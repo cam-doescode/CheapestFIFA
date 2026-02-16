@@ -19,7 +19,7 @@ export function MatchGrid({ matches }: MatchGridProps) {
   const cities = (searchParams.get("city") || "").split(",").filter(Boolean);
   const teams = (searchParams.get("team") || "").split(",").filter(Boolean);
   const sort = searchParams.get("sort") || "savings";
-  const predictorOn = searchParams.get("predictor") === "on";
+  const predictorOn = searchParams.get("predictor") !== "off";
 
   const filtered = useMemo(() => {
     let result = matches;

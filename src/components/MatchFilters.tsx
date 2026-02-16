@@ -18,7 +18,7 @@ export function MatchFilters({ matches }: MatchFiltersProps) {
   const selectedCities = (searchParams.get("city") || "").split(",").filter(Boolean);
   const selectedTeams = (searchParams.get("team") || "").split(",").filter(Boolean);
   const currentSort = searchParams.get("sort") || "savings";
-  const predictorOn = searchParams.get("predictor") === "on";
+  const predictorOn = searchParams.get("predictor") !== "off";
 
   const cities = useMemo(() => {
     return [...new Set(matches.map((m) => m.match.city))].sort();
@@ -54,7 +54,7 @@ export function MatchFilters({ matches }: MatchFiltersProps) {
     (key: string, value: string) => {
       const params = new URLSearchParams(searchParams.toString());
       // Clear param when it matches the default
-      const defaults: Record<string, string> = { sort: "savings", predictor: "off" };
+      const defaults: Record<string, string> = { sort: "savings", predictor: "on" };
       if (value === defaults[key]) {
         params.delete(key);
       } else {
