@@ -5,7 +5,7 @@ import { useMemo } from "react";
 import type { MatchWithPrices } from "@/lib/types";
 import { MatchCard } from "./MatchCard";
 import { MatchFilters } from "./MatchFilters";
-import { savingsPercent } from "@/lib/utils";
+import { savingsPercent, parseTeams } from "@/lib/utils";
 
 interface MatchGridProps {
   matches: MatchWithPrices[];
@@ -14,26 +14,27 @@ interface MatchGridProps {
 export function MatchGrid({ matches }: MatchGridProps) {
   const searchParams = useSearchParams();
 
-  const round = searchParams.get("round") || "all";
-  const city = searchParams.get("city") || "all";
-  const team = searchParams.get("team") || "";
+  const rounds = (searchParams.get("round") || "").split(",").filter(Boolean);
+  const cities = (searchParams.get("city") || "").split(",").filter(Boolean);
+  const teams = (searchParams.get("team") || "").split(",").filter(Boolean);
   const sort = searchParams.get("sort") || "date";
 
   const filtered = useMemo(() => {
     let result = matches;
 
-    if (round !== "all") {
-      result = result.filter((m) => m.match.round === parseInt(round));
+    if (rounds.length > 0) {
+      const roundNums = rounds.map((r) => parseInt(r));
+      result = result.filter((m) => roundNums.includes(m.match.round));
     }
 
-    if (city !== "all") {
-      result = result.filter((m) => m.match.city === city);
+    if (cities.length > 0) {
+      result = result.filter((m) => cities.includes(m.match.city));
     }
 
-    if (team) {
-      const search = team.toLowerCase();
+    if (teams.length > 0) {
+      const teamSet = new Set(teams.map((t) => t.toLowerCase()));
       result = result.filter((m) =>
-        m.match.teams.toLowerCase().includes(search)
+        parseTeams(m.match.teams).some((t) => teamSet.has(t.toLowerCase()))
       );
     }
 
@@ -62,7 +63,7 @@ export function MatchGrid({ matches }: MatchGridProps) {
     });
 
     return result;
-  }, [matches, round, city, team, sort]);
+  }, [matches, rounds, cities, teams, sort]);
 
   return (
     <>

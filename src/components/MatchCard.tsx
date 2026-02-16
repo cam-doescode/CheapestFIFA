@@ -1,9 +1,42 @@
+import Image from "next/image";
 import type { MatchWithPrices } from "@/lib/types";
-import { formatDate, formatTime, getCollectUrl } from "@/lib/utils";
+import { formatDate, formatTime, getCollectUrl, parseTeams, getFlagUrl } from "@/lib/utils";
 import { PriceTable } from "./PriceTable";
 
 interface MatchCardProps {
   data: MatchWithPrices;
+}
+
+function TeamNames({ teams }: { teams: string }) {
+  const parsed = parseTeams(teams);
+  if (parsed.length !== 2) return <>{teams}</>;
+
+  return (
+    <span className="inline-flex flex-wrap items-center gap-x-1">
+      <TeamWithFlag name={parsed[0]} />
+      <span className="text-zinc-400 dark:text-zinc-500 font-normal mx-0.5">vs.</span>
+      <TeamWithFlag name={parsed[1]} />
+    </span>
+  );
+}
+
+function TeamWithFlag({ name }: { name: string }) {
+  const flagUrl = getFlagUrl(name);
+  return (
+    <span className="inline-flex items-center gap-1">
+      {flagUrl && (
+        <Image
+          src={flagUrl}
+          alt={`${name} flag`}
+          width={20}
+          height={15}
+          className="inline-block rounded-sm"
+          unoptimized
+        />
+      )}
+      {name}
+    </span>
+  );
 }
 
 export function MatchCard({ data }: MatchCardProps) {
@@ -14,7 +47,7 @@ export function MatchCard({ data }: MatchCardProps) {
     .sort((a, b) => a.floorPrice! - b.floorPrice!)[0];
 
   return (
-    <div className="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-4 hover:shadow-md transition-shadow">
+    <div className="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-4 hover:shadow-md transition-shadow flex flex-col">
       {/* Header */}
       <div className="flex items-start justify-between mb-3">
         <div>
@@ -22,7 +55,7 @@ export function MatchCard({ data }: MatchCardProps) {
             {match.roundInfo} &middot; Match {match.matchNo}
           </div>
           <h3 className="font-semibold text-zinc-900 dark:text-zinc-100 text-base leading-tight">
-            {match.teams}
+            <TeamNames teams={match.teams} />
           </h3>
         </div>
         {cheapestFloor && (
@@ -53,7 +86,7 @@ export function MatchCard({ data }: MatchCardProps) {
           href={getCollectUrl(match.matchNo, cheapestFloor.category)}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-3 block w-full text-center text-sm font-medium py-2 px-4 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white transition-colors"
+          className="mt-auto pt-3 block w-full text-center text-sm font-medium py-2 px-4 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white transition-colors"
         >
           Buy on FIFA Collect &rarr;
         </a>

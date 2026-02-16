@@ -65,6 +65,62 @@ export function getCollectUrl(matchNo: number, category?: number): string {
   return `${base}?referrer=${REFERRAL_CODE}`;
 }
 
+/** Map team name (as it appears in the API) to ISO 3166-1 alpha-2 code */
+const TEAM_TO_ISO: Record<string, string> = {
+  "Algeria": "dz",
+  "Argentina": "ar",
+  "Australia": "au",
+  "Austria": "at",
+  "Belgium": "be",
+  "Brazil": "br",
+  "Cabo Verde": "cv",
+  "Canada": "ca",
+  "Colombia": "co",
+  "Croatia": "hr",
+  "Curaçao": "cw",
+  "Ecuador": "ec",
+  "Egypt": "eg",
+  "England": "gb-eng",
+  "France": "fr",
+  "Germany": "de",
+  "Ghana": "gh",
+  "Haiti": "ht",
+  "IR Iran": "ir",
+  "Ivory Coast": "ci",
+  "Japan": "jp",
+  "Jordan": "jo",
+  "Korea Republic": "kr",
+  "Mexico": "mx",
+  "Morocco": "ma",
+  "Netherlands": "nl",
+  "New Zealand": "nz",
+  "Norway": "no",
+  "Panama": "pa",
+  "Portugal": "pt",
+  "Qatar": "qa",
+  "Saudi Arabia": "sa",
+  "Scotland": "gb-sct",
+  "Senegal": "sn",
+  "South Africa": "za",
+  "Spain": "es",
+  "Switzerland": "ch",
+  "Tunisia": "tn",
+  "Uruguay": "uy",
+  "USA": "us",
+};
+
+/** Get flag CDN URL for a team name, or null if unknown */
+export function getFlagUrl(teamName: string): string | null {
+  const code = TEAM_TO_ISO[teamName.trim()];
+  if (!code) return null;
+  return `https://flagcdn.com/24x18/${code}.png`;
+}
+
+/** Parse "Team A vs. Team B" into individual team names */
+export function parseTeams(teams: string): string[] {
+  return teams.split(/\s+vs\.\s+/).map((t) => t.trim());
+}
+
 export const ROUND_FILTERS = [
   { value: "all", label: "All Rounds" },
   { value: "48", label: "Group Stage" },
