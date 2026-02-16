@@ -1,7 +1,8 @@
 import Image from "next/image";
 import type { MatchWithPrices } from "@/lib/types";
-import { formatDate, formatTime, getCollectUrl, parseTeams, getFlagUrl } from "@/lib/utils";
+import { formatDate, formatTime, getCollectUrl, parseTeams, getFlagUrl, getStadiumMapPath } from "@/lib/utils";
 import { PriceTable } from "./PriceTable";
+import { StadiumMapModal } from "./StadiumMapModal";
 
 interface MatchCardProps {
   data: MatchWithPrices;
@@ -69,12 +70,15 @@ export function MatchCard({ data }: MatchCardProps) {
       </div>
 
       {/* Match details */}
-      <div className="flex flex-wrap gap-x-2 sm:gap-x-4 gap-y-0.5 text-[11px] sm:text-xs text-zinc-500 dark:text-zinc-400 mb-2 sm:mb-3">
-        <span>{formatDate(match.date)}</span>
-        <span>{formatTime(match.date)}</span>
-        <span>
-          {match.stadium}, {match.city}
-        </span>
+      <div className="text-[11px] sm:text-xs text-zinc-500 dark:text-zinc-400 mb-2 sm:mb-3 space-y-0.5">
+        <div>{formatDate(match.date)} &nbsp; {formatTime(match.date)}</div>
+        <div>
+          <StadiumMapModal
+            stadium={match.stadium}
+            city={match.city}
+            mapSrc={getStadiumMapPath(match.city)}
+          />
+        </div>
       </div>
 
       {/* Price table */}

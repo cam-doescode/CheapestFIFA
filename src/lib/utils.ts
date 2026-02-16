@@ -121,6 +121,12 @@ export function parseTeams(teams: string): string[] {
   return teams.split(/\s+vs\.\s+/).map((t) => t.trim());
 }
 
+/** Get local stadium map path for a city */
+export function getStadiumMapPath(city: string): string {
+  const filename = city.replace(/\s+/g, "_");
+  return `/stadium-maps/Stadium_Map_${filename}.png`;
+}
+
 export const ROUND_FILTERS = [
   { value: "all", label: "All Rounds" },
   { value: "48", label: "Group Stage" },
