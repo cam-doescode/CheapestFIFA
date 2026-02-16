@@ -68,10 +68,10 @@ export function MatchGrid({ matches }: MatchGridProps) {
   return (
     <>
       <MatchFilters matches={matches} />
-      <div className="text-sm text-zinc-500 dark:text-zinc-400 mb-4">
+      <div className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 mb-2 sm:mb-4">
         Showing {filtered.length} of {matches.length} matches
       </div>
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {filtered.map((match) => (
           <MatchCard key={match.match.id} data={match} />
         ))}

@@ -44,21 +44,21 @@ export default async function Home() {
     <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950">
       {/* Header */}
       <header className="border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900">
-        <div className="max-w-7xl mx-auto px-4 py-6">
-          <h1 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100">
+        <div className="max-w-7xl mx-auto px-4 py-4 sm:py-6">
+          <h1 className="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-zinc-100">
             FIFA World Cup 2026 Ticket Prices
           </h1>
-          <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1 max-w-2xl">
+          <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 mt-1 max-w-2xl">
             The largest FIFA World Cup ever is coming to the US, Canada &amp;
-            Mexico. Compare cheap ticket prices across resale markets for all
-            104 matches and find the best deals before they sell out.
+            Mexico. Compare ticket prices across resale markets for all 104
+            matches.
           </p>
         </div>
       </header>
 
       {/* Stats banner */}
       <div className="bg-emerald-50 dark:bg-emerald-950/30 border-b border-emerald-100 dark:border-emerald-900/50">
-        <div className="max-w-7xl mx-auto px-4 py-3 flex flex-wrap gap-x-6 gap-y-1 text-sm">
+        <div className="max-w-7xl mx-auto px-4 py-2 sm:py-3 flex flex-wrap gap-x-3 sm:gap-x-6 gap-y-0.5 text-xs sm:text-sm">
           <div>
             <span className="text-emerald-700 dark:text-emerald-400 font-semibold">
               {matches.length}
@@ -72,11 +72,11 @@ export default async function Home() {
               {tickets.filter((t) => t.floorPrice).length}
             </span>{" "}
             <span className="text-emerald-600 dark:text-emerald-500">
-              live price listings
+              live prices
             </span>
           </div>
           <div className="text-emerald-600 dark:text-emerald-500">
-            Comparing prices from{" "}
+            From{" "}
             <span className="font-semibold text-emerald-700 dark:text-emerald-400">
               FIFA Collect
             </span>{" "}
@@ -85,8 +85,25 @@ export default async function Home() {
         </div>
       </div>
 
+      {/* FIFA Resale closure notice */}
+      <div className="bg-amber-50 dark:bg-amber-950/30 border-b border-amber-100 dark:border-amber-900/50">
+        <div className="max-w-7xl mx-auto px-4 py-2 sm:py-3 text-xs sm:text-sm text-amber-700 dark:text-amber-400">
+          FIFA&apos;s official resale marketplace is{" "}
+          <span className="font-semibold">closed Feb 22 &ndash; Apr 8, 2026</span>.{" "}
+          <a
+            href="https://collect.fifa.com/marketplace?ref=serfifathekick"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold underline hover:text-amber-800 dark:hover:text-amber-300"
+          >
+            FIFA Collect
+          </a>{" "}
+          is the only official way to buy &amp; sell tickets during this window.
+        </div>
+      </div>
+
       {/* Main content */}
-      <main className="max-w-7xl mx-auto px-4 py-6">
+      <main className="max-w-7xl mx-auto px-4 py-4 sm:py-6">
         <Suspense
           fallback={
             <div className="text-center text-zinc-500 py-12">
@@ -100,7 +117,7 @@ export default async function Home() {
 
       {/* Footer */}
       <footer className="border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900">
-        <div className="max-w-7xl mx-auto px-4 py-6 space-y-4 text-xs text-zinc-400 dark:text-zinc-500">
+        <div className="max-w-7xl mx-auto px-4 py-4 sm:py-6 space-y-3 sm:space-y-4 text-[10px] sm:text-xs text-zinc-400 dark:text-zinc-500">
           <div>
             <p className="font-semibold text-zinc-500 dark:text-zinc-400 mb-1">
               About FIFA Collect

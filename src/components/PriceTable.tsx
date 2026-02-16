@@ -18,16 +18,16 @@ export function PriceTable({ tickets, resalePrices, matchNo }: PriceTableProps) 
 
   return (
   <>
-    <table className="w-full text-sm">
+    <table className="w-full text-xs sm:text-sm">
       <thead>
         <tr className="border-b border-zinc-200 dark:border-zinc-700 text-zinc-500 dark:text-zinc-400">
-          <th className="text-left py-1 pr-2 font-medium">Cat</th>
-          <th className="text-right py-1 px-2 font-medium">Face</th>
-          <th className="text-right py-1 px-2 font-medium">Collect</th>
+          <th className="text-left py-1 pr-1 sm:pr-2 font-medium">Cat</th>
+          <th className="text-right py-1 px-1 sm:px-2 font-medium">Face</th>
+          <th className="text-right py-1 px-1 sm:px-2 font-medium">Collect</th>
           {resalePrices.length > 0 && (
-            <th className="text-right py-1 px-2 font-medium">Resale</th>
+            <th className="text-right py-1 px-1 sm:px-2 font-medium">Resale</th>
           )}
-          <th className="text-right py-1 pl-2 font-medium">vs Face</th>
+          <th className="text-right py-1 pl-1 sm:pl-2 font-medium">vs Face</th>
         </tr>
       </thead>
       <tbody>
@@ -45,14 +45,14 @@ export function PriceTable({ tickets, resalePrices, matchNo }: PriceTableProps) 
               key={ticket.category}
               className="border-b border-zinc-100 dark:border-zinc-800 last:border-0"
             >
-              <td className="py-1.5 pr-2 font-medium text-zinc-700 dark:text-zinc-300">
+              <td className="py-1 sm:py-1.5 pr-1 sm:pr-2 font-medium text-zinc-700 dark:text-zinc-300">
                 {categoryLabel(ticket.category)}
               </td>
-              <td className="py-1.5 px-2 text-right text-zinc-500 dark:text-zinc-400">
+              <td className="py-1 sm:py-1.5 px-1 sm:px-2 text-right text-zinc-500 dark:text-zinc-400">
                 {formatCurrency(ticket.faceValue)}
                 {ticket.estimatedFaceValue && <span title="Estimated face value">*</span>}
               </td>
-              <td className="py-1.5 px-2 text-right font-semibold">
+              <td className="py-1 sm:py-1.5 px-1 sm:px-2 text-right font-semibold">
                 {hasFloor ? (
                   <a
                     href={getCollectUrl(matchNo, ticket.category)}
@@ -67,7 +67,7 @@ export function PriceTable({ tickets, resalePrices, matchNo }: PriceTableProps) 
                 )}
               </td>
               {resalePrices.length > 0 && (
-                <td className="py-1.5 px-2 text-right">
+                <td className="py-1 sm:py-1.5 px-1 sm:px-2 text-right">
                   {resale ? (
                     <span className="text-zinc-700 dark:text-zinc-300">
                       {formatCurrency(resale.price)}
@@ -77,7 +77,7 @@ export function PriceTable({ tickets, resalePrices, matchNo }: PriceTableProps) 
                   )}
                 </td>
               )}
-              <td className="py-1.5 pl-2 text-right">
+              <td className="py-1 sm:py-1.5 pl-1 sm:pl-2 text-right">
                 {hasFloor ? (
                   (() => {
                     const multiplier = ticket.floorPrice! / ticket.faceValue;

@@ -47,21 +47,21 @@ export function MatchCard({ data }: MatchCardProps) {
     .sort((a, b) => a.floorPrice! - b.floorPrice!)[0];
 
   return (
-    <div className="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-4 hover:shadow-md transition-shadow flex flex-col">
+    <div className="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-3 sm:p-4 hover:shadow-md transition-shadow flex flex-col">
       {/* Header */}
-      <div className="flex items-start justify-between mb-3">
+      <div className="flex items-start justify-between mb-2 sm:mb-3">
         <div>
-          <div className="text-xs font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-wide mb-1">
+          <div className="text-[10px] sm:text-xs font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-wide mb-0.5 sm:mb-1">
             {match.roundInfo} &middot; Match {match.matchNo}
           </div>
-          <h3 className="font-semibold text-zinc-900 dark:text-zinc-100 text-base leading-tight">
+          <h3 className="font-semibold text-zinc-900 dark:text-zinc-100 text-sm sm:text-base leading-tight">
             <TeamNames teams={match.teams} />
           </h3>
         </div>
         {cheapestFloor && (
           <div className="text-right ml-3 shrink-0">
-            <div className="text-xs text-zinc-500 dark:text-zinc-400">From</div>
-            <div className="text-lg font-bold text-emerald-600 dark:text-emerald-400">
+            <div className="text-[10px] sm:text-xs text-zinc-500 dark:text-zinc-400">From</div>
+            <div className="text-base sm:text-lg font-bold text-emerald-600 dark:text-emerald-400">
               ${Math.round(cheapestFloor.floorPrice!)}
             </div>
           </div>
@@ -69,7 +69,7 @@ export function MatchCard({ data }: MatchCardProps) {
       </div>
 
       {/* Match details */}
-      <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-zinc-500 dark:text-zinc-400 mb-3">
+      <div className="flex flex-wrap gap-x-2 sm:gap-x-4 gap-y-0.5 text-[11px] sm:text-xs text-zinc-500 dark:text-zinc-400 mb-2 sm:mb-3">
         <span>{formatDate(match.date)}</span>
         <span>{formatTime(match.date)}</span>
         <span>
@@ -86,7 +86,7 @@ export function MatchCard({ data }: MatchCardProps) {
           href={getCollectUrl(match.matchNo, cheapestFloor.category)}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-auto pt-3 block w-full text-center text-sm font-medium py-2 px-4 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white transition-colors"
+          className="mt-auto pt-2 sm:pt-3 block w-full text-center text-xs sm:text-sm font-medium py-1.5 sm:py-2 px-4 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white transition-colors"
         >
           Buy on FIFA Collect &rarr;
         </a>
