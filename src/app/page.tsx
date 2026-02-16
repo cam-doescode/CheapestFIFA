@@ -99,10 +99,50 @@ export default async function Home() {
 
       {/* Footer */}
       <footer className="border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900">
-        <div className="max-w-7xl mx-auto px-4 py-4 text-xs text-zinc-400 dark:text-zinc-500">
+        <div className="max-w-7xl mx-auto px-4 py-6 space-y-4 text-xs text-zinc-400 dark:text-zinc-500">
+          <div>
+            <p className="font-semibold text-zinc-500 dark:text-zinc-400 mb-1">
+              About FIFA Collect
+            </p>
+            <p>
+              FIFA Collect is a digital collectibles marketplace where fans can
+              buy, sell, and trade FIFA World Cup 2026 tickets. All purchases on
+              FIFA Collect are final and non-refundable. A 15% resale fee
+              applies to secondary market sales. For full details on how the
+              platform works, fees, and policies, visit the{" "}
+              <a
+                href="https://collect.fifa.com/learn"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-emerald-600 dark:text-emerald-400 underline hover:text-emerald-700 dark:hover:text-emerald-300"
+              >
+                FIFA Collect FAQ
+              </a>
+              .
+            </p>
+          </div>
+
+          <div>
+            <p className="font-semibold text-zinc-500 dark:text-zinc-400 mb-1">
+              Disclaimer
+            </p>
+            <p>
+              CheapestFIFA is an independent price comparison tool and is not
+              affiliated with, endorsed by, or connected to FIFA, FIFA Collect,
+              or any official FIFA entity. All ticket prices displayed are
+              sourced from publicly available data and are provided for
+              informational purposes only. We make no guarantees regarding the
+              accuracy, completeness, or timeliness of pricing information.
+              CheapestFIFA shall not be held liable for any losses, damages, or
+              issues arising from the use of this site or from transactions made
+              on third-party platforms. Users are solely responsible for
+              verifying prices and terms before making any purchase.
+            </p>
+          </div>
+
           <p>
-            Price data from FIFA Collect marketplace. Not affiliated with FIFA.
-            Prices update every 5 minutes.
+            Price data from FIFA Collect marketplace. Prices update every 5
+            minutes.
           </p>
         </div>
       </footer>

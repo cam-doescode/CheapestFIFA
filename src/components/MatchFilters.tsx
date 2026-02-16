@@ -17,7 +17,7 @@ export function MatchFilters({ matches }: MatchFiltersProps) {
   const selectedRounds = (searchParams.get("round") || "").split(",").filter(Boolean);
   const selectedCities = (searchParams.get("city") || "").split(",").filter(Boolean);
   const selectedTeams = (searchParams.get("team") || "").split(",").filter(Boolean);
-  const currentSort = searchParams.get("sort") || "date";
+  const currentSort = searchParams.get("sort") || "savings";
 
   const cities = useMemo(() => {
     return [...new Set(matches.map((m) => m.match.city))].sort();
@@ -52,7 +52,7 @@ export function MatchFilters({ matches }: MatchFiltersProps) {
   const updateSingleParam = useCallback(
     (key: string, value: string) => {
       const params = new URLSearchParams(searchParams.toString());
-      if (value === "date") {
+      if (value === "savings") {
         params.delete(key);
       } else {
         params.set(key, value);
