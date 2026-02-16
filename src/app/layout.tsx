@@ -13,9 +13,28 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CheapestFIFA — Compare FIFA World Cup 2026 Ticket Prices",
+  title:
+    "FIFA World Cup 2026 Ticket Prices — Compare Cheap Tickets Across Resale Markets",
   description:
-    "Find the cheapest FIFA World Cup 2026 tickets. Compare prices across FIFA Collect and FIFA Resale Marketplace for all 104 matches.",
+    "Compare FIFA World Cup 2026 ticket prices across resale marketplaces. Find cheap tickets for all 104 matches in the US, Canada & Mexico. Live prices from FIFA Collect and secondary markets.",
+  keywords: [
+    "FIFA World Cup 2026 tickets",
+    "World Cup 2026 ticket prices",
+    "cheap World Cup tickets",
+    "FIFA World Cup resale tickets",
+    "World Cup 2026 USA",
+    "World Cup 2026 Canada",
+    "World Cup 2026 Mexico",
+    "FIFA Collect tickets",
+    "World Cup ticket comparison",
+    "FIFA 2026 tickets",
+  ],
+  openGraph: {
+    title: "FIFA World Cup 2026 Ticket Prices — Find the Best Deals",
+    description:
+      "The biggest World Cup ever is coming to North America. Compare ticket prices across resale markets for all 104 matches and save up to 50%.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

@@ -46,24 +46,25 @@ export default async function Home() {
       <header className="border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900">
         <div className="max-w-7xl mx-auto px-4 py-6">
           <h1 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100">
-            CheapestFIFA
+            FIFA World Cup 2026 Ticket Prices
           </h1>
-          <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
-            Compare FIFA World Cup 2026 ticket prices across resale platforms.
-            Find the best deals on all 104 matches.
+          <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1 max-w-2xl">
+            The largest FIFA World Cup ever is coming to the US, Canada &amp;
+            Mexico. Compare cheap ticket prices across resale markets for all
+            104 matches and find the best deals before they sell out.
           </p>
         </div>
       </header>
 
       {/* Stats banner */}
       <div className="bg-emerald-50 dark:bg-emerald-950/30 border-b border-emerald-100 dark:border-emerald-900/50">
-        <div className="max-w-7xl mx-auto px-4 py-3 flex flex-wrap gap-6 text-sm">
+        <div className="max-w-7xl mx-auto px-4 py-3 flex flex-wrap gap-x-6 gap-y-1 text-sm">
           <div>
             <span className="text-emerald-700 dark:text-emerald-400 font-semibold">
               {matches.length}
             </span>{" "}
             <span className="text-emerald-600 dark:text-emerald-500">
-              matches tracked
+              matches across 16 cities
             </span>
           </div>
           <div>
@@ -71,15 +72,15 @@ export default async function Home() {
               {tickets.filter((t) => t.floorPrice).length}
             </span>{" "}
             <span className="text-emerald-600 dark:text-emerald-500">
-              listings with prices
+              live price listings
             </span>
           </div>
           <div className="text-emerald-600 dark:text-emerald-500">
-            Prices from{" "}
+            Comparing prices from{" "}
             <span className="font-semibold text-emerald-700 dark:text-emerald-400">
               FIFA Collect
             </span>{" "}
-            marketplace
+            &amp; more
           </div>
         </div>
       </div>
@@ -127,13 +128,13 @@ export default async function Home() {
               Disclaimer
             </p>
             <p>
-              CheapestFIFA is an independent price comparison tool and is not
+              WC26 Ticket Prices is an independent price comparison tool and is not
               affiliated with, endorsed by, or connected to FIFA, FIFA Collect,
               or any official FIFA entity. All ticket prices displayed are
               sourced from publicly available data and are provided for
               informational purposes only. We make no guarantees regarding the
               accuracy, completeness, or timeliness of pricing information.
-              CheapestFIFA shall not be held liable for any losses, damages, or
+              WC26 Ticket Prices shall not be held liable for any losses, damages, or
               issues arising from the use of this site or from transactions made
               on third-party platforms. Users are solely responsible for
               verifying prices and terms before making any purchase.
