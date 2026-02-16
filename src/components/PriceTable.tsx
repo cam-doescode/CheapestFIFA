@@ -1,13 +1,15 @@
 import type { TicketListing, ResalePrice } from "@/lib/types";
 import { formatCurrency, savingsPercent, categoryLabel, getCollectUrl } from "@/lib/utils";
+import { getRsdFaceValue } from "@/data/rsd-prices";
 
 interface PriceTableProps {
   tickets: TicketListing[];
   resalePrices: ResalePrice[];
   matchNo: number;
+  pricingSource?: string;
 }
 
-export function PriceTable({ tickets, resalePrices, matchNo }: PriceTableProps) {
+export function PriceTable({ tickets, resalePrices, matchNo, pricingSource = "collect" }: PriceTableProps) {
   if (tickets.length === 0) {
     return (
       <p className="text-sm text-zinc-500 italic">No ticket data available</p>
@@ -22,7 +24,7 @@ export function PriceTable({ tickets, resalePrices, matchNo }: PriceTableProps) 
       <thead>
         <tr className="border-b border-zinc-200 dark:border-zinc-700 text-zinc-500 dark:text-zinc-400">
           <th className="text-left py-1 pr-1 sm:pr-2 font-medium">Cat</th>
-          <th className="text-right py-1 px-1 sm:px-2 font-medium">Face</th>
+          <th className="text-right py-1 px-1 sm:px-2 font-medium">{pricingSource === "rsd" ? "RSD" : "Face"}</th>
           <th className="text-right py-1 px-1 sm:px-2 font-medium">Collect</th>
           {resalePrices.length > 0 && (
             <th className="text-right py-1 px-1 sm:px-2 font-medium">Resale</th>
@@ -36,8 +38,12 @@ export function PriceTable({ tickets, resalePrices, matchNo }: PriceTableProps) 
             (r) => r.category === ticket.category
           );
           const hasFloor = ticket.floorPrice != null && ticket.floorPrice > 0;
+          const faceValue = pricingSource === "rsd"
+            ? (getRsdFaceValue(matchNo, ticket.category) ?? ticket.faceValue)
+            : ticket.faceValue;
+          const isRsdFallback = pricingSource === "rsd" && getRsdFaceValue(matchNo, ticket.category) === null;
           const savings = hasFloor
-            ? savingsPercent(ticket.faceValue, ticket.floorPrice!)
+            ? savingsPercent(faceValue, ticket.floorPrice!)
             : null;
 
           return (
@@ -49,8 +55,8 @@ export function PriceTable({ tickets, resalePrices, matchNo }: PriceTableProps) 
                 {categoryLabel(ticket.category)}
               </td>
               <td className="py-1 sm:py-1.5 px-1 sm:px-2 text-right text-zinc-500 dark:text-zinc-400">
-                {formatCurrency(ticket.faceValue)}
-                {ticket.estimatedFaceValue && <span title="Estimated face value">*</span>}
+                {formatCurrency(faceValue)}
+                {(ticket.estimatedFaceValue || isRsdFallback) && <span title={isRsdFallback ? "RSD price unavailable, showing Collect face value" : "Estimated face value"}>*</span>}
               </td>
               <td className="py-1 sm:py-1.5 px-1 sm:px-2 text-right font-semibold">
                 {hasFloor ? (
@@ -80,7 +86,7 @@ export function PriceTable({ tickets, resalePrices, matchNo }: PriceTableProps) 
               <td className="py-1 sm:py-1.5 pl-1 sm:pl-2 text-right">
                 {hasFloor ? (
                   (() => {
-                    const multiplier = ticket.floorPrice! / ticket.faceValue;
+                    const multiplier = ticket.floorPrice! / faceValue;
                     if (multiplier <= 1) {
                       return (
                         <span className="text-emerald-600 dark:text-emerald-400 font-medium">

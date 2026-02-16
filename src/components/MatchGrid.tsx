@@ -7,6 +7,7 @@ import { MatchCard } from "./MatchCard";
 import { MatchFilters } from "./MatchFilters";
 import { savingsPercent, parseTeams } from "@/lib/utils";
 import { PREDICTIONS_BY_MATCH } from "@/data/knockout-predictions";
+import { getRsdFaceValue } from "@/data/rsd-prices";
 
 interface MatchGridProps {
   matches: MatchWithPrices[];
@@ -20,6 +21,7 @@ export function MatchGrid({ matches }: MatchGridProps) {
   const teams = (searchParams.get("team") || "").split(",").filter(Boolean);
   const sort = searchParams.get("sort") || "savings";
   const predictorOn = searchParams.get("predictor") !== "off";
+  const pricingSource = searchParams.get("pricing") || "collect";
 
   const filtered = useMemo(() => {
     let result = matches;
@@ -60,8 +62,8 @@ export function MatchGrid({ matches }: MatchGridProps) {
           return aMin - bMin;
         }
         case "savings": {
-          const aSav = getBestSavings(a);
-          const bSav = getBestSavings(b);
+          const aSav = getBestSavings(a, pricingSource);
+          const bSav = getBestSavings(b, pricingSource);
           return bSav - aSav; // highest savings first
         }
         case "match":
@@ -76,7 +78,7 @@ export function MatchGrid({ matches }: MatchGridProps) {
     });
 
     return result;
-  }, [matches, rounds, cities, teams, sort, predictorOn]);
+  }, [matches, rounds, cities, teams, sort, predictorOn, pricingSource]);
 
   return (
     <>
@@ -90,6 +92,7 @@ export function MatchGrid({ matches }: MatchGridProps) {
             key={match.match.id}
             data={match}
             prediction={predictorOn ? PREDICTIONS_BY_MATCH.get(match.match.matchNo) : undefined}
+            pricingSource={pricingSource}
           />
         ))}
       </div>
@@ -109,9 +112,14 @@ function getMinFloor(m: MatchWithPrices): number {
   return floors.length > 0 ? Math.min(...floors) : Infinity;
 }
 
-function getBestSavings(m: MatchWithPrices): number {
+function getBestSavings(m: MatchWithPrices, pricingSource: string): number {
   const savings = m.tickets
     .filter((t) => t.floorPrice != null && t.floorPrice > 0)
-    .map((t) => savingsPercent(t.faceValue, t.floorPrice!));
+    .map((t) => {
+      const face = pricingSource === "rsd"
+        ? (getRsdFaceValue(m.match.matchNo, t.category) ?? t.faceValue)
+        : t.faceValue;
+      return savingsPercent(face, t.floorPrice!);
+    });
   return savings.length > 0 ? Math.max(...savings) : -Infinity;
 }

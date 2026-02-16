@@ -1,0 +1,2815 @@
+{
+  "snapshotDate": "2026-02-16",
+  "source": "FIFA RSD pricing tracker by @EndlessNinjaFury (Google Sheets)",
+  "note": "Random Selection Draw face values (Dec 2025 - Jan 2026). Cat 1, 2, 3 only (no Cat 4 in RSD). Does not include Supporter Entry tier.",
+  "faceValues": [
+    {
+      "matchNo": 1,
+      "teams": "MEX v RSA",
+      "category": 1,
+      "faceValue": 2355.0,
+      "city": "Mexico City",
+      "date": "6/11/26",
+      "round": "Group A"
+    },
+    {
+      "matchNo": 1,
+      "teams": "MEX v RSA",
+      "category": 2,
+      "faceValue": 1705.0,
+      "city": "Mexico City",
+      "date": "6/11/26",
+      "round": "Group A"
+    },
+    {
+      "matchNo": 1,
+      "teams": "MEX v RSA",
+      "category": 3,
+      "faceValue": 1020.0,
+      "city": "Mexico City",
+      "date": "6/11/26",
+      "round": "Group A"
+    },
+    {
+      "matchNo": 2,
+      "teams": "KOR v UEFA-D",
+      "category": 1,
+      "faceValue": 500.0,
+      "city": "Guadalajara",
+      "date": "6/11/26",
+      "round": "Group A"
+    },
+    {
+      "matchNo": 2,
+      "teams": "KOR v UEFA-D",
+      "category": 2,
+      "faceValue": 400.0,
+      "city": "Guadalajara",
+      "date": "6/11/26",
+      "round": "Group A"
+    },
+    {
+      "matchNo": 2,
+      "teams": "KOR v UEFA-D",
+      "category": 3,
+      "faceValue": 180.0,
+      "city": "Guadalajara",
+      "date": "6/11/26",
+      "round": "Group A"
+    },
+    {
+      "matchNo": 3,
+      "teams": "CAN v UEFA-A",
+      "category": 1,
+      "faceValue": 2170.0,
+      "city": "Toronto",
+      "date": "6/12/26",
+      "round": "Group B"
+    },
+    {
+      "matchNo": 3,
+      "teams": "CAN v UEFA-A",
+      "category": 2,
+      "faceValue": 1575.0,
+      "city": "Toronto",
+      "date": "6/12/26",
+      "round": "Group B"
+    },
+    {
+      "matchNo": 3,
+      "teams": "CAN v UEFA-A",
+      "category": 3,
+      "faceValue": 930.0,
+      "city": "Toronto",
+      "date": "6/12/26",
+      "round": "Group B"
+    },
+    {
+      "matchNo": 4,
+      "teams": "USA v PAR",
+      "category": 1,
+      "faceValue": 2735.0,
+      "city": "Los Angeles",
+      "date": "6/12/26",
+      "round": "Group D"
+    },
+    {
+      "matchNo": 4,
+      "teams": "USA v PAR",
+      "category": 2,
+      "faceValue": 1940.0,
+      "city": "Los Angeles",
+      "date": "6/12/26",
+      "round": "Group D"
+    },
+    {
+      "matchNo": 4,
+      "teams": "USA v PAR",
+      "category": 3,
+      "faceValue": 1120.0,
+      "city": "Los Angeles",
+      "date": "6/12/26",
+      "round": "Group D"
+    },
+    {
+      "matchNo": 5,
+      "teams": "SCO v HAI",
+      "category": 1,
+      "faceValue": 500.0,
+      "city": "Boston",
+      "date": "6/13/26",
+      "round": "Group C"
+    },
+    {
+      "matchNo": 5,
+      "teams": "SCO v HAI",
+      "category": 2,
+      "faceValue": 400.0,
+      "city": "Boston",
+      "date": "6/13/26",
+      "round": "Group C"
+    },
+    {
+      "matchNo": 5,
+      "teams": "SCO v HAI",
+      "category": 3,
+      "faceValue": 180.0,
+      "city": "Boston",
+      "date": "6/13/26",
+      "round": "Group C"
+    },
+    {
+      "matchNo": 6,
+      "teams": "AUS v UEFA-C",
+      "category": 1,
+      "faceValue": 450.0,
+      "city": "Vancouver",
+      "date": "6/13/26",
+      "round": "Group D"
+    },
+    {
+      "matchNo": 6,
+      "teams": "AUS v UEFA-C",
+      "category": 2,
+      "faceValue": 380.0,
+      "city": "Vancouver",
+      "date": "6/13/26",
+      "round": "Group D"
+    },
+    {
+      "matchNo": 6,
+      "teams": "AUS v UEFA-C",
+      "category": 3,
+      "faceValue": 140.0,
+      "city": "Vancouver",
+      "date": "6/13/26",
+      "round": "Group D"
+    },
+    {
+      "matchNo": 7,
+      "teams": "BRA v MAR",
+      "category": 1,
+      "faceValue": 700.0,
+      "city": "NY / NJ",
+      "date": "6/13/26",
+      "round": "Group C"
+    },
+    {
+      "matchNo": 7,
+      "teams": "BRA v MAR",
+      "category": 2,
+      "faceValue": 500.0,
+      "city": "NY / NJ",
+      "date": "6/13/26",
+      "round": "Group C"
+    },
+    {
+      "matchNo": 7,
+      "teams": "BRA v MAR",
+      "category": 3,
+      "faceValue": 265.0,
+      "city": "NY / NJ",
+      "date": "6/13/26",
+      "round": "Group C"
+    },
+    {
+      "matchNo": 8,
+      "teams": "SUI v QAT",
+      "category": 1,
+      "faceValue": 450.0,
+      "city": "San Francisco",
+      "date": "6/13/26",
+      "round": "Group B"
+    },
+    {
+      "matchNo": 8,
+      "teams": "SUI v QAT",
+      "category": 2,
+      "faceValue": 380.0,
+      "city": "San Francisco",
+      "date": "6/13/26",
+      "round": "Group B"
+    },
+    {
+      "matchNo": 8,
+      "teams": "SUI v QAT",
+      "category": 3,
+      "faceValue": 140.0,
+      "city": "San Francisco",
+      "date": "6/13/26",
+      "round": "Group B"
+    },
+    {
+      "matchNo": 9,
+      "teams": "CIV v ECU",
+      "category": 1,
+      "faceValue": 500.0,
+      "city": "Philadelphia",
+      "date": "6/14/26",
+      "round": "Group E"
+    },
+    {
+      "matchNo": 9,
+      "teams": "CIV v ECU",
+      "category": 2,
+      "faceValue": 400.0,
+      "city": "Philadelphia",
+      "date": "6/14/26",
+      "round": "Group E"
+    },
+    {
+      "matchNo": 9,
+      "teams": "CIV v ECU",
+      "category": 3,
+      "faceValue": 180.0,
+      "city": "Philadelphia",
+      "date": "6/14/26",
+      "round": "Group E"
+    },
+    {
+      "matchNo": 10,
+      "teams": "GER v CUW",
+      "category": 1,
+      "faceValue": 500.0,
+      "city": "Houston",
+      "date": "6/14/26",
+      "round": "Group E"
+    },
+    {
+      "matchNo": 10,
+      "teams": "GER v CUW",
+      "category": 2,
+      "faceValue": 400.0,
+      "city": "Houston",
+      "date": "6/14/26",
+      "round": "Group E"
+    },
+    {
+      "matchNo": 10,
+      "teams": "GER v CUW",
+      "category": 3,
+      "faceValue": 180.0,
+      "city": "Houston",
+      "date": "6/14/26",
+      "round": "Group E"
+    },
+    {
+      "matchNo": 11,
+      "teams": "NED v JPN",
+      "category": 1,
+      "faceValue": 600.0,
+      "city": "Dallas",
+      "date": "6/14/26",
+      "round": "Group F"
+    },
+    {
+      "matchNo": 11,
+      "teams": "NED v JPN",
+      "category": 2,
+      "faceValue": 430.0,
+      "city": "Dallas",
+      "date": "6/14/26",
+      "round": "Group F"
+    },
+    {
+      "matchNo": 11,
+      "teams": "NED v JPN",
+      "category": 3,
+      "faceValue": 220.0,
+      "city": "Dallas",
+      "date": "6/14/26",
+      "round": "Group F"
+    },
+    {
+      "matchNo": 12,
+      "teams": "UEFA-B V TUN",
+      "category": 1,
+      "faceValue": 450.0,
+      "city": "Monterrey",
+      "date": "6/14/26",
+      "round": "Group F"
+    },
+    {
+      "matchNo": 12,
+      "teams": "UEFA-B V TUN",
+      "category": 2,
+      "faceValue": 380.0,
+      "city": "Monterrey",
+      "date": "6/14/26",
+      "round": "Group F"
+    },
+    {
+      "matchNo": 12,
+      "teams": "UEFA-B V TUN",
+      "category": 3,
+      "faceValue": 140.0,
+      "city": "Monterrey",
+      "date": "6/14/26",
+      "round": "Group F"
+    },
+    {
+      "matchNo": 13,
+      "teams": "URU v KSA",
+      "category": 1,
+      "faceValue": 600.0,
+      "city": "Miami",
+      "date": "6/15/26",
+      "round": "Group H"
+    },
+    {
+      "matchNo": 13,
+      "teams": "URU v KSA",
+      "category": 2,
+      "faceValue": 430.0,
+      "city": "Miami",
+      "date": "6/15/26",
+      "round": "Group H"
+    },
+    {
+      "matchNo": 13,
+      "teams": "URU v KSA",
+      "category": 3,
+      "faceValue": 220.0,
+      "city": "Miami",
+      "date": "6/15/26",
+      "round": "Group H"
+    },
+    {
+      "matchNo": 14,
+      "teams": "ESP v CPV",
+      "category": 1,
+      "faceValue": 500.0,
+      "city": "Atlanta",
+      "date": "6/15/26",
+      "round": "Group H"
+    },
+    {
+      "matchNo": 14,
+      "teams": "ESP v CPV",
+      "category": 2,
+      "faceValue": 400.0,
+      "city": "Atlanta",
+      "date": "6/15/26",
+      "round": "Group H"
+    },
+    {
+      "matchNo": 14,
+      "teams": "ESP v CPV",
+      "category": 3,
+      "faceValue": 180.0,
+      "city": "Atlanta",
+      "date": "6/15/26",
+      "round": "Group H"
+    },
+    {
+      "matchNo": 15,
+      "teams": "IRN v NZL",
+      "category": 1,
+      "faceValue": 450.0,
+      "city": "Los Angeles",
+      "date": "6/15/26",
+      "round": "Group G"
+    },
+    {
+      "matchNo": 15,
+      "teams": "IRN v NZL",
+      "category": 2,
+      "faceValue": 380.0,
+      "city": "Los Angeles",
+      "date": "6/15/26",
+      "round": "Group G"
+    },
+    {
+      "matchNo": 15,
+      "teams": "IRN v NZL",
+      "category": 3,
+      "faceValue": 140.0,
+      "city": "Los Angeles",
+      "date": "6/15/26",
+      "round": "Group G"
+    },
+    {
+      "matchNo": 16,
+      "teams": "BEL v EGY",
+      "category": 1,
+      "faceValue": 500.0,
+      "city": "Seattle",
+      "date": "6/15/26",
+      "round": "Group G"
+    },
+    {
+      "matchNo": 16,
+      "teams": "BEL v EGY",
+      "category": 2,
+      "faceValue": 400.0,
+      "city": "Seattle",
+      "date": "6/15/26",
+      "round": "Group G"
+    },
+    {
+      "matchNo": 16,
+      "teams": "BEL v EGY",
+      "category": 3,
+      "faceValue": 180.0,
+      "city": "Seattle",
+      "date": "6/15/26",
+      "round": "Group G"
+    },
+    {
+      "matchNo": 17,
+      "teams": "FRA v SEN",
+      "category": 1,
+      "faceValue": 620.0,
+      "city": "NY / NJ",
+      "date": "6/16/26",
+      "round": "Group I"
+    },
+    {
+      "matchNo": 17,
+      "teams": "FRA v SEN",
+      "category": 2,
+      "faceValue": 465.0,
+      "city": "NY / NJ",
+      "date": "6/16/26",
+      "round": "Group I"
+    },
+    {
+      "matchNo": 17,
+      "teams": "FRA v SEN",
+      "category": 3,
+      "faceValue": 220.0,
+      "city": "NY / NJ",
+      "date": "6/16/26",
+      "round": "Group I"
+    },
+    {
+      "matchNo": 18,
+      "teams": "NOR v IC2",
+      "category": 1,
+      "faceValue": 500.0,
+      "city": "Boston",
+      "date": "6/16/26",
+      "round": "Group I"
+    },
+    {
+      "matchNo": 18,
+      "teams": "NOR v IC2",
+      "category": 2,
+      "faceValue": 400.0,
+      "city": "Boston",
+      "date": "6/16/26",
+      "round": "Group I"
+    },
+    {
+      "matchNo": 18,
+      "teams": "NOR v IC2",
+      "category": 3,
+      "faceValue": 180.0,
+      "city": "Boston",
+      "date": "6/16/26",
+      "round": "Group I"
+    },
+    {
+      "matchNo": 19,
+      "teams": "ARG v ALG",
+      "category": 1,
+      "faceValue": 700.0,
+      "city": "Kansas City",
+      "date": "6/16/26",
+      "round": "Group J"
+    },
+    {
+      "matchNo": 19,
+      "teams": "ARG v ALG",
+      "category": 2,
+      "faceValue": 500.0,
+      "city": "Kansas City",
+      "date": "6/16/26",
+      "round": "Group J"
+    },
+    {
+      "matchNo": 19,
+      "teams": "ARG v ALG",
+      "category": 3,
+      "faceValue": 265.0,
+      "city": "Kansas City",
+      "date": "6/16/26",
+      "round": "Group J"
+    },
+    {
+      "matchNo": 20,
+      "teams": "AUT v JOR",
+      "category": 1,
+      "faceValue": 450.0,
+      "city": "San Francisco",
+      "date": "6/16/26",
+      "round": "Group J"
+    },
+    {
+      "matchNo": 20,
+      "teams": "AUT v JOR",
+      "category": 2,
+      "faceValue": 380.0,
+      "city": "San Francisco",
+      "date": "6/16/26",
+      "round": "Group J"
+    },
+    {
+      "matchNo": 20,
+      "teams": "AUT v JOR",
+      "category": 3,
+      "faceValue": 140.0,
+      "city": "San Francisco",
+      "date": "6/16/26",
+      "round": "Group J"
+    },
+    {
+      "matchNo": 21,
+      "teams": "PAN v GHA",
+      "category": 1,
+      "faceValue": 450.0,
+      "city": "Toronto",
+      "date": "6/17/26",
+      "round": "Group L"
+    },
+    {
+      "matchNo": 21,
+      "teams": "PAN v GHA",
+      "category": 2,
+      "faceValue": 380.0,
+      "city": "Toronto",
+      "date": "6/17/26",
+      "round": "Group L"
+    },
+    {
+      "matchNo": 21,
+      "teams": "PAN v GHA",
+      "category": 3,
+      "faceValue": 140.0,
+      "city": "Toronto",
+      "date": "6/17/26",
+      "round": "Group L"
+    },
+    {
+      "matchNo": 22,
+      "teams": "ENG v CRO",
+      "category": 1,
+      "faceValue": 700.0,
+      "city": "Dallas",
+      "date": "6/17/26",
+      "round": "Group L"
+    },
+    {
+      "matchNo": 22,
+      "teams": "ENG v CRO",
+      "category": 2,
+      "faceValue": 500.0,
+      "city": "Dallas",
+      "date": "6/17/26",
+      "round": "Group L"
+    },
+    {
+      "matchNo": 22,
+      "teams": "ENG v CRO",
+      "category": 3,
+      "faceValue": 265.0,
+      "city": "Dallas",
+      "date": "6/17/26",
+      "round": "Group L"
+    },
+    {
+      "matchNo": 23,
+      "teams": "POR v IC1",
+      "category": 1,
+      "faceValue": 700.0,
+      "city": "Houston",
+      "date": "6/17/26",
+      "round": "Group K"
+    },
+    {
+      "matchNo": 23,
+      "teams": "POR v IC1",
+      "category": 2,
+      "faceValue": 500.0,
+      "city": "Houston",
+      "date": "6/17/26",
+      "round": "Group K"
+    },
+    {
+      "matchNo": 23,
+      "teams": "POR v IC1",
+      "category": 3,
+      "faceValue": 265.0,
+      "city": "Houston",
+      "date": "6/17/26",
+      "round": "Group K"
+    },
+    {
+      "matchNo": 24,
+      "teams": "COL v UZB",
+      "category": 1,
+      "faceValue": 600.0,
+      "city": "Mexico City",
+      "date": "6/17/26",
+      "round": "Group K"
+    },
+    {
+      "matchNo": 24,
+      "teams": "COL v UZB",
+      "category": 2,
+      "faceValue": 430.0,
+      "city": "Mexico City",
+      "date": "6/17/26",
+      "round": "Group K"
+    },
+    {
+      "matchNo": 24,
+      "teams": "COL v UZB",
+      "category": 3,
+      "faceValue": 220.0,
+      "city": "Mexico City",
+      "date": "6/17/26",
+      "round": "Group K"
+    },
+    {
+      "matchNo": 25,
+      "teams": "RSA v UEFA-D",
+      "category": 1,
+      "faceValue": 450.0,
+      "city": "Atlanta",
+      "date": "6/18/26",
+      "round": "Group A"
+    },
+    {
+      "matchNo": 25,
+      "teams": "RSA v UEFA-D",
+      "category": 2,
+      "faceValue": 380.0,
+      "city": "Atlanta",
+      "date": "6/18/26",
+      "round": "Group A"
+    },
+    {
+      "matchNo": 25,
+      "teams": "RSA v UEFA-D",
+      "category": 3,
+      "faceValue": 140.0,
+      "city": "Atlanta",
+      "date": "6/18/26",
+      "round": "Group A"
+    },
+    {
+      "matchNo": 26,
+      "teams": "SUI v UEFA-A",
+      "category": 1,
+      "faceValue": 500.0,
+      "city": "Los Angeles",
+      "date": "6/18/26",
+      "round": "Group B"
+    },
+    {
+      "matchNo": 26,
+      "teams": "SUI v UEFA-A",
+      "category": 2,
+      "faceValue": 400.0,
+      "city": "Los Angeles",
+      "date": "6/18/26",
+      "round": "Group B"
+    },
+    {
+      "matchNo": 26,
+      "teams": "SUI v UEFA-A",
+      "category": 3,
+      "faceValue": 180.0,
+      "city": "Los Angeles",
+      "date": "6/18/26",
+      "round": "Group B"
+    },
+    {
+      "matchNo": 27,
+      "teams": "CAN v QAT",
+      "category": 1,
+      "faceValue": 700.0,
+      "city": "Vancouver",
+      "date": "6/18/26",
+      "round": "Group B"
+    },
+    {
+      "matchNo": 27,
+      "teams": "CAN v QAT",
+      "category": 2,
+      "faceValue": 500.0,
+      "city": "Vancouver",
+      "date": "6/18/26",
+      "round": "Group B"
+    },
+    {
+      "matchNo": 27,
+      "teams": "CAN v QAT",
+      "category": 3,
+      "faceValue": 265.0,
+      "city": "Vancouver",
+      "date": "6/18/26",
+      "round": "Group B"
+    },
+    {
+      "matchNo": 28,
+      "teams": "MEX v KOR",
+      "category": 1,
+      "faceValue": 700.0,
+      "city": "Guadalajara",
+      "date": "6/18/26",
+      "round": "Group A"
+    },
+    {
+      "matchNo": 28,
+      "teams": "MEX v KOR",
+      "category": 2,
+      "faceValue": 500.0,
+      "city": "Guadalajara",
+      "date": "6/18/26",
+      "round": "Group A"
+    },
+    {
+      "matchNo": 28,
+      "teams": "MEX v KOR",
+      "category": 3,
+      "faceValue": 265.0,
+      "city": "Guadalajara",
+      "date": "6/18/26",
+      "round": "Group A"
+    },
+    {
+      "matchNo": 29,
+      "teams": "BRA v HAI",
+      "category": 1,
+      "faceValue": 700.0,
+      "city": "Philadelphia",
+      "date": "6/19/26",
+      "round": "Group C"
+    },
+    {
+      "matchNo": 29,
+      "teams": "BRA v HAI",
+      "category": 2,
+      "faceValue": 500.0,
+      "city": "Philadelphia",
+      "date": "6/19/26",
+      "round": "Group C"
+    },
+    {
+      "matchNo": 29,
+      "teams": "BRA v HAI",
+      "category": 3,
+      "faceValue": 265.0,
+      "city": "Philadelphia",
+      "date": "6/19/26",
+      "round": "Group C"
+    },
+    {
+      "matchNo": 30,
+      "teams": "MAR v SCO",
+      "category": 1,
+      "faceValue": 600.0,
+      "city": "Boston",
+      "date": "6/19/26",
+      "round": "Group C"
+    },
+    {
+      "matchNo": 30,
+      "teams": "MAR v SCO",
+      "category": 2,
+      "faceValue": 430.0,
+      "city": "Boston",
+      "date": "6/19/26",
+      "round": "Group C"
+    },
+    {
+      "matchNo": 30,
+      "teams": "MAR v SCO",
+      "category": 3,
+      "faceValue": 220.0,
+      "city": "Boston",
+      "date": "6/19/26",
+      "round": "Group C"
+    },
+    {
+      "matchNo": 31,
+      "teams": "PAR v UEFA-C",
+      "category": 1,
+      "faceValue": 450.0,
+      "city": "San Francisco",
+      "date": "6/19/26",
+      "round": "Group D"
+    },
+    {
+      "matchNo": 31,
+      "teams": "PAR v UEFA-C",
+      "category": 2,
+      "faceValue": 380.0,
+      "city": "San Francisco",
+      "date": "6/19/26",
+      "round": "Group D"
+    },
+    {
+      "matchNo": 31,
+      "teams": "PAR v UEFA-C",
+      "category": 3,
+      "faceValue": 140.0,
+      "city": "San Francisco",
+      "date": "6/19/26",
+      "round": "Group D"
+    },
+    {
+      "matchNo": 32,
+      "teams": "USA v AUS",
+      "category": 1,
+      "faceValue": 700.0,
+      "city": "Seattle",
+      "date": "6/19/26",
+      "round": "Group D"
+    },
+    {
+      "matchNo": 32,
+      "teams": "USA v AUS",
+      "category": 2,
+      "faceValue": 500.0,
+      "city": "Seattle",
+      "date": "6/19/26",
+      "round": "Group D"
+    },
+    {
+      "matchNo": 32,
+      "teams": "USA v AUS",
+      "category": 3,
+      "faceValue": 265.0,
+      "city": "Seattle",
+      "date": "6/19/26",
+      "round": "Group D"
+    },
+    {
+      "matchNo": 33,
+      "teams": "GER v CIV",
+      "category": 1,
+      "faceValue": 600.0,
+      "city": "Toronto",
+      "date": "6/20/26",
+      "round": "Group E"
+    },
+    {
+      "matchNo": 33,
+      "teams": "GER v CIV",
+      "category": 2,
+      "faceValue": 430.0,
+      "city": "Toronto",
+      "date": "6/20/26",
+      "round": "Group E"
+    },
+    {
+      "matchNo": 33,
+      "teams": "GER v CIV",
+      "category": 3,
+      "faceValue": 220.0,
+      "city": "Toronto",
+      "date": "6/20/26",
+      "round": "Group E"
+    },
+    {
+      "matchNo": 34,
+      "teams": "ECU v CUW",
+      "category": 1,
+      "faceValue": 500.0,
+      "city": "Kansas City",
+      "date": "6/20/26",
+      "round": "Group E"
+    },
+    {
+      "matchNo": 34,
+      "teams": "ECU v CUW",
+      "category": 2,
+      "faceValue": 400.0,
+      "city": "Kansas City",
+      "date": "6/20/26",
+      "round": "Group E"
+    },
+    {
+      "matchNo": 34,
+      "teams": "ECU v CUW",
+      "category": 3,
+      "faceValue": 180.0,
+      "city": "Kansas City",
+      "date": "6/20/26",
+      "round": "Group E"
+    },
+    {
+      "matchNo": 35,
+      "teams": "NED v UEFA-B",
+      "category": 1,
+      "faceValue": 600.0,
+      "city": "Houston",
+      "date": "6/20/26",
+      "round": "Group F"
+    },
+    {
+      "matchNo": 35,
+      "teams": "NED v UEFA-B",
+      "category": 2,
+      "faceValue": 430.0,
+      "city": "Houston",
+      "date": "6/20/26",
+      "round": "Group F"
+    },
+    {
+      "matchNo": 35,
+      "teams": "NED v UEFA-B",
+      "category": 3,
+      "faceValue": 220.0,
+      "city": "Houston",
+      "date": "6/20/26",
+      "round": "Group F"
+    },
+    {
+      "matchNo": 36,
+      "teams": "JPN v TUN",
+      "category": 1,
+      "faceValue": 450.0,
+      "city": "Monterrey",
+      "date": "6/20/26",
+      "round": "Group F"
+    },
+    {
+      "matchNo": 36,
+      "teams": "JPN v TUN",
+      "category": 2,
+      "faceValue": 380.0,
+      "city": "Monterrey",
+      "date": "6/20/26",
+      "round": "Group F"
+    },
+    {
+      "matchNo": 36,
+      "teams": "JPN v TUN",
+      "category": 3,
+      "faceValue": 140.0,
+      "city": "Monterrey",
+      "date": "6/20/26",
+      "round": "Group F"
+    },
+    {
+      "matchNo": 37,
+      "teams": "URU v CPV",
+      "category": 1,
+      "faceValue": 500.0,
+      "city": "Miami",
+      "date": "6/21/26",
+      "round": "Group H"
+    },
+    {
+      "matchNo": 37,
+      "teams": "URU v CPV",
+      "category": 2,
+      "faceValue": 400.0,
+      "city": "Miami",
+      "date": "6/21/26",
+      "round": "Group H"
+    },
+    {
+      "matchNo": 37,
+      "teams": "URU v CPV",
+      "category": 3,
+      "faceValue": 180.0,
+      "city": "Miami",
+      "date": "6/21/26",
+      "round": "Group H"
+    },
+    {
+      "matchNo": 38,
+      "teams": "ESP v KSA",
+      "category": 1,
+      "faceValue": 600.0,
+      "city": "Atlanta",
+      "date": "6/21/26",
+      "round": "Group H"
+    },
+    {
+      "matchNo": 38,
+      "teams": "ESP v KSA",
+      "category": 2,
+      "faceValue": 430.0,
+      "city": "Atlanta",
+      "date": "6/21/26",
+      "round": "Group H"
+    },
+    {
+      "matchNo": 38,
+      "teams": "ESP v KSA",
+      "category": 3,
+      "faceValue": 220.0,
+      "city": "Atlanta",
+      "date": "6/21/26",
+      "round": "Group H"
+    },
+    {
+      "matchNo": 39,
+      "teams": "BEL v IRN",
+      "category": 1,
+      "faceValue": 500.0,
+      "city": "Los Angeles",
+      "date": "6/21/26",
+      "round": "Group G"
+    },
+    {
+      "matchNo": 39,
+      "teams": "BEL v IRN",
+      "category": 2,
+      "faceValue": 400.0,
+      "city": "Los Angeles",
+      "date": "6/21/26",
+      "round": "Group G"
+    },
+    {
+      "matchNo": 39,
+      "teams": "BEL v IRN",
+      "category": 3,
+      "faceValue": 180.0,
+      "city": "Los Angeles",
+      "date": "6/21/26",
+      "round": "Group G"
+    },
+    {
+      "matchNo": 40,
+      "teams": "EGY v NZL",
+      "category": 1,
+      "faceValue": 450.0,
+      "city": "Vancouver",
+      "date": "6/21/26",
+      "round": "Group G"
+    },
+    {
+      "matchNo": 40,
+      "teams": "EGY v NZL",
+      "category": 2,
+      "faceValue": 380.0,
+      "city": "Vancouver",
+      "date": "6/21/26",
+      "round": "Group G"
+    },
+    {
+      "matchNo": 40,
+      "teams": "EGY v NZL",
+      "category": 3,
+      "faceValue": 140.0,
+      "city": "Vancouver",
+      "date": "6/21/26",
+      "round": "Group G"
+    },
+    {
+      "matchNo": 41,
+      "teams": "SEN v NOR",
+      "category": 1,
+      "faceValue": 620.0,
+      "city": "NY / NJ",
+      "date": "6/22/26",
+      "round": "Group I"
+    },
+    {
+      "matchNo": 41,
+      "teams": "SEN v NOR",
+      "category": 2,
+      "faceValue": 465.0,
+      "city": "NY / NJ",
+      "date": "6/22/26",
+      "round": "Group I"
+    },
+    {
+      "matchNo": 41,
+      "teams": "SEN v NOR",
+      "category": 3,
+      "faceValue": 220.0,
+      "city": "NY / NJ",
+      "date": "6/22/26",
+      "round": "Group I"
+    },
+    {
+      "matchNo": 42,
+      "teams": "FRA v IC2",
+      "category": 1,
+      "faceValue": 600.0,
+      "city": "Philadelphia",
+      "date": "6/22/26",
+      "round": "Group I"
+    },
+    {
+      "matchNo": 42,
+      "teams": "FRA v IC2",
+      "category": 2,
+      "faceValue": 430.0,
+      "city": "Philadelphia",
+      "date": "6/22/26",
+      "round": "Group I"
+    },
+    {
+      "matchNo": 42,
+      "teams": "FRA v IC2",
+      "category": 3,
+      "faceValue": 220.0,
+      "city": "Philadelphia",
+      "date": "6/22/26",
+      "round": "Group I"
+    },
+    {
+      "matchNo": 43,
+      "teams": "ARG v AUT",
+      "category": 1,
+      "faceValue": 700.0,
+      "city": "Dallas",
+      "date": "6/22/26",
+      "round": "Group J"
+    },
+    {
+      "matchNo": 43,
+      "teams": "ARG v AUT",
+      "category": 2,
+      "faceValue": 500.0,
+      "city": "Dallas",
+      "date": "6/22/26",
+      "round": "Group J"
+    },
+    {
+      "matchNo": 43,
+      "teams": "ARG v AUT",
+      "category": 3,
+      "faceValue": 265.0,
+      "city": "Dallas",
+      "date": "6/22/26",
+      "round": "Group J"
+    },
+    {
+      "matchNo": 44,
+      "teams": "ALG v JOR",
+      "category": 1,
+      "faceValue": 450.0,
+      "city": "San Francisco",
+      "date": "6/22/26",
+      "round": "Group J"
+    },
+    {
+      "matchNo": 44,
+      "teams": "ALG v JOR",
+      "category": 2,
+      "faceValue": 380.0,
+      "city": "San Francisco",
+      "date": "6/22/26",
+      "round": "Group J"
+    },
+    {
+      "matchNo": 44,
+      "teams": "ALG v JOR",
+      "category": 3,
+      "faceValue": 140.0,
+      "city": "San Francisco",
+      "date": "6/22/26",
+      "round": "Group J"
+    },
+    {
+      "matchNo": 45,
+      "teams": "ENG v GHA",
+      "category": 1,
+      "faceValue": 600.0,
+      "city": "Boston",
+      "date": "6/23/26",
+      "round": "Group L"
+    },
+    {
+      "matchNo": 45,
+      "teams": "ENG v GHA",
+      "category": 2,
+      "faceValue": 430.0,
+      "city": "Boston",
+      "date": "6/23/26",
+      "round": "Group L"
+    },
+    {
+      "matchNo": 45,
+      "teams": "ENG v GHA",
+      "category": 3,
+      "faceValue": 220.0,
+      "city": "Boston",
+      "date": "6/23/26",
+      "round": "Group L"
+    },
+    {
+      "matchNo": 46,
+      "teams": "CRO v PAN",
+      "category": 1,
+      "faceValue": 500.0,
+      "city": "Toronto",
+      "date": "6/23/26",
+      "round": "Group L"
+    },
+    {
+      "matchNo": 46,
+      "teams": "CRO v PAN",
+      "category": 2,
+      "faceValue": 400.0,
+      "city": "Toronto",
+      "date": "6/23/26",
+      "round": "Group L"
+    },
+    {
+      "matchNo": 46,
+      "teams": "CRO v PAN",
+      "category": 3,
+      "faceValue": 180.0,
+      "city": "Toronto",
+      "date": "6/23/26",
+      "round": "Group L"
+    },
+    {
+      "matchNo": 47,
+      "teams": "POR v UZB",
+      "category": 1,
+      "faceValue": 700.0,
+      "city": "Houston",
+      "date": "6/23/26",
+      "round": "Group K"
+    },
+    {
+      "matchNo": 47,
+      "teams": "POR v UZB",
+      "category": 2,
+      "faceValue": 500.0,
+      "city": "Houston",
+      "date": "6/23/26",
+      "round": "Group K"
+    },
+    {
+      "matchNo": 47,
+      "teams": "POR v UZB",
+      "category": 3,
+      "faceValue": 265.0,
+      "city": "Houston",
+      "date": "6/23/26",
+      "round": "Group K"
+    },
+    {
+      "matchNo": 48,
+      "teams": "COL v IC1",
+      "category": 1,
+      "faceValue": 500.0,
+      "city": "Guadalajara",
+      "date": "6/23/26",
+      "round": "Group K"
+    },
+    {
+      "matchNo": 48,
+      "teams": "COL v IC1",
+      "category": 2,
+      "faceValue": 400.0,
+      "city": "Guadalajara",
+      "date": "6/23/26",
+      "round": "Group K"
+    },
+    {
+      "matchNo": 48,
+      "teams": "COL v IC1",
+      "category": 3,
+      "faceValue": 180.0,
+      "city": "Guadalajara",
+      "date": "6/23/26",
+      "round": "Group K"
+    },
+    {
+      "matchNo": 49,
+      "teams": "BRA v SCO",
+      "category": 1,
+      "faceValue": 700.0,
+      "city": "Miami",
+      "date": "6/24/26",
+      "round": "Group C"
+    },
+    {
+      "matchNo": 49,
+      "teams": "BRA v SCO",
+      "category": 2,
+      "faceValue": 500.0,
+      "city": "Miami",
+      "date": "6/24/26",
+      "round": "Group C"
+    },
+    {
+      "matchNo": 49,
+      "teams": "BRA v SCO",
+      "category": 3,
+      "faceValue": 265.0,
+      "city": "Miami",
+      "date": "6/24/26",
+      "round": "Group C"
+    },
+    {
+      "matchNo": 50,
+      "teams": "MAR v HAI",
+      "category": 1,
+      "faceValue": 500.0,
+      "city": "Atlanta",
+      "date": "6/24/26",
+      "round": "Group C"
+    },
+    {
+      "matchNo": 50,
+      "teams": "MAR v HAI",
+      "category": 2,
+      "faceValue": 400.0,
+      "city": "Atlanta",
+      "date": "6/24/26",
+      "round": "Group C"
+    },
+    {
+      "matchNo": 50,
+      "teams": "MAR v HAI",
+      "category": 3,
+      "faceValue": 180.0,
+      "city": "Atlanta",
+      "date": "6/24/26",
+      "round": "Group C"
+    },
+    {
+      "matchNo": 51,
+      "teams": "CAN v SUI",
+      "category": 1,
+      "faceValue": 700.0,
+      "city": "Vancouver",
+      "date": "6/24/26",
+      "round": "Group B"
+    },
+    {
+      "matchNo": 51,
+      "teams": "CAN v SUI",
+      "category": 2,
+      "faceValue": 500.0,
+      "city": "Vancouver",
+      "date": "6/24/26",
+      "round": "Group B"
+    },
+    {
+      "matchNo": 51,
+      "teams": "CAN v SUI",
+      "category": 3,
+      "faceValue": 265.0,
+      "city": "Vancouver",
+      "date": "6/24/26",
+      "round": "Group B"
+    },
+    {
+      "matchNo": 52,
+      "teams": "QAT v UEFA-A",
+      "category": 1,
+      "faceValue": 500.0,
+      "city": "Seattle",
+      "date": "6/24/26",
+      "round": "Group B"
+    },
+    {
+      "matchNo": 52,
+      "teams": "QAT v UEFA-A",
+      "category": 2,
+      "faceValue": 400.0,
+      "city": "Seattle",
+      "date": "6/24/26",
+      "round": "Group B"
+    },
+    {
+      "matchNo": 52,
+      "teams": "QAT v UEFA-A",
+      "category": 3,
+      "faceValue": 180.0,
+      "city": "Seattle",
+      "date": "6/24/26",
+      "round": "Group B"
+    },
+    {
+      "matchNo": 53,
+      "teams": "MEX v UEFA-D",
+      "category": 1,
+      "faceValue": 700.0,
+      "city": "Mexico City",
+      "date": "6/24/26",
+      "round": "Group A"
+    },
+    {
+      "matchNo": 53,
+      "teams": "MEX v UEFA-D",
+      "category": 2,
+      "faceValue": 500.0,
+      "city": "Mexico City",
+      "date": "6/24/26",
+      "round": "Group A"
+    },
+    {
+      "matchNo": 53,
+      "teams": "MEX v UEFA-D",
+      "category": 3,
+      "faceValue": 265.0,
+      "city": "Mexico City",
+      "date": "6/24/26",
+      "round": "Group A"
+    },
+    {
+      "matchNo": 54,
+      "teams": "RSA v KOR",
+      "category": 1,
+      "faceValue": 450.0,
+      "city": "Monterrey",
+      "date": "6/24/26",
+      "round": "Group A"
+    },
+    {
+      "matchNo": 54,
+      "teams": "RSA v KOR",
+      "category": 2,
+      "faceValue": 380.0,
+      "city": "Monterrey",
+      "date": "6/24/26",
+      "round": "Group A"
+    },
+    {
+      "matchNo": 54,
+      "teams": "RSA v KOR",
+      "category": 3,
+      "faceValue": 140.0,
+      "city": "Monterrey",
+      "date": "6/24/26",
+      "round": "Group A"
+    },
+    {
+      "matchNo": 55,
+      "teams": "CIV v CUW",
+      "category": 1,
+      "faceValue": 450.0,
+      "city": "Philadelphia",
+      "date": "6/25/26",
+      "round": "Group E"
+    },
+    {
+      "matchNo": 55,
+      "teams": "CIV v CUW",
+      "category": 2,
+      "faceValue": 380.0,
+      "city": "Philadelphia",
+      "date": "6/25/26",
+      "round": "Group E"
+    },
+    {
+      "matchNo": 55,
+      "teams": "CIV v CUW",
+      "category": 3,
+      "faceValue": 140.0,
+      "city": "Philadelphia",
+      "date": "6/25/26",
+      "round": "Group E"
+    },
+    {
+      "matchNo": 56,
+      "teams": "GER v ECU",
+      "category": 1,
+      "faceValue": 700.0,
+      "city": "NY / NJ",
+      "date": "6/25/26",
+      "round": "Group E"
+    },
+    {
+      "matchNo": 56,
+      "teams": "GER v ECU",
+      "category": 2,
+      "faceValue": 500.0,
+      "city": "NY / NJ",
+      "date": "6/25/26",
+      "round": "Group E"
+    },
+    {
+      "matchNo": 56,
+      "teams": "GER v ECU",
+      "category": 3,
+      "faceValue": 265.0,
+      "city": "NY / NJ",
+      "date": "6/25/26",
+      "round": "Group E"
+    },
+    {
+      "matchNo": 57,
+      "teams": "JPN v UEFA-B",
+      "category": 1,
+      "faceValue": 500.0,
+      "city": "Dallas",
+      "date": "6/25/26",
+      "round": "Group F"
+    },
+    {
+      "matchNo": 57,
+      "teams": "JPN v UEFA-B",
+      "category": 2,
+      "faceValue": 400.0,
+      "city": "Dallas",
+      "date": "6/25/26",
+      "round": "Group F"
+    },
+    {
+      "matchNo": 57,
+      "teams": "JPN v UEFA-B",
+      "category": 3,
+      "faceValue": 180.0,
+      "city": "Dallas",
+      "date": "6/25/26",
+      "round": "Group F"
+    },
+    {
+      "matchNo": 58,
+      "teams": "NED v TUN",
+      "category": 1,
+      "faceValue": 500.0,
+      "city": "Kansas City",
+      "date": "6/25/26",
+      "round": "Group F"
+    },
+    {
+      "matchNo": 58,
+      "teams": "NED v TUN",
+      "category": 2,
+      "faceValue": 400.0,
+      "city": "Kansas City",
+      "date": "6/25/26",
+      "round": "Group F"
+    },
+    {
+      "matchNo": 58,
+      "teams": "NED v TUN",
+      "category": 3,
+      "faceValue": 180.0,
+      "city": "Kansas City",
+      "date": "6/25/26",
+      "round": "Group F"
+    },
+    {
+      "matchNo": 59,
+      "teams": "USA v UEFA-C",
+      "category": 1,
+      "faceValue": 910.0,
+      "city": "Los Angeles",
+      "date": "6/25/26",
+      "round": "Group D"
+    },
+    {
+      "matchNo": 59,
+      "teams": "USA v UEFA-C",
+      "category": 2,
+      "faceValue": 750.0,
+      "city": "Los Angeles",
+      "date": "6/25/26",
+      "round": "Group D"
+    },
+    {
+      "matchNo": 59,
+      "teams": "USA v UEFA-C",
+      "category": 3,
+      "faceValue": 340.0,
+      "city": "Los Angeles",
+      "date": "6/25/26",
+      "round": "Group D"
+    },
+    {
+      "matchNo": 60,
+      "teams": "AUS v PAR",
+      "category": 1,
+      "faceValue": 450.0,
+      "city": "San Francisco",
+      "date": "6/25/26",
+      "round": "Group D"
+    },
+    {
+      "matchNo": 60,
+      "teams": "AUS v PAR",
+      "category": 2,
+      "faceValue": 380.0,
+      "city": "San Francisco",
+      "date": "6/25/26",
+      "round": "Group D"
+    },
+    {
+      "matchNo": 60,
+      "teams": "AUS v PAR",
+      "category": 3,
+      "faceValue": 140.0,
+      "city": "San Francisco",
+      "date": "6/25/26",
+      "round": "Group D"
+    },
+    {
+      "matchNo": 61,
+      "teams": "FRA v NOR",
+      "category": 1,
+      "faceValue": 700.0,
+      "city": "Boston",
+      "date": "6/26/26",
+      "round": "Group I"
+    },
+    {
+      "matchNo": 61,
+      "teams": "FRA v NOR",
+      "category": 2,
+      "faceValue": 500.0,
+      "city": "Boston",
+      "date": "6/26/26",
+      "round": "Group I"
+    },
+    {
+      "matchNo": 61,
+      "teams": "FRA v NOR",
+      "category": 3,
+      "faceValue": 265.0,
+      "city": "Boston",
+      "date": "6/26/26",
+      "round": "Group I"
+    },
+    {
+      "matchNo": 62,
+      "teams": "SEN v IC2",
+      "category": 1,
+      "faceValue": 450.0,
+      "city": "Toronto",
+      "date": "6/26/26",
+      "round": "Group I"
+    },
+    {
+      "matchNo": 62,
+      "teams": "SEN v IC2",
+      "category": 2,
+      "faceValue": 380.0,
+      "city": "Toronto",
+      "date": "6/26/26",
+      "round": "Group I"
+    },
+    {
+      "matchNo": 62,
+      "teams": "SEN v IC2",
+      "category": 3,
+      "faceValue": 140.0,
+      "city": "Toronto",
+      "date": "6/26/26",
+      "round": "Group I"
+    },
+    {
+      "matchNo": 63,
+      "teams": "IRN v EGY",
+      "category": 1,
+      "faceValue": 500.0,
+      "city": "Seattle",
+      "date": "6/26/26",
+      "round": "Group G"
+    },
+    {
+      "matchNo": 63,
+      "teams": "IRN v EGY",
+      "category": 2,
+      "faceValue": 400.0,
+      "city": "Seattle",
+      "date": "6/26/26",
+      "round": "Group G"
+    },
+    {
+      "matchNo": 63,
+      "teams": "IRN v EGY",
+      "category": 3,
+      "faceValue": 180.0,
+      "city": "Seattle",
+      "date": "6/26/26",
+      "round": "Group G"
+    },
+    {
+      "matchNo": 64,
+      "teams": "BEL v NZL",
+      "category": 1,
+      "faceValue": 500.0,
+      "city": "Vancouver",
+      "date": "6/26/26",
+      "round": "Group G"
+    },
+    {
+      "matchNo": 64,
+      "teams": "BEL v NZL",
+      "category": 2,
+      "faceValue": 400.0,
+      "city": "Vancouver",
+      "date": "6/26/26",
+      "round": "Group G"
+    },
+    {
+      "matchNo": 64,
+      "teams": "BEL v NZL",
+      "category": 3,
+      "faceValue": 180.0,
+      "city": "Vancouver",
+      "date": "6/26/26",
+      "round": "Group G"
+    },
+    {
+      "matchNo": 65,
+      "teams": "KSA v CPV",
+      "category": 1,
+      "faceValue": 450.0,
+      "city": "Houston",
+      "date": "6/26/26",
+      "round": "Group H"
+    },
+    {
+      "matchNo": 65,
+      "teams": "KSA v CPV",
+      "category": 2,
+      "faceValue": 380.0,
+      "city": "Houston",
+      "date": "6/26/26",
+      "round": "Group H"
+    },
+    {
+      "matchNo": 65,
+      "teams": "KSA v CPV",
+      "category": 3,
+      "faceValue": 140.0,
+      "city": "Houston",
+      "date": "6/26/26",
+      "round": "Group H"
+    },
+    {
+      "matchNo": 66,
+      "teams": "ESP v URU",
+      "category": 1,
+      "faceValue": 700.0,
+      "city": "Guadalajara",
+      "date": "6/26/26",
+      "round": "Group H"
+    },
+    {
+      "matchNo": 66,
+      "teams": "ESP v URU",
+      "category": 2,
+      "faceValue": 500.0,
+      "city": "Guadalajara",
+      "date": "6/26/26",
+      "round": "Group H"
+    },
+    {
+      "matchNo": 66,
+      "teams": "ESP v URU",
+      "category": 3,
+      "faceValue": 265.0,
+      "city": "Guadalajara",
+      "date": "6/26/26",
+      "round": "Group H"
+    },
+    {
+      "matchNo": 67,
+      "teams": "ENG v PAN",
+      "category": 1,
+      "faceValue": 620.0,
+      "city": "NY / NJ",
+      "date": "6/27/26",
+      "round": "Group L"
+    },
+    {
+      "matchNo": 67,
+      "teams": "ENG v PAN",
+      "category": 2,
+      "faceValue": 465.0,
+      "city": "NY / NJ",
+      "date": "6/27/26",
+      "round": "Group L"
+    },
+    {
+      "matchNo": 67,
+      "teams": "ENG v PAN",
+      "category": 3,
+      "faceValue": 220.0,
+      "city": "NY / NJ",
+      "date": "6/27/26",
+      "round": "Group L"
+    },
+    {
+      "matchNo": 68,
+      "teams": "CRO v GHA",
+      "category": 1,
+      "faceValue": 500.0,
+      "city": "Philadelphia",
+      "date": "6/27/26",
+      "round": "Group L"
+    },
+    {
+      "matchNo": 68,
+      "teams": "CRO v GHA",
+      "category": 2,
+      "faceValue": 400.0,
+      "city": "Philadelphia",
+      "date": "6/27/26",
+      "round": "Group L"
+    },
+    {
+      "matchNo": 68,
+      "teams": "CRO v GHA",
+      "category": 3,
+      "faceValue": 180.0,
+      "city": "Philadelphia",
+      "date": "6/27/26",
+      "round": "Group L"
+    },
+    {
+      "matchNo": 69,
+      "teams": "AUT v ALG",
+      "category": 1,
+      "faceValue": 450.0,
+      "city": "Kansas City",
+      "date": "6/27/26",
+      "round": "Group J"
+    },
+    {
+      "matchNo": 69,
+      "teams": "AUT v ALG",
+      "category": 2,
+      "faceValue": 380.0,
+      "city": "Kansas City",
+      "date": "6/27/26",
+      "round": "Group J"
+    },
+    {
+      "matchNo": 69,
+      "teams": "AUT v ALG",
+      "category": 3,
+      "faceValue": 140.0,
+      "city": "Kansas City",
+      "date": "6/27/26",
+      "round": "Group J"
+    },
+    {
+      "matchNo": 70,
+      "teams": "ARG v JOR",
+      "category": 1,
+      "faceValue": 700.0,
+      "city": "Dallas",
+      "date": "6/27/26",
+      "round": "Group J"
+    },
+    {
+      "matchNo": 70,
+      "teams": "ARG v JOR",
+      "category": 2,
+      "faceValue": 500.0,
+      "city": "Dallas",
+      "date": "6/27/26",
+      "round": "Group J"
+    },
+    {
+      "matchNo": 70,
+      "teams": "ARG v JOR",
+      "category": 3,
+      "faceValue": 265.0,
+      "city": "Dallas",
+      "date": "6/27/26",
+      "round": "Group J"
+    },
+    {
+      "matchNo": 71,
+      "teams": "POR v COL",
+      "category": 1,
+      "faceValue": 700.0,
+      "city": "Miami",
+      "date": "6/27/26",
+      "round": "Group K"
+    },
+    {
+      "matchNo": 71,
+      "teams": "POR v COL",
+      "category": 2,
+      "faceValue": 500.0,
+      "city": "Miami",
+      "date": "6/27/26",
+      "round": "Group K"
+    },
+    {
+      "matchNo": 71,
+      "teams": "POR v COL",
+      "category": 3,
+      "faceValue": 265.0,
+      "city": "Miami",
+      "date": "6/27/26",
+      "round": "Group K"
+    },
+    {
+      "matchNo": 72,
+      "teams": "UZB v IC1",
+      "category": 1,
+      "faceValue": 450.0,
+      "city": "Atlanta",
+      "date": "6/27/26",
+      "round": "Group K"
+    },
+    {
+      "matchNo": 72,
+      "teams": "UZB v IC1",
+      "category": 2,
+      "faceValue": 380.0,
+      "city": "Atlanta",
+      "date": "6/27/26",
+      "round": "Group K"
+    },
+    {
+      "matchNo": 72,
+      "teams": "UZB v IC1",
+      "category": 3,
+      "faceValue": 140.0,
+      "city": "Atlanta",
+      "date": "6/27/26",
+      "round": "Group K"
+    },
+    {
+      "matchNo": 73,
+      "teams": "2A v 2B",
+      "category": 1,
+      "faceValue": 790.0,
+      "city": "Los Angeles",
+      "date": "6/28/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 73,
+      "teams": "2A v 2B",
+      "category": 2,
+      "faceValue": 605.0,
+      "city": "Los Angeles",
+      "date": "6/28/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 73,
+      "teams": "2A v 2B",
+      "category": 3,
+      "faceValue": 305.0,
+      "city": "Los Angeles",
+      "date": "6/28/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 74,
+      "teams": "1E v 3ABCDF",
+      "category": 1,
+      "faceValue": 620.0,
+      "city": "Boston",
+      "date": "6/29/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 74,
+      "teams": "1E v 3ABCDF",
+      "category": 2,
+      "faceValue": 515.0,
+      "city": "Boston",
+      "date": "6/29/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 74,
+      "teams": "1E v 3ABCDF",
+      "category": 3,
+      "faceValue": 265.0,
+      "city": "Boston",
+      "date": "6/29/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 75,
+      "teams": "1F v 2C",
+      "category": 1,
+      "faceValue": 460.0,
+      "city": "Monterrey",
+      "date": "6/29/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 75,
+      "teams": "1F v 2C",
+      "category": 2,
+      "faceValue": 350.0,
+      "city": "Monterrey",
+      "date": "6/29/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 75,
+      "teams": "1F v 2C",
+      "category": 3,
+      "faceValue": 190.0,
+      "city": "Monterrey",
+      "date": "6/29/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 76,
+      "teams": "1C v 2F",
+      "category": 1,
+      "faceValue": 530.0,
+      "city": "Houston",
+      "date": "6/29/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 76,
+      "teams": "1C v 2F",
+      "category": 2,
+      "faceValue": 430.0,
+      "city": "Houston",
+      "date": "6/29/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 76,
+      "teams": "1C v 2F",
+      "category": 3,
+      "faceValue": 220.0,
+      "city": "Houston",
+      "date": "6/29/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 77,
+      "teams": "1I v 3CDFGH",
+      "category": 1,
+      "faceValue": 750.0,
+      "city": "NY / NJ",
+      "date": "6/30/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 77,
+      "teams": "1I v 3CDFGH",
+      "category": 2,
+      "faceValue": 610.0,
+      "city": "NY / NJ",
+      "date": "6/30/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 77,
+      "teams": "1I v 3CDFGH",
+      "category": 3,
+      "faceValue": 280.0,
+      "city": "NY / NJ",
+      "date": "6/30/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 78,
+      "teams": "2E v 2I",
+      "category": 1,
+      "faceValue": 505.0,
+      "city": "Dallas",
+      "date": "6/30/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 78,
+      "teams": "2E v 2I",
+      "category": 2,
+      "faceValue": 405.0,
+      "city": "Dallas",
+      "date": "6/30/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 78,
+      "teams": "2E v 2I",
+      "category": 3,
+      "faceValue": 205.0,
+      "city": "Dallas",
+      "date": "6/30/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 79,
+      "teams": "1A v 3CEFHI",
+      "category": 1,
+      "faceValue": 620.0,
+      "city": "Mexico City",
+      "date": "6/30/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 79,
+      "teams": "1A v 3CEFHI",
+      "category": 2,
+      "faceValue": 485.0,
+      "city": "Mexico City",
+      "date": "6/30/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 79,
+      "teams": "1A v 3CEFHI",
+      "category": 3,
+      "faceValue": 240.0,
+      "city": "Mexico City",
+      "date": "6/30/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 80,
+      "teams": "1L v 3EHIJK",
+      "category": 1,
+      "faceValue": 530.0,
+      "city": "Atlanta",
+      "date": "7/1/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 80,
+      "teams": "1L v 3EHIJK",
+      "category": 2,
+      "faceValue": 430.0,
+      "city": "Atlanta",
+      "date": "7/1/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 80,
+      "teams": "1L v 3EHIJK",
+      "category": 3,
+      "faceValue": 190.0,
+      "city": "Atlanta",
+      "date": "7/1/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 81,
+      "teams": "1D v 3BEFIJ",
+      "category": 1,
+      "faceValue": 765.0,
+      "city": "San Francisco",
+      "date": "7/1/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 81,
+      "teams": "1D v 3BEFIJ",
+      "category": 2,
+      "faceValue": 605.0,
+      "city": "San Francisco",
+      "date": "7/1/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 81,
+      "teams": "1D v 3BEFIJ",
+      "category": 3,
+      "faceValue": 275.0,
+      "city": "San Francisco",
+      "date": "7/1/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 82,
+      "teams": "1G v 3AEHIJ",
+      "category": 1,
+      "faceValue": 515.0,
+      "city": "Seattle",
+      "date": "7/1/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 82,
+      "teams": "1G v 3AEHIJ",
+      "category": 2,
+      "faceValue": 430.0,
+      "city": "Seattle",
+      "date": "7/1/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 82,
+      "teams": "1G v 3AEHIJ",
+      "category": 3,
+      "faceValue": 200.0,
+      "city": "Seattle",
+      "date": "7/1/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 83,
+      "teams": "2K v 2L",
+      "category": 1,
+      "faceValue": 625.0,
+      "city": "Toronto",
+      "date": "7/2/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 83,
+      "teams": "2K v 2L",
+      "category": 2,
+      "faceValue": 475.0,
+      "city": "Toronto",
+      "date": "7/2/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 83,
+      "teams": "2K v 2L",
+      "category": 3,
+      "faceValue": 240.0,
+      "city": "Toronto",
+      "date": "7/2/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 84,
+      "teams": "1H v 2J",
+      "category": 1,
+      "faceValue": 700.0,
+      "city": "Los Angeles",
+      "date": "7/2/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 84,
+      "teams": "1H v 2J",
+      "category": 2,
+      "faceValue": 555.0,
+      "city": "Los Angeles",
+      "date": "7/2/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 84,
+      "teams": "1H v 2J",
+      "category": 3,
+      "faceValue": 250.0,
+      "city": "Los Angeles",
+      "date": "7/2/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 85,
+      "teams": "1B v 3EFGIJ",
+      "category": 1,
+      "faceValue": 600.0,
+      "city": "Vancouver",
+      "date": "7/2/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 85,
+      "teams": "1B v 3EFGIJ",
+      "category": 2,
+      "faceValue": 515.0,
+      "city": "Vancouver",
+      "date": "7/2/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 85,
+      "teams": "1B v 3EFGIJ",
+      "category": 3,
+      "faceValue": 230.0,
+      "city": "Vancouver",
+      "date": "7/2/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 86,
+      "teams": " 1J v 2H",
+      "category": 1,
+      "faceValue": 700.0,
+      "city": "Miami",
+      "date": "7/3/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 86,
+      "teams": " 1J v 2H",
+      "category": 2,
+      "faceValue": 560.0,
+      "city": "Miami",
+      "date": "7/3/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 86,
+      "teams": " 1J v 2H",
+      "category": 3,
+      "faceValue": 270.0,
+      "city": "Miami",
+      "date": "7/3/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 87,
+      "teams": "1K v 3DEIJL",
+      "category": 1,
+      "faceValue": 520.0,
+      "city": "Kansas City",
+      "date": "7/3/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 87,
+      "teams": "1K v 3DEIJL",
+      "category": 2,
+      "faceValue": 425.0,
+      "city": "Kansas City",
+      "date": "7/3/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 87,
+      "teams": "1K v 3DEIJL",
+      "category": 3,
+      "faceValue": 200.0,
+      "city": "Kansas City",
+      "date": "7/3/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 88,
+      "teams": "2D v 2G",
+      "category": 1,
+      "faceValue": 540.0,
+      "city": "Dallas",
+      "date": "7/3/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 88,
+      "teams": "2D v 2G",
+      "category": 2,
+      "faceValue": 440.0,
+      "city": "Dallas",
+      "date": "7/3/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 88,
+      "teams": "2D v 2G",
+      "category": 3,
+      "faceValue": 225.0,
+      "city": "Dallas",
+      "date": "7/3/26",
+      "round": "R32"
+    },
+    {
+      "matchNo": 89,
+      "teams": "W74 v W77",
+      "category": 1,
+      "faceValue": 840.0,
+      "city": "Philadelphia",
+      "date": "7/4/26",
+      "round": "R16"
+    },
+    {
+      "matchNo": 89,
+      "teams": "W74 v W77",
+      "category": 2,
+      "faceValue": 620.0,
+      "city": "Philadelphia",
+      "date": "7/4/26",
+      "round": "R16"
+    },
+    {
+      "matchNo": 89,
+      "teams": "W74 v W77",
+      "category": 3,
+      "faceValue": 320.0,
+      "city": "Philadelphia",
+      "date": "7/4/26",
+      "round": "R16"
+    },
+    {
+      "matchNo": 90,
+      "teams": "W73 v W75",
+      "category": 1,
+      "faceValue": 620.0,
+      "city": "Houston",
+      "date": "7/4/26",
+      "round": "R16"
+    },
+    {
+      "matchNo": 90,
+      "teams": "W73 v W75",
+      "category": 2,
+      "faceValue": 505.0,
+      "city": "Houston",
+      "date": "7/4/26",
+      "round": "R16"
+    },
+    {
+      "matchNo": 90,
+      "teams": "W73 v W75",
+      "category": 3,
+      "faceValue": 220.0,
+      "city": "Houston",
+      "date": "7/4/26",
+      "round": "R16"
+    },
+    {
+      "matchNo": 91,
+      "teams": "W76 v W78",
+      "category": 1,
+      "faceValue": 980.0,
+      "city": "NY / NJ",
+      "date": "7/5/26",
+      "round": "R16"
+    },
+    {
+      "matchNo": 91,
+      "teams": "W76 v W78",
+      "category": 2,
+      "faceValue": 785.0,
+      "city": "NY / NJ",
+      "date": "7/5/26",
+      "round": "R16"
+    },
+    {
+      "matchNo": 91,
+      "teams": "W76 v W78",
+      "category": 3,
+      "faceValue": 365.0,
+      "city": "NY / NJ",
+      "date": "7/5/26",
+      "round": "R16"
+    },
+    {
+      "matchNo": 92,
+      "teams": "W79 v W80",
+      "category": 1,
+      "faceValue": 885.0,
+      "city": "Mexico City",
+      "date": "7/5/26",
+      "round": "R16"
+    },
+    {
+      "matchNo": 92,
+      "teams": "W79 v W80",
+      "category": 2,
+      "faceValue": 625.0,
+      "city": "Mexico City",
+      "date": "7/5/26",
+      "round": "R16"
+    },
+    {
+      "matchNo": 92,
+      "teams": "W79 v W80",
+      "category": 3,
+      "faceValue": 350.0,
+      "city": "Mexico City",
+      "date": "7/5/26",
+      "round": "R16"
+    },
+    {
+      "matchNo": 93,
+      "teams": "W83 v W84",
+      "category": 1,
+      "faceValue": 640.0,
+      "city": "Dallas",
+      "date": "7/6/26",
+      "round": "R16"
+    },
+    {
+      "matchNo": 93,
+      "teams": "W83 v W84",
+      "category": 2,
+      "faceValue": 515.0,
+      "city": "Dallas",
+      "date": "7/6/26",
+      "round": "R16"
+    },
+    {
+      "matchNo": 93,
+      "teams": "W83 v W84",
+      "category": 3,
+      "faceValue": 240.0,
+      "city": "Dallas",
+      "date": "7/6/26",
+      "round": "R16"
+    },
+    {
+      "matchNo": 94,
+      "teams": "W81 v W82",
+      "category": 1,
+      "faceValue": 695.0,
+      "city": "Seattle",
+      "date": "7/6/26",
+      "round": "R16"
+    },
+    {
+      "matchNo": 94,
+      "teams": "W81 v W82",
+      "category": 2,
+      "faceValue": 565.0,
+      "city": "Seattle",
+      "date": "7/6/26",
+      "round": "R16"
+    },
+    {
+      "matchNo": 94,
+      "teams": "W81 v W82",
+      "category": 3,
+      "faceValue": 270.0,
+      "city": "Seattle",
+      "date": "7/6/26",
+      "round": "R16"
+    },
+    {
+      "matchNo": 95,
+      "teams": "W86 v W88",
+      "category": 1,
+      "faceValue": 735.0,
+      "city": "Atlanta",
+      "date": "7/7/26",
+      "round": "R16"
+    },
+    {
+      "matchNo": 95,
+      "teams": "W86 v W88",
+      "category": 2,
+      "faceValue": 580.0,
+      "city": "Atlanta",
+      "date": "7/7/26",
+      "round": "R16"
+    },
+    {
+      "matchNo": 95,
+      "teams": "W86 v W88",
+      "category": 3,
+      "faceValue": 270.0,
+      "city": "Atlanta",
+      "date": "7/7/26",
+      "round": "R16"
+    },
+    {
+      "matchNo": 96,
+      "teams": "W85 v W87",
+      "category": 1,
+      "faceValue": 765.0,
+      "city": "Vancouver",
+      "date": "7/7/26",
+      "round": "R16"
+    },
+    {
+      "matchNo": 96,
+      "teams": "W85 v W87",
+      "category": 2,
+      "faceValue": 625.0,
+      "city": "Vancouver",
+      "date": "7/7/26",
+      "round": "R16"
+    },
+    {
+      "matchNo": 96,
+      "teams": "W85 v W87",
+      "category": 3,
+      "faceValue": 320.0,
+      "city": "Vancouver",
+      "date": "7/7/26",
+      "round": "R16"
+    },
+    {
+      "matchNo": 97,
+      "teams": "W89 v W90",
+      "category": 1,
+      "faceValue": 1270.0,
+      "city": "Boston",
+      "date": "7/9/26",
+      "round": "QF"
+    },
+    {
+      "matchNo": 97,
+      "teams": "W89 v W90",
+      "category": 2,
+      "faceValue": 890.0,
+      "city": "Boston",
+      "date": "7/9/26",
+      "round": "QF"
+    },
+    {
+      "matchNo": 97,
+      "teams": "W89 v W90",
+      "category": 3,
+      "faceValue": 650.0,
+      "city": "Boston",
+      "date": "7/9/26",
+      "round": "QF"
+    },
+    {
+      "matchNo": 98,
+      "teams": "W93 v W94",
+      "category": 1,
+      "faceValue": 1775.0,
+      "city": "Los Angeles",
+      "date": "7/10/26",
+      "round": "QF"
+    },
+    {
+      "matchNo": 98,
+      "teams": "W93 v W94",
+      "category": 2,
+      "faceValue": 1220.0,
+      "city": "Los Angeles",
+      "date": "7/10/26",
+      "round": "QF"
+    },
+    {
+      "matchNo": 98,
+      "teams": "W93 v W94",
+      "category": 3,
+      "faceValue": 800.0,
+      "city": "Los Angeles",
+      "date": "7/10/26",
+      "round": "QF"
+    },
+    {
+      "matchNo": 99,
+      "teams": "W91 v W92",
+      "category": 1,
+      "faceValue": 1445.0,
+      "city": "Miami",
+      "date": "7/11/26",
+      "round": "QF"
+    },
+    {
+      "matchNo": 99,
+      "teams": "W91 v W92",
+      "category": 2,
+      "faceValue": 1005.0,
+      "city": "Miami",
+      "date": "7/11/26",
+      "round": "QF"
+    },
+    {
+      "matchNo": 99,
+      "teams": "W91 v W92",
+      "category": 3,
+      "faceValue": 735.0,
+      "city": "Miami",
+      "date": "7/11/26",
+      "round": "QF"
+    },
+    {
+      "matchNo": 100,
+      "teams": "W95 v W96",
+      "category": 1,
+      "faceValue": 1265.0,
+      "city": "Kansas City",
+      "date": "7/11/26",
+      "round": "QF"
+    },
+    {
+      "matchNo": 100,
+      "teams": "W95 v W96",
+      "category": 2,
+      "faceValue": 940.0,
+      "city": "Kansas City",
+      "date": "7/11/26",
+      "round": "QF"
+    },
+    {
+      "matchNo": 100,
+      "teams": "W95 v W96",
+      "category": 3,
+      "faceValue": 535.0,
+      "city": "Kansas City",
+      "date": "7/11/26",
+      "round": "QF"
+    },
+    {
+      "matchNo": 101,
+      "teams": "W97 v W98",
+      "category": 1,
+      "faceValue": 3295.0,
+      "city": "Dallas",
+      "date": "7/14/26",
+      "round": "SF"
+    },
+    {
+      "matchNo": 101,
+      "teams": "W97 v W98",
+      "category": 2,
+      "faceValue": 2350.0,
+      "city": "Dallas",
+      "date": "7/14/26",
+      "round": "SF"
+    },
+    {
+      "matchNo": 101,
+      "teams": "W97 v W98",
+      "category": 3,
+      "faceValue": 930.0,
+      "city": "Dallas",
+      "date": "7/14/26",
+      "round": "SF"
+    },
+    {
+      "matchNo": 102,
+      "teams": "W99 v W100",
+      "category": 1,
+      "faceValue": 3040.0,
+      "city": "Atlanta",
+      "date": "7/15/26",
+      "round": "SF"
+    },
+    {
+      "matchNo": 102,
+      "teams": "W99 v W100",
+      "category": 2,
+      "faceValue": 2525.0,
+      "city": "Atlanta",
+      "date": "7/15/26",
+      "round": "SF"
+    },
+    {
+      "matchNo": 102,
+      "teams": "W99 v W100",
+      "category": 3,
+      "faceValue": 905.0,
+      "city": "Atlanta",
+      "date": "7/15/26",
+      "round": "SF"
+    },
+    {
+      "matchNo": 103,
+      "teams": "L101 v L102",
+      "category": 1,
+      "faceValue": 1125.0,
+      "city": "Miami",
+      "date": "7/18/26",
+      "round": "Bronze"
+    },
+    {
+      "matchNo": 103,
+      "teams": "L101 v L102",
+      "category": 2,
+      "faceValue": 865.0,
+      "city": "Miami",
+      "date": "7/18/26",
+      "round": "Bronze"
+    },
+    {
+      "matchNo": 103,
+      "teams": "L101 v L102",
+      "category": 3,
+      "faceValue": 455.0,
+      "city": "Miami",
+      "date": "7/18/26",
+      "round": "Bronze"
+    },
+    {
+      "matchNo": 104,
+      "teams": "W101 v W102",
+      "category": 1,
+      "faceValue": 8680.0,
+      "city": "NY / NJ",
+      "date": "7/19/26",
+      "round": "Final"
+    },
+    {
+      "matchNo": 104,
+      "teams": "W101 v W102",
+      "category": 2,
+      "faceValue": 5575.0,
+      "city": "NY / NJ",
+      "date": "7/19/26",
+      "round": "Final"
+    },
+    {
+      "matchNo": 104,
+      "teams": "W101 v W102",
+      "category": 3,
+      "faceValue": 4185.0,
+      "city": "NY / NJ",
+      "date": "7/19/26",
+      "round": "Final"
+    }
+  ]
+}

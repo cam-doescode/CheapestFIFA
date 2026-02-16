@@ -19,6 +19,7 @@ export function MatchFilters({ matches }: MatchFiltersProps) {
   const selectedTeams = (searchParams.get("team") || "").split(",").filter(Boolean);
   const currentSort = searchParams.get("sort") || "savings";
   const predictorOn = searchParams.get("predictor") !== "off";
+  const pricingSource = searchParams.get("pricing") || "collect";
 
   const cities = useMemo(() => {
     return [...new Set(matches.map((m) => m.match.city))].sort();
@@ -54,7 +55,7 @@ export function MatchFilters({ matches }: MatchFiltersProps) {
     (key: string, value: string) => {
       const params = new URLSearchParams(searchParams.toString());
       // Clear param when it matches the default
-      const defaults: Record<string, string> = { sort: "savings", predictor: "on" };
+      const defaults: Record<string, string> = { sort: "savings", predictor: "on", pricing: "collect" };
       if (value === defaults[key]) {
         params.delete(key);
       } else {
@@ -110,6 +111,40 @@ export function MatchFilters({ matches }: MatchFiltersProps) {
         <option value="savings">Best Savings</option>
         <option value="match">Match Number</option>
       </select>
+
+      {/* Pricing Source toggle */}
+      <div className="col-span-2 sm:col-span-1 flex items-center gap-1">
+        <button
+          type="button"
+          onClick={() => updateSingleParam("pricing", pricingSource === "collect" ? "rsd" : "collect")}
+          className={`flex items-center gap-2 rounded-lg border px-3 py-2 text-xs sm:text-sm transition-colors ${
+            pricingSource === "rsd"
+              ? "border-blue-400 dark:border-blue-600 bg-blue-50 dark:bg-blue-950/30 text-blue-700 dark:text-blue-400"
+              : "border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-500 dark:text-zinc-400"
+          }`}
+        >
+          <span
+            className={`relative inline-flex h-4 w-7 shrink-0 rounded-full transition-colors ${
+              pricingSource === "rsd" ? "bg-blue-500" : "bg-zinc-300 dark:bg-zinc-600"
+            }`}
+          >
+            <span
+              className={`inline-block h-3 w-3 rounded-full bg-white shadow transform transition-transform mt-0.5 ${
+                pricingSource === "rsd" ? "translate-x-3.5 ml-0" : "translate-x-0.5"
+              }`}
+            />
+          </span>
+          {pricingSource === "rsd" ? "RSD Pricing" : "Collect Pricing"}
+        </button>
+        <span className="relative group">
+          <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-zinc-200 dark:bg-zinc-700 text-zinc-500 dark:text-zinc-400 text-[10px] font-bold cursor-help">
+            ?
+          </span>
+          <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-56 px-3 py-2 rounded-lg bg-zinc-800 dark:bg-zinc-700 text-white text-[10px] sm:text-xs leading-snug opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity z-50 text-center shadow-lg">
+            Switch between FIFA Collect face values (default) and Random Selection Draw (RSD) face values. RSD prices vary by venue.
+          </span>
+        </span>
+      </div>
 
       {/* Knockout Predictor toggle */}
       <div className="col-span-2 sm:col-span-1 flex items-center gap-1">

@@ -8,6 +8,7 @@ import { StadiumMapModal } from "./StadiumMapModal";
 interface MatchCardProps {
   data: MatchWithPrices;
   prediction?: KnockoutPrediction;
+  pricingSource?: string;
 }
 
 function TeamNames({ teams }: { teams: string }) {
@@ -42,7 +43,7 @@ function TeamWithFlag({ name }: { name: string }) {
   );
 }
 
-export function MatchCard({ data, prediction }: MatchCardProps) {
+export function MatchCard({ data, prediction, pricingSource = "collect" }: MatchCardProps) {
   const { match, tickets, resalePrices } = data;
 
   const cheapestFloor = tickets
@@ -98,7 +99,7 @@ export function MatchCard({ data, prediction }: MatchCardProps) {
       </div>
 
       {/* Price table */}
-      <PriceTable tickets={tickets} resalePrices={resalePrices} matchNo={match.matchNo} />
+      <PriceTable tickets={tickets} resalePrices={resalePrices} matchNo={match.matchNo} pricingSource={pricingSource} />
 
       {/* Buy CTA — links to cheapest available category */}
       {cheapestFloor && (
