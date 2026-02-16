@@ -1,11 +1,13 @@
 import Image from "next/image";
 import type { MatchWithPrices } from "@/lib/types";
+import type { KnockoutPrediction } from "@/data/knockout-predictions";
 import { formatDate, formatTime, getCollectUrl, parseTeams, getFlagUrl, getStadiumMapPath } from "@/lib/utils";
 import { PriceTable } from "./PriceTable";
 import { StadiumMapModal } from "./StadiumMapModal";
 
 interface MatchCardProps {
   data: MatchWithPrices;
+  prediction?: KnockoutPrediction;
 }
 
 function TeamNames({ teams }: { teams: string }) {
@@ -40,23 +42,37 @@ function TeamWithFlag({ name }: { name: string }) {
   );
 }
 
-export function MatchCard({ data }: MatchCardProps) {
+export function MatchCard({ data, prediction }: MatchCardProps) {
   const { match, tickets, resalePrices } = data;
 
   const cheapestFloor = tickets
     .filter((t) => t.floorPrice != null && t.floorPrice > 0)
     .sort((a, b) => a.floorPrice! - b.floorPrice!)[0];
 
+  // Use predicted teams when available
+  const displayTeams = prediction
+    ? `${prediction.team1} vs. ${prediction.team2}`
+    : match.teams;
+
   return (
-    <div className="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-3 sm:p-4 hover:shadow-md transition-shadow flex flex-col">
+    <div className={`rounded-xl border p-3 sm:p-4 hover:shadow-md transition-shadow flex flex-col ${
+      prediction
+        ? "border-purple-300 dark:border-purple-800 bg-white dark:bg-zinc-900"
+        : "border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"
+    }`}>
       {/* Header */}
       <div className="flex items-start justify-between mb-2 sm:mb-3">
         <div>
           <div className="text-[10px] sm:text-xs font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-wide mb-0.5 sm:mb-1">
             {match.roundInfo} &middot; Match {match.matchNo}
+            {prediction && (
+              <span className="ml-1.5 inline-flex items-center px-1.5 py-0.5 rounded-full text-[9px] sm:text-[10px] font-semibold bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-400 normal-case tracking-normal">
+                {prediction.probability}% likely
+              </span>
+            )}
           </div>
           <h3 className="font-semibold text-zinc-900 dark:text-zinc-100 text-sm sm:text-base leading-tight">
-            <TeamNames teams={match.teams} />
+            <TeamNames teams={displayTeams} />
           </h3>
         </div>
         {cheapestFloor && (

@@ -107,6 +107,7 @@ const TEAM_TO_ISO: Record<string, string> = {
   "Tunisia": "tn",
   "Uruguay": "uy",
   "USA": "us",
+  "Uzbekistan": "uz",
 };
 
 /** Get flag CDN URL for a team name, or null if unknown */

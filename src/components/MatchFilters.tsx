@@ -18,6 +18,7 @@ export function MatchFilters({ matches }: MatchFiltersProps) {
   const selectedCities = (searchParams.get("city") || "").split(",").filter(Boolean);
   const selectedTeams = (searchParams.get("team") || "").split(",").filter(Boolean);
   const currentSort = searchParams.get("sort") || "savings";
+  const predictorOn = searchParams.get("predictor") === "on";
 
   const cities = useMemo(() => {
     return [...new Set(matches.map((m) => m.match.city))].sort();
@@ -52,7 +53,9 @@ export function MatchFilters({ matches }: MatchFiltersProps) {
   const updateSingleParam = useCallback(
     (key: string, value: string) => {
       const params = new URLSearchParams(searchParams.toString());
-      if (value === "savings") {
+      // Clear param when it matches the default
+      const defaults: Record<string, string> = { sort: "savings", predictor: "off" };
+      if (value === defaults[key]) {
         params.delete(key);
       } else {
         params.set(key, value);
@@ -107,6 +110,40 @@ export function MatchFilters({ matches }: MatchFiltersProps) {
         <option value="savings">Best Savings</option>
         <option value="match">Match Number</option>
       </select>
+
+      {/* Knockout Predictor toggle */}
+      <div className="col-span-2 sm:col-span-1 flex items-center gap-1">
+        <button
+          type="button"
+          onClick={() => updateSingleParam("predictor", predictorOn ? "off" : "on")}
+          className={`flex items-center gap-2 rounded-lg border px-3 py-2 text-xs sm:text-sm transition-colors ${
+            predictorOn
+              ? "border-purple-400 dark:border-purple-600 bg-purple-50 dark:bg-purple-950/30 text-purple-700 dark:text-purple-400"
+              : "border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-500 dark:text-zinc-400"
+          }`}
+        >
+          <span
+            className={`relative inline-flex h-4 w-7 shrink-0 rounded-full transition-colors ${
+              predictorOn ? "bg-purple-500" : "bg-zinc-300 dark:bg-zinc-600"
+            }`}
+          >
+            <span
+              className={`inline-block h-3 w-3 rounded-full bg-white shadow transform transition-transform mt-0.5 ${
+                predictorOn ? "translate-x-3.5 ml-0" : "translate-x-0.5"
+              }`}
+            />
+          </span>
+          Knockout Predictor
+        </button>
+        <span className="relative group">
+          <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-zinc-200 dark:bg-zinc-700 text-zinc-500 dark:text-zinc-400 text-[10px] font-bold cursor-help">
+            ?
+          </span>
+          <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-56 px-3 py-2 rounded-lg bg-zinc-800 dark:bg-zinc-700 text-white text-[10px] sm:text-xs leading-snug opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity z-50 text-center shadow-lg">
+            Shows projected knockout matchups based on simulation odds. These are predictions only &mdash; actual matchups depend on group stage results.
+          </span>
+        </span>
+      </div>
     </div>
   );
 }

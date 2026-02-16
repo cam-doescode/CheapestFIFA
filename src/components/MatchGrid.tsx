@@ -6,6 +6,7 @@ import type { MatchWithPrices } from "@/lib/types";
 import { MatchCard } from "./MatchCard";
 import { MatchFilters } from "./MatchFilters";
 import { savingsPercent, parseTeams } from "@/lib/utils";
+import { PREDICTIONS_BY_MATCH } from "@/data/knockout-predictions";
 
 interface MatchGridProps {
   matches: MatchWithPrices[];
@@ -18,6 +19,7 @@ export function MatchGrid({ matches }: MatchGridProps) {
   const cities = (searchParams.get("city") || "").split(",").filter(Boolean);
   const teams = (searchParams.get("team") || "").split(",").filter(Boolean);
   const sort = searchParams.get("sort") || "savings";
+  const predictorOn = searchParams.get("predictor") === "on";
 
   const filtered = useMemo(() => {
     let result = matches;
@@ -33,9 +35,20 @@ export function MatchGrid({ matches }: MatchGridProps) {
 
     if (teams.length > 0) {
       const teamSet = new Set(teams.map((t) => t.toLowerCase()));
-      result = result.filter((m) =>
-        parseTeams(m.match.teams).some((t) => teamSet.has(t.toLowerCase()))
-      );
+      result = result.filter((m) => {
+        // Match on actual team names
+        if (parseTeams(m.match.teams).some((t) => teamSet.has(t.toLowerCase()))) {
+          return true;
+        }
+        // When predictor is on, also match on predicted teams
+        if (predictorOn) {
+          const pred = PREDICTIONS_BY_MATCH.get(m.match.matchNo);
+          if (pred && (teamSet.has(pred.team1.toLowerCase()) || teamSet.has(pred.team2.toLowerCase()))) {
+            return true;
+          }
+        }
+        return false;
+      });
     }
 
     // Sort
@@ -63,7 +76,7 @@ export function MatchGrid({ matches }: MatchGridProps) {
     });
 
     return result;
-  }, [matches, rounds, cities, teams, sort]);
+  }, [matches, rounds, cities, teams, sort, predictorOn]);
 
   return (
     <>
@@ -73,7 +86,11 @@ export function MatchGrid({ matches }: MatchGridProps) {
       </div>
       <div className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {filtered.map((match) => (
-          <MatchCard key={match.match.id} data={match} />
+          <MatchCard
+            key={match.match.id}
+            data={match}
+            prediction={predictorOn ? PREDICTIONS_BY_MATCH.get(match.match.matchNo) : undefined}
+          />
         ))}
       </div>
       {filtered.length === 0 && (
