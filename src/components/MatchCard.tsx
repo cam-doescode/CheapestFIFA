@@ -1,5 +1,5 @@
 import type { MatchWithPrices } from "@/lib/types";
-import { formatDate, formatTime } from "@/lib/utils";
+import { formatDate, formatTime, getCollectUrl } from "@/lib/utils";
 import { PriceTable } from "./PriceTable";
 
 interface MatchCardProps {
@@ -45,7 +45,19 @@ export function MatchCard({ data }: MatchCardProps) {
       </div>
 
       {/* Price table */}
-      <PriceTable tickets={tickets} resalePrices={resalePrices} />
+      <PriceTable tickets={tickets} resalePrices={resalePrices} matchNo={match.matchNo} />
+
+      {/* Buy CTA — links to cheapest available category */}
+      {cheapestFloor && (
+        <a
+          href={getCollectUrl(match.matchNo, cheapestFloor.category)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-3 block w-full text-center text-sm font-medium py-2 px-4 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white transition-colors"
+        >
+          Buy on FIFA Collect &rarr;
+        </a>
+      )}
     </div>
   );
 }

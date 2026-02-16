@@ -1,12 +1,13 @@
 import type { TicketListing, ResalePrice } from "@/lib/types";
-import { formatCurrency, savingsPercent, categoryLabel } from "@/lib/utils";
+import { formatCurrency, savingsPercent, categoryLabel, getCollectUrl } from "@/lib/utils";
 
 interface PriceTableProps {
   tickets: TicketListing[];
   resalePrices: ResalePrice[];
+  matchNo: number;
 }
 
-export function PriceTable({ tickets, resalePrices }: PriceTableProps) {
+export function PriceTable({ tickets, resalePrices, matchNo }: PriceTableProps) {
   if (tickets.length === 0) {
     return (
       <p className="text-sm text-zinc-500 italic">No ticket data available</p>
@@ -51,9 +52,14 @@ export function PriceTable({ tickets, resalePrices }: PriceTableProps) {
               </td>
               <td className="py-1.5 px-2 text-right font-semibold">
                 {hasFloor ? (
-                  <span className="text-emerald-600 dark:text-emerald-400">
+                  <a
+                    href={getCollectUrl(matchNo, ticket.category)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-emerald-600 dark:text-emerald-400 hover:underline"
+                  >
                     {formatCurrency(ticket.floorPrice!)}
-                  </span>
+                  </a>
                 ) : (
                   <span className="text-zinc-400">--</span>
                 )}

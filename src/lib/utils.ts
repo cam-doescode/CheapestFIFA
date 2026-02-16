@@ -54,6 +54,17 @@ export function getRoundOrder(round: number): number {
   return order[round] ?? 0;
 }
 
+// FIFA Collect referral config
+const REFERRAL_CODE = "serfifathekick";
+
+/** Build a FIFA Collect marketplace URL for a specific match+category */
+export function getCollectUrl(matchNo: number, category?: number): string {
+  const base = category
+    ? `https://collect.fifa.com/marketplace/cat${category}-m${matchNo}`
+    : `https://collect.fifa.com/marketplace`;
+  return `${base}?referrer=${REFERRAL_CODE}`;
+}
+
 export const ROUND_FILTERS = [
   { value: "all", label: "All Rounds" },
   { value: "48", label: "Group Stage" },
