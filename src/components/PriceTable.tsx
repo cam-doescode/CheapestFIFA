@@ -17,6 +17,7 @@ export function PriceTable({ tickets, resalePrices, matchNo }: PriceTableProps) 
   const sortedTickets = [...tickets].sort((a, b) => a.category - b.category);
 
   return (
+  <>
     <table className="w-full text-sm">
       <thead>
         <tr className="border-b border-zinc-200 dark:border-zinc-700 text-zinc-500 dark:text-zinc-400">
@@ -49,6 +50,7 @@ export function PriceTable({ tickets, resalePrices, matchNo }: PriceTableProps) 
               </td>
               <td className="py-1.5 px-2 text-right text-zinc-500 dark:text-zinc-400">
                 {formatCurrency(ticket.faceValue)}
+                {ticket.estimatedFaceValue && <span title="Estimated face value">*</span>}
               </td>
               <td className="py-1.5 px-2 text-right font-semibold">
                 {hasFloor ? (
@@ -109,5 +111,11 @@ export function PriceTable({ tickets, resalePrices, matchNo }: PriceTableProps) 
         })}
       </tbody>
     </table>
+    {sortedTickets.some((t) => t.estimatedFaceValue) && (
+      <p className="text-[10px] text-zinc-400 dark:text-zinc-500 mt-1">
+        *Estimated face value based on similar matches
+      </p>
+    )}
+  </>
   );
 }

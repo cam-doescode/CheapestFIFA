@@ -18,7 +18,22 @@ export async function getTicketsByMatch(): Promise<TicketListing[]> {
     { next: { revalidate: 300 } } // cache 5 min — prices change
   );
   if (!res.ok) throw new Error(`Failed to fetch tickets: ${res.status}`);
-  return res.json();
+  const tickets: TicketListing[] = await res.json();
+
+  // Backfill missing face values from snapshot estimates
+  const snapshot = await import("@/data/face-values-snapshot.json");
+  for (const ticket of tickets) {
+    if (!ticket.faceValue) {
+      const fallback = (snapshot.faceValues as Array<{ matchNo: number; category: number; faceValue: number | null; estimated?: boolean }>)
+        .find((f) => f.matchNo === ticket.match.matchNo && f.category === ticket.category);
+      if (fallback?.faceValue) {
+        ticket.faceValue = fallback.faceValue;
+        ticket.estimatedFaceValue = true;
+      }
+    }
+  }
+
+  return tickets;
 }
 
 export async function getResaleData(): Promise<ResaleData | null> {

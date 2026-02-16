@@ -1,0 +1,2051 @@
+{
+  "snapshotDate": "2026-02-16",
+  "source": "fifacollect.info/api/matches/GetTicketsByMatch",
+  "note": "Face values from FIFA Collect API. Stored as fallback in case API changes.",
+  "faceValues": [
+    {
+      "matchNo": 1,
+      "teams": "Mexico vs. South Africa",
+      "category": 1,
+      "faceValue": 2140.0,
+      "city": "Mexico City",
+      "date": "2026-06-11T12:00:00-06:00",
+      "stadium": "Estadio Azteca",
+      "round": "Group A"
+    },
+    {
+      "matchNo": 1,
+      "teams": "Mexico vs. South Africa",
+      "category": 2,
+      "faceValue": 1550.0,
+      "city": "Mexico City",
+      "date": "2026-06-11T12:00:00-06:00",
+      "stadium": "Estadio Azteca",
+      "round": "Group A"
+    },
+    {
+      "matchNo": 2,
+      "teams": "Korea Republic vs. W Play-Off D",
+      "category": 1,
+      "faceValue": 415.0,
+      "city": "Guadalajara",
+      "date": "2026-06-11T12:00:00-06:00",
+      "stadium": "Estadio Akron",
+      "round": "Group A"
+    },
+    {
+      "matchNo": 2,
+      "teams": "Korea Republic vs. W Play-Off D",
+      "category": 2,
+      "faceValue": 300.0,
+      "city": "Guadalajara",
+      "date": "2026-06-11T12:00:00-06:00",
+      "stadium": "Estadio Akron",
+      "round": "Group A"
+    },
+    {
+      "matchNo": 3,
+      "teams": "Canada vs. W Play-Off A",
+      "category": 3,
+      "faceValue": 845.0,
+      "city": "Toronto",
+      "date": "2026-06-12T12:00:00-04:00",
+      "stadium": "BMO Field",
+      "round": "Group B"
+    },
+    {
+      "matchNo": 4,
+      "teams": "USA vs. Paraguay",
+      "category": 1,
+      "faceValue": 2735.0,
+      "city": "Los Angeles",
+      "date": "2026-06-12T12:00:00-07:00",
+      "stadium": "SoFi Stadium",
+      "round": "Group D"
+    },
+    {
+      "matchNo": 4,
+      "teams": "USA vs. Paraguay",
+      "category": 2,
+      "faceValue": 1940.0,
+      "city": "Los Angeles",
+      "date": "2026-06-12T12:00:00-07:00",
+      "stadium": "SoFi Stadium",
+      "round": "Group D"
+    },
+    {
+      "matchNo": 5,
+      "teams": "Haiti vs. Scotland",
+      "category": 1,
+      "faceValue": 410.0,
+      "city": "Boston",
+      "date": "2026-06-13T12:00:00-04:00",
+      "stadium": "Gillette Stadium",
+      "round": "Group C"
+    },
+    {
+      "matchNo": 5,
+      "teams": "Haiti vs. Scotland",
+      "category": 2,
+      "faceValue": 310.0,
+      "city": "Boston",
+      "date": "2026-06-13T12:00:00-04:00",
+      "stadium": "Gillette Stadium",
+      "round": "Group C"
+    },
+    {
+      "matchNo": 6,
+      "teams": "Australia vs. W Play-Off C",
+      "category": 1,
+      "faceValue": 440.0,
+      "city": "Vancouver",
+      "date": "2026-06-13T12:00:00-07:00",
+      "stadium": "BC Place",
+      "round": "Group D"
+    },
+    {
+      "matchNo": 6,
+      "teams": "Australia vs. W Play-Off C",
+      "category": 2,
+      "faceValue": 375.0,
+      "city": "Vancouver",
+      "date": "2026-06-13T12:00:00-07:00",
+      "stadium": "BC Place",
+      "round": "Group D"
+    },
+    {
+      "matchNo": 7,
+      "teams": "Brazil vs. Morocco",
+      "category": 1,
+      "faceValue": 620.0,
+      "city": "New York New Jersey",
+      "date": "2026-06-13T12:00:00-04:00",
+      "stadium": "MetLife Stadium",
+      "round": "Group C"
+    },
+    {
+      "matchNo": 7,
+      "teams": "Brazil vs. Morocco",
+      "category": 2,
+      "faceValue": 500.0,
+      "city": "New York New Jersey",
+      "date": "2026-06-13T12:00:00-04:00",
+      "stadium": "MetLife Stadium",
+      "round": "Group C"
+    },
+    {
+      "matchNo": 8,
+      "teams": "Qatar vs. Switzerland",
+      "category": 1,
+      "faceValue": 620.0,
+      "city": "San Francisco Bay Area",
+      "date": "2026-06-13T12:00:00-07:00",
+      "stadium": "Levi's Stadium",
+      "round": "Group B"
+    },
+    {
+      "matchNo": 8,
+      "teams": "Qatar vs. Switzerland",
+      "category": 2,
+      "faceValue": 465.0,
+      "city": "San Francisco Bay Area",
+      "date": "2026-06-13T12:00:00-07:00",
+      "stadium": "Levi's Stadium",
+      "round": "Group B"
+    },
+    {
+      "matchNo": 9,
+      "teams": "Ivory Coast vs. Ecuador",
+      "category": 1,
+      "faceValue": 445.0,
+      "city": "Philadelphia",
+      "date": "2026-06-14T12:00:00-04:00",
+      "stadium": "Lincoln Financial Field",
+      "round": "Group E"
+    },
+    {
+      "matchNo": 9,
+      "teams": "Ivory Coast vs. Ecuador",
+      "category": 2,
+      "faceValue": 360.0,
+      "city": "Philadelphia",
+      "date": "2026-06-14T12:00:00-04:00",
+      "stadium": "Lincoln Financial Field",
+      "round": "Group E"
+    },
+    {
+      "matchNo": 10,
+      "teams": "Germany vs. Cura\u00e7ao",
+      "category": 1,
+      "faceValue": 410.0,
+      "city": "Houston",
+      "date": "2026-06-14T12:00:00-05:00",
+      "stadium": "NRG Stadium",
+      "round": "Group E"
+    },
+    {
+      "matchNo": 10,
+      "teams": "Germany vs. Cura\u00e7ao",
+      "category": 2,
+      "faceValue": 310.0,
+      "city": "Houston",
+      "date": "2026-06-14T12:00:00-05:00",
+      "stadium": "NRG Stadium",
+      "round": "Group E"
+    },
+    {
+      "matchNo": 11,
+      "teams": "Netherlands vs. Japan",
+      "category": 1,
+      "faceValue": 445.0,
+      "city": "Dallas",
+      "date": "2026-06-14T12:00:00-05:00",
+      "stadium": "AT&T Stadium",
+      "round": "Group F"
+    },
+    {
+      "matchNo": 11,
+      "teams": "Netherlands vs. Japan",
+      "category": 2,
+      "faceValue": 335.0,
+      "city": "Dallas",
+      "date": "2026-06-14T12:00:00-05:00",
+      "stadium": "AT&T Stadium",
+      "round": "Group F"
+    },
+    {
+      "matchNo": 12,
+      "teams": "W Play-Off B vs. Tunisia",
+      "category": 1,
+      "faceValue": 390.0,
+      "city": "Monterrey",
+      "date": "2026-06-14T12:00:00-06:00",
+      "stadium": "Estadio BBVA",
+      "round": "Group F"
+    },
+    {
+      "matchNo": 13,
+      "teams": "Saudi Arabia vs. Uruguay",
+      "category": 1,
+      "faceValue": 445.0,
+      "city": "Miami",
+      "date": "2026-06-15T12:00:00-04:00",
+      "stadium": "Hard Rock Stadium",
+      "round": "Group H"
+    },
+    {
+      "matchNo": 13,
+      "teams": "Saudi Arabia vs. Uruguay",
+      "category": 2,
+      "faceValue": 380.0,
+      "city": "Miami",
+      "date": "2026-06-15T12:00:00-04:00",
+      "stadium": "Hard Rock Stadium",
+      "round": "Group H"
+    },
+    {
+      "matchNo": 14,
+      "teams": "Spain vs. Cabo Verde",
+      "category": 1,
+      "faceValue": 410.0,
+      "city": "Atlanta",
+      "date": "2026-06-15T12:00:00-04:00",
+      "stadium": "Mercedes-Benz Stadium",
+      "round": "Group H"
+    },
+    {
+      "matchNo": 14,
+      "teams": "Spain vs. Cabo Verde",
+      "category": 2,
+      "faceValue": 310.0,
+      "city": "Atlanta",
+      "date": "2026-06-15T12:00:00-04:00",
+      "stadium": "Mercedes-Benz Stadium",
+      "round": "Group H"
+    },
+    {
+      "matchNo": 15,
+      "teams": "IR Iran vs. New Zealand",
+      "category": 1,
+      "faceValue": 620.0,
+      "city": "Los Angeles",
+      "date": "2026-06-15T12:00:00-07:00",
+      "stadium": "SoFi Stadium",
+      "round": "Group G"
+    },
+    {
+      "matchNo": 15,
+      "teams": "IR Iran vs. New Zealand",
+      "category": 2,
+      "faceValue": 465.0,
+      "city": "Los Angeles",
+      "date": "2026-06-15T12:00:00-07:00",
+      "stadium": "SoFi Stadium",
+      "round": "Group G"
+    },
+    {
+      "matchNo": 16,
+      "teams": "Belgium vs. Egypt",
+      "category": 1,
+      "faceValue": 410.0,
+      "city": "Seattle",
+      "date": "2026-06-15T12:00:00-07:00",
+      "stadium": "Lumen Field",
+      "round": "Group G"
+    },
+    {
+      "matchNo": 16,
+      "teams": "Belgium vs. Egypt",
+      "category": 2,
+      "faceValue": 310.0,
+      "city": "Seattle",
+      "date": "2026-06-15T12:00:00-07:00",
+      "stadium": "Lumen Field",
+      "round": "Group G"
+    },
+    {
+      "matchNo": 17,
+      "teams": "France vs. Senegal",
+      "category": 1,
+      "faceValue": 620.0,
+      "city": "New York New Jersey",
+      "date": "2026-06-16T12:00:00-04:00",
+      "stadium": "MetLife Stadium",
+      "round": "Group I"
+    },
+    {
+      "matchNo": 17,
+      "teams": "France vs. Senegal",
+      "category": 2,
+      "faceValue": 465.0,
+      "city": "New York New Jersey",
+      "date": "2026-06-16T12:00:00-04:00",
+      "stadium": "MetLife Stadium",
+      "round": "Group I"
+    },
+    {
+      "matchNo": 18,
+      "teams": "W Play-Off 2 vs. Norway",
+      "category": 1,
+      "faceValue": 410.0,
+      "city": "Boston",
+      "date": "2026-06-16T12:00:00-04:00",
+      "stadium": "Gillette Stadium",
+      "round": "Group I"
+    },
+    {
+      "matchNo": 18,
+      "teams": "W Play-Off 2 vs. Norway",
+      "category": 2,
+      "faceValue": 310.0,
+      "city": "Boston",
+      "date": "2026-06-16T12:00:00-04:00",
+      "stadium": "Gillette Stadium",
+      "round": "Group I"
+    },
+    {
+      "matchNo": 19,
+      "teams": "Argentina vs. Algeria",
+      "category": 1,
+      "faceValue": 410.0,
+      "city": "Kansas City",
+      "date": "2026-06-16T12:00:00-05:00",
+      "stadium": "Arrowhead Stadium",
+      "round": "Group J"
+    },
+    {
+      "matchNo": 19,
+      "teams": "Argentina vs. Algeria",
+      "category": 2,
+      "faceValue": 310.0,
+      "city": "Kansas City",
+      "date": "2026-06-16T12:00:00-05:00",
+      "stadium": "Arrowhead Stadium",
+      "round": "Group J"
+    },
+    {
+      "matchNo": 20,
+      "teams": "Austria vs. Jordan",
+      "category": 1,
+      "faceValue": 620.0,
+      "city": "San Francisco Bay Area",
+      "date": "2026-06-16T12:00:00-07:00",
+      "stadium": "Levi's Stadium",
+      "round": "Group J"
+    },
+    {
+      "matchNo": 20,
+      "teams": "Austria vs. Jordan",
+      "category": 2,
+      "faceValue": 465.0,
+      "city": "San Francisco Bay Area",
+      "date": "2026-06-16T12:00:00-07:00",
+      "stadium": "Levi's Stadium",
+      "round": "Group J"
+    },
+    {
+      "matchNo": 21,
+      "teams": "Ghana vs. Panama",
+      "category": 2,
+      "faceValue": 390.0,
+      "city": "Toronto",
+      "date": "2026-06-17T12:00:00-04:00",
+      "stadium": "BMO Field",
+      "round": "Group L"
+    },
+    {
+      "matchNo": 21,
+      "teams": "Ghana vs. Panama",
+      "category": 3,
+      "faceValue": 185.0,
+      "city": "Toronto",
+      "date": "2026-06-17T12:00:00-04:00",
+      "stadium": "BMO Field",
+      "round": "Group L"
+    },
+    {
+      "matchNo": 22,
+      "teams": "England vs. Croatia",
+      "category": 1,
+      "faceValue": 445.0,
+      "city": "Dallas",
+      "date": "2026-06-17T12:00:00-05:00",
+      "stadium": "AT&T Stadium",
+      "round": "Group L"
+    },
+    {
+      "matchNo": 22,
+      "teams": "England vs. Croatia",
+      "category": 2,
+      "faceValue": 335.0,
+      "city": "Dallas",
+      "date": "2026-06-17T12:00:00-05:00",
+      "stadium": "AT&T Stadium",
+      "round": "Group L"
+    },
+    {
+      "matchNo": 23,
+      "teams": "Portugal vs. W Play-Off 1",
+      "category": 1,
+      "faceValue": 410.0,
+      "city": "Houston",
+      "date": "2026-06-17T12:00:00-05:00",
+      "stadium": "NRG Stadium",
+      "round": "Group K"
+    },
+    {
+      "matchNo": 23,
+      "teams": "Portugal vs. W Play-Off 1",
+      "category": 2,
+      "faceValue": 310.0,
+      "city": "Houston",
+      "date": "2026-06-17T12:00:00-05:00",
+      "stadium": "NRG Stadium",
+      "round": "Group K"
+    },
+    {
+      "matchNo": 24,
+      "teams": "Uzbekistan vs. Colombia",
+      "category": 1,
+      "faceValue": 480.0,
+      "city": "Mexico City",
+      "date": "2026-06-17T12:00:00-06:00",
+      "stadium": "Estadio Azteca",
+      "round": "Group K"
+    },
+    {
+      "matchNo": 24,
+      "teams": "Uzbekistan vs. Colombia",
+      "category": 2,
+      "faceValue": 375.0,
+      "city": "Mexico City",
+      "date": "2026-06-17T12:00:00-06:00",
+      "stadium": "Estadio Azteca",
+      "round": "Group K"
+    },
+    {
+      "matchNo": 25,
+      "teams": "W Play-Off D vs. South Africa",
+      "category": 1,
+      "faceValue": 410.0,
+      "city": "Atlanta",
+      "date": "2026-06-18T12:00:00-04:00",
+      "stadium": "Mercedes-Benz Stadium",
+      "round": "Group A"
+    },
+    {
+      "matchNo": 25,
+      "teams": "W Play-Off D vs. South Africa",
+      "category": 2,
+      "faceValue": 310.0,
+      "city": "Atlanta",
+      "date": "2026-06-18T12:00:00-04:00",
+      "stadium": "Mercedes-Benz Stadium",
+      "round": "Group A"
+    },
+    {
+      "matchNo": 26,
+      "teams": "Switzerland vs. W Play-Off A",
+      "category": 1,
+      "faceValue": 620.0,
+      "city": "Los Angeles",
+      "date": "2026-06-18T12:00:00-07:00",
+      "stadium": "SoFi Stadium",
+      "round": "Group B"
+    },
+    {
+      "matchNo": 26,
+      "teams": "Switzerland vs. W Play-Off A",
+      "category": 2,
+      "faceValue": 465.0,
+      "city": "Los Angeles",
+      "date": "2026-06-18T12:00:00-07:00",
+      "stadium": "SoFi Stadium",
+      "round": "Group B"
+    },
+    {
+      "matchNo": 27,
+      "teams": "Canada vs. Qatar",
+      "category": 1,
+      "faceValue": 540.0,
+      "city": "Vancouver",
+      "date": "2026-06-18T12:00:00-07:00",
+      "stadium": "BC Place",
+      "round": "Group B"
+    },
+    {
+      "matchNo": 27,
+      "teams": "Canada vs. Qatar",
+      "category": 2,
+      "faceValue": 455.0,
+      "city": "Vancouver",
+      "date": "2026-06-18T12:00:00-07:00",
+      "stadium": "BC Place",
+      "round": "Group B"
+    },
+    {
+      "matchNo": 28,
+      "teams": "Mexico vs. Korea Republic",
+      "category": 1,
+      "faceValue": 525.0,
+      "city": "Guadalajara",
+      "date": "2026-06-18T12:00:00-06:00",
+      "stadium": "Estadio Akron",
+      "round": "Group A"
+    },
+    {
+      "matchNo": 28,
+      "teams": "Mexico vs. Korea Republic",
+      "category": 2,
+      "faceValue": 405.0,
+      "city": "Guadalajara",
+      "date": "2026-06-18T12:00:00-06:00",
+      "stadium": "Estadio Akron",
+      "round": "Group A"
+    },
+    {
+      "matchNo": 29,
+      "teams": "Brazil vs. Haiti",
+      "category": 1,
+      "faceValue": 445.0,
+      "city": "Philadelphia",
+      "date": "2026-06-19T12:00:00-04:00",
+      "stadium": "Lincoln Financial Field",
+      "round": "Group C"
+    },
+    {
+      "matchNo": 29,
+      "teams": "Brazil vs. Haiti",
+      "category": 2,
+      "faceValue": 360.0,
+      "city": "Philadelphia",
+      "date": "2026-06-19T12:00:00-04:00",
+      "stadium": "Lincoln Financial Field",
+      "round": "Group C"
+    },
+    {
+      "matchNo": 30,
+      "teams": "Scotland vs. Morocco",
+      "category": 1,
+      "faceValue": 410.0,
+      "city": "Boston",
+      "date": "2026-06-19T12:00:00-04:00",
+      "stadium": "Gillette Stadium",
+      "round": "Group C"
+    },
+    {
+      "matchNo": 30,
+      "teams": "Scotland vs. Morocco",
+      "category": 2,
+      "faceValue": 310.0,
+      "city": "Boston",
+      "date": "2026-06-19T12:00:00-04:00",
+      "stadium": "Gillette Stadium",
+      "round": "Group C"
+    },
+    {
+      "matchNo": 31,
+      "teams": "W Play-Off C vs. Paraguay",
+      "category": 1,
+      "faceValue": 620.0,
+      "city": "San Francisco Bay Area",
+      "date": "2026-06-19T12:00:00-07:00",
+      "stadium": "Levi's Stadium",
+      "round": "Group D"
+    },
+    {
+      "matchNo": 31,
+      "teams": "W Play-Off C vs. Paraguay",
+      "category": 2,
+      "faceValue": 465.0,
+      "city": "San Francisco Bay Area",
+      "date": "2026-06-19T12:00:00-07:00",
+      "stadium": "Levi's Stadium",
+      "round": "Group D"
+    },
+    {
+      "matchNo": 32,
+      "teams": "USA vs. Australia",
+      "category": 1,
+      "faceValue": 605.0,
+      "city": "Seattle",
+      "date": "2026-06-19T12:00:00-07:00",
+      "stadium": "Lumen Field",
+      "round": "Group D"
+    },
+    {
+      "matchNo": 32,
+      "teams": "USA vs. Australia",
+      "category": 2,
+      "faceValue": 470.0,
+      "city": "Seattle",
+      "date": "2026-06-19T12:00:00-07:00",
+      "stadium": "Lumen Field",
+      "round": "Group D"
+    },
+    {
+      "matchNo": 33,
+      "teams": "Germany vs. Ivory Coast",
+      "category": 2,
+      "faceValue": 390.0,
+      "city": "Toronto",
+      "date": "2026-06-20T12:00:00-04:00",
+      "stadium": "BMO Field",
+      "round": "Group E"
+    },
+    {
+      "matchNo": 33,
+      "teams": "Germany vs. Ivory Coast",
+      "category": 3,
+      "faceValue": 185.0,
+      "city": "Toronto",
+      "date": "2026-06-20T12:00:00-04:00",
+      "stadium": "BMO Field",
+      "round": "Group E"
+    },
+    {
+      "matchNo": 34,
+      "teams": "Ecuador vs. Cura\u00e7ao",
+      "category": 1,
+      "faceValue": 410.0,
+      "city": "Kansas City",
+      "date": "2026-06-20T12:00:00-05:00",
+      "stadium": "Arrowhead Stadium",
+      "round": "Group E"
+    },
+    {
+      "matchNo": 34,
+      "teams": "Ecuador vs. Cura\u00e7ao",
+      "category": 2,
+      "faceValue": 310.0,
+      "city": "Kansas City",
+      "date": "2026-06-20T12:00:00-05:00",
+      "stadium": "Arrowhead Stadium",
+      "round": "Group E"
+    },
+    {
+      "matchNo": 35,
+      "teams": "Netherlands vs. W Play-Off B",
+      "category": 1,
+      "faceValue": 410.0,
+      "city": "Houston",
+      "date": "2026-06-20T12:00:00-05:00",
+      "stadium": "NRG Stadium",
+      "round": "Group F"
+    },
+    {
+      "matchNo": 35,
+      "teams": "Netherlands vs. W Play-Off B",
+      "category": 2,
+      "faceValue": 330.0,
+      "city": "Houston",
+      "date": "2026-06-20T12:00:00-05:00",
+      "stadium": "NRG Stadium",
+      "round": "Group F"
+    },
+    {
+      "matchNo": 36,
+      "teams": "Tunisia vs. Japan",
+      "category": 1,
+      "faceValue": 390.0,
+      "city": "Monterrey",
+      "date": "2026-06-20T12:00:00-06:00",
+      "stadium": "Estadio BBVA",
+      "round": "Group F"
+    },
+    {
+      "matchNo": 37,
+      "teams": "Uruguay vs. Cabo Verde",
+      "category": 1,
+      "faceValue": 445.0,
+      "city": "Miami",
+      "date": "2026-06-21T12:00:00-04:00",
+      "stadium": "Hard Rock Stadium",
+      "round": "Group H"
+    },
+    {
+      "matchNo": 37,
+      "teams": "Uruguay vs. Cabo Verde",
+      "category": 2,
+      "faceValue": 380.0,
+      "city": "Miami",
+      "date": "2026-06-21T12:00:00-04:00",
+      "stadium": "Hard Rock Stadium",
+      "round": "Group H"
+    },
+    {
+      "matchNo": 38,
+      "teams": "Spain vs. Saudi Arabia",
+      "category": 1,
+      "faceValue": 410.0,
+      "city": "Atlanta",
+      "date": "2026-06-21T12:00:00-04:00",
+      "stadium": "Mercedes-Benz Stadium",
+      "round": "Group H"
+    },
+    {
+      "matchNo": 38,
+      "teams": "Spain vs. Saudi Arabia",
+      "category": 2,
+      "faceValue": 310.0,
+      "city": "Atlanta",
+      "date": "2026-06-21T12:00:00-04:00",
+      "stadium": "Mercedes-Benz Stadium",
+      "round": "Group H"
+    },
+    {
+      "matchNo": 39,
+      "teams": "Belgium vs. IR Iran",
+      "category": 1,
+      "faceValue": 620.0,
+      "city": "Los Angeles",
+      "date": "2026-06-21T12:00:00-07:00",
+      "stadium": "SoFi Stadium",
+      "round": "Group G"
+    },
+    {
+      "matchNo": 39,
+      "teams": "Belgium vs. IR Iran",
+      "category": 2,
+      "faceValue": 465.0,
+      "city": "Los Angeles",
+      "date": "2026-06-21T12:00:00-07:00",
+      "stadium": "SoFi Stadium",
+      "round": "Group G"
+    },
+    {
+      "matchNo": 40,
+      "teams": "New Zealand vs. Egypt",
+      "category": 1,
+      "faceValue": 440.0,
+      "city": "Vancouver",
+      "date": "2026-06-21T12:00:00-07:00",
+      "stadium": "BC Place",
+      "round": "Group G"
+    },
+    {
+      "matchNo": 40,
+      "teams": "New Zealand vs. Egypt",
+      "category": 2,
+      "faceValue": 375.0,
+      "city": "Vancouver",
+      "date": "2026-06-21T12:00:00-07:00",
+      "stadium": "BC Place",
+      "round": "Group G"
+    },
+    {
+      "matchNo": 41,
+      "teams": "Norway vs. Senegal",
+      "category": 1,
+      "faceValue": 620.0,
+      "city": "New York New Jersey",
+      "date": "2026-06-22T12:00:00-04:00",
+      "stadium": "MetLife Stadium",
+      "round": "Group I"
+    },
+    {
+      "matchNo": 41,
+      "teams": "Norway vs. Senegal",
+      "category": 2,
+      "faceValue": 465.0,
+      "city": "New York New Jersey",
+      "date": "2026-06-22T12:00:00-04:00",
+      "stadium": "MetLife Stadium",
+      "round": "Group I"
+    },
+    {
+      "matchNo": 42,
+      "teams": "France vs. W Play-Off 2",
+      "category": 1,
+      "faceValue": 445.0,
+      "city": "Philadelphia",
+      "date": "2026-06-22T12:00:00-04:00",
+      "stadium": "Lincoln Financial Field",
+      "round": "Group I"
+    },
+    {
+      "matchNo": 42,
+      "teams": "France vs. W Play-Off 2",
+      "category": 2,
+      "faceValue": 335.0,
+      "city": "Philadelphia",
+      "date": "2026-06-22T12:00:00-04:00",
+      "stadium": "Lincoln Financial Field",
+      "round": "Group I"
+    },
+    {
+      "matchNo": 43,
+      "teams": "Argentina vs. Austria",
+      "category": 1,
+      "faceValue": 445.0,
+      "city": "Dallas",
+      "date": "2026-06-22T12:00:00-05:00",
+      "stadium": "AT&T Stadium",
+      "round": "Group J"
+    },
+    {
+      "matchNo": 43,
+      "teams": "Argentina vs. Austria",
+      "category": 2,
+      "faceValue": 335.0,
+      "city": "Dallas",
+      "date": "2026-06-22T12:00:00-05:00",
+      "stadium": "AT&T Stadium",
+      "round": "Group J"
+    },
+    {
+      "matchNo": 44,
+      "teams": "Jordan vs. Algeria",
+      "category": 1,
+      "faceValue": 620.0,
+      "city": "San Francisco Bay Area",
+      "date": "2026-06-22T12:00:00-07:00",
+      "stadium": "Levi's Stadium",
+      "round": "Group J"
+    },
+    {
+      "matchNo": 44,
+      "teams": "Jordan vs. Algeria",
+      "category": 2,
+      "faceValue": 465.0,
+      "city": "San Francisco Bay Area",
+      "date": "2026-06-22T12:00:00-07:00",
+      "stadium": "Levi's Stadium",
+      "round": "Group J"
+    },
+    {
+      "matchNo": 45,
+      "teams": "England vs. Ghana",
+      "category": 1,
+      "faceValue": 410.0,
+      "city": "Boston",
+      "date": "2026-06-23T12:00:00-04:00",
+      "stadium": "Gillette Stadium",
+      "round": "Group L"
+    },
+    {
+      "matchNo": 45,
+      "teams": "England vs. Ghana",
+      "category": 2,
+      "faceValue": 310.0,
+      "city": "Boston",
+      "date": "2026-06-23T12:00:00-04:00",
+      "stadium": "Gillette Stadium",
+      "round": "Group L"
+    },
+    {
+      "matchNo": 46,
+      "teams": "Panama vs. Croatia",
+      "category": 2,
+      "faceValue": 405.0,
+      "city": "Toronto",
+      "date": "2026-06-23T12:00:00-04:00",
+      "stadium": "BMO Field",
+      "round": "Group L"
+    },
+    {
+      "matchNo": 46,
+      "teams": "Panama vs. Croatia",
+      "category": 3,
+      "faceValue": 195.0,
+      "city": "Toronto",
+      "date": "2026-06-23T12:00:00-04:00",
+      "stadium": "BMO Field",
+      "round": "Group L"
+    },
+    {
+      "matchNo": 47,
+      "teams": "Portugal vs. Uzbekistan",
+      "category": 1,
+      "faceValue": 410.0,
+      "city": "Houston",
+      "date": "2026-06-23T12:00:00-05:00",
+      "stadium": "NRG Stadium",
+      "round": "Group K"
+    },
+    {
+      "matchNo": 47,
+      "teams": "Portugal vs. Uzbekistan",
+      "category": 2,
+      "faceValue": 310.0,
+      "city": "Houston",
+      "date": "2026-06-23T12:00:00-05:00",
+      "stadium": "NRG Stadium",
+      "round": "Group K"
+    },
+    {
+      "matchNo": 48,
+      "teams": "Colombia vs. W Play-Off 1",
+      "category": 1,
+      "faceValue": 405.0,
+      "city": "Guadalajara",
+      "date": "2026-06-23T12:00:00-06:00",
+      "stadium": "Estadio Akron",
+      "round": "Group K"
+    },
+    {
+      "matchNo": 48,
+      "teams": "Colombia vs. W Play-Off 1",
+      "category": 2,
+      "faceValue": 315.0,
+      "city": "Guadalajara",
+      "date": "2026-06-23T12:00:00-06:00",
+      "stadium": "Estadio Akron",
+      "round": "Group K"
+    },
+    {
+      "matchNo": 49,
+      "teams": "Scotland vs. Brazil",
+      "category": 1,
+      "faceValue": 445.0,
+      "city": "Miami",
+      "date": "2026-06-24T12:00:00-04:00",
+      "stadium": "Hard Rock Stadium",
+      "round": "Group C"
+    },
+    {
+      "matchNo": 49,
+      "teams": "Scotland vs. Brazil",
+      "category": 2,
+      "faceValue": 360.0,
+      "city": "Miami",
+      "date": "2026-06-24T12:00:00-04:00",
+      "stadium": "Hard Rock Stadium",
+      "round": "Group C"
+    },
+    {
+      "matchNo": 50,
+      "teams": "Morocco vs. Haiti",
+      "category": 1,
+      "faceValue": 410.0,
+      "city": "Atlanta",
+      "date": "2026-06-24T12:00:00-04:00",
+      "stadium": "Mercedes-Benz Stadium",
+      "round": "Group C"
+    },
+    {
+      "matchNo": 50,
+      "teams": "Morocco vs. Haiti",
+      "category": 2,
+      "faceValue": 310.0,
+      "city": "Atlanta",
+      "date": "2026-06-24T12:00:00-04:00",
+      "stadium": "Mercedes-Benz Stadium",
+      "round": "Group C"
+    },
+    {
+      "matchNo": 51,
+      "teams": "Canada vs. Switzerland",
+      "category": 1,
+      "faceValue": 540.0,
+      "city": "Vancouver",
+      "date": "2026-06-24T12:00:00-07:00",
+      "stadium": "BC Place",
+      "round": "Group B"
+    },
+    {
+      "matchNo": 51,
+      "teams": "Canada vs. Switzerland",
+      "category": 2,
+      "faceValue": 455.0,
+      "city": "Vancouver",
+      "date": "2026-06-24T12:00:00-07:00",
+      "stadium": "BC Place",
+      "round": "Group B"
+    },
+    {
+      "matchNo": 52,
+      "teams": "W Play-Off A vs. Qatar",
+      "category": 1,
+      "faceValue": 410.0,
+      "city": "Seattle",
+      "date": "2026-06-24T12:00:00-07:00",
+      "stadium": "Lumen Field",
+      "round": "Group B"
+    },
+    {
+      "matchNo": 52,
+      "teams": "W Play-Off A vs. Qatar",
+      "category": 2,
+      "faceValue": 310.0,
+      "city": "Seattle",
+      "date": "2026-06-24T12:00:00-07:00",
+      "stadium": "Lumen Field",
+      "round": "Group B"
+    },
+    {
+      "matchNo": 53,
+      "teams": "Mexico vs. W Play-Off D",
+      "category": 1,
+      "faceValue": 630.0,
+      "city": "Mexico City",
+      "date": "2026-06-24T12:00:00-06:00",
+      "stadium": "Estadio Azteca",
+      "round": "Group A"
+    },
+    {
+      "matchNo": 53,
+      "teams": "Mexico vs. W Play-Off D",
+      "category": 2,
+      "faceValue": 490.0,
+      "city": "Mexico City",
+      "date": "2026-06-24T12:00:00-06:00",
+      "stadium": "Estadio Azteca",
+      "round": "Group A"
+    },
+    {
+      "matchNo": 54,
+      "teams": "South Africa vs. Korea Republic",
+      "category": 1,
+      "faceValue": 390.0,
+      "city": "Monterrey",
+      "date": "2026-06-24T12:00:00-06:00",
+      "stadium": "Estadio BBVA",
+      "round": "Group A"
+    },
+    {
+      "matchNo": 55,
+      "teams": "Cura\u00e7ao vs. Ivory Coast",
+      "category": 1,
+      "faceValue": 445.0,
+      "city": "Philadelphia",
+      "date": "2026-06-25T12:00:00-04:00",
+      "stadium": "Lincoln Financial Field",
+      "round": "Group E"
+    },
+    {
+      "matchNo": 55,
+      "teams": "Cura\u00e7ao vs. Ivory Coast",
+      "category": 2,
+      "faceValue": 335.0,
+      "city": "Philadelphia",
+      "date": "2026-06-25T12:00:00-04:00",
+      "stadium": "Lincoln Financial Field",
+      "round": "Group E"
+    },
+    {
+      "matchNo": 56,
+      "teams": "Ecuador vs. Germany",
+      "category": 1,
+      "faceValue": 620.0,
+      "city": "New York New Jersey",
+      "date": "2026-06-25T12:00:00-04:00",
+      "stadium": "MetLife Stadium",
+      "round": "Group E"
+    },
+    {
+      "matchNo": 56,
+      "teams": "Ecuador vs. Germany",
+      "category": 2,
+      "faceValue": 465.0,
+      "city": "New York New Jersey",
+      "date": "2026-06-25T12:00:00-04:00",
+      "stadium": "MetLife Stadium",
+      "round": "Group E"
+    },
+    {
+      "matchNo": 57,
+      "teams": "Japan vs. W Play-Off B",
+      "category": 1,
+      "faceValue": 445.0,
+      "city": "Dallas",
+      "date": "2026-06-25T12:00:00-05:00",
+      "stadium": "AT&T Stadium",
+      "round": "Group F"
+    },
+    {
+      "matchNo": 57,
+      "teams": "Japan vs. W Play-Off B",
+      "category": 2,
+      "faceValue": 335.0,
+      "city": "Dallas",
+      "date": "2026-06-25T12:00:00-05:00",
+      "stadium": "AT&T Stadium",
+      "round": "Group F"
+    },
+    {
+      "matchNo": 58,
+      "teams": "Tunisia vs. Netherlands",
+      "category": 1,
+      "faceValue": 410.0,
+      "city": "Kansas City",
+      "date": "2026-06-25T12:00:00-05:00",
+      "stadium": "Arrowhead Stadium",
+      "round": "Group F"
+    },
+    {
+      "matchNo": 58,
+      "teams": "Tunisia vs. Netherlands",
+      "category": 2,
+      "faceValue": 310.0,
+      "city": "Kansas City",
+      "date": "2026-06-25T12:00:00-05:00",
+      "stadium": "Arrowhead Stadium",
+      "round": "Group F"
+    },
+    {
+      "matchNo": 59,
+      "teams": "USA vs. W Play-Off C",
+      "category": 1,
+      "faceValue": 910.0,
+      "city": "Los Angeles",
+      "date": "2026-06-25T12:00:00-07:00",
+      "stadium": "SoFi Stadium",
+      "round": "Group D"
+    },
+    {
+      "matchNo": 59,
+      "teams": "USA vs. W Play-Off C",
+      "category": 2,
+      "faceValue": 750.0,
+      "city": "Los Angeles",
+      "date": "2026-06-25T12:00:00-07:00",
+      "stadium": "SoFi Stadium",
+      "round": "Group D"
+    },
+    {
+      "matchNo": 60,
+      "teams": "Paraguay vs. Australia",
+      "category": 1,
+      "faceValue": 620.0,
+      "city": "San Francisco Bay Area",
+      "date": "2026-06-25T12:00:00-07:00",
+      "stadium": "Levi's Stadium",
+      "round": "Group D"
+    },
+    {
+      "matchNo": 60,
+      "teams": "Paraguay vs. Australia",
+      "category": 2,
+      "faceValue": 465.0,
+      "city": "San Francisco Bay Area",
+      "date": "2026-06-25T12:00:00-07:00",
+      "stadium": "Levi's Stadium",
+      "round": "Group D"
+    },
+    {
+      "matchNo": 61,
+      "teams": "Norway vs. France",
+      "category": 1,
+      "faceValue": 410.0,
+      "city": "Boston",
+      "date": "2026-06-26T12:00:00-04:00",
+      "stadium": "Gillette Stadium",
+      "round": "Group I"
+    },
+    {
+      "matchNo": 61,
+      "teams": "Norway vs. France",
+      "category": 2,
+      "faceValue": 310.0,
+      "city": "Boston",
+      "date": "2026-06-26T12:00:00-04:00",
+      "stadium": "Gillette Stadium",
+      "round": "Group I"
+    },
+    {
+      "matchNo": 62,
+      "teams": "Senegal vs. W Play-Off 2",
+      "category": 2,
+      "faceValue": 405.0,
+      "city": "Toronto",
+      "date": "2026-06-26T12:00:00-04:00",
+      "stadium": "BMO Field",
+      "round": "Group I"
+    },
+    {
+      "matchNo": 62,
+      "teams": "Senegal vs. W Play-Off 2",
+      "category": 3,
+      "faceValue": 195.0,
+      "city": "Toronto",
+      "date": "2026-06-26T12:00:00-04:00",
+      "stadium": "BMO Field",
+      "round": "Group I"
+    },
+    {
+      "matchNo": 63,
+      "teams": "Egypt vs. IR Iran",
+      "category": 1,
+      "faceValue": 410.0,
+      "city": "Seattle",
+      "date": "2026-06-26T12:00:00-07:00",
+      "stadium": "Lumen Field",
+      "round": "Group G"
+    },
+    {
+      "matchNo": 63,
+      "teams": "Egypt vs. IR Iran",
+      "category": 2,
+      "faceValue": 310.0,
+      "city": "Seattle",
+      "date": "2026-06-26T12:00:00-07:00",
+      "stadium": "Lumen Field",
+      "round": "Group G"
+    },
+    {
+      "matchNo": 64,
+      "teams": "New Zealand vs. Belgium",
+      "category": 1,
+      "faceValue": 440.0,
+      "city": "Vancouver",
+      "date": "2026-06-26T12:00:00-07:00",
+      "stadium": "BC Place",
+      "round": "Group G"
+    },
+    {
+      "matchNo": 64,
+      "teams": "New Zealand vs. Belgium",
+      "category": 2,
+      "faceValue": 375.0,
+      "city": "Vancouver",
+      "date": "2026-06-26T12:00:00-07:00",
+      "stadium": "BC Place",
+      "round": "Group G"
+    },
+    {
+      "matchNo": 65,
+      "teams": "Cabo Verde vs. Saudi Arabia",
+      "category": 1,
+      "faceValue": 410.0,
+      "city": "Houston",
+      "date": "2026-06-26T12:00:00-05:00",
+      "stadium": "NRG Stadium",
+      "round": "Group H"
+    },
+    {
+      "matchNo": 65,
+      "teams": "Cabo Verde vs. Saudi Arabia",
+      "category": 2,
+      "faceValue": 310.0,
+      "city": "Houston",
+      "date": "2026-06-26T12:00:00-05:00",
+      "stadium": "NRG Stadium",
+      "round": "Group H"
+    },
+    {
+      "matchNo": 66,
+      "teams": "Uruguay vs. Spain",
+      "category": 1,
+      "faceValue": 415.0,
+      "city": "Guadalajara",
+      "date": "2026-06-26T12:00:00-06:00",
+      "stadium": "Estadio Akron",
+      "round": "Group H"
+    },
+    {
+      "matchNo": 66,
+      "teams": "Uruguay vs. Spain",
+      "category": 2,
+      "faceValue": 300.0,
+      "city": "Guadalajara",
+      "date": "2026-06-26T12:00:00-06:00",
+      "stadium": "Estadio Akron",
+      "round": "Group H"
+    },
+    {
+      "matchNo": 67,
+      "teams": "Panama vs. England",
+      "category": 1,
+      "faceValue": 620.0,
+      "city": "New York New Jersey",
+      "date": "2026-06-27T12:00:00-04:00",
+      "stadium": "MetLife Stadium",
+      "round": "Group L"
+    },
+    {
+      "matchNo": 67,
+      "teams": "Panama vs. England",
+      "category": 2,
+      "faceValue": 465.0,
+      "city": "New York New Jersey",
+      "date": "2026-06-27T12:00:00-04:00",
+      "stadium": "MetLife Stadium",
+      "round": "Group L"
+    },
+    {
+      "matchNo": 68,
+      "teams": "Croatia vs. Ghana",
+      "category": 1,
+      "faceValue": 445.0,
+      "city": "Philadelphia",
+      "date": "2026-06-27T12:00:00-04:00",
+      "stadium": "Lincoln Financial Field",
+      "round": "Group L"
+    },
+    {
+      "matchNo": 68,
+      "teams": "Croatia vs. Ghana",
+      "category": 2,
+      "faceValue": 360.0,
+      "city": "Philadelphia",
+      "date": "2026-06-27T12:00:00-04:00",
+      "stadium": "Lincoln Financial Field",
+      "round": "Group L"
+    },
+    {
+      "matchNo": 69,
+      "teams": "Algeria vs. Austria",
+      "category": 1,
+      "faceValue": 410.0,
+      "city": "Kansas City",
+      "date": "2026-06-27T12:00:00-05:00",
+      "stadium": "Arrowhead Stadium",
+      "round": "Group J"
+    },
+    {
+      "matchNo": 69,
+      "teams": "Algeria vs. Austria",
+      "category": 2,
+      "faceValue": 310.0,
+      "city": "Kansas City",
+      "date": "2026-06-27T12:00:00-05:00",
+      "stadium": "Arrowhead Stadium",
+      "round": "Group J"
+    },
+    {
+      "matchNo": 70,
+      "teams": "Jordan vs. Argentina",
+      "category": 1,
+      "faceValue": 445.0,
+      "city": "Dallas",
+      "date": "2026-06-27T12:00:00-05:00",
+      "stadium": "AT&T Stadium",
+      "round": "Group J"
+    },
+    {
+      "matchNo": 70,
+      "teams": "Jordan vs. Argentina",
+      "category": 2,
+      "faceValue": 335.0,
+      "city": "Dallas",
+      "date": "2026-06-27T12:00:00-05:00",
+      "stadium": "AT&T Stadium",
+      "round": "Group J"
+    },
+    {
+      "matchNo": 71,
+      "teams": "Colombia vs. Portugal",
+      "category": 1,
+      "faceValue": 445.0,
+      "city": "Miami",
+      "date": "2026-06-27T12:00:00-04:00",
+      "stadium": "Hard Rock Stadium",
+      "round": "Group K"
+    },
+    {
+      "matchNo": 71,
+      "teams": "Colombia vs. Portugal",
+      "category": 2,
+      "faceValue": 385.0,
+      "city": "Miami",
+      "date": "2026-06-27T12:00:00-04:00",
+      "stadium": "Hard Rock Stadium",
+      "round": "Group K"
+    },
+    {
+      "matchNo": 72,
+      "teams": "W Play-Off 1 vs. Uzbekistan",
+      "category": 1,
+      "faceValue": 410.0,
+      "city": "Atlanta",
+      "date": "2026-06-27T12:00:00-04:00",
+      "stadium": "Mercedes-Benz Stadium",
+      "round": "Group K"
+    },
+    {
+      "matchNo": 72,
+      "teams": "W Play-Off 1 vs. Uzbekistan",
+      "category": 2,
+      "faceValue": 310.0,
+      "city": "Atlanta",
+      "date": "2026-06-27T12:00:00-04:00",
+      "stadium": "Mercedes-Benz Stadium",
+      "round": "Group K"
+    },
+    {
+      "matchNo": 73,
+      "teams": "2A vs. 2B",
+      "category": 1,
+      "faceValue": 750.0,
+      "city": "Los Angeles",
+      "date": "2026-06-28T12:00:00-07:00",
+      "stadium": "SoFi Stadium",
+      "round": "Round of 32"
+    },
+    {
+      "matchNo": 73,
+      "teams": "2A vs. 2B",
+      "category": 2,
+      "faceValue": 575.0,
+      "city": "Los Angeles",
+      "date": "2026-06-28T12:00:00-07:00",
+      "stadium": "SoFi Stadium",
+      "round": "Round of 32"
+    },
+    {
+      "matchNo": 74,
+      "teams": "1E vs. 3ABCDF",
+      "category": 1,
+      "faceValue": 470.0,
+      "city": "Boston",
+      "date": "2026-06-29T12:00:00-04:00",
+      "stadium": "Gillette Stadium",
+      "round": "Round of 32"
+    },
+    {
+      "matchNo": 74,
+      "teams": "1E vs. 3ABCDF",
+      "category": 2,
+      "faceValue": 390.0,
+      "city": "Boston",
+      "date": "2026-06-29T12:00:00-04:00",
+      "stadium": "Gillette Stadium",
+      "round": "Round of 32"
+    },
+    {
+      "matchNo": 75,
+      "teams": "1F vs. 2C",
+      "category": 1,
+      "faceValue": 400.0,
+      "city": "Monterrey",
+      "date": "2026-06-29T12:00:00-06:00",
+      "stadium": "Estadio BBVA",
+      "round": "Round of 32"
+    },
+    {
+      "matchNo": 76,
+      "teams": "1C vs. 2F",
+      "category": 1,
+      "faceValue": 440.0,
+      "city": "Houston",
+      "date": "2026-06-29T12:00:00-05:00",
+      "stadium": "NRG Stadium",
+      "round": "Round of 32"
+    },
+    {
+      "matchNo": 76,
+      "teams": "1C vs. 2F",
+      "category": 2,
+      "faceValue": 355.0,
+      "city": "Houston",
+      "date": "2026-06-29T12:00:00-05:00",
+      "stadium": "NRG Stadium",
+      "round": "Round of 32"
+    },
+    {
+      "matchNo": 77,
+      "teams": "1I vs. 3CDFGH",
+      "category": 1,
+      "faceValue": 715.0,
+      "city": "New York New Jersey",
+      "date": "2026-06-30T12:00:00-04:00",
+      "stadium": "MetLife Stadium",
+      "round": "Round of 32"
+    },
+    {
+      "matchNo": 77,
+      "teams": "1I vs. 3CDFGH",
+      "category": 2,
+      "faceValue": 580.0,
+      "city": "New York New Jersey",
+      "date": "2026-06-30T12:00:00-04:00",
+      "stadium": "MetLife Stadium",
+      "round": "Round of 32"
+    },
+    {
+      "matchNo": 78,
+      "teams": "2E vs. 2I",
+      "category": 1,
+      "faceValue": 480.0,
+      "city": "Dallas",
+      "date": "2026-06-30T12:00:00-05:00",
+      "stadium": "AT&T Stadium",
+      "round": "Round of 32"
+    },
+    {
+      "matchNo": 78,
+      "teams": "2E vs. 2I",
+      "category": 2,
+      "faceValue": 385.0,
+      "city": "Dallas",
+      "date": "2026-06-30T12:00:00-05:00",
+      "stadium": "AT&T Stadium",
+      "round": "Round of 32"
+    },
+    {
+      "matchNo": 79,
+      "teams": "1A vs. 3CEFHI",
+      "category": 1,
+      "faceValue": 515.0,
+      "city": "Mexico City",
+      "date": "2026-06-30T12:00:00-06:00",
+      "stadium": "Estadio Azteca",
+      "round": "Round of 32"
+    },
+    {
+      "matchNo": 79,
+      "teams": "1A vs. 3CEFHI",
+      "category": 2,
+      "faceValue": 405.0,
+      "city": "Mexico City",
+      "date": "2026-06-30T12:00:00-06:00",
+      "stadium": "Estadio Azteca",
+      "round": "Round of 32"
+    },
+    {
+      "matchNo": 80,
+      "teams": "1L vs. 3EHIJK",
+      "category": 1,
+      "faceValue": 440.0,
+      "city": "Atlanta",
+      "date": "2026-07-01T12:00:00-04:00",
+      "stadium": "Mercedes-Benz Stadium",
+      "round": "Round of 32"
+    },
+    {
+      "matchNo": 80,
+      "teams": "1L vs. 3EHIJK",
+      "category": 2,
+      "faceValue": 360.0,
+      "city": "Atlanta",
+      "date": "2026-07-01T12:00:00-04:00",
+      "stadium": "Mercedes-Benz Stadium",
+      "round": "Round of 32"
+    },
+    {
+      "matchNo": 81,
+      "teams": "1D vs. 3BEFIJ",
+      "category": 1,
+      "faceValue": 665.0,
+      "city": "San Francisco Bay Area",
+      "date": "2026-07-01T12:00:00-07:00",
+      "stadium": "Levi's Stadium",
+      "round": "Round of 32"
+    },
+    {
+      "matchNo": 81,
+      "teams": "1D vs. 3BEFIJ",
+      "category": 2,
+      "faceValue": 525.0,
+      "city": "San Francisco Bay Area",
+      "date": "2026-07-01T12:00:00-07:00",
+      "stadium": "Levi's Stadium",
+      "round": "Round of 32"
+    },
+    {
+      "matchNo": 82,
+      "teams": "1G vs. 3AEHIJ",
+      "category": 1,
+      "faceValue": 470.0,
+      "city": "Seattle",
+      "date": "2026-07-01T12:00:00-07:00",
+      "stadium": "Lumen Field",
+      "round": "Round of 32"
+    },
+    {
+      "matchNo": 82,
+      "teams": "1G vs. 3AEHIJ",
+      "category": 2,
+      "faceValue": 390.0,
+      "city": "Seattle",
+      "date": "2026-07-01T12:00:00-07:00",
+      "stadium": "Lumen Field",
+      "round": "Round of 32"
+    },
+    {
+      "matchNo": 83,
+      "teams": "2K vs. 2L",
+      "category": 1,
+      "faceValue": 545.0,
+      "city": "Toronto",
+      "date": "2026-07-02T12:00:00-04:00",
+      "stadium": "BMO Field",
+      "round": "Round of 32"
+    },
+    {
+      "matchNo": 83,
+      "teams": "2K vs. 2L",
+      "category": 3,
+      "faceValue": 210.0,
+      "city": "Toronto",
+      "date": "2026-07-02T12:00:00-04:00",
+      "stadium": "BMO Field",
+      "round": "Round of 32"
+    },
+    {
+      "matchNo": 84,
+      "teams": "1H vs. 2J",
+      "category": 1,
+      "faceValue": 665.0,
+      "city": "Los Angeles",
+      "date": "2026-07-02T12:00:00-07:00",
+      "stadium": "SoFi Stadium",
+      "round": "Round of 32"
+    },
+    {
+      "matchNo": 84,
+      "teams": "1H vs. 2J",
+      "category": 2,
+      "faceValue": 530.0,
+      "city": "Los Angeles",
+      "date": "2026-07-02T12:00:00-07:00",
+      "stadium": "SoFi Stadium",
+      "round": "Round of 32"
+    },
+    {
+      "matchNo": 85,
+      "teams": "1B vs. 3EFGIJ",
+      "category": 1,
+      "faceValue": 500.0,
+      "city": "Vancouver",
+      "date": "2026-07-02T12:00:00-07:00",
+      "stadium": "BC Place",
+      "round": "Round of 32"
+    },
+    {
+      "matchNo": 85,
+      "teams": "1B vs. 3EFGIJ",
+      "category": 2,
+      "faceValue": 430.0,
+      "city": "Vancouver",
+      "date": "2026-07-02T12:00:00-07:00",
+      "stadium": "BC Place",
+      "round": "Round of 32"
+    },
+    {
+      "matchNo": 86,
+      "teams": "1J vs. 2H",
+      "category": 1,
+      "faceValue": 505.0,
+      "city": "Miami",
+      "date": "2026-07-03T12:00:00-04:00",
+      "stadium": "Hard Rock Stadium",
+      "round": "Round of 32"
+    },
+    {
+      "matchNo": 86,
+      "teams": "1J vs. 2H",
+      "category": 2,
+      "faceValue": 405.0,
+      "city": "Miami",
+      "date": "2026-07-03T12:00:00-04:00",
+      "stadium": "Hard Rock Stadium",
+      "round": "Round of 32"
+    },
+    {
+      "matchNo": 87,
+      "teams": "1K vs. 3DEIJL",
+      "category": 1,
+      "faceValue": 470.0,
+      "city": "Kansas City",
+      "date": "2026-07-03T12:00:00-05:00",
+      "stadium": "Arrowhead Stadium",
+      "round": "Round of 32"
+    },
+    {
+      "matchNo": 87,
+      "teams": "1K vs. 3DEIJL",
+      "category": 2,
+      "faceValue": 385.0,
+      "city": "Kansas City",
+      "date": "2026-07-03T12:00:00-05:00",
+      "stadium": "Arrowhead Stadium",
+      "round": "Round of 32"
+    },
+    {
+      "matchNo": 88,
+      "teams": "2D vs. 2G",
+      "category": 1,
+      "faceValue": 515.0,
+      "city": "Dallas",
+      "date": "2026-07-03T12:00:00-05:00",
+      "stadium": "AT&T Stadium",
+      "round": "Round of 32"
+    },
+    {
+      "matchNo": 88,
+      "teams": "2D vs. 2G",
+      "category": 2,
+      "faceValue": 420.0,
+      "city": "Dallas",
+      "date": "2026-07-03T12:00:00-05:00",
+      "stadium": "AT&T Stadium",
+      "round": "Round of 32"
+    },
+    {
+      "matchNo": 89,
+      "teams": "W74 vs. W77",
+      "category": 1,
+      "faceValue": 760.0,
+      "city": "Philadelphia",
+      "date": "2026-07-04T12:00:00-04:00",
+      "stadium": "Lincoln Financial Field",
+      "round": "Round of 16"
+    },
+    {
+      "matchNo": 89,
+      "teams": "W74 vs. W77",
+      "category": 2,
+      "faceValue": 560.0,
+      "city": "Philadelphia",
+      "date": "2026-07-04T12:00:00-04:00",
+      "stadium": "Lincoln Financial Field",
+      "round": "Round of 16"
+    },
+    {
+      "matchNo": 90,
+      "teams": "W73 vs. W75",
+      "category": 1,
+      "faceValue": 620.0,
+      "city": "Houston",
+      "date": "2026-07-04T12:00:00-05:00",
+      "stadium": "NRG Stadium",
+      "round": "Round of 16"
+    },
+    {
+      "matchNo": 90,
+      "teams": "W73 vs. W75",
+      "category": 2,
+      "faceValue": 505.0,
+      "city": "Houston",
+      "date": "2026-07-04T12:00:00-05:00",
+      "stadium": "NRG Stadium",
+      "round": "Round of 16"
+    },
+    {
+      "matchNo": 91,
+      "teams": "W76 vs. W78",
+      "category": 1,
+      "faceValue": 980.0,
+      "city": "New York New Jersey",
+      "date": "2026-07-05T12:00:00-04:00",
+      "stadium": "MetLife Stadium",
+      "round": "Round of 16"
+    },
+    {
+      "matchNo": 91,
+      "teams": "W76 vs. W78",
+      "category": 2,
+      "faceValue": 785.0,
+      "city": "New York New Jersey",
+      "date": "2026-07-05T12:00:00-04:00",
+      "stadium": "MetLife Stadium",
+      "round": "Round of 16"
+    },
+    {
+      "matchNo": 92,
+      "teams": "W79 vs. W80",
+      "category": 1,
+      "faceValue": 695.0,
+      "city": "Mexico City",
+      "date": "2026-07-05T12:00:00-06:00",
+      "stadium": "Estadio Azteca",
+      "round": "Round of 16"
+    },
+    {
+      "matchNo": 93,
+      "teams": "W83 vs. W84",
+      "category": 1,
+      "faceValue": 640.0,
+      "city": "Dallas",
+      "date": "2026-07-06T12:00:00-05:00",
+      "stadium": "AT&T Stadium",
+      "round": "Round of 16"
+    },
+    {
+      "matchNo": 93,
+      "teams": "W83 vs. W84",
+      "category": 2,
+      "faceValue": 515.0,
+      "city": "Dallas",
+      "date": "2026-07-06T12:00:00-05:00",
+      "stadium": "AT&T Stadium",
+      "round": "Round of 16"
+    },
+    {
+      "matchNo": 94,
+      "teams": "W81 vs. W82",
+      "category": 1,
+      "faceValue": 695.0,
+      "city": "Seattle",
+      "date": "2026-07-06T12:00:00-07:00",
+      "stadium": "Lumen Field",
+      "round": "Round of 16"
+    },
+    {
+      "matchNo": 94,
+      "teams": "W81 vs. W82",
+      "category": 2,
+      "faceValue": 565.0,
+      "city": "Seattle",
+      "date": "2026-07-06T12:00:00-07:00",
+      "stadium": "Lumen Field",
+      "round": "Round of 16"
+    },
+    {
+      "matchNo": 95,
+      "teams": "W86 vs. W88",
+      "category": 1,
+      "faceValue": 665.0,
+      "city": "Atlanta",
+      "date": "2026-07-07T12:00:00-04:00",
+      "stadium": "Mercedes-Benz Stadium",
+      "round": "Round of 16"
+    },
+    {
+      "matchNo": 95,
+      "teams": "W86 vs. W88",
+      "category": 2,
+      "faceValue": 525.0,
+      "city": "Atlanta",
+      "date": "2026-07-07T12:00:00-04:00",
+      "stadium": "Mercedes-Benz Stadium",
+      "round": "Round of 16"
+    },
+    {
+      "matchNo": 96,
+      "teams": "W85 vs. W87",
+      "category": 1,
+      "faceValue": 730.0,
+      "city": "Vancouver",
+      "date": "2026-07-07T12:00:00-07:00",
+      "stadium": "BC Place",
+      "round": "Round of 16"
+    },
+    {
+      "matchNo": 96,
+      "teams": "W85 vs. W87",
+      "category": 2,
+      "faceValue": 595.0,
+      "city": "Vancouver",
+      "date": "2026-07-07T12:00:00-07:00",
+      "stadium": "BC Place",
+      "round": "Round of 16"
+    },
+    {
+      "matchNo": 97,
+      "teams": "W89 vs. W90",
+      "category": 1,
+      "faceValue": 1270.0,
+      "city": "Boston",
+      "date": "2026-07-09T12:00:00-04:00",
+      "stadium": "Gillette Stadium",
+      "round": "Quarter-final"
+    },
+    {
+      "matchNo": 97,
+      "teams": "W89 vs. W90",
+      "category": 2,
+      "faceValue": 890.0,
+      "city": "Boston",
+      "date": "2026-07-09T12:00:00-04:00",
+      "stadium": "Gillette Stadium",
+      "round": "Quarter-final"
+    },
+    {
+      "matchNo": 98,
+      "teams": "W93 vs. W94",
+      "category": 1,
+      "faceValue": 1775.0,
+      "city": "Los Angeles",
+      "date": "2026-07-10T12:00:00-07:00",
+      "stadium": "SoFi Stadium",
+      "round": "Quarter-final"
+    },
+    {
+      "matchNo": 98,
+      "teams": "W93 vs. W94",
+      "category": 2,
+      "faceValue": 1220.0,
+      "city": "Los Angeles",
+      "date": "2026-07-10T12:00:00-07:00",
+      "stadium": "SoFi Stadium",
+      "round": "Quarter-final"
+    },
+    {
+      "matchNo": 99,
+      "teams": "W91 vs. W92",
+      "category": 1,
+      "faceValue": 1375.0,
+      "city": "Miami",
+      "date": "2026-07-11T12:00:00-04:00",
+      "stadium": "Hard Rock Stadium",
+      "round": "Quarter-final"
+    },
+    {
+      "matchNo": 99,
+      "teams": "W91 vs. W92",
+      "category": 2,
+      "faceValue": 955.0,
+      "city": "Miami",
+      "date": "2026-07-11T12:00:00-04:00",
+      "stadium": "Hard Rock Stadium",
+      "round": "Quarter-final"
+    },
+    {
+      "matchNo": 100,
+      "teams": "W95 vs. W96",
+      "category": 1,
+      "faceValue": 1265.0,
+      "city": "Kansas City",
+      "date": "2026-07-11T12:00:00-05:00",
+      "stadium": "Arrowhead Stadium",
+      "round": "Quarter-final"
+    },
+    {
+      "matchNo": 100,
+      "teams": "W95 vs. W96",
+      "category": 2,
+      "faceValue": 940.0,
+      "city": "Kansas City",
+      "date": "2026-07-11T12:00:00-05:00",
+      "stadium": "Arrowhead Stadium",
+      "round": "Quarter-final"
+    },
+    {
+      "matchNo": 101,
+      "teams": "W97 vs. W98",
+      "category": 1,
+      "faceValue": 3295.0,
+      "city": "Dallas",
+      "date": "2026-07-14T12:00:00-05:00",
+      "stadium": "AT&T Stadium",
+      "round": "Semi-final"
+    },
+    {
+      "matchNo": 101,
+      "teams": "W97 vs. W98",
+      "category": 2,
+      "faceValue": 2350.0,
+      "city": "Dallas",
+      "date": "2026-07-14T12:00:00-05:00",
+      "stadium": "AT&T Stadium",
+      "round": "Semi-final"
+    },
+    {
+      "matchNo": 102,
+      "teams": "W99 vs. W100",
+      "category": 1,
+      "faceValue": 3200.0,
+      "city": "Atlanta",
+      "date": "2026-07-15T12:00:00-04:00",
+      "stadium": "Mercedes-Benz Stadium",
+      "round": "Semi-final",
+      "estimated": true
+    },
+    {
+      "matchNo": 102,
+      "teams": "W99 vs. W100",
+      "category": 2,
+      "faceValue": 2185.0,
+      "city": "Atlanta",
+      "date": "2026-07-15T12:00:00-04:00",
+      "stadium": "Mercedes-Benz Stadium",
+      "round": "Semi-final"
+    },
+    {
+      "matchNo": 102,
+      "teams": "W99 vs. W100",
+      "category": 3,
+      "faceValue": 780.0,
+      "city": "Atlanta",
+      "date": "2026-07-15T12:00:00-04:00",
+      "stadium": "Mercedes-Benz Stadium",
+      "round": "Semi-final"
+    },
+    {
+      "matchNo": 103,
+      "teams": "L101 vs. L102",
+      "category": 1,
+      "faceValue": 1070.0,
+      "city": "Miami",
+      "date": "2026-07-18T12:00:00-04:00",
+      "stadium": "Hard Rock Stadium",
+      "round": "Third Place"
+    },
+    {
+      "matchNo": 103,
+      "teams": "L101 vs. L102",
+      "category": 2,
+      "faceValue": 750.0,
+      "city": "Miami",
+      "date": "2026-07-18T12:00:00-04:00",
+      "stadium": "Hard Rock Stadium",
+      "round": "Third Place",
+      "estimated": true
+    },
+    {
+      "matchNo": 104,
+      "teams": "W101 vs. W102",
+      "category": 1,
+      "faceValue": 5200.0,
+      "city": "New York New Jersey",
+      "date": "2026-07-19T12:00:00-04:00",
+      "stadium": "MetLife Stadium",
+      "round": "Final",
+      "estimated": true
+    },
+    {
+      "matchNo": 104,
+      "teams": "W101 vs. W102",
+      "category": 2,
+      "faceValue": 4000.0,
+      "city": "New York New Jersey",
+      "date": "2026-07-19T12:00:00-04:00",
+      "stadium": "MetLife Stadium",
+      "round": "Final",
+      "estimated": true
+    },
+    {
+      "matchNo": 104,
+      "teams": "W101 vs. W102",
+      "category": 3,
+      "faceValue": 3450.0,
+      "city": "New York New Jersey",
+      "date": "2026-07-19T12:00:00-04:00",
+      "stadium": "MetLife Stadium",
+      "round": "Final"
+    }
+  ]
+}

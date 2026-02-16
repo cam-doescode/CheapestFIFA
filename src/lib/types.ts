@@ -20,6 +20,7 @@ export interface TicketListing {
   availableCategories: number[];
   category: number;
   faceValue: number;
+  estimatedFaceValue?: boolean;
   floorPrice?: number;
   lastUpdate?: string;
   totalSupply: number;
