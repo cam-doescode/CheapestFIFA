@@ -92,7 +92,7 @@ export function MatchCard({ data }: MatchCardProps) {
           rel="noopener noreferrer"
           className="mt-auto pt-2 sm:pt-3 block w-full text-center text-xs sm:text-sm font-medium py-1.5 sm:py-2 px-4 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white transition-colors"
         >
-          Buy on FIFA Collect &rarr;
+          Buy from ${Math.round(cheapestFloor.floorPrice!)} on FIFA Collect &rarr;
         </a>
       )}
     </div>
