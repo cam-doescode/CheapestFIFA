@@ -112,36 +112,39 @@ export function MatchFilters({ matches }: MatchFiltersProps) {
         <option value="match">Match Number</option>
       </select>
 
-      {/* Pricing Source toggle */}
-      <div className="col-span-2 sm:col-span-1 flex items-center gap-1">
-        <button
-          type="button"
-          onClick={() => updateSingleParam("pricing", pricingSource === "collect" ? "rsd" : "collect")}
-          className={`flex items-center gap-2 rounded-lg border px-3 py-2 text-xs sm:text-sm transition-colors ${
-            pricingSource === "rsd"
-              ? "border-blue-400 dark:border-blue-600 bg-blue-50 dark:bg-blue-950/30 text-blue-700 dark:text-blue-400"
-              : "border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-500 dark:text-zinc-400"
-          }`}
-        >
-          <span
-            className={`relative inline-flex h-4 w-7 shrink-0 rounded-full transition-colors ${
-              pricingSource === "rsd" ? "bg-blue-500" : "bg-zinc-300 dark:bg-zinc-600"
+      {/* Pricing Source segmented control */}
+      <div className="col-span-2 sm:col-span-1 flex items-center gap-1.5">
+        <span className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 whitespace-nowrap">Face Value:</span>
+        <div className="inline-flex rounded-lg border border-zinc-200 dark:border-zinc-700 overflow-hidden">
+          <button
+            type="button"
+            onClick={() => updateSingleParam("pricing", "collect")}
+            className={`px-3 py-2 text-xs sm:text-sm font-medium transition-colors ${
+              pricingSource === "collect"
+                ? "bg-emerald-600 text-white"
+                : "bg-white dark:bg-zinc-900 text-zinc-500 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800"
             }`}
           >
-            <span
-              className={`inline-block h-3 w-3 rounded-full bg-white shadow transform transition-transform mt-0.5 ${
-                pricingSource === "rsd" ? "translate-x-3.5 ml-0" : "translate-x-0.5"
-              }`}
-            />
-          </span>
-          {pricingSource === "rsd" ? "RSD Pricing" : "Collect Pricing"}
-        </button>
+            Collect
+          </button>
+          <button
+            type="button"
+            onClick={() => updateSingleParam("pricing", "rsd")}
+            className={`px-3 py-2 text-xs sm:text-sm font-medium transition-colors border-l border-zinc-200 dark:border-zinc-700 ${
+              pricingSource === "rsd"
+                ? "bg-blue-600 text-white"
+                : "bg-white dark:bg-zinc-900 text-zinc-500 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800"
+            }`}
+          >
+            RSD
+          </button>
+        </div>
         <span className="relative group">
-          <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-zinc-200 dark:bg-zinc-700 text-zinc-500 dark:text-zinc-400 text-[10px] font-bold cursor-help">
+          <button type="button" className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-zinc-200 dark:bg-zinc-700 text-zinc-500 dark:text-zinc-400 text-[10px] font-bold cursor-help focus:outline-none">
             ?
-          </span>
-          <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-56 px-3 py-2 rounded-lg bg-zinc-800 dark:bg-zinc-700 text-white text-[10px] sm:text-xs leading-snug opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity z-50 text-center shadow-lg">
-            Switch between FIFA Collect face values (default) and Random Selection Draw (RSD) face values. RSD prices vary by venue.
+          </button>
+          <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-56 px-3 py-2 rounded-lg bg-zinc-800 dark:bg-zinc-700 text-white text-[10px] sm:text-xs leading-snug opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition-opacity z-50 text-center shadow-lg">
+            Compare face values from FIFA Collect (marketplace resale) vs. RSD (Random Selection Draw). RSD prices vary by venue.
           </span>
         </span>
       </div>
@@ -171,10 +174,10 @@ export function MatchFilters({ matches }: MatchFiltersProps) {
           Knockout Predictor
         </button>
         <span className="relative group">
-          <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-zinc-200 dark:bg-zinc-700 text-zinc-500 dark:text-zinc-400 text-[10px] font-bold cursor-help">
+          <button type="button" className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-zinc-200 dark:bg-zinc-700 text-zinc-500 dark:text-zinc-400 text-[10px] font-bold cursor-help focus:outline-none">
             ?
-          </span>
-          <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-56 px-3 py-2 rounded-lg bg-zinc-800 dark:bg-zinc-700 text-white text-[10px] sm:text-xs leading-snug opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity z-50 text-center shadow-lg">
+          </button>
+          <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-56 px-3 py-2 rounded-lg bg-zinc-800 dark:bg-zinc-700 text-white text-[10px] sm:text-xs leading-snug opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition-opacity z-50 text-center shadow-lg">
             Shows projected knockout matchups based on simulation odds. These are predictions only &mdash; actual matchups depend on group stage results.
           </span>
         </span>

@@ -24,7 +24,7 @@ export function PriceTable({ tickets, resalePrices, matchNo, pricingSource = "co
       <thead>
         <tr className="border-b border-zinc-200 dark:border-zinc-700 text-zinc-500 dark:text-zinc-400">
           <th className="text-left py-1 pr-1 sm:pr-2 font-medium">Cat</th>
-          <th className="text-right py-1 px-1 sm:px-2 font-medium">{pricingSource === "rsd" ? "RSD" : "Face"}</th>
+          <th className="text-right py-1 px-1 sm:px-2 font-medium">{pricingSource === "rsd" ? "RSD Face" : "Face"}</th>
           <th className="text-right py-1 px-1 sm:px-2 font-medium">Collect</th>
           {resalePrices.length > 0 && (
             <th className="text-right py-1 px-1 sm:px-2 font-medium">Resale</th>

@@ -1,0 +1,701 @@
+{
+    "entryType": "article",
+    "entryId": "62FugL8D80wkRhuU2YylXF",
+    "articleTitle": "STADIUM INFORMATION",
+    "articlePublishedDate": "2025-10-15T23:00:00+00:00",
+    "heroImage": {
+        "entryId": "6O2LBG2s2eYv0owvoS0Cug",
+        "title": "Stadium Information",
+        "src": "https://digitalhub.fifa.com/transform/06fb071f-d357-47c8-9304-b7146b7ffbc3/FWC-Tickets-Stadium-Information",
+        "alt": "FIFA",
+        "caption": "FIFA",
+        "width": 3840,
+        "height": 2160
+    },
+    "richtext": {
+        "nodeType": "document",
+        "data": {},
+        "content": [
+            {
+                "nodeType": "paragraph",
+                "data": {},
+                "content": [
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "Here are the relevant details for the FIFA World Cup 2026™ stadiums in Canada:",
+                        "marks": [
+                            {
+                                "type": "bold"
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "\n\n",
+                        "marks": []
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "BC Place Vancouver",
+                        "marks": [
+                            {
+                                "type": "bold"
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "\nAddress: 777 Pacific Blvd, Vancouver, BC V6B 4Y8, Canada\nStadium capacity: 48,821 (please note that the net capacity may change due to ongoing stadium configuration)\n",
+                        "marks": []
+                    },
+                    {
+                        "nodeType": "hyperlink",
+                        "data": {
+                            "uri": "https://eur02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdigitalhub.fifa.com%2Fm%2F3c2acc012b1bae34%2Foriginal%2FStadium_Map_Vancouver.png&data=05%7C02%7Cflavia.villacadefaria%40fwc2026.org%7C1a90182f3c7947907e6608de00f522a2%7Cac1c0d014482488590e3ebe4b44279d6%7C0%7C0%7C638949250086482563%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=5W9ethnArfNnkMoMd0KxSHVRey5nAveFdo6nyqtEfeM%3D&reserved=0"
+                        },
+                        "content": [
+                            {
+                                "nodeType": "text",
+                                "data": {},
+                                "value": "Click here",
+                                "marks": []
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": " to view the stadium map",
+                        "marks": []
+                    }
+                ]
+            },
+            {
+                "nodeType": "paragraph",
+                "data": {},
+                "content": [
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "Toronto Stadium\n",
+                        "marks": [
+                            {
+                                "type": "bold"
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "Address: 170 Princes' Blvd, Toronto, ON M6K 3C3, Canada\nStadium capacity: 44,315 (please note that the net capacity may change due to ongoing stadium configuration)\n",
+                        "marks": []
+                    },
+                    {
+                        "nodeType": "hyperlink",
+                        "data": {
+                            "uri": "https://digitalhub.fifa.com/m/2256877ea4883936/original/Stadium_Map_Toronto.png"
+                        },
+                        "content": [
+                            {
+                                "nodeType": "text",
+                                "data": {},
+                                "value": "Click here",
+                                "marks": []
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": " to view the stadium map",
+                        "marks": []
+                    }
+                ]
+            },
+            {
+                "nodeType": "paragraph",
+                "data": {},
+                "content": [
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "Here are the relevant details for the FIFA World Cup 2026™ stadiums in Mexico:",
+                        "marks": [
+                            {
+                                "type": "bold"
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "\n\n",
+                        "marks": []
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "Mexico City Stadium\n",
+                        "marks": [
+                            {
+                                "type": "bold"
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "Address: Calz. de Tlalpan 3465, Sta. Úrsula Coapa, Coyoacán, 04650 Ciudad de México, CDMX, Mexico \nStadium capacity: 72,766 (please note that the net capacity may change due to ongoing stadium configuration)\n",
+                        "marks": []
+                    },
+                    {
+                        "nodeType": "hyperlink",
+                        "data": {
+                            "uri": "https://digitalhub.fifa.com/m/6724a8924837d6a7/original/Stadium_Map_Mexico_City.png"
+                        },
+                        "content": [
+                            {
+                                "nodeType": "text",
+                                "data": {},
+                                "value": "Click here",
+                                "marks": []
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": " to view the stadium map\n\n",
+                        "marks": []
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "Guadalajara Stadium\n",
+                        "marks": [
+                            {
+                                "type": "bold"
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "Address: Circuito J.V.C. 2800, El Bajío, 45014 Zapopan, Jalisco, Mexico \nStadium capacity: 44,330 (please note that the net capacity may change due to ongoing stadium configuration)\n",
+                        "marks": []
+                    },
+                    {
+                        "nodeType": "hyperlink",
+                        "data": {
+                            "uri": "https://digitalhub.fifa.com/m/34606c01376b9858/original/Stadium_Map_Guadalajara.png"
+                        },
+                        "content": [
+                            {
+                                "nodeType": "text",
+                                "data": {},
+                                "value": "Click here",
+                                "marks": []
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": " to view the stadium map\n\n",
+                        "marks": []
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "Monterrey Stadium\n",
+                        "marks": [
+                            {
+                                "type": "bold"
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "Address: Av. Pablo Livas 2011, colonia La Pastora, C.P. 67140, en Guadalupe, Nuevo León, Mexico\nStadium capacity: 50,113 (please note that the net capacity may change due to ongoing stadium configuration)\n",
+                        "marks": []
+                    },
+                    {
+                        "nodeType": "hyperlink",
+                        "data": {
+                            "uri": "https://digitalhub.fifa.com/m/470e53caa32491a7/original/Stadium_Map_Monterrey.png"
+                        },
+                        "content": [
+                            {
+                                "nodeType": "text",
+                                "data": {},
+                                "value": "Click here",
+                                "marks": []
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": " to view the stadium map",
+                        "marks": []
+                    }
+                ]
+            },
+            {
+                "nodeType": "paragraph",
+                "data": {},
+                "content": [
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "Here are the relevant details for the FIFA World Cup 2026™ stadiums in the United States:",
+                        "marks": [
+                            {
+                                "type": "bold"
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "\n\n",
+                        "marks": []
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "Atlanta Stadium  \n",
+                        "marks": [
+                            {
+                                "type": "bold"
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "Address: 1 AMB Dr NW, Atlanta, GA 30313, USA \nStadium capacity: 67,382 (please note that the net capacity may change due to ongoing stadium configuration)\n",
+                        "marks": []
+                    },
+                    {
+                        "nodeType": "hyperlink",
+                        "data": {
+                            "uri": "https://digitalhub.fifa.com/m/7b28137545c45610/original/Stadium_Map_Atlanta.png"
+                        },
+                        "content": [
+                            {
+                                "nodeType": "text",
+                                "data": {},
+                                "value": "Click here",
+                                "marks": []
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": " to view the stadium map\n\n",
+                        "marks": []
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "Boston Stadium  \n",
+                        "marks": [
+                            {
+                                "type": "bold"
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "Address: 1 Patriot Pl, Foxborough, MA 02035, USA\nStadium capacity: 63,815 (please note that the net capacity may change due to ongoing stadium configuration)\n",
+                        "marks": []
+                    },
+                    {
+                        "nodeType": "hyperlink",
+                        "data": {
+                            "uri": "https://digitalhub.fifa.com/m/5414e729dc079316/original/Stadium_Map_Boston.png"
+                        },
+                        "content": [
+                            {
+                                "nodeType": "text",
+                                "data": {},
+                                "value": "Click here",
+                                "marks": []
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": " to view the stadium map\n\n",
+                        "marks": []
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "Dallas Stadium\n",
+                        "marks": [
+                            {
+                                "type": "bold"
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "Address: 1 AT&T Way, Arlington, TX 76011, USA \nStadium capacity: 70,122 (please note that the net capacity may change due to ongoing stadium configuration)\n",
+                        "marks": []
+                    },
+                    {
+                        "nodeType": "hyperlink",
+                        "data": {
+                            "uri": "https://digitalhub.fifa.com/m/2a8fd5552a3bf728/original/Stadium_Map_Dallas.png"
+                        },
+                        "content": [
+                            {
+                                "nodeType": "text",
+                                "data": {},
+                                "value": "Click here",
+                                "marks": []
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": " to view the stadium map",
+                        "marks": []
+                    }
+                ]
+            },
+            {
+                "nodeType": "paragraph",
+                "data": {},
+                "content": [
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "Houston Stadium  \n",
+                        "marks": [
+                            {
+                                "type": "bold"
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "Address: NRG Pkwy, Houston, TX 77054, USA\nStadium capacity: 68,311 (please note that the net capacity may change due to ongoing stadium configuration)\n",
+                        "marks": []
+                    },
+                    {
+                        "nodeType": "hyperlink",
+                        "data": {
+                            "uri": "https://digitalhub.fifa.com/m/428702d2f199975e/original/Stadium_Map_Houston.png"
+                        },
+                        "content": [
+                            {
+                                "nodeType": "text",
+                                "data": {},
+                                "value": "Click here",
+                                "marks": []
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": " to view the stadium map  \n\n",
+                        "marks": []
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "Kansas City Stadium  \n",
+                        "marks": [
+                            {
+                                "type": "bold"
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "Address: 1 Arrowhead Dr, Kansas City, MO 64129, USA\nStadium capacity: 67,513 (please note that the net capacity may change due to ongoing stadium configuration)\n",
+                        "marks": []
+                    },
+                    {
+                        "nodeType": "hyperlink",
+                        "data": {
+                            "uri": "https://digitalhub.fifa.com/m/598ce151095d8adf/original/Stadium_Map_Kansas_City.png"
+                        },
+                        "content": [
+                            {
+                                "nodeType": "text",
+                                "data": {},
+                                "value": "Click here",
+                                "marks": []
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": " to view the stadium map\n\n",
+                        "marks": []
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "Los Angeles Stadium  \n",
+                        "marks": [
+                            {
+                                "type": "bold"
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "Address: 1001 Stadium Dr, Inglewood, CA 90301, USA\nStadium capacity: 69,650 (please note that the net capacity may change due to ongoing stadium configuration)\n",
+                        "marks": []
+                    },
+                    {
+                        "nodeType": "hyperlink",
+                        "data": {
+                            "uri": "https://digitalhub.fifa.com/m/2b3d1983e7d1f7bb/original/Stadium_Map_Los_Angeles.png"
+                        },
+                        "content": [
+                            {
+                                "nodeType": "text",
+                                "data": {},
+                                "value": "Click here",
+                                "marks": []
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": " to view the stadium map  \n\n",
+                        "marks": []
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "Miami Stadium\n",
+                        "marks": [
+                            {
+                                "type": "bold"
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "Address: 347 Don Shula Dr, Miami Gardens, FL 33056, USA  \nStadium capacity: 64,091 (please note that the net capacity may change due to ongoing stadium configuration)\n",
+                        "marks": []
+                    },
+                    {
+                        "nodeType": "hyperlink",
+                        "data": {
+                            "uri": "https://digitalhub.fifa.com/m/81896f00a53e020/original/Stadium_Map_Miami.png"
+                        },
+                        "content": [
+                            {
+                                "nodeType": "text",
+                                "data": {},
+                                "value": "Click here",
+                                "marks": []
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": " to view the stadium map  \n\n",
+                        "marks": []
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "New York New Jersey Stadium  \n",
+                        "marks": [
+                            {
+                                "type": "bold"
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "Address: 1 MetLife Stadium Dr, East Rutherford, NJ 07073, USA \nStadium capacity: 78,576 (please note that the net capacity may change due to ongoing stadium configuration)\n",
+                        "marks": []
+                    },
+                    {
+                        "nodeType": "hyperlink",
+                        "data": {
+                            "uri": "https://digitalhub.fifa.com/m/6547f6ac676326c4/original/Stadium_Map_New_York_New_Jersey.png"
+                        },
+                        "content": [
+                            {
+                                "nodeType": "text",
+                                "data": {},
+                                "value": "Click here",
+                                "marks": []
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": " to view the stadium map  \n\n",
+                        "marks": []
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "Philadelphia Stadium  \n",
+                        "marks": [
+                            {
+                                "type": "bold"
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "Address: One Lincoln Financial Field Way, Philadelphia, PA 19148, USA \nStadium capacity: 65,827 (please note that the net capacity may change due to ongoing stadium configuration)\n",
+                        "marks": []
+                    },
+                    {
+                        "nodeType": "hyperlink",
+                        "data": {
+                            "uri": "https://digitalhub.fifa.com/m/87ef914bd38349c/original/Stadium_Map_Philadelphia.png"
+                        },
+                        "content": [
+                            {
+                                "nodeType": "text",
+                                "data": {},
+                                "value": "Click here",
+                                "marks": []
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": " to view the stadium map  \n\n",
+                        "marks": []
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "San Francisco Bay Area Stadium  \n",
+                        "marks": [
+                            {
+                                "type": "bold"
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "Address: 4900 Marie P DeBartolo Way, Santa Clara, CA 95054, USA \nStadium capacity: 69,391 (please note that the net capacity may change due to ongoing stadium configuration)\n",
+                        "marks": []
+                    },
+                    {
+                        "nodeType": "hyperlink",
+                        "data": {
+                            "uri": "https://digitalhub.fifa.com/m/74e37ec670ea784f/original/Stadium_Map_San_Francisco_Bay_Area.png"
+                        },
+                        "content": [
+                            {
+                                "nodeType": "text",
+                                "data": {},
+                                "value": "Click here",
+                                "marks": []
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": " to view the stadium map\n\n",
+                        "marks": []
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "Seattle Stadium  \n",
+                        "marks": [
+                            {
+                                "type": "bold"
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": "Address: 800 Occidental Ave S, Seattle, WA 98134, USA\nStadium capacity: 65,123 (please note that the net capacity may change due to ongoing stadium configuration)\n",
+                        "marks": []
+                    },
+                    {
+                        "nodeType": "hyperlink",
+                        "data": {
+                            "uri": "https://digitalhub.fifa.com/m/aeb01f8007b3494/original/Stadium_Map_Seattle.png"
+                        },
+                        "content": [
+                            {
+                                "nodeType": "text",
+                                "data": {},
+                                "value": "Click here",
+                                "marks": []
+                            }
+                        ]
+                    },
+                    {
+                        "nodeType": "text",
+                        "data": {},
+                        "value": " to view the stadium map",
+                        "marks": []
+                    }
+                ]
+            }
+        ]
+    },
+    "publishedLabel": "Published",
+    "backLabel": "Back",
+    "shareLabel": "Share",
+    "authorLabel": "Author",
+    "theme": "Dark",
+    "customTheme": {
+        "identifier": "Article Page Default Theme",
+        "backgroundColor": "#ffffff",
+        "textColor": "#03122B",
+        "primaryColor": "#00b8ff",
+        "secondaryColor": "#505B73",
+        "tertiaryColor": "#020f2a",
+        "quaternaryColor": "#ffffff",
+        "quinaryColor": "#ffffff"
+    },
+    "articlePreviewText": "Learn more about the different FIFA World Cup 2026™ stadium names, locations and seating capacities.",
+    "previewImage": {
+        "entryId": "6O2LBG2s2eYv0owvoS0Cug",
+        "title": "Stadium Information",
+        "src": "https://digitalhub.fifa.com/transform/06fb071f-d357-47c8-9304-b7146b7ffbc3/FWC-Tickets-Stadium-Information",
+        "alt": "FIFA",
+        "caption": "FIFA",
+        "width": 3840,
+        "height": 2160
+    },
+    "articlePageInternalTitle": "Article Page > FWC 2026 > Ticketing > Stadium Information"
+}

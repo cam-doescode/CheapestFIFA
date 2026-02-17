@@ -86,6 +86,7 @@ const TEAM_TO_ISO: Record<string, string> = {
   "Ghana": "gh",
   "Haiti": "ht",
   "IR Iran": "ir",
+  "Iran": "ir",
   "Ivory Coast": "ci",
   "Japan": "jp",
   "Jordan": "jo",

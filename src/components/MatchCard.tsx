@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { MatchWithPrices } from "@/lib/types";
 import type { KnockoutPrediction } from "@/data/knockout-predictions";
+import { getTeamAggregates } from "@/data/knockout-predictions";
 import { formatDate, formatTime, getCollectUrl, parseTeams, getFlagUrl, getStadiumMapPath } from "@/lib/utils";
 import { PriceTable } from "./PriceTable";
 import { StadiumMapModal } from "./StadiumMapModal";
@@ -43,6 +44,43 @@ function TeamWithFlag({ name }: { name: string }) {
   );
 }
 
+function PredictionBadge({ prediction }: { prediction: KnockoutPrediction }) {
+  const top = prediction.matchups[0];
+  const alternatives = prediction.matchups.slice(1);
+  const aggregates = getTeamAggregates(prediction);
+  // Sort aggregates by probability desc
+  const sortedTeams = [...aggregates.entries()].sort((a, b) => b[1] - a[1]);
+
+  return (
+    <span className="relative group/pred">
+      <button
+        type="button"
+        className="ml-1.5 inline-flex items-center px-1.5 py-0.5 rounded-full text-[9px] sm:text-[10px] font-semibold bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-400 normal-case tracking-normal cursor-help focus:outline-none"
+      >
+        {top.probability}% likely
+      </button>
+      {alternatives.length > 0 && (
+        <span className="absolute top-full left-0 mt-1 min-w-[240px] w-max max-w-[300px] px-3 py-2.5 rounded-lg bg-zinc-800 dark:bg-zinc-700 text-white text-[10px] sm:text-xs leading-snug opacity-0 pointer-events-none group-hover/pred:opacity-100 group-hover/pred:pointer-events-auto group-focus-within/pred:opacity-100 group-focus-within/pred:pointer-events-auto transition-opacity z-50 shadow-lg">
+          <div className="font-semibold mb-1.5 text-purple-300">Other possible matchups</div>
+          {alternatives.map((alt, i) => (
+            <div key={i} className="flex justify-between gap-3 py-0.5">
+              <span className="whitespace-nowrap">{alt.team1} vs. {alt.team2}</span>
+              <span className="text-purple-300 font-medium shrink-0">{alt.probability}%</span>
+            </div>
+          ))}
+          <div className="border-t border-zinc-600 mt-1.5 pt-1.5 font-semibold text-zinc-300">Team odds for this slot</div>
+          {sortedTeams.map(([team, pct]) => (
+            <div key={team} className="flex justify-between gap-3 py-0.5">
+              <span>{team}</span>
+              <span className="text-emerald-400 font-medium shrink-0">{pct.toFixed(1)}%</span>
+            </div>
+          ))}
+        </span>
+      )}
+    </span>
+  );
+}
+
 export function MatchCard({ data, prediction, pricingSource = "collect" }: MatchCardProps) {
   const { match, tickets, resalePrices } = data;
 
@@ -50,9 +88,10 @@ export function MatchCard({ data, prediction, pricingSource = "collect" }: Match
     .filter((t) => t.floorPrice != null && t.floorPrice > 0)
     .sort((a, b) => a.floorPrice! - b.floorPrice!)[0];
 
-  // Use predicted teams when available
-  const displayTeams = prediction
-    ? `${prediction.team1} vs. ${prediction.team2}`
+  // Use predicted teams when available (top matchup)
+  const topMatchup = prediction?.matchups[0];
+  const displayTeams = topMatchup
+    ? `${topMatchup.team1} vs. ${topMatchup.team2}`
     : match.teams;
 
   return (
@@ -66,11 +105,7 @@ export function MatchCard({ data, prediction, pricingSource = "collect" }: Match
         <div>
           <div className="text-[10px] sm:text-xs font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-wide mb-0.5 sm:mb-1">
             {match.roundInfo} &middot; Match {match.matchNo}
-            {prediction && (
-              <span className="ml-1.5 inline-flex items-center px-1.5 py-0.5 rounded-full text-[9px] sm:text-[10px] font-semibold bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-400 normal-case tracking-normal">
-                {prediction.probability}% likely
-              </span>
-            )}
+            {prediction && <PredictionBadge prediction={prediction} />}
           </div>
           <h3 className="font-semibold text-zinc-900 dark:text-zinc-100 text-sm sm:text-base leading-tight">
             <TeamNames teams={displayTeams} />

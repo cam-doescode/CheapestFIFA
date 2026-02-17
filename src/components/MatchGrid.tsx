@@ -45,7 +45,7 @@ export function MatchGrid({ matches }: MatchGridProps) {
         // When predictor is on, also match on predicted teams
         if (predictorOn) {
           const pred = PREDICTIONS_BY_MATCH.get(m.match.matchNo);
-          if (pred && (teamSet.has(pred.team1.toLowerCase()) || teamSet.has(pred.team2.toLowerCase()))) {
+          if (pred && pred.matchups.some((mu) => teamSet.has(mu.team1.toLowerCase()) || teamSet.has(mu.team2.toLowerCase()))) {
             return true;
           }
         }
