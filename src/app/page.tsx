@@ -3,6 +3,7 @@ import { getTicketsByMatch, getResaleData } from "@/lib/api";
 import type { MatchWithPrices } from "@/lib/types";
 import { withReferral } from "@/lib/utils";
 import { MatchGrid } from "@/components/MatchGrid";
+import { GeoBanner } from "@/components/GeoBanner";
 
 export default async function Home() {
   const [tickets, resaleData] = await Promise.all([
@@ -92,6 +93,11 @@ export default async function Home() {
           </a>
         </div>
       </div>
+
+      {/* Geo-detection banner */}
+      <Suspense fallback={null}>
+        <GeoBanner />
+      </Suspense>
 
       {/* Main content */}
       <main className="max-w-7xl mx-auto px-4 py-4 sm:py-6">
