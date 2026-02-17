@@ -143,6 +143,11 @@ export function MatchCard({ data, prediction, pricingSource = "collect" }: Match
             <div className="text-base sm:text-lg font-bold text-emerald-600 dark:text-emerald-400">
               ${Math.round(cheapestFloor.floorPrice!)}
             </div>
+            {cheapestFloor.faceValue > 0 && cheapestFloor.floorPrice! <= cheapestFloor.faceValue && (
+              <div className="text-[9px] sm:text-[10px] font-semibold text-emerald-700 dark:text-emerald-300 bg-emerald-100 dark:bg-emerald-900/40 rounded px-1 py-0.5 mt-0.5">
+                Below face!
+              </div>
+            )}
           </div>
         )}
       </div>
@@ -159,6 +164,17 @@ export function MatchCard({ data, prediction, pricingSource = "collect" }: Match
         </div>
       </div>
 
+      {/* Supply indicator */}
+      {(() => {
+        const totalListed = tickets.reduce((sum, t) => sum + (t.circulatingSupply || 0), 0);
+        if (totalListed === 0) return null;
+        return (
+          <div className="text-[10px] sm:text-[11px] text-zinc-400 dark:text-zinc-500 mb-1.5">
+            {totalListed.toLocaleString()} ticket{totalListed !== 1 ? "s" : ""} listed on Collect
+          </div>
+        );
+      })()}
+
       {/* Price table */}
       <PriceTable tickets={tickets} resalePrices={resalePrices} matchNo={match.matchNo} pricingSource={pricingSource} />
 
@@ -167,7 +183,7 @@ export function MatchCard({ data, prediction, pricingSource = "collect" }: Match
         <a
           href={getCollectUrl(match.matchNo, cheapestFloor.category)}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener"
           className="mt-auto pt-2 sm:pt-3 block w-full text-center text-xs sm:text-sm font-medium py-1.5 sm:py-2 px-4 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white transition-colors"
         >
           Buy from ${Math.round(cheapestFloor.floorPrice!)} on FIFA Collect &rarr;

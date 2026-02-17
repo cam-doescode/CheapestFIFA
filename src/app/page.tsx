@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { getTicketsByMatch, getResaleData } from "@/lib/api";
 import type { MatchWithPrices } from "@/lib/types";
+import { withReferral } from "@/lib/utils";
 import { MatchGrid } from "@/components/MatchGrid";
 
 export default async function Home() {
@@ -78,9 +79,9 @@ export default async function Home() {
           </div>
           <span className="mx-2 sm:mx-3 text-emerald-300 dark:text-emerald-700">|</span>
           <a
-            href="https://collect.fifa.com/pages/right-to-tickets"
+            href={withReferral("https://collect.fifa.com/pages/right-to-tickets")}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
             className="text-emerald-600 dark:text-emerald-500 hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors"
           >
             From{" "}
@@ -111,9 +112,9 @@ export default async function Home() {
           FIFA official resale{" "}
           <span className="font-semibold">closed Feb 22 &ndash; Apr 8</span>{" · "}
           <a
-            href="https://collect.fifa.com/marketplace?ref=serfifathekick"
+            href={withReferral("https://collect.fifa.com/marketplace")}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
             className="font-semibold underline hover:text-amber-700 dark:hover:text-amber-400"
           >
             FIFA Collect
@@ -136,9 +137,9 @@ export default async function Home() {
               applies to secondary market sales. For full details on how the
               platform works, fees, and policies, visit the{" "}
               <a
-                href="https://collect.fifa.com/learn"
+                href={withReferral("https://collect.fifa.com/learn")}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener"
                 className="text-emerald-600 dark:text-emerald-400 underline hover:text-emerald-700 dark:hover:text-emerald-300"
               >
                 FIFA Collect FAQ

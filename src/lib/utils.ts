@@ -57,12 +57,18 @@ export function getRoundOrder(round: number): number {
 // FIFA Collect referral config
 const REFERRAL_CODE = "serfifathekick";
 
+/** Append referral tracking to any FIFA Collect URL */
+export function withReferral(url: string): string {
+  const separator = url.includes("?") ? "&" : "?";
+  return `${url}${separator}referrer=${REFERRAL_CODE}`;
+}
+
 /** Build a FIFA Collect marketplace URL for a specific match+category */
 export function getCollectUrl(matchNo: number, category?: number): string {
   const base = category
     ? `https://collect.fifa.com/marketplace/cat${category}-m${matchNo}`
     : `https://collect.fifa.com/marketplace`;
-  return `${base}?referrer=${REFERRAL_CODE}`;
+  return withReferral(base);
 }
 
 /** Map team name (as it appears in the API) to ISO 3166-1 alpha-2 code */
