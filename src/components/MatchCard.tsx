@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import type { MatchWithPrices } from "@/lib/types";
 import type { KnockoutPrediction } from "@/data/knockout-predictions";
@@ -45,22 +48,45 @@ function TeamWithFlag({ name }: { name: string }) {
 }
 
 function PredictionBadge({ prediction }: { prediction: KnockoutPrediction }) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLSpanElement>(null);
   const top = prediction.matchups[0];
   const alternatives = prediction.matchups.slice(1);
   const aggregates = getTeamAggregates(prediction);
-  // Sort aggregates by probability desc
   const sortedTeams = [...aggregates.entries()].sort((a, b) => b[1] - a[1]);
 
+  useEffect(() => {
+    if (!open) return;
+    function handleClickOutside(e: MouseEvent | TouchEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
+  }, [open]);
+
   return (
-    <span className="relative group/pred">
+    <span ref={ref} className="relative group/pred">
       <button
         type="button"
+        onClick={() => setOpen((v) => !v)}
         className="ml-1.5 inline-flex items-center px-1.5 py-0.5 rounded-full text-[9px] sm:text-[10px] font-semibold bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-400 normal-case tracking-normal cursor-help focus:outline-none"
       >
         {top.probability}% likely
       </button>
       {alternatives.length > 0 && (
-        <span className="absolute top-full left-0 mt-1 min-w-[240px] w-max max-w-[300px] px-3 py-2.5 rounded-lg bg-zinc-800 dark:bg-zinc-700 text-white text-[10px] sm:text-xs leading-snug opacity-0 pointer-events-none group-hover/pred:opacity-100 group-hover/pred:pointer-events-auto group-focus-within/pred:opacity-100 group-focus-within/pred:pointer-events-auto transition-opacity z-50 shadow-lg">
+        <span
+          className={`absolute top-full left-0 mt-1 min-w-[240px] w-max max-w-[300px] px-3 py-2.5 rounded-lg bg-zinc-800 dark:bg-zinc-700 text-white text-[10px] sm:text-xs leading-snug z-50 shadow-lg transition-opacity ${
+            open
+              ? "opacity-100 pointer-events-auto"
+              : "opacity-0 pointer-events-none group-hover/pred:opacity-100 group-hover/pred:pointer-events-auto"
+          }`}
+        >
           <div className="font-semibold mb-1.5 text-purple-300">Other possible matchups</div>
           {alternatives.map((alt, i) => (
             <div key={i} className="flex justify-between gap-3 py-0.5">

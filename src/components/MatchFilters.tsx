@@ -5,6 +5,7 @@ import { useCallback, useMemo } from "react";
 import type { MatchWithPrices } from "@/lib/types";
 import { ROUND_FILTERS, parseTeams } from "@/lib/utils";
 import { MultiSelect } from "./MultiSelect";
+import { InfoTooltip } from "./InfoTooltip";
 
 interface MatchFiltersProps {
   matches: MatchWithPrices[];
@@ -139,14 +140,7 @@ export function MatchFilters({ matches }: MatchFiltersProps) {
             RSD
           </button>
         </div>
-        <span className="relative group">
-          <button type="button" className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-zinc-200 dark:bg-zinc-700 text-zinc-500 dark:text-zinc-400 text-[10px] font-bold cursor-help focus:outline-none">
-            ?
-          </button>
-          <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-56 px-3 py-2 rounded-lg bg-zinc-800 dark:bg-zinc-700 text-white text-[10px] sm:text-xs leading-snug opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition-opacity z-50 text-center shadow-lg">
-            Compare face values from FIFA Collect (marketplace resale) vs. RSD (Random Selection Draw). RSD prices vary by venue.
-          </span>
-        </span>
+        <InfoTooltip text="Compare face values from FIFA Collect (marketplace resale) vs. RSD (Random Selection Draw). RSD prices vary by venue." />
       </div>
 
       {/* Knockout Predictor toggle */}
@@ -173,14 +167,7 @@ export function MatchFilters({ matches }: MatchFiltersProps) {
           </span>
           Knockout Predictor
         </button>
-        <span className="relative group">
-          <button type="button" className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-zinc-200 dark:bg-zinc-700 text-zinc-500 dark:text-zinc-400 text-[10px] font-bold cursor-help focus:outline-none">
-            ?
-          </button>
-          <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-56 px-3 py-2 rounded-lg bg-zinc-800 dark:bg-zinc-700 text-white text-[10px] sm:text-xs leading-snug opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition-opacity z-50 text-center shadow-lg">
-            Shows projected knockout matchups based on simulation odds. These are predictions only &mdash; actual matchups depend on group stage results.
-          </span>
-        </span>
+        <InfoTooltip text="Shows projected knockout matchups based on simulation odds. These are predictions only — actual matchups depend on group stage results." />
       </div>
     </div>
   );
