@@ -110,6 +110,7 @@ export function MatchFilters({ matches }: MatchFiltersProps) {
         <option value="date">Sort by Date</option>
         <option value="cheapest">Cheapest First</option>
         <option value="savings">Best Savings</option>
+        <option value="markup">Highest Markup</option>
         <option value="match">Match Number</option>
       </select>
 

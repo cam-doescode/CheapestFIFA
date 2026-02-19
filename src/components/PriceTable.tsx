@@ -92,8 +92,11 @@ export function PriceTable({ tickets, resalePrices, matchNo, pricingSource = "co
                     const multiplier = ticket.floorPrice! / faceValue;
                     if (multiplier <= 1) {
                       return (
-                        <span className="text-emerald-600 dark:text-emerald-400 font-medium">
+                        <span className="relative group/bf text-emerald-600 dark:text-emerald-400 font-medium cursor-help">
                           Below face!
+                          <span className="absolute bottom-full right-0 mb-1 px-2 py-1 rounded bg-zinc-800 dark:bg-zinc-700 text-white text-[10px] font-semibold whitespace-nowrap opacity-0 pointer-events-none group-hover/bf:opacity-100 group-active/bf:opacity-100 transition-opacity z-50">
+                            {multiplier.toFixed(2)}x face value
+                          </span>
                         </span>
                       );
                     }

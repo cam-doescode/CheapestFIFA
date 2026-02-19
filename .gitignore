@@ -43,6 +43,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# old stadium maps backup
+/public/stadium-maps/old/
+
 #localdata
 /src/data/knockout-source.txt
 /src/data/stadiuminfo.txt

@@ -66,6 +66,11 @@ export function MatchGrid({ matches }: MatchGridProps) {
           const bSav = getBestSavings(b, pricingSource);
           return bSav - aSav; // highest savings first
         }
+        case "markup": {
+          const aMark = getMaxMultiplier(a, pricingSource);
+          const bMark = getMaxMultiplier(b, pricingSource);
+          return bMark - aMark; // highest markup first
+        }
         case "match":
           return a.match.matchNo - b.match.matchNo;
         case "date":
@@ -110,6 +115,18 @@ function getMinFloor(m: MatchWithPrices): number {
     .filter((t) => t.floorPrice != null && t.floorPrice > 0)
     .map((t) => t.floorPrice!);
   return floors.length > 0 ? Math.min(...floors) : Infinity;
+}
+
+function getMaxMultiplier(m: MatchWithPrices, pricingSource: string): number {
+  const multipliers = m.tickets
+    .filter((t) => t.floorPrice != null && t.floorPrice > 0)
+    .map((t) => {
+      const face = pricingSource === "rsd"
+        ? (getRsdFaceValue(m.match.matchNo, t.category) ?? t.faceValue)
+        : t.faceValue;
+      return face > 0 ? t.floorPrice! / face : 0;
+    });
+  return multipliers.length > 0 ? Math.max(...multipliers) : 0;
 }
 
 function getBestSavings(m: MatchWithPrices, pricingSource: string): number {

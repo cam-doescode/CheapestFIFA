@@ -6,6 +6,7 @@ import type { MatchWithPrices } from "@/lib/types";
 import type { KnockoutPrediction } from "@/data/knockout-predictions";
 import { getTeamAggregates } from "@/data/knockout-predictions";
 import { formatDate, formatTime, getCollectUrl, parseTeams, getFlagUrl, getStadiumMapPath } from "@/lib/utils";
+import { getRsdFaceValue } from "@/data/rsd-prices";
 import { PriceTable } from "./PriceTable";
 import { StadiumMapModal } from "./StadiumMapModal";
 
@@ -114,6 +115,13 @@ export function MatchCard({ data, prediction, pricingSource = "collect" }: Match
     .filter((t) => t.floorPrice != null && t.floorPrice > 0)
     .sort((a, b) => a.floorPrice! - b.floorPrice!)[0];
 
+  // Resolve face value based on pricing toggle
+  const cheapestFaceValue = cheapestFloor
+    ? (pricingSource === "rsd"
+        ? (getRsdFaceValue(match.matchNo, cheapestFloor.category) ?? cheapestFloor.faceValue)
+        : cheapestFloor.faceValue)
+    : 0;
+
   // Use predicted teams when available (top matchup)
   const topMatchup = prediction?.matchups[0];
   const displayTeams = topMatchup
@@ -143,9 +151,12 @@ export function MatchCard({ data, prediction, pricingSource = "collect" }: Match
             <div className="text-base sm:text-lg font-bold text-emerald-600 dark:text-emerald-400">
               ${Math.round(cheapestFloor.floorPrice!)}
             </div>
-            {cheapestFloor.faceValue > 0 && cheapestFloor.floorPrice! <= cheapestFloor.faceValue && (
-              <div className="text-[9px] sm:text-[10px] font-semibold text-emerald-700 dark:text-emerald-300 bg-emerald-100 dark:bg-emerald-900/40 rounded px-1 py-0.5 mt-0.5">
+            {cheapestFaceValue > 0 && cheapestFloor.floorPrice! <= cheapestFaceValue && (
+              <div className="relative group/bf text-[9px] sm:text-[10px] font-semibold text-emerald-700 dark:text-emerald-300 bg-emerald-100 dark:bg-emerald-900/40 rounded px-1 py-0.5 mt-0.5 cursor-help">
                 Below face!
+                <span className="absolute bottom-full right-0 mb-1 px-2 py-1 rounded bg-zinc-800 dark:bg-zinc-700 text-white text-[10px] font-semibold whitespace-nowrap opacity-0 pointer-events-none group-hover/bf:opacity-100 group-active/bf:opacity-100 transition-opacity z-50">
+                  {(cheapestFloor.floorPrice! / cheapestFaceValue).toFixed(2)}x face value
+                </span>
               </div>
             )}
           </div>
