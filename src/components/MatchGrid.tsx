@@ -20,6 +20,7 @@ export function MatchGrid({ matches, supplyTrends }: MatchGridProps) {
   const rounds = (searchParams.get("round") || "").split(",").filter(Boolean);
   const cities = (searchParams.get("city") || "").split(",").filter(Boolean);
   const teams = (searchParams.get("team") || "").split(",").filter(Boolean);
+  const matchNos = (searchParams.get("matchNo") || "").split(",").filter(Boolean);
   const sort = searchParams.get("sort") || "savings";
   const predictorOn = searchParams.get("predictor") !== "off";
   const pricingSource = searchParams.get("pricing") || "collect";
@@ -43,6 +44,11 @@ export function MatchGrid({ matches, supplyTrends }: MatchGridProps) {
 
   const filtered = useMemo(() => {
     let result = matches;
+
+    if (matchNos.length > 0) {
+      const matchNoNums = new Set(matchNos.map((n) => parseInt(n)));
+      result = result.filter((m) => matchNoNums.has(m.match.matchNo));
+    }
 
     if (rounds.length > 0) {
       const roundNums = rounds.map((r) => parseInt(r));
@@ -121,7 +127,7 @@ export function MatchGrid({ matches, supplyTrends }: MatchGridProps) {
     });
 
     return result;
-  }, [matches, rounds, cities, teams, sort, predictorOn, pricingSource, supplyTrends]);
+  }, [matches, matchNos, rounds, cities, teams, sort, predictorOn, pricingSource, supplyTrends]);
 
   return (
     <>

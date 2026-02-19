@@ -18,6 +18,7 @@ export function MatchFilters({ matches }: MatchFiltersProps) {
   const selectedRounds = (searchParams.get("round") || "").split(",").filter(Boolean);
   const selectedCities = (searchParams.get("city") || "").split(",").filter(Boolean);
   const selectedTeams = (searchParams.get("team") || "").split(",").filter(Boolean);
+  const selectedMatches = (searchParams.get("matchNo") || "").split(",").filter(Boolean);
   const currentSort = searchParams.get("sort") || "savings";
   const predictorOn = searchParams.get("predictor") !== "off";
   const pricingSource = searchParams.get("pricing") || "collect";
@@ -75,6 +76,12 @@ export function MatchFilters({ matches }: MatchFiltersProps) {
   const cityOptions = cities.map((c) => ({ value: c, label: c }));
   const teamOptions = teams.map((t) => ({ value: t, label: t }));
 
+  const matchOptions = useMemo(() => {
+    return [...matches]
+      .sort((a, b) => a.match.matchNo - b.match.matchNo)
+      .map((m) => ({ value: String(m.match.matchNo), label: `M${m.match.matchNo}` }));
+  }, [matches]);
+
   return (
     <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-2 sm:gap-3 mb-4 sm:mb-6">
       {/* Team multi-select */}
@@ -99,6 +106,14 @@ export function MatchFilters({ matches }: MatchFiltersProps) {
         options={cityOptions}
         selected={selectedCities}
         onChange={(vals) => updateParam("city", vals)}
+      />
+
+      {/* Match number multi-select */}
+      <MultiSelect
+        label="All Matches"
+        options={matchOptions}
+        selected={selectedMatches}
+        onChange={(vals) => updateParam("matchNo", vals)}
       />
 
       {/* Sort (single select — keep as dropdown) */}
