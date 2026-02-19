@@ -46,6 +46,17 @@ export interface ResaleData {
   prices: ResalePrice[];
 }
 
+// Supply history tracking
+export interface SupplyTrendPoint {
+  date: string;   // "YYYY-MM-DD"
+  value: number;
+}
+
+export interface SupplyTrendData {
+  current: number;
+  history: SupplyTrendPoint[];  // newest-first, up to 5 entries
+}
+
 // Grouped ticket data for display
 export interface MatchWithPrices {
   match: Match;

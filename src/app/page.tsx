@@ -1,14 +1,17 @@
 import { Suspense } from "react";
 import { getTicketsByMatch, getResaleData } from "@/lib/api";
-import type { MatchWithPrices } from "@/lib/types";
+import type { MatchWithPrices, SupplyTrendData } from "@/lib/types";
 import { withReferral } from "@/lib/utils";
+import { getSupplyHistory } from "@/lib/supply-history";
 import { MatchGrid } from "@/components/MatchGrid";
+import { SupplyTrend } from "@/components/SupplyTrend";
 import { GeoBanner } from "@/components/GeoBanner";
 
 export default async function Home() {
-  const [tickets, resaleData] = await Promise.all([
+  const [tickets, resaleData, supplyHistory] = await Promise.all([
     getTicketsByMatch(),
     getResaleData(),
+    getSupplyHistory(5),
   ]);
 
   // Group tickets by match
@@ -41,6 +44,24 @@ export default async function Home() {
   const matches = [...matchMap.values()].sort(
     (a, b) => new Date(a.match.date).getTime() - new Date(b.match.date).getTime()
   );
+
+  // Global supply trend
+  const globalTotalListed = tickets.reduce((sum, t) => sum + (t.circulatingSupply || 0), 0);
+  const globalTrend: SupplyTrendData = {
+    current: globalTotalListed,
+    history: supplyHistory.days.map((d) => ({ date: d.date, value: d.total })),
+  };
+
+  // Per-match supply trends
+  const supplyTrends: Record<number, SupplyTrendData> = {};
+  for (const entry of matches) {
+    const matchNo = entry.match.matchNo;
+    const current = entry.tickets.reduce((sum, t) => sum + (t.circulatingSupply || 0), 0);
+    const history = supplyHistory.days
+      .map((d) => ({ date: d.date, value: d.matches[String(matchNo)] || 0 }))
+      .filter((p) => p.value > 0 || current > 0);
+    supplyTrends[matchNo] = { current, history };
+  }
 
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950">
@@ -78,6 +99,14 @@ export default async function Home() {
               live prices
             </span>
           </div>
+          {globalTotalListed > 0 && (
+            <>
+              <span className="mx-2 sm:mx-3 text-emerald-300 dark:text-emerald-700">|</span>
+              <div className="text-emerald-600 dark:text-emerald-500">
+                <SupplyTrend data={globalTrend} label="tickets listed" />
+              </div>
+            </>
+          )}
           <span className="mx-2 sm:mx-3 text-emerald-300 dark:text-emerald-700">|</span>
           <a
             href={withReferral("https://collect.fifa.com/pages/right-to-tickets")}
@@ -108,7 +137,7 @@ export default async function Home() {
             </div>
           }
         >
-          <MatchGrid matches={matches} />
+          <MatchGrid matches={matches} supplyTrends={supplyTrends} />
         </Suspense>
       </main>
 

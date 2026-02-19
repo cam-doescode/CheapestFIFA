@@ -2,7 +2,7 @@
 
 import { useSearchParams } from "next/navigation";
 import { useMemo } from "react";
-import type { MatchWithPrices } from "@/lib/types";
+import type { MatchWithPrices, SupplyTrendData } from "@/lib/types";
 import { MatchCard } from "./MatchCard";
 import { MatchFilters } from "./MatchFilters";
 import { savingsPercent, parseTeams } from "@/lib/utils";
@@ -11,9 +11,10 @@ import { getRsdFaceValue } from "@/data/rsd-prices";
 
 interface MatchGridProps {
   matches: MatchWithPrices[];
+  supplyTrends?: Record<number, SupplyTrendData>;
 }
 
-export function MatchGrid({ matches }: MatchGridProps) {
+export function MatchGrid({ matches, supplyTrends }: MatchGridProps) {
   const searchParams = useSearchParams();
 
   const rounds = (searchParams.get("round") || "").split(",").filter(Boolean);
@@ -98,6 +99,7 @@ export function MatchGrid({ matches }: MatchGridProps) {
             data={match}
             prediction={predictorOn ? PREDICTIONS_BY_MATCH.get(match.match.matchNo) : undefined}
             pricingSource={pricingSource}
+            supplyTrend={supplyTrends?.[match.match.matchNo]}
           />
         ))}
       </div>

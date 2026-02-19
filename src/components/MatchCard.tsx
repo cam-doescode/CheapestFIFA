@@ -2,18 +2,20 @@
 
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import type { MatchWithPrices } from "@/lib/types";
+import type { MatchWithPrices, SupplyTrendData } from "@/lib/types";
 import type { KnockoutPrediction } from "@/data/knockout-predictions";
 import { getTeamAggregates } from "@/data/knockout-predictions";
 import { formatDate, formatTime, getCollectUrl, parseTeams, getFlagUrl, getStadiumMapPath } from "@/lib/utils";
 import { getRsdFaceValue } from "@/data/rsd-prices";
 import { PriceTable } from "./PriceTable";
 import { StadiumMapModal } from "./StadiumMapModal";
+import { SupplyTrend } from "./SupplyTrend";
 
 interface MatchCardProps {
   data: MatchWithPrices;
   prediction?: KnockoutPrediction;
   pricingSource?: string;
+  supplyTrend?: SupplyTrendData;
 }
 
 function TeamNames({ teams }: { teams: string }) {
@@ -108,7 +110,7 @@ function PredictionBadge({ prediction }: { prediction: KnockoutPrediction }) {
   );
 }
 
-export function MatchCard({ data, prediction, pricingSource = "collect" }: MatchCardProps) {
+export function MatchCard({ data, prediction, pricingSource = "collect", supplyTrend }: MatchCardProps) {
   const { match, tickets, resalePrices } = data;
 
   const cheapestFloor = tickets
@@ -175,8 +177,15 @@ export function MatchCard({ data, prediction, pricingSource = "collect" }: Match
         </div>
       </div>
 
-      {/* Supply indicator */}
+      {/* Supply indicator with trend */}
       {(() => {
+        if (supplyTrend && supplyTrend.current > 0) {
+          return (
+            <div className="text-[10px] sm:text-[11px] text-zinc-400 dark:text-zinc-500 mb-1.5">
+              <SupplyTrend data={supplyTrend} label="tickets on Collect" />
+            </div>
+          );
+        }
         const totalListed = tickets.reduce((sum, t) => sum + (t.circulatingSupply || 0), 0);
         if (totalListed === 0) return null;
         return (
