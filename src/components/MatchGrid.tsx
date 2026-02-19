@@ -72,6 +72,16 @@ export function MatchGrid({ matches, supplyTrends }: MatchGridProps) {
           const bMark = getMaxMultiplier(b, pricingSource);
           return bMark - aMark; // highest markup first
         }
+        case "supply-up": {
+          const aDelta = getSupplyDelta(a, supplyTrends);
+          const bDelta = getSupplyDelta(b, supplyTrends);
+          return bDelta - aDelta; // biggest increase first
+        }
+        case "supply-down": {
+          const aDelta = getSupplyDelta(a, supplyTrends);
+          const bDelta = getSupplyDelta(b, supplyTrends);
+          return aDelta - bDelta; // biggest decrease first
+        }
         case "match":
           return a.match.matchNo - b.match.matchNo;
         case "date":
@@ -84,7 +94,7 @@ export function MatchGrid({ matches, supplyTrends }: MatchGridProps) {
     });
 
     return result;
-  }, [matches, rounds, cities, teams, sort, predictorOn, pricingSource]);
+  }, [matches, rounds, cities, teams, sort, predictorOn, pricingSource, supplyTrends]);
 
   return (
     <>
@@ -129,6 +139,12 @@ function getMaxMultiplier(m: MatchWithPrices, pricingSource: string): number {
       return face > 0 ? t.floorPrice! / face : 0;
     });
   return multipliers.length > 0 ? Math.max(...multipliers) : 0;
+}
+
+function getSupplyDelta(m: MatchWithPrices, supplyTrends?: Record<number, SupplyTrendData>): number {
+  const trend = supplyTrends?.[m.match.matchNo];
+  if (!trend || trend.history.length < 2) return 0;
+  return trend.history[0].value - trend.history[1].value;
 }
 
 function getBestSavings(m: MatchWithPrices, pricingSource: string): number {
