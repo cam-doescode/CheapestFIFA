@@ -139,9 +139,8 @@ export function MatchCard({ data, prediction, pricingSource = "collect", supplyT
     ? totalListed <= fomoThresholds.p10Supply ? "red" : totalListed <= fomoThresholds.p25Supply ? "amber" : "none"
     : "none";
 
-  // FOMO: activity proof
+  // Activity proof
   const totalSold = tickets.reduce((sum, t) => sum + (t.saleTransactions || 0), 0);
-  const showActivity = fomoThresholds && totalSold >= fomoThresholds.medianSales;
   const lastSaleTicket = tickets
     .filter(t => t.lastSaleDate)
     .sort((a, b) => new Date(b.lastSaleDate!).getTime() - new Date(a.lastSaleDate!).getTime())[0];
@@ -196,52 +195,53 @@ export function MatchCard({ data, prediction, pricingSource = "collect", supplyT
         )}
       </div>
 
-      {/* Match details */}
-      <div className="text-[11px] sm:text-xs text-zinc-500 dark:text-zinc-400 mb-3 sm:mb-3 space-y-0.5">
-        <div>{formatDate(match.date)} &nbsp; {formatTime(match.date)}</div>
-        <div className="py-0.5">
-          <StadiumMapModal
-            stadium={match.stadium}
-            city={match.city}
-            mapSrc={getStadiumMapPath(match.city)}
-          />
+      {/* Match details + supply/activity */}
+      <div className="flex items-start justify-between gap-2 text-[11px] sm:text-xs text-zinc-500 dark:text-zinc-400 mb-2 sm:mb-3">
+        {/* Left: date & stadium */}
+        <div className="space-y-0.5">
+          <div>{formatDate(match.date)} &nbsp; {formatTime(match.date)}</div>
+          <div className="py-0.5">
+            <StadiumMapModal
+              stadium={match.stadium}
+              city={match.city}
+              mapSrc={getStadiumMapPath(match.city)}
+            />
+          </div>
         </div>
-      </div>
 
-      {/* Supply indicator with trend — scarcity changes the label & color inline */}
-      {totalListed > 0 && (
-        <div className={`text-[10px] sm:text-[11px] mb-1.5 ${
-          scarcityTier === "red"
-            ? "text-red-600 dark:text-red-400 font-semibold"
-            : scarcityTier === "amber"
-              ? "text-amber-700 dark:text-amber-400 font-semibold"
-              : "text-zinc-400 dark:text-zinc-500"
-        }`}>
-          {supplyTrend && supplyTrend.current > 0
-            ? <SupplyTrend data={supplyTrend} label={scarcityTier !== "none" ? "left on Collect" : "tickets on Collect"} />
-            : scarcityTier !== "none"
-              ? <>Only {totalListed.toLocaleString()} left on Collect</>
-              : <>{totalListed.toLocaleString()} ticket{totalListed !== 1 ? "s" : ""} listed on Collect</>
-          }
-        </div>
-      )}
-
-      {/* Activity proof */}
-      {showActivity && totalSold > 0 && (
-        <div className="text-[10px] sm:text-[11px] text-zinc-400 dark:text-zinc-500 mb-1.5 flex items-center gap-1">
-          {lastSaleTicket && isRecentSale(lastSaleTicket.lastSaleDate!) && (
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
-          )}
-          <span>
-            <span className="font-medium text-zinc-500 dark:text-zinc-400">{totalSold.toLocaleString()} sold</span>
-            {lastSaleTicket?.lastSalePrice && lastSaleTicket.lastSaleDate && (
-              <span>
-                {" "}&middot; last: ${Math.round(lastSaleTicket.lastSalePrice)}, {formatTimeAgo(lastSaleTicket.lastSaleDate)}
-              </span>
+        {/* Right: supply & activity */}
+        {totalListed > 0 && (
+          <div className="text-right text-[10px] sm:text-[11px] shrink-0 space-y-0.5">
+            <div className={
+              scarcityTier === "red"
+                ? "text-red-600 dark:text-red-400 font-semibold"
+                : scarcityTier === "amber"
+                  ? "text-amber-700 dark:text-amber-400 font-semibold"
+                  : "text-zinc-400 dark:text-zinc-500"
+            }>
+              {supplyTrend && supplyTrend.current > 0
+                ? <SupplyTrend data={supplyTrend} label="on Collect" />
+                : <>{totalListed.toLocaleString()} on Collect</>
+              }
+            </div>
+            {totalSold > 0 && (
+              <div className="text-zinc-400 dark:text-zinc-500 flex items-center justify-end gap-1">
+                {lastSaleTicket && isRecentSale(lastSaleTicket.lastSaleDate!) && (
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
+                )}
+                <span>
+                  <span className="font-medium text-zinc-500 dark:text-zinc-400">{totalSold.toLocaleString()} sold</span>
+                  {lastSaleTicket?.lastSalePrice && lastSaleTicket.lastSaleDate && (
+                    <span>
+                      {" "}&middot; ${Math.round(lastSaleTicket.lastSalePrice)}, {formatTimeAgo(lastSaleTicket.lastSaleDate)}
+                    </span>
+                  )}
+                </span>
+              </div>
             )}
-          </span>
-        </div>
-      )}
+          </div>
+        )}
+      </div>
 
       {/* Price table */}
       <PriceTable tickets={tickets} resalePrices={resalePrices} matchNo={match.matchNo} pricingSource={pricingSource} />
