@@ -53,21 +53,30 @@ export function SupplyTrend({ data, label = "tickets listed" }: SupplyTrendProps
     }
   }
 
+  const hasPopup = history.length > 0;
+
   return (
     <span ref={ref} className="relative group/supply inline-flex items-center gap-1">
-      <span>
-        <span className="font-semibold">{current.toLocaleString()}</span> {label}
-      </span>
-      {arrow && (
+      {hasPopup ? (
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className={`${arrowColor} font-bold cursor-help focus:outline-none`}
+          className="inline-flex items-center gap-1 py-1 -my-1 cursor-help focus:outline-none"
         >
-          {arrow}
+          <span>
+            <span className="font-semibold">{current.toLocaleString()}</span> {label}
+          </span>
+          {arrow && <span className={`${arrowColor} font-bold`}>{arrow}</span>}
         </button>
+      ) : (
+        <span className="inline-flex items-center gap-1">
+          <span>
+            <span className="font-semibold">{current.toLocaleString()}</span> {label}
+          </span>
+          {arrow && <span className={`${arrowColor} font-bold`}>{arrow}</span>}
+        </span>
       )}
-      {history.length > 0 && (
+      {hasPopup && (
         <span
           className={`absolute top-full left-0 mt-1 min-w-[180px] w-max px-3 py-2 rounded-lg bg-zinc-800 dark:bg-zinc-700 text-white text-[10px] sm:text-xs leading-snug z-50 shadow-lg transition-opacity ${
             open

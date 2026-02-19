@@ -197,9 +197,9 @@ export function MatchCard({ data, prediction, pricingSource = "collect", supplyT
       </div>
 
       {/* Match details */}
-      <div className="text-[11px] sm:text-xs text-zinc-500 dark:text-zinc-400 mb-2 sm:mb-3 space-y-0.5">
+      <div className="text-[11px] sm:text-xs text-zinc-500 dark:text-zinc-400 mb-3 sm:mb-3 space-y-0.5">
         <div>{formatDate(match.date)} &nbsp; {formatTime(match.date)}</div>
-        <div>
+        <div className="py-0.5">
           <StadiumMapModal
             stadium={match.stadium}
             city={match.city}
