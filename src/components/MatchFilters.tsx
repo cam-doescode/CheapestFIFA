@@ -109,6 +109,8 @@ export function MatchFilters({ matches }: MatchFiltersProps) {
       >
         <option value="savings">Best Savings</option>
         <option value="supply-down">Selling Fast</option>
+        <option value="lowest-stock">Lowest Stock</option>
+        <option value="most-popular">Most Popular</option>
         <option value="cheapest">Cheapest First</option>
         <option value="markup">Highest Markup</option>
         <option value="supply-up">Increasing Supply</option>

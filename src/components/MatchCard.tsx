@@ -11,11 +11,18 @@ import { PriceTable } from "./PriceTable";
 import { StadiumMapModal } from "./StadiumMapModal";
 import { SupplyTrend } from "./SupplyTrend";
 
+interface FomoThresholds {
+  p10Supply: number;
+  p25Supply: number;
+  medianSales: number;
+}
+
 interface MatchCardProps {
   data: MatchWithPrices;
   prediction?: KnockoutPrediction;
   pricingSource?: string;
   supplyTrend?: SupplyTrendData;
+  fomoThresholds?: FomoThresholds;
 }
 
 function TeamNames({ teams }: { teams: string }) {
@@ -110,7 +117,7 @@ function PredictionBadge({ prediction }: { prediction: KnockoutPrediction }) {
   );
 }
 
-export function MatchCard({ data, prediction, pricingSource = "collect", supplyTrend }: MatchCardProps) {
+export function MatchCard({ data, prediction, pricingSource = "collect", supplyTrend, fomoThresholds }: MatchCardProps) {
   const { match, tickets, resalePrices } = data;
 
   const cheapestFloor = tickets
@@ -124,6 +131,21 @@ export function MatchCard({ data, prediction, pricingSource = "collect", supplyT
         : cheapestFloor.faceValue)
     : 0;
 
+  const isBelowFace = cheapestFaceValue > 0 && cheapestFloor && cheapestFloor.floorPrice! <= cheapestFaceValue;
+
+  // FOMO: supply scarcity
+  const totalListed = supplyTrend?.current ?? tickets.reduce((sum, t) => sum + (t.circulatingSupply || 0), 0);
+  const scarcityTier = fomoThresholds
+    ? totalListed <= fomoThresholds.p10Supply ? "red" : totalListed <= fomoThresholds.p25Supply ? "amber" : "none"
+    : "none";
+
+  // FOMO: activity proof
+  const totalSold = tickets.reduce((sum, t) => sum + (t.saleTransactions || 0), 0);
+  const showActivity = fomoThresholds && totalSold >= fomoThresholds.medianSales;
+  const lastSaleTicket = tickets
+    .filter(t => t.lastSaleDate)
+    .sort((a, b) => new Date(b.lastSaleDate!).getTime() - new Date(a.lastSaleDate!).getTime())[0];
+
   // Use predicted teams when available (top matchup)
   const topMatchup = prediction?.matchups[0];
   const displayTeams = topMatchup
@@ -131,10 +153,14 @@ export function MatchCard({ data, prediction, pricingSource = "collect", supplyT
     : match.teams;
 
   return (
-    <div className={`rounded-xl border p-3 sm:p-4 hover:shadow-md transition-shadow flex flex-col ${
+    <div className={`rounded-xl border p-3 sm:p-4 hover:shadow-md transition-shadow flex flex-col bg-white dark:bg-zinc-900 ${
       prediction
-        ? "border-purple-300 dark:border-purple-800 bg-white dark:bg-zinc-900"
-        : "border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"
+        ? "border-purple-300 dark:border-purple-800"
+        : scarcityTier === "red"
+          ? "border-red-300 dark:border-red-800"
+          : scarcityTier === "amber"
+            ? "border-amber-300 dark:border-amber-800"
+            : "border-zinc-200 dark:border-zinc-800"
     }`}>
       {/* Header */}
       <div className="flex items-start justify-between mb-2 sm:mb-3">
@@ -143,9 +169,14 @@ export function MatchCard({ data, prediction, pricingSource = "collect", supplyT
             {match.roundInfo} &middot; Match {match.matchNo}
             {prediction && <PredictionBadge prediction={prediction} />}
           </div>
-          <h3 className="font-semibold text-zinc-900 dark:text-zinc-100 text-sm sm:text-base leading-tight">
+          <h3 className={`font-semibold text-zinc-900 dark:text-zinc-100 text-sm sm:text-base leading-tight${prediction ? " italic" : ""}`}>
             <TeamNames teams={displayTeams} />
           </h3>
+          {prediction && (
+            <div className="text-[9px] sm:text-[10px] text-purple-500 dark:text-purple-400 mt-0.5 font-normal not-italic">
+              Projected &middot; {match.teams}
+            </div>
+          )}
         </div>
         {cheapestFloor && (
           <div className="text-right ml-3 shrink-0">
@@ -177,23 +208,40 @@ export function MatchCard({ data, prediction, pricingSource = "collect", supplyT
         </div>
       </div>
 
-      {/* Supply indicator with trend */}
-      {(() => {
-        if (supplyTrend && supplyTrend.current > 0) {
-          return (
-            <div className="text-[10px] sm:text-[11px] text-zinc-400 dark:text-zinc-500 mb-1.5">
-              <SupplyTrend data={supplyTrend} label="tickets on Collect" />
-            </div>
-          );
-        }
-        const totalListed = tickets.reduce((sum, t) => sum + (t.circulatingSupply || 0), 0);
-        if (totalListed === 0) return null;
-        return (
-          <div className="text-[10px] sm:text-[11px] text-zinc-400 dark:text-zinc-500 mb-1.5">
-            {totalListed.toLocaleString()} ticket{totalListed !== 1 ? "s" : ""} listed on Collect
-          </div>
-        );
-      })()}
+      {/* Supply indicator with trend — scarcity changes the label & color inline */}
+      {totalListed > 0 && (
+        <div className={`text-[10px] sm:text-[11px] mb-1.5 ${
+          scarcityTier === "red"
+            ? "text-red-600 dark:text-red-400 font-semibold"
+            : scarcityTier === "amber"
+              ? "text-amber-700 dark:text-amber-400 font-semibold"
+              : "text-zinc-400 dark:text-zinc-500"
+        }`}>
+          {supplyTrend && supplyTrend.current > 0
+            ? <SupplyTrend data={supplyTrend} label={scarcityTier !== "none" ? "left on Collect" : "tickets on Collect"} />
+            : scarcityTier !== "none"
+              ? <>Only {totalListed.toLocaleString()} left on Collect</>
+              : <>{totalListed.toLocaleString()} ticket{totalListed !== 1 ? "s" : ""} listed on Collect</>
+          }
+        </div>
+      )}
+
+      {/* Activity proof */}
+      {showActivity && totalSold > 0 && (
+        <div className="text-[10px] sm:text-[11px] text-zinc-400 dark:text-zinc-500 mb-1.5 flex items-center gap-1">
+          {lastSaleTicket && isRecentSale(lastSaleTicket.lastSaleDate!) && (
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
+          )}
+          <span>
+            <span className="font-medium text-zinc-500 dark:text-zinc-400">{totalSold.toLocaleString()} sold</span>
+            {lastSaleTicket?.lastSalePrice && lastSaleTicket.lastSaleDate && (
+              <span>
+                {" "}&middot; last: ${Math.round(lastSaleTicket.lastSalePrice)}, {formatTimeAgo(lastSaleTicket.lastSaleDate)}
+              </span>
+            )}
+          </span>
+        </div>
+      )}
 
       {/* Price table */}
       <PriceTable tickets={tickets} resalePrices={resalePrices} matchNo={match.matchNo} pricingSource={pricingSource} />
@@ -204,11 +252,26 @@ export function MatchCard({ data, prediction, pricingSource = "collect", supplyT
           href={getCollectUrl(match.matchNo, cheapestFloor.category)}
           target="_blank"
           rel="noopener"
-          className="mt-auto pt-2 sm:pt-3 block w-full text-center text-xs sm:text-sm font-medium py-1.5 sm:py-2 px-4 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white transition-colors"
+          className={`mt-auto pt-2 sm:pt-3 block w-full text-center text-xs sm:text-sm font-medium py-1.5 sm:py-2 px-4 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white transition-colors${isBelowFace ? " animate-subtle-pulse" : ""}`}
         >
           Buy from ${Math.round(cheapestFloor.floorPrice!)} on FIFA Collect &rarr;
         </a>
       )}
     </div>
   );
+}
+
+function isRecentSale(dateStr: string): boolean {
+  const hoursAgo = (Date.now() - new Date(dateStr).getTime()) / 3600000;
+  return hoursAgo < 24;
+}
+
+function formatTimeAgo(dateStr: string): string {
+  const ms = Date.now() - new Date(dateStr).getTime();
+  const hours = Math.floor(ms / 3600000);
+  if (hours < 1) return "just now";
+  if (hours < 24) return `${hours}h ago`;
+  const days = Math.floor(hours / 24);
+  if (days <= 7) return `${days}d ago`;
+  return "";
 }

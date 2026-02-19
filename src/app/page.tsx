@@ -6,6 +6,7 @@ import { getSupplyHistory } from "@/lib/supply-history";
 import { MatchGrid } from "@/components/MatchGrid";
 import { SupplyTrend } from "@/components/SupplyTrend";
 import { GeoBanner } from "@/components/GeoBanner";
+import { ResaleCountdown } from "@/components/ResaleCountdown";
 
 export default async function Home() {
   const [tickets, resaleData, supplyHistory] = await Promise.all([
@@ -107,6 +108,8 @@ export default async function Home() {
               </div>
             </>
           )}
+          <span className="mx-2 sm:mx-3 text-emerald-300 dark:text-emerald-700">|</span>
+          <ResaleCountdown />
           <span className="mx-2 sm:mx-3 text-emerald-300 dark:text-emerald-700">|</span>
           <a
             href={withReferral("https://collect.fifa.com/pages/right-to-tickets")}

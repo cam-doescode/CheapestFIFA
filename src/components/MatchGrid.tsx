@@ -24,6 +24,23 @@ export function MatchGrid({ matches, supplyTrends }: MatchGridProps) {
   const predictorOn = searchParams.get("predictor") !== "off";
   const pricingSource = searchParams.get("pricing") || "collect";
 
+  // Compute percentile-based FOMO thresholds from live data
+  const fomoThresholds = useMemo(() => {
+    const supplyValues = matches.map(m =>
+      m.tickets.reduce((sum, t) => sum + (t.circulatingSupply || 0), 0)
+    ).sort((a, b) => a - b);
+
+    const salesValues = matches.map(m =>
+      m.tickets.reduce((sum, t) => sum + (t.saleTransactions || 0), 0)
+    ).sort((a, b) => a - b);
+
+    return {
+      p10Supply: supplyValues[Math.floor(supplyValues.length * 0.10)] || 0,
+      p25Supply: supplyValues[Math.floor(supplyValues.length * 0.25)] || 0,
+      medianSales: salesValues[Math.floor(salesValues.length * 0.50)] || 0,
+    };
+  }, [matches]);
+
   const filtered = useMemo(() => {
     let result = matches;
 
@@ -82,6 +99,16 @@ export function MatchGrid({ matches, supplyTrends }: MatchGridProps) {
           const bDelta = getSupplyDelta(b, supplyTrends);
           return aDelta - bDelta; // biggest decrease first
         }
+        case "lowest-stock": {
+          const aSupply = getTotalSupply(a);
+          const bSupply = getTotalSupply(b);
+          return aSupply - bSupply; // fewest listed first
+        }
+        case "most-popular": {
+          const aSales = getTotalSales(a);
+          const bSales = getTotalSales(b);
+          return bSales - aSales; // most sold first
+        }
         case "match":
           return a.match.matchNo - b.match.matchNo;
         case "date":
@@ -110,6 +137,7 @@ export function MatchGrid({ matches, supplyTrends }: MatchGridProps) {
             prediction={predictorOn ? PREDICTIONS_BY_MATCH.get(match.match.matchNo) : undefined}
             pricingSource={pricingSource}
             supplyTrend={supplyTrends?.[match.match.matchNo]}
+            fomoThresholds={fomoThresholds}
           />
         ))}
       </div>
@@ -145,6 +173,14 @@ function getSupplyDelta(m: MatchWithPrices, supplyTrends?: Record<number, Supply
   const trend = supplyTrends?.[m.match.matchNo];
   if (!trend || trend.history.length < 2) return 0;
   return trend.history[0].value - trend.history[1].value;
+}
+
+function getTotalSupply(m: MatchWithPrices): number {
+  return m.tickets.reduce((sum, t) => sum + (t.circulatingSupply || 0), 0);
+}
+
+function getTotalSales(m: MatchWithPrices): number {
+  return m.tickets.reduce((sum, t) => sum + (t.saleTransactions || 0), 0);
 }
 
 function getBestSavings(m: MatchWithPrices, pricingSource: string): number {
