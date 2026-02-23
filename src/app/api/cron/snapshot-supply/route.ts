@@ -24,12 +24,14 @@ export async function GET(request: NextRequest) {
   const tickets: Array<{
     match: { matchNo: number };
     circulatingSupply: number;
+    floorPrice?: number;
   }> = await res.json();
 
-  // Aggregate: total + per-match supply
+  // Aggregate: total + per-match supply (only categories with active listings)
   const matchTotals: Record<string, number> = {};
   let total = 0;
   for (const ticket of tickets) {
+    if (!ticket.floorPrice || ticket.floorPrice <= 0) continue;
     const matchNo = String(ticket.match.matchNo);
     const supply = ticket.circulatingSupply || 0;
     matchTotals[matchNo] = (matchTotals[matchNo] || 0) + supply;

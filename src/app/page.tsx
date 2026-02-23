@@ -46,8 +46,10 @@ export default async function Home() {
     (a, b) => new Date(a.match.date).getTime() - new Date(b.match.date).getTime()
   );
 
-  // Global supply trend
-  const globalTotalListed = tickets.reduce((sum, t) => sum + (t.circulatingSupply || 0), 0);
+  // Global supply trend — only count categories with active listings (floorPrice > 0)
+  const globalTotalListed = tickets
+    .filter((t) => t.floorPrice != null && t.floorPrice > 0)
+    .reduce((sum, t) => sum + (t.circulatingSupply || 0), 0);
   const globalTrend: SupplyTrendData = {
     current: globalTotalListed,
     history: supplyHistory.days.map((d) => ({ date: d.date, value: d.total })),
@@ -57,7 +59,9 @@ export default async function Home() {
   const supplyTrends: Record<number, SupplyTrendData> = {};
   for (const entry of matches) {
     const matchNo = entry.match.matchNo;
-    const current = entry.tickets.reduce((sum, t) => sum + (t.circulatingSupply || 0), 0);
+    const current = entry.tickets
+      .filter((t) => t.floorPrice != null && t.floorPrice > 0)
+      .reduce((sum, t) => sum + (t.circulatingSupply || 0), 0);
     const history = supplyHistory.days
       .map((d) => ({ date: d.date, value: d.matches[String(matchNo)] || 0 }))
       .filter((p) => p.value > 0 || current > 0);

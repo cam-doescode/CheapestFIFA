@@ -134,7 +134,9 @@ export function MatchCard({ data, prediction, pricingSource = "collect", supplyT
   const isBelowFace = cheapestFaceValue > 0 && cheapestFloor && cheapestFloor.floorPrice! <= cheapestFaceValue;
 
   // FOMO: supply scarcity
-  const totalListed = supplyTrend?.current ?? tickets.reduce((sum, t) => sum + (t.circulatingSupply || 0), 0);
+  const totalListed = supplyTrend?.current ?? tickets
+    .filter((t) => t.floorPrice != null && t.floorPrice > 0)
+    .reduce((sum, t) => sum + (t.circulatingSupply || 0), 0);
   const scarcityTier = fomoThresholds
     ? totalListed <= fomoThresholds.p10Supply ? "red" : totalListed <= fomoThresholds.p25Supply ? "amber" : "none"
     : "none";
