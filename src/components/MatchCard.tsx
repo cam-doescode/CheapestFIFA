@@ -2,27 +2,18 @@
 
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import type { MatchWithPrices, SupplyTrendData } from "@/lib/types";
+import type { MatchWithPrices } from "@/lib/types";
 import type { KnockoutPrediction } from "@/data/knockout-predictions";
 import { getTeamAggregates } from "@/data/knockout-predictions";
 import { formatDate, formatTime, getCollectUrl, parseTeams, getFlagUrl, getStadiumMapPath } from "@/lib/utils";
 import { getRsdFaceValue } from "@/data/rsd-prices";
 import { PriceTable } from "./PriceTable";
 import { StadiumMapModal } from "./StadiumMapModal";
-import { SupplyTrend } from "./SupplyTrend";
-
-interface FomoThresholds {
-  p10Supply: number;
-  p25Supply: number;
-  medianSales: number;
-}
 
 interface MatchCardProps {
   data: MatchWithPrices;
   prediction?: KnockoutPrediction;
   pricingSource?: string;
-  supplyTrend?: SupplyTrendData;
-  fomoThresholds?: FomoThresholds;
 }
 
 function TeamNames({ teams }: { teams: string }) {
@@ -117,7 +108,7 @@ function PredictionBadge({ prediction }: { prediction: KnockoutPrediction }) {
   );
 }
 
-export function MatchCard({ data, prediction, pricingSource = "collect", supplyTrend, fomoThresholds }: MatchCardProps) {
+export function MatchCard({ data, prediction, pricingSource = "collect" }: MatchCardProps) {
   const { match, tickets, resalePrices } = data;
 
   const cheapestFloor = tickets
@@ -132,14 +123,6 @@ export function MatchCard({ data, prediction, pricingSource = "collect", supplyT
     : 0;
 
   const isBelowFace = cheapestFaceValue > 0 && cheapestFloor && cheapestFloor.floorPrice! <= cheapestFaceValue;
-
-  // FOMO: supply scarcity
-  const totalListed = supplyTrend?.current ?? tickets
-    .filter((t) => t.floorPrice != null && t.floorPrice > 0)
-    .reduce((sum, t) => sum + (t.circulatingSupply || 0), 0);
-  const scarcityTier = fomoThresholds
-    ? totalListed <= fomoThresholds.p10Supply ? "red" : totalListed <= fomoThresholds.p25Supply ? "amber" : "none"
-    : "none";
 
   // Activity proof
   const totalSold = tickets.reduce((sum, t) => sum + (t.saleTransactions || 0), 0);
@@ -157,11 +140,7 @@ export function MatchCard({ data, prediction, pricingSource = "collect", supplyT
     <div className={`rounded-xl border p-3 sm:p-4 hover:shadow-md transition-shadow flex flex-col bg-white dark:bg-zinc-900 ${
       prediction
         ? "border-purple-300 dark:border-purple-800"
-        : scarcityTier === "red"
-          ? "border-red-300 dark:border-red-800"
-          : scarcityTier === "amber"
-            ? "border-amber-300 dark:border-amber-800"
-            : "border-zinc-200 dark:border-zinc-800"
+        : "border-zinc-200 dark:border-zinc-800"
     }`}>
       {/* Header */}
       <div className="flex items-start justify-between mb-2 sm:mb-3">
@@ -211,36 +190,25 @@ export function MatchCard({ data, prediction, pricingSource = "collect", supplyT
           </div>
         </div>
 
-        {/* Right: supply & activity */}
-        {totalListed > 0 && (
-          <div className="text-right text-[10px] sm:text-[11px] shrink-0 space-y-0.5">
-            <div className={
-              scarcityTier === "red"
-                ? "text-red-600 dark:text-red-400 font-semibold"
-                : scarcityTier === "amber"
-                  ? "text-amber-700 dark:text-amber-400 font-semibold"
-                  : "text-zinc-400 dark:text-zinc-500"
-            }>
-              {supplyTrend && supplyTrend.current > 0
-                ? <SupplyTrend data={supplyTrend} label="on Collect" />
-                : <>{totalListed.toLocaleString()} on Collect</>
-              }
-            </div>
-            {totalSold > 0 && (
-              <div className="text-zinc-400 dark:text-zinc-500 flex items-center justify-end gap-1">
-                {lastSaleTicket && isRecentSale(lastSaleTicket.lastSaleDate!) && (
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
-                )}
-                <span>
-                  <span className="font-medium text-zinc-500 dark:text-zinc-400">{totalSold.toLocaleString()} sold</span>
-                  {lastSaleTicket?.lastSalePrice && lastSaleTicket.lastSaleDate && (
+        {/* Right: activity */}
+        {totalSold > 0 && (
+          <div className="text-right text-[10px] sm:text-[11px] shrink-0">
+            <div className="text-zinc-400 dark:text-zinc-500 flex items-center justify-end gap-1">
+              {lastSaleTicket && isRecentSale(lastSaleTicket.lastSaleDate!) && (
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
+              )}
+              <span>
+                <span className="font-medium text-zinc-500 dark:text-zinc-400">{totalSold.toLocaleString()} sold</span>
+                {lastSaleTicket?.lastSalePrice && lastSaleTicket.lastSaleDate && (() => {
+                  const ago = formatTimeAgo(lastSaleTicket.lastSaleDate);
+                  return (
                     <span>
-                      {" "}&middot; ${Math.round(lastSaleTicket.lastSalePrice)}, {formatTimeAgo(lastSaleTicket.lastSaleDate)}
+                      {" "}&middot; ${Math.round(lastSaleTicket.lastSalePrice)}{ago ? `, ${ago}` : ""}
                     </span>
-                  )}
-                </span>
-              </div>
-            )}
+                  );
+                })()}
+              </span>
+            </div>
           </div>
         )}
       </div>

@@ -2,7 +2,7 @@
 
 import { useSearchParams } from "next/navigation";
 import { useMemo } from "react";
-import type { MatchWithPrices, SupplyTrendData } from "@/lib/types";
+import type { MatchWithPrices } from "@/lib/types";
 import { MatchCard } from "./MatchCard";
 import { MatchFilters } from "./MatchFilters";
 import { savingsPercent, parseTeams } from "@/lib/utils";
@@ -11,10 +11,9 @@ import { getRsdFaceValue } from "@/data/rsd-prices";
 
 interface MatchGridProps {
   matches: MatchWithPrices[];
-  supplyTrends?: Record<number, SupplyTrendData>;
 }
 
-export function MatchGrid({ matches, supplyTrends }: MatchGridProps) {
+export function MatchGrid({ matches }: MatchGridProps) {
   const searchParams = useSearchParams();
 
   const rounds = (searchParams.get("round") || "").split(",").filter(Boolean);
@@ -24,23 +23,6 @@ export function MatchGrid({ matches, supplyTrends }: MatchGridProps) {
   const sort = searchParams.get("sort") || "savings";
   const predictorOn = searchParams.get("predictor") !== "off";
   const pricingSource = searchParams.get("pricing") || "collect";
-
-  // Compute percentile-based FOMO thresholds from live data
-  const fomoThresholds = useMemo(() => {
-    const supplyValues = matches.map(m =>
-      m.tickets.reduce((sum, t) => sum + (t.circulatingSupply || 0), 0)
-    ).sort((a, b) => a - b);
-
-    const salesValues = matches.map(m =>
-      m.tickets.reduce((sum, t) => sum + (t.saleTransactions || 0), 0)
-    ).sort((a, b) => a - b);
-
-    return {
-      p10Supply: supplyValues[Math.floor(supplyValues.length * 0.10)] || 0,
-      p25Supply: supplyValues[Math.floor(supplyValues.length * 0.25)] || 0,
-      medianSales: salesValues[Math.floor(salesValues.length * 0.50)] || 0,
-    };
-  }, [matches]);
 
   const filtered = useMemo(() => {
     let result = matches;
@@ -95,21 +77,6 @@ export function MatchGrid({ matches, supplyTrends }: MatchGridProps) {
           const bMark = getMaxMultiplier(b, pricingSource);
           return bMark - aMark; // highest markup first
         }
-        case "supply-up": {
-          const aDelta = getSupplyDelta(a, supplyTrends);
-          const bDelta = getSupplyDelta(b, supplyTrends);
-          return bDelta - aDelta; // biggest increase first
-        }
-        case "supply-down": {
-          const aDelta = getSupplyDelta(a, supplyTrends);
-          const bDelta = getSupplyDelta(b, supplyTrends);
-          return aDelta - bDelta; // biggest decrease first
-        }
-        case "lowest-stock": {
-          const aSupply = getTotalSupply(a);
-          const bSupply = getTotalSupply(b);
-          return aSupply - bSupply; // fewest listed first
-        }
         case "most-popular": {
           const aSales = getTotalSales(a);
           const bSales = getTotalSales(b);
@@ -127,7 +94,7 @@ export function MatchGrid({ matches, supplyTrends }: MatchGridProps) {
     });
 
     return result;
-  }, [matches, matchNos, rounds, cities, teams, sort, predictorOn, pricingSource, supplyTrends]);
+  }, [matches, matchNos, rounds, cities, teams, sort, predictorOn, pricingSource]);
 
   return (
     <>
@@ -142,8 +109,6 @@ export function MatchGrid({ matches, supplyTrends }: MatchGridProps) {
             data={match}
             prediction={predictorOn ? PREDICTIONS_BY_MATCH.get(match.match.matchNo) : undefined}
             pricingSource={pricingSource}
-            supplyTrend={supplyTrends?.[match.match.matchNo]}
-            fomoThresholds={fomoThresholds}
           />
         ))}
       </div>
@@ -173,16 +138,6 @@ function getMaxMultiplier(m: MatchWithPrices, pricingSource: string): number {
       return face > 0 ? t.floorPrice! / face : 0;
     });
   return multipliers.length > 0 ? Math.max(...multipliers) : 0;
-}
-
-function getSupplyDelta(m: MatchWithPrices, supplyTrends?: Record<number, SupplyTrendData>): number {
-  const trend = supplyTrends?.[m.match.matchNo];
-  if (!trend || trend.history.length < 2) return 0;
-  return trend.history[0].value - trend.history[1].value;
-}
-
-function getTotalSupply(m: MatchWithPrices): number {
-  return m.tickets.reduce((sum, t) => sum + (t.circulatingSupply || 0), 0);
 }
 
 function getTotalSales(m: MatchWithPrices): number {

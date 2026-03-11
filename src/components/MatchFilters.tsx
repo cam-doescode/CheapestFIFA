@@ -123,12 +123,9 @@ export function MatchFilters({ matches }: MatchFiltersProps) {
         className="rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 px-3 py-2 text-xs sm:text-sm text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-emerald-500 w-full sm:w-auto"
       >
         <option value="savings">Best Savings</option>
-        <option value="supply-down">Selling Fast</option>
-        <option value="lowest-stock">Lowest Stock</option>
         <option value="most-popular">Most Popular</option>
         <option value="cheapest">Cheapest First</option>
         <option value="markup">Highest Markup</option>
-        <option value="supply-up">Increasing Supply</option>
         <option value="date">Sort by Date</option>
         <option value="match">Match Number</option>
       </select>
