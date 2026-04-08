@@ -27,12 +27,12 @@ export function PriceTable({ tickets, resalePrices, matchNo, pricingSource = "co
         <thead>
           <tr className="border-b border-zinc-200 dark:border-zinc-700 text-zinc-500 dark:text-zinc-400">
             <th className="text-left py-1 pr-1 sm:pr-2 font-medium">Cat</th>
-            <th className="text-right py-1 px-1 sm:px-2 font-medium">{pricingSource === "rsd" ? "RSD Face" : "Face"}</th>
-            <th className="text-right py-1 px-1 sm:px-2 font-medium">vs Face</th>
+            <th className="text-right py-1 px-1 font-medium">{pricingSource === "rsd" ? "RSD Face" : "Face"}</th>
+            <th className="text-right py-1 px-1 font-medium whitespace-nowrap">vs Face</th>
             {hasMkt && (
               <>
-                <th className="text-right py-1 px-1 sm:px-2 font-medium">Mkt</th>
-                <th className="text-right py-1 px-1 sm:px-2 font-medium">vs Mkt</th>
+                <th className="text-right py-1 px-1 font-medium">Mkt</th>
+                <th className="text-right py-1 px-1 font-medium whitespace-nowrap">vs Mkt</th>
               </>
             )}
             <th className={dividerTh}>Collect</th>
@@ -59,7 +59,7 @@ export function PriceTable({ tickets, resalePrices, matchNo, pricingSource = "co
                 </td>
 
                 {/* Face */}
-                <td className="py-1 sm:py-1.5 px-1 sm:px-2 text-right text-zinc-500 dark:text-zinc-400">
+                <td className="py-1 sm:py-1.5 px-1 text-right text-zinc-500 dark:text-zinc-400">
                   {formatCurrency(faceValue)}
                   {(ticket.estimatedFaceValue || isRsdFallback) && (
                     <span title={isRsdFallback ? "RSD price unavailable, showing Collect face value" : "Estimated face value"}>*</span>
@@ -67,24 +67,26 @@ export function PriceTable({ tickets, resalePrices, matchNo, pricingSource = "co
                 </td>
 
                 {/* vs Face */}
-                <td className="py-1 sm:py-1.5 px-1 sm:px-2 text-right">
+                <td className="py-1 sm:py-1.5 px-1 text-right whitespace-nowrap">
                   {hasFloor ? (() => {
                     const multiplier = ticket.floorPrice! / faceValue;
                     if (multiplier <= 1) {
                       return (
-                        <span className="text-emerald-600 dark:text-emerald-400 font-semibold">
+                        <a href={getCollectUrl(matchNo, ticket.category)} target="_blank" rel="noopener"
+                          className="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline">
                           {Math.round((1 - multiplier) * 100)}% less
-                        </span>
+                        </a>
                       );
                     }
                     return (
-                      <span className={
-                        multiplier <= 1.5 ? "text-emerald-600 dark:text-emerald-400 font-medium" :
-                        multiplier <= 3   ? "text-amber-600 dark:text-amber-400 font-medium" :
-                                            "text-red-500 font-medium"
-                      }>
-                        {multiplier.toFixed(1)}x
-                      </span>
+                      multiplier <= 1.5
+                        ? <a href={getCollectUrl(matchNo, ticket.category)} target="_blank" rel="noopener"
+                            className="text-emerald-600 dark:text-emerald-400 font-medium hover:underline">
+                            {multiplier.toFixed(1)}x
+                          </a>
+                        : <span className={multiplier <= 3 ? "text-amber-600 dark:text-amber-400 font-medium" : "text-red-500 font-medium"}>
+                            {multiplier.toFixed(1)}x
+                          </span>
                     );
                   })() : <span className="text-zinc-400">--</span>}
                 </td>
@@ -92,12 +94,15 @@ export function PriceTable({ tickets, resalePrices, matchNo, pricingSource = "co
                 {/* Mkt + vs Mkt */}
                 {hasMkt && (
                   <>
-                    <td className="py-1 sm:py-1.5 px-1 sm:px-2 text-right text-zinc-500 dark:text-zinc-400">
+                    <td className="py-1 sm:py-1.5 px-1 text-right text-zinc-500 dark:text-zinc-400">
                       {resale ? formatCurrency(resale.price) : <span className="text-zinc-400">--</span>}
                     </td>
                     <td className="py-1 sm:py-1.5 px-1 sm:px-2 text-right font-semibold whitespace-nowrap">
                       {mktSaving != null
-                        ? <span className="text-emerald-600 dark:text-emerald-400">{mktSaving}% less</span>
+                        ? <a href={getCollectUrl(matchNo, ticket.category)} target="_blank" rel="noopener"
+                            className="text-emerald-600 dark:text-emerald-400 hover:underline">
+                            {mktSaving}% less
+                          </a>
                         : <span className="text-zinc-400">--</span>}
                     </td>
                   </>
