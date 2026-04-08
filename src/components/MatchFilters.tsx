@@ -84,136 +84,100 @@ export function MatchFilters({ matches }: MatchFiltersProps) {
   }, [matches]);
 
   return (
-    <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-2 sm:gap-3 mb-4 sm:mb-6">
-      {/* Team multi-select */}
-      <MultiSelect
-        label="All Teams"
-        options={teamOptions}
-        selected={selectedTeams}
-        onChange={(vals) => updateParam("team", vals)}
-      />
+    <div className="flex flex-col gap-2 sm:gap-3 mb-4 sm:mb-6">
 
-      {/* Round multi-select */}
-      <MultiSelect
-        label="All Rounds"
-        options={roundOptions}
-        selected={selectedRounds}
-        onChange={(vals) => updateParam("round", vals)}
-      />
+      {/* Row 1: Filters + Sort */}
+      <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-2 sm:gap-3">
+        <MultiSelect label="All Teams" options={teamOptions} selected={selectedTeams} onChange={(vals) => updateParam("team", vals)} />
+        <MultiSelect label="All Rounds" options={roundOptions} selected={selectedRounds} onChange={(vals) => updateParam("round", vals)} />
+        <MultiSelect label="All Cities" options={cityOptions} selected={selectedCities} onChange={(vals) => updateParam("city", vals)} />
+        <MultiSelect label="All Matches" options={matchOptions} selected={selectedMatches} onChange={(vals) => updateParam("matchNo", vals)} />
 
-      {/* City multi-select */}
-      <MultiSelect
-        label="All Cities"
-        options={cityOptions}
-        selected={selectedCities}
-        onChange={(vals) => updateParam("city", vals)}
-      />
+        <select
+          value={currentSort}
+          onChange={(e) => updateSingleParam("sort", e.target.value)}
+          className="rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 px-3 py-2 text-xs sm:text-sm text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-emerald-500 w-full sm:w-auto"
+        >
+          <option value="mkt-discount">Savings vs. Mkt</option>
+          <option value="savings">Savings vs. Face</option>
+          <option value="most-popular">Most Popular</option>
+          <option value="cheapest">Cheapest First</option>
+          <option value="markup">Highest Markup</option>
+          <option value="date">Sort by Date</option>
+          <option value="match">Match Number</option>
+        </select>
+      </div>
 
-      {/* Match number multi-select */}
-      <MultiSelect
-        label="All Matches"
-        options={matchOptions}
-        selected={selectedMatches}
-        onChange={(vals) => updateParam("matchNo", vals)}
-      />
+      {/* Row 2: Toggles — Knockout Predictor, Include Fees, Face Value */}
+      <div className="flex flex-wrap gap-2 sm:gap-3 items-center">
 
-      {/* Sort (single select — keep as dropdown) */}
-      <select
-        value={currentSort}
-        onChange={(e) => updateSingleParam("sort", e.target.value)}
-        className="rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 px-3 py-2 text-xs sm:text-sm text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-emerald-500 w-full sm:w-auto"
-      >
-        <option value="mkt-discount">Savings vs. Mkt</option>
-        <option value="savings">Savings vs. Face</option>
-        <option value="most-popular">Most Popular</option>
-        <option value="cheapest">Cheapest First</option>
-        <option value="markup">Highest Markup</option>
-        <option value="date">Sort by Date</option>
-        <option value="match">Match Number</option>
-      </select>
-
-      {/* Pricing Source segmented control */}
-      <div className="col-span-2 sm:col-span-1 flex items-center gap-1.5">
-        <span className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 whitespace-nowrap">Face Value:</span>
-        <div className="inline-flex rounded-lg border border-zinc-200 dark:border-zinc-700 overflow-hidden">
+        {/* Knockout Predictor */}
+        <div className="flex items-center gap-1">
           <button
             type="button"
-            onClick={() => updateSingleParam("pricing", "collect")}
-            className={`px-3 py-2 text-xs sm:text-sm font-medium transition-colors ${
-              pricingSource === "collect"
-                ? "bg-emerald-600 text-white"
-                : "bg-white dark:bg-zinc-900 text-zinc-500 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800"
+            onClick={() => updateSingleParam("predictor", predictorOn ? "off" : "on")}
+            className={`flex items-center gap-2 rounded-lg border px-3 py-2 text-xs sm:text-sm transition-colors ${
+              predictorOn
+                ? "border-purple-400 dark:border-purple-600 bg-purple-50 dark:bg-purple-950/30 text-purple-700 dark:text-purple-400"
+                : "border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-500 dark:text-zinc-400"
             }`}
           >
-            Collect
+            <span className={`relative inline-flex h-4 w-7 shrink-0 rounded-full transition-colors ${predictorOn ? "bg-purple-500" : "bg-zinc-300 dark:bg-zinc-600"}`}>
+              <span className={`inline-block h-3 w-3 rounded-full bg-white shadow transform transition-transform mt-0.5 ${predictorOn ? "translate-x-3.5" : "translate-x-0.5"}`} />
+            </span>
+            Knockout Predictor
           </button>
-          <button
-            type="button"
-            onClick={() => updateSingleParam("pricing", "rsd")}
-            className={`px-3 py-2 text-xs sm:text-sm font-medium transition-colors border-l border-zinc-200 dark:border-zinc-700 ${
-              pricingSource === "rsd"
-                ? "bg-blue-600 text-white"
-                : "bg-white dark:bg-zinc-900 text-zinc-500 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800"
-            }`}
-          >
-            RSD
-          </button>
+          <InfoTooltip text="Shows projected knockout matchups based on simulation odds. These are predictions only — actual matchups depend on group stage results." />
         </div>
-        <InfoTooltip text="Compare face values from FIFA Collect (marketplace resale) vs. RSD (Random Selection Draw). RSD prices vary by venue." />
-      </div>
 
-      {/* Knockout Predictor toggle */}
-      <div className="col-span-2 sm:col-span-1 flex items-center gap-1">
-        <button
-          type="button"
-          onClick={() => updateSingleParam("predictor", predictorOn ? "off" : "on")}
-          className={`flex items-center gap-2 rounded-lg border px-3 py-2 text-xs sm:text-sm transition-colors ${
-            predictorOn
-              ? "border-purple-400 dark:border-purple-600 bg-purple-50 dark:bg-purple-950/30 text-purple-700 dark:text-purple-400"
-              : "border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-500 dark:text-zinc-400"
-          }`}
-        >
-          <span
-            className={`relative inline-flex h-4 w-7 shrink-0 rounded-full transition-colors ${
-              predictorOn ? "bg-purple-500" : "bg-zinc-300 dark:bg-zinc-600"
+        {/* Include Fees */}
+        <div className="flex items-center gap-1">
+          <button
+            type="button"
+            onClick={() => updateSingleParam("fees", feesOn ? "off" : "on")}
+            className={`flex items-center gap-2 rounded-lg border px-3 py-2 text-xs sm:text-sm transition-colors ${
+              feesOn
+                ? "border-amber-400 dark:border-amber-600 bg-amber-50 dark:bg-amber-950/30 text-amber-700 dark:text-amber-400"
+                : "border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-500 dark:text-zinc-400"
             }`}
           >
-            <span
-              className={`inline-block h-3 w-3 rounded-full bg-white shadow transform transition-transform mt-0.5 ${
-                predictorOn ? "translate-x-3.5 ml-0" : "translate-x-0.5"
-              }`}
-            />
-          </span>
-          Knockout Predictor
-        </button>
-        <InfoTooltip text="Shows projected knockout matchups based on simulation odds. These are predictions only — actual matchups depend on group stage results." />
-      </div>
+            <span className={`relative inline-flex h-4 w-7 shrink-0 rounded-full transition-colors ${feesOn ? "bg-amber-500" : "bg-zinc-300 dark:bg-zinc-600"}`}>
+              <span className={`inline-block h-3 w-3 rounded-full bg-white shadow transform transition-transform mt-0.5 ${feesOn ? "translate-x-3.5" : "translate-x-0.5"}`} />
+            </span>
+            Include Fees
+          </button>
+          <InfoTooltip text="15% fees on FIFA Marketplace purchases · 3% fees on FIFA Collect purchases (credit card only — crypto excluded)" />
+        </div>
 
-      {/* Fees toggle */}
-      <div className="col-span-2 sm:col-span-1 flex items-center gap-1">
-        <button
-          type="button"
-          onClick={() => updateSingleParam("fees", feesOn ? "off" : "on")}
-          className={`flex items-center gap-2 rounded-lg border px-3 py-2 text-xs sm:text-sm transition-colors ${
-            feesOn
-              ? "border-amber-400 dark:border-amber-600 bg-amber-50 dark:bg-amber-950/30 text-amber-700 dark:text-amber-400"
-              : "border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-500 dark:text-zinc-400"
-          }`}
-        >
-          <span
-            className={`relative inline-flex h-4 w-7 shrink-0 rounded-full transition-colors ${
-              feesOn ? "bg-amber-500" : "bg-zinc-300 dark:bg-zinc-600"
-            }`}
-          >
-            <span
-              className={`inline-block h-3 w-3 rounded-full bg-white shadow transform transition-transform mt-0.5 ${
-                feesOn ? "translate-x-3.5 ml-0" : "translate-x-0.5"
+        {/* Face Value source */}
+        <div className="flex items-center gap-1.5">
+          <span className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 whitespace-nowrap">Face Value:</span>
+          <div className="inline-flex rounded-lg border border-zinc-200 dark:border-zinc-700 overflow-hidden">
+            <button
+              type="button"
+              onClick={() => updateSingleParam("pricing", "collect")}
+              className={`px-3 py-2 text-xs sm:text-sm font-medium transition-colors ${
+                pricingSource === "collect"
+                  ? "bg-emerald-600 text-white"
+                  : "bg-white dark:bg-zinc-900 text-zinc-500 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800"
               }`}
-            />
-          </span>
-          Include Fees
-        </button>
-        <InfoTooltip text="15% fees on FIFA Marketplace purchases · 3% fees on FIFA Collect purchases (credit card only — crypto excluded)" />
+            >
+              Collect
+            </button>
+            <button
+              type="button"
+              onClick={() => updateSingleParam("pricing", "rsd")}
+              className={`px-3 py-2 text-xs sm:text-sm font-medium transition-colors border-l border-zinc-200 dark:border-zinc-700 ${
+                pricingSource === "rsd"
+                  ? "bg-blue-600 text-white"
+                  : "bg-white dark:bg-zinc-900 text-zinc-500 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800"
+              }`}
+            >
+              RSD
+            </button>
+          </div>
+          <InfoTooltip text="Compare face values from FIFA Collect (marketplace resale) vs. RSD (Random Selection Draw). RSD prices vary by venue." />
+        </div>
       </div>
     </div>
   );

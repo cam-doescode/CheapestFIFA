@@ -47,7 +47,7 @@ export function PaymentBanner() {
   return (
     <>
       <div className="bg-violet-50 dark:bg-violet-950/30 border-b border-violet-100 dark:border-violet-900/50">
-        <div className="max-w-7xl mx-auto px-4 py-2 sm:py-2.5 flex items-center justify-between gap-2 text-xs sm:text-sm">
+        <div className="max-w-7xl mx-auto px-4 py-2 sm:py-2.5 flex items-start justify-between gap-2 text-xs sm:text-sm">
           <a
             href={COLLECT_URL}
             target="_blank"
@@ -65,7 +65,7 @@ export function PaymentBanner() {
           <button
             type="button"
             onClick={dismiss}
-            className="text-violet-400 dark:text-violet-600 hover:text-violet-600 dark:hover:text-violet-400 shrink-0 p-1"
+            className="text-violet-400 dark:text-violet-600 hover:text-violet-600 dark:hover:text-violet-400 shrink-0 p-1 mt-0.5"
             aria-label="Dismiss"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
