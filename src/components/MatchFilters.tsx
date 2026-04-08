@@ -123,6 +123,7 @@ export function MatchFilters({ matches }: MatchFiltersProps) {
         className="rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 px-3 py-2 text-xs sm:text-sm text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-emerald-500 w-full sm:w-auto"
       >
         <option value="savings">Best Savings</option>
+        <option value="mkt-discount">Biggest Mkt Discount</option>
         <option value="most-popular">Most Popular</option>
         <option value="cheapest">Cheapest First</option>
         <option value="markup">Highest Markup</option>

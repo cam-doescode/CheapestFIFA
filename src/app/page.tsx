@@ -4,7 +4,7 @@ import type { MatchWithPrices } from "@/lib/types";
 import { withReferral } from "@/lib/utils";
 import { MatchGrid } from "@/components/MatchGrid";
 import { GeoBanner } from "@/components/GeoBanner";
-import { ResaleCountdown } from "@/components/ResaleCountdown";
+import { PaymentBanner } from "@/components/PaymentBanner";
 
 export default async function Home() {
   const [tickets, resaleData] = await Promise.all([
@@ -43,6 +43,24 @@ export default async function Home() {
     (a, b) => new Date(a.match.date).getTime() - new Date(b.match.date).getTime()
   );
 
+  // Average % cheaper Collect vs Marketplace (only where Collect < Mkt)
+  const mktDiscounts: number[] = [];
+  for (const m of matches) {
+    for (const t of m.tickets) {
+      if (!t.floorPrice || t.floorPrice <= 0) continue;
+      const mkt = m.resalePrices.find(r => r.category === t.category);
+      if (!mkt || mkt.price <= t.floorPrice) continue;
+      mktDiscounts.push((mkt.price - t.floorPrice) / mkt.price * 100);
+    }
+  }
+  const avgMktDiscount = mktDiscounts.length > 0
+    ? Math.round(mktDiscounts.reduce((a, b) => a + b, 0) / mktDiscounts.length)
+    : null;
+
+  const mktRefreshedAt = resaleData?.lastScraped
+    ? new Date(resaleData.lastScraped).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })
+    : null;
+
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950">
       {/* Header */}
@@ -79,8 +97,19 @@ export default async function Home() {
               live prices
             </span>
           </div>
-          <span className="mx-2 sm:mx-3 text-emerald-300 dark:text-emerald-700">|</span>
-          <ResaleCountdown />
+          {avgMktDiscount != null && (
+            <>
+              <span className="mx-2 sm:mx-3 text-emerald-300 dark:text-emerald-700">|</span>
+              <div>
+                <span className="text-emerald-700 dark:text-emerald-400 font-semibold">
+                  ~{avgMktDiscount}% cheaper
+                </span>{" "}
+                <span className="text-emerald-600 dark:text-emerald-500">
+                  than FIFA Marketplace
+                </span>
+              </div>
+            </>
+          )}
           <span className="mx-2 sm:mx-3 text-emerald-300 dark:text-emerald-700">|</span>
           <a
             href={withReferral("https://collect.fifa.com/pages/right-to-tickets")}
@@ -96,6 +125,11 @@ export default async function Home() {
           </a>
         </div>
       </div>
+
+      {/* Payment methods banner */}
+      <Suspense fallback={null}>
+        <PaymentBanner />
+      </Suspense>
 
       {/* Geo-detection banner */}
       <Suspense fallback={null}>
@@ -114,23 +148,6 @@ export default async function Home() {
           <MatchGrid matches={matches} />
         </Suspense>
       </main>
-
-      {/* FIFA Resale closure notice — compact ticker */}
-      <div className="bg-amber-50/80 dark:bg-amber-950/20 border-t border-amber-100 dark:border-amber-900/40">
-        <div className="max-w-7xl mx-auto px-4 py-1 overflow-x-auto whitespace-nowrap text-[10px] sm:text-xs text-amber-600 dark:text-amber-500">
-          FIFA official resale{" "}
-          <span className="font-semibold">closed Feb 22 &ndash; Apr 8</span>{" · "}
-          <a
-            href={withReferral("https://collect.fifa.com/marketplace")}
-            target="_blank"
-            rel="noopener"
-            className="font-semibold underline hover:text-amber-700 dark:hover:text-amber-400"
-          >
-            FIFA Collect
-          </a>{" "}
-          is the only way to buy &amp; sell during this window
-        </div>
-      </div>
 
       {/* Footer */}
       <footer className="border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900">
@@ -176,8 +193,10 @@ export default async function Home() {
           </div>
 
           <p>
-            Price data from FIFA Collect marketplace. Prices update every 5
-            minutes.
+            FIFA Collect prices update every 5 minutes.
+            {mktRefreshedAt && (
+              <> FIFA Marketplace prices last refreshed <span className="font-medium text-zinc-500 dark:text-zinc-400">{mktRefreshedAt}</span>.</>
+            )}
           </p>
         </div>
       </footer>

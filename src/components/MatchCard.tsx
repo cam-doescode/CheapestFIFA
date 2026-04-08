@@ -124,6 +124,17 @@ export function MatchCard({ data, prediction, pricingSource = "collect" }: Match
 
   const isBelowFace = cheapestFaceValue > 0 && cheapestFloor && cheapestFloor.floorPrice! <= cheapestFaceValue;
 
+  // Best saving vs FIFA Marketplace across all categories
+  const bestMktSaving = tickets.reduce<{ pct: number; dollars: number } | null>((best, t) => {
+    if (!t.floorPrice || t.floorPrice <= 0) return best;
+    const mkt = resalePrices.find(r => r.category === t.category);
+    if (!mkt || mkt.price <= t.floorPrice) return best;
+    const pct = Math.round(((mkt.price - t.floorPrice) / mkt.price) * 100);
+    const dollars = Math.round(mkt.price - t.floorPrice);
+    if (!best || pct > best.pct) return { pct, dollars };
+    return best;
+  }, null);
+
   // Activity proof
   const totalSold = tickets.reduce((sum, t) => sum + (t.saleTransactions || 0), 0);
   const lastSaleTicket = tickets
@@ -152,11 +163,9 @@ export function MatchCard({ data, prediction, pricingSource = "collect" }: Match
           <h3 className={`font-semibold text-zinc-900 dark:text-zinc-100 text-sm sm:text-base leading-tight${prediction ? " italic" : ""}`}>
             <TeamNames teams={displayTeams} />
           </h3>
-          {prediction && (
-            <div className="text-[9px] sm:text-[10px] text-purple-500 dark:text-purple-400 mt-0.5 font-normal not-italic">
-              Projected &middot; {match.teams}
-            </div>
-          )}
+          <div className="text-[9px] sm:text-[10px] text-purple-500 dark:text-purple-400 mt-0.5 font-normal not-italic">
+            {prediction ? <>Projected &middot; {match.teams}</> : <>&nbsp;</>}
+          </div>
         </div>
         {cheapestFloor && (
           <div className="text-right ml-3 shrink-0">
@@ -175,6 +184,19 @@ export function MatchCard({ data, prediction, pricingSource = "collect" }: Match
           </div>
         )}
       </div>
+
+      {/* FIFA Marketplace savings banner */}
+      {bestMktSaving && bestMktSaving.pct >= 5 && (
+        <div className="mb-2 sm:mb-3 -mx-0.5 px-2 py-1.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 flex items-center gap-1.5">
+          <span className="text-emerald-600 dark:text-emerald-400 text-base leading-none">🏷️</span>
+          <span className="text-xs font-semibold text-emerald-700 dark:text-emerald-300">
+            {bestMktSaving.pct}% cheaper than FIFA Marketplace
+          </span>
+          <span className="text-xs text-emerald-600 dark:text-emerald-500 ml-auto shrink-0">
+            Save ${bestMktSaving.dollars.toLocaleString()}
+          </span>
+        </div>
+      )}
 
       {/* Match details + supply/activity */}
       <div className="flex items-start justify-between gap-2 text-[11px] sm:text-xs text-zinc-500 dark:text-zinc-400 mb-2 sm:mb-3">

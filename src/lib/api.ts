@@ -1,4 +1,4 @@
-import type { Match, TicketListing, ResaleData } from "./types";
+import type { Match, TicketListing, ResaleData, ResalePrice } from "./types";
 
 const FIFACOLLECT_API = "https://www.fifacollect.info/api";
 const COMPETITION_ID = 2; // FIFA World Cup 2026
@@ -38,10 +38,25 @@ export async function getTicketsByMatch(): Promise<TicketListing[]> {
 
 export async function getResaleData(): Promise<ResaleData | null> {
   try {
-    const data = await import("@/data/resale-prices.json");
-    return data.default as ResaleData;
+    const raw = await import("@/data/fifa-marketplace-values-latest.json");
+    const data = raw.default as {
+      scraped_at: string;
+      matches: Record<string, { categories: Record<string, { bestPrice: number | null }> }>;
+    };
+
+    const prices: ResalePrice[] = [];
+    for (const [matchKey, match] of Object.entries(data.matches)) {
+      const matchNo = parseInt(matchKey.replace("Match ", ""), 10);
+      if (isNaN(matchNo)) continue;
+      for (const [catName, cat] of Object.entries(match.categories)) {
+        const category = parseInt(catName.replace("Category ", ""), 10);
+        if (isNaN(category) || cat.bestPrice == null) continue;
+        prices.push({ matchNo, category, price: cat.bestPrice, currency: "USD", scrapedAt: data.scraped_at });
+      }
+    }
+
+    return { lastScraped: data.scraped_at, prices };
   } catch {
-    // No resale data file yet
     return null;
   }
 }

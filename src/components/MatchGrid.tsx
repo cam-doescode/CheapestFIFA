@@ -20,7 +20,7 @@ export function MatchGrid({ matches }: MatchGridProps) {
   const cities = (searchParams.get("city") || "").split(",").filter(Boolean);
   const teams = (searchParams.get("team") || "").split(",").filter(Boolean);
   const matchNos = (searchParams.get("matchNo") || "").split(",").filter(Boolean);
-  const sort = searchParams.get("sort") || "savings";
+  const sort = searchParams.get("sort") || "mkt-discount";
   const predictorOn = searchParams.get("predictor") !== "off";
   const pricingSource = searchParams.get("pricing") || "collect";
 
@@ -76,6 +76,11 @@ export function MatchGrid({ matches }: MatchGridProps) {
           const aMark = getMaxMultiplier(a, pricingSource);
           const bMark = getMaxMultiplier(b, pricingSource);
           return bMark - aMark; // highest markup first
+        }
+        case "mkt-discount": {
+          const aDis = getBestMktDiscount(a);
+          const bDis = getBestMktDiscount(b);
+          return bDis - aDis;
         }
         case "most-popular": {
           const aSales = getTotalSales(a);
@@ -142,6 +147,18 @@ function getMaxMultiplier(m: MatchWithPrices, pricingSource: string): number {
 
 function getTotalSales(m: MatchWithPrices): number {
   return m.tickets.reduce((sum, t) => sum + (t.saleTransactions || 0), 0);
+}
+
+function getBestMktDiscount(m: MatchWithPrices): number {
+  let best = -Infinity;
+  for (const t of m.tickets) {
+    if (!t.floorPrice || t.floorPrice <= 0) continue;
+    const mkt = m.resalePrices.find((r) => r.category === t.category);
+    if (!mkt || mkt.price <= t.floorPrice) continue;
+    const pct = ((mkt.price - t.floorPrice) / mkt.price) * 100;
+    if (pct > best) best = pct;
+  }
+  return best;
 }
 
 function getBestSavings(m: MatchWithPrices, pricingSource: string): number {
