@@ -125,13 +125,13 @@ export function MatchCard({ data, prediction, pricingSource = "collect" }: Match
   const isBelowFace = cheapestFaceValue > 0 && cheapestFloor && cheapestFloor.floorPrice! <= cheapestFaceValue;
 
   // Best saving vs FIFA Marketplace across all categories
-  const bestMktSaving = tickets.reduce<{ pct: number; dollars: number } | null>((best, t) => {
+  const bestMktSaving = tickets.reduce<{ pct: number; dollars: number; category: number } | null>((best, t) => {
     if (!t.floorPrice || t.floorPrice <= 0) return best;
     const mkt = resalePrices.find(r => r.category === t.category);
     if (!mkt || mkt.price <= t.floorPrice) return best;
     const pct = Math.round(((mkt.price - t.floorPrice) / mkt.price) * 100);
     const dollars = Math.round(mkt.price - t.floorPrice);
-    if (!best || pct > best.pct) return { pct, dollars };
+    if (!best || pct > best.pct) return { pct, dollars, category: t.category };
     return best;
   }, null);
 
@@ -187,7 +187,12 @@ export function MatchCard({ data, prediction, pricingSource = "collect" }: Match
 
       {/* FIFA Marketplace savings banner */}
       {bestMktSaving && bestMktSaving.pct >= 5 && (
-        <div className="mb-2 sm:mb-3 -mx-0.5 px-2 py-1.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 flex items-center gap-1.5">
+        <a
+          href={getCollectUrl(match.matchNo, bestMktSaving.category)}
+          target="_blank"
+          rel="noopener"
+          className="mb-2 sm:mb-3 -mx-0.5 px-2 py-1.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 flex items-center gap-1.5 hover:bg-emerald-100 dark:hover:bg-emerald-950/60 transition-colors"
+        >
           <span className="text-emerald-600 dark:text-emerald-400 text-base leading-none">🏷️</span>
           <span className="text-xs font-semibold text-emerald-700 dark:text-emerald-300">
             {bestMktSaving.pct}% cheaper than FIFA Marketplace
@@ -195,7 +200,7 @@ export function MatchCard({ data, prediction, pricingSource = "collect" }: Match
           <span className="text-xs text-emerald-600 dark:text-emerald-500 ml-auto shrink-0">
             Save ${bestMktSaving.dollars.toLocaleString()}
           </span>
-        </div>
+        </a>
       )}
 
       {/* Match details + supply/activity */}

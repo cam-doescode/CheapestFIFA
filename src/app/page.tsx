@@ -100,14 +100,14 @@ export default async function Home() {
           {avgMktDiscount != null && (
             <>
               <span className="mx-2 sm:mx-3 text-emerald-300 dark:text-emerald-700">|</span>
-              <div>
+              <a href={withReferral("https://collect.fifa.com/marketplace")} target="_blank" rel="noopener" className="hover:underline">
                 <span className="text-emerald-700 dark:text-emerald-400 font-semibold">
                   ~{avgMktDiscount}% cheaper
                 </span>{" "}
                 <span className="text-emerald-600 dark:text-emerald-500">
                   than FIFA Marketplace
                 </span>
-              </div>
+              </a>
             </>
           )}
           <span className="mx-2 sm:mx-3 text-emerald-300 dark:text-emerald-700">|</span>
@@ -115,7 +115,7 @@ export default async function Home() {
             href={withReferral("https://collect.fifa.com/pages/right-to-tickets")}
             target="_blank"
             rel="noopener"
-            className="text-emerald-600 dark:text-emerald-500 hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors"
+            className="text-emerald-600 dark:text-emerald-500 hover:text-emerald-700 dark:hover:text-emerald-400 hover:underline transition-colors"
           >
             From{" "}
             <span className="font-semibold text-emerald-700 dark:text-emerald-400">

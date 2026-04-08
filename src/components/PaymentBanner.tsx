@@ -1,6 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { withReferral } from "@/lib/utils";
+
+const COLLECT_URL = withReferral("https://collect.fifa.com/marketplace");
 
 function ApplePayBadge() {
   return (
@@ -45,14 +48,20 @@ export function PaymentBanner() {
     <>
       <div className="bg-violet-50 dark:bg-violet-950/30 border-b border-violet-100 dark:border-violet-900/50">
         <div className="max-w-7xl mx-auto px-4 py-2 sm:py-2.5 flex items-center justify-between gap-2 text-xs sm:text-sm">
-          <div className="flex items-center gap-2 flex-wrap">
+          <a
+            href={COLLECT_URL}
+            target="_blank"
+            rel="noopener"
+            className="flex items-center gap-2 flex-wrap hover:opacity-80 transition-opacity"
+          >
             <span className="text-violet-700 dark:text-violet-300 font-medium">
               FIFA Collect now accepts
             </span>
             <ApplePayBadge />
             <span className="text-violet-400 dark:text-violet-600">&amp;</span>
             <GooglePayBadge />
-          </div>
+            <span className="text-zinc-500 dark:text-zinc-400">— no crypto wallet needed!</span>
+          </a>
           <button
             type="button"
             onClick={dismiss}
