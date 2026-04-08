@@ -2,14 +2,18 @@ import type { TicketListing, ResalePrice } from "@/lib/types";
 import { formatCurrency, categoryLabel, getCollectUrl } from "@/lib/utils";
 import { getRsdFaceValue } from "@/data/rsd-prices";
 
+const MKT_FEE = 1.15;   // 15% FIFA Marketplace buyer fee
+const COLLECT_FEE = 1.03; // 3% FIFA Collect credit card fee
+
 interface PriceTableProps {
   tickets: TicketListing[];
   resalePrices: ResalePrice[];
   matchNo: number;
   pricingSource?: string;
+  feesOn?: boolean;
 }
 
-export function PriceTable({ tickets, resalePrices, matchNo, pricingSource = "collect" }: PriceTableProps) {
+export function PriceTable({ tickets, resalePrices, matchNo, pricingSource = "collect", feesOn = true }: PriceTableProps) {
   if (tickets.length === 0) {
     return <p className="text-sm text-zinc-500 italic">No ticket data available</p>;
   }
@@ -47,8 +51,11 @@ export function PriceTable({ tickets, resalePrices, matchNo, pricingSource = "co
               : ticket.faceValue;
             const isRsdFallback = pricingSource === "rsd" && getRsdFaceValue(matchNo, ticket.category) === null;
 
-            const mktSaving = hasFloor && resale && resale.price > ticket.floorPrice!
-              ? Math.round(((resale.price - ticket.floorPrice!) / resale.price) * 100)
+            const effectiveMkt = resale ? resale.price * (feesOn ? MKT_FEE : 1) : null;
+            const effectiveCollect = hasFloor ? ticket.floorPrice! * (feesOn ? COLLECT_FEE : 1) : null;
+
+            const mktSaving = effectiveCollect != null && effectiveMkt != null && effectiveMkt > effectiveCollect
+              ? Math.round(((effectiveMkt - effectiveCollect) / effectiveMkt) * 100)
               : null;
 
             return (
@@ -68,8 +75,8 @@ export function PriceTable({ tickets, resalePrices, matchNo, pricingSource = "co
 
                 {/* vs Face */}
                 <td className="py-1 sm:py-1.5 px-1 text-right whitespace-nowrap">
-                  {hasFloor ? (() => {
-                    const multiplier = ticket.floorPrice! / faceValue;
+                  {effectiveCollect != null ? (() => {
+                    const multiplier = effectiveCollect / faceValue;
                     if (multiplier <= 1) {
                       return (
                         <a href={getCollectUrl(matchNo, ticket.category)} target="_blank" rel="noopener"
@@ -95,7 +102,7 @@ export function PriceTable({ tickets, resalePrices, matchNo, pricingSource = "co
                 {hasMkt && (
                   <>
                     <td className="py-1 sm:py-1.5 px-1 text-right text-zinc-500 dark:text-zinc-400">
-                      {resale ? formatCurrency(resale.price) : <span className="text-zinc-400">--</span>}
+                      {effectiveMkt != null ? formatCurrency(Math.round(effectiveMkt)) : <span className="text-zinc-400">--</span>}
                     </td>
                     <td className="py-1 sm:py-1.5 px-1 sm:px-2 text-right font-semibold whitespace-nowrap">
                       {mktSaving != null
@@ -110,10 +117,10 @@ export function PriceTable({ tickets, resalePrices, matchNo, pricingSource = "co
 
                 {/* Collect — action column, separated by divider */}
                 <td className={dividerTd}>
-                  {hasFloor ? (
+                  {effectiveCollect != null ? (
                     <a href={getCollectUrl(matchNo, ticket.category)} target="_blank" rel="noopener"
                       className="text-emerald-600 dark:text-emerald-400 hover:underline inline-flex items-center gap-0.5 font-bold">
-                      {formatCurrency(ticket.floorPrice!)}
+                      {formatCurrency(Math.round(effectiveCollect))}
                       <svg className="w-2.5 h-2.5 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>

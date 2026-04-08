@@ -22,6 +22,7 @@ export function MatchFilters({ matches }: MatchFiltersProps) {
   const currentSort = searchParams.get("sort") || "mkt-discount";
   const predictorOn = searchParams.get("predictor") !== "off";
   const pricingSource = searchParams.get("pricing") || "collect";
+  const feesOn = searchParams.get("fees") !== "off";
 
   const cities = useMemo(() => {
     return [...new Set(matches.map((m) => m.match.city))].sort();
@@ -57,7 +58,7 @@ export function MatchFilters({ matches }: MatchFiltersProps) {
     (key: string, value: string) => {
       const params = new URLSearchParams(searchParams.toString());
       // Clear param when it matches the default
-      const defaults: Record<string, string> = { sort: "mkt-discount", predictor: "on", pricing: "collect" };
+      const defaults: Record<string, string> = { sort: "mkt-discount", predictor: "on", pricing: "collect", fees: "on" };
       if (value === defaults[key]) {
         params.delete(key);
       } else {
@@ -186,6 +187,33 @@ export function MatchFilters({ matches }: MatchFiltersProps) {
           Knockout Predictor
         </button>
         <InfoTooltip text="Shows projected knockout matchups based on simulation odds. These are predictions only — actual matchups depend on group stage results." />
+      </div>
+
+      {/* Fees toggle */}
+      <div className="col-span-2 sm:col-span-1 flex items-center gap-1">
+        <button
+          type="button"
+          onClick={() => updateSingleParam("fees", feesOn ? "off" : "on")}
+          className={`flex items-center gap-2 rounded-lg border px-3 py-2 text-xs sm:text-sm transition-colors ${
+            feesOn
+              ? "border-amber-400 dark:border-amber-600 bg-amber-50 dark:bg-amber-950/30 text-amber-700 dark:text-amber-400"
+              : "border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-500 dark:text-zinc-400"
+          }`}
+        >
+          <span
+            className={`relative inline-flex h-4 w-7 shrink-0 rounded-full transition-colors ${
+              feesOn ? "bg-amber-500" : "bg-zinc-300 dark:bg-zinc-600"
+            }`}
+          >
+            <span
+              className={`inline-block h-3 w-3 rounded-full bg-white shadow transform transition-transform mt-0.5 ${
+                feesOn ? "translate-x-3.5 ml-0" : "translate-x-0.5"
+              }`}
+            />
+          </span>
+          Include Fees
+        </button>
+        <InfoTooltip text="15% fees on FIFA Marketplace purchases · 3% fees on FIFA Collect purchases (credit card only — crypto excluded)" />
       </div>
     </div>
   );

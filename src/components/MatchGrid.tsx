@@ -23,6 +23,7 @@ export function MatchGrid({ matches }: MatchGridProps) {
   const sort = searchParams.get("sort") || "mkt-discount";
   const predictorOn = searchParams.get("predictor") !== "off";
   const pricingSource = searchParams.get("pricing") || "collect";
+  const feesOn = searchParams.get("fees") !== "off";
 
   const filtered = useMemo(() => {
     let result = matches;
@@ -78,8 +79,8 @@ export function MatchGrid({ matches }: MatchGridProps) {
           return bMark - aMark; // highest markup first
         }
         case "mkt-discount": {
-          const aDis = getBestMktDiscount(a);
-          const bDis = getBestMktDiscount(b);
+          const aDis = getBestMktDiscount(a, feesOn);
+          const bDis = getBestMktDiscount(b, feesOn);
           return bDis - aDis;
         }
         case "most-popular": {
@@ -99,7 +100,7 @@ export function MatchGrid({ matches }: MatchGridProps) {
     });
 
     return result;
-  }, [matches, matchNos, rounds, cities, teams, sort, predictorOn, pricingSource]);
+  }, [matches, matchNos, rounds, cities, teams, sort, predictorOn, pricingSource, feesOn]);
 
   return (
     <>
@@ -114,6 +115,7 @@ export function MatchGrid({ matches }: MatchGridProps) {
             data={match}
             prediction={predictorOn ? PREDICTIONS_BY_MATCH.get(match.match.matchNo) : undefined}
             pricingSource={pricingSource}
+            feesOn={feesOn}
           />
         ))}
       </div>
@@ -149,13 +151,19 @@ function getTotalSales(m: MatchWithPrices): number {
   return m.tickets.reduce((sum, t) => sum + (t.saleTransactions || 0), 0);
 }
 
-function getBestMktDiscount(m: MatchWithPrices): number {
+const MKT_FEE = 1.15;
+const COLLECT_FEE = 1.03;
+
+function getBestMktDiscount(m: MatchWithPrices, feesOn: boolean): number {
   let best = -Infinity;
   for (const t of m.tickets) {
     if (!t.floorPrice || t.floorPrice <= 0) continue;
     const mkt = m.resalePrices.find((r) => r.category === t.category);
-    if (!mkt || mkt.price <= t.floorPrice) continue;
-    const pct = ((mkt.price - t.floorPrice) / mkt.price) * 100;
+    if (!mkt) continue;
+    const effectiveMkt = mkt.price * (feesOn ? MKT_FEE : 1);
+    const effectiveCollect = t.floorPrice * (feesOn ? COLLECT_FEE : 1);
+    if (effectiveMkt <= effectiveCollect) continue;
+    const pct = ((effectiveMkt - effectiveCollect) / effectiveMkt) * 100;
     if (pct > best) best = pct;
   }
   return best;

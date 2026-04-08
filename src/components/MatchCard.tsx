@@ -14,6 +14,7 @@ interface MatchCardProps {
   data: MatchWithPrices;
   prediction?: KnockoutPrediction;
   pricingSource?: string;
+  feesOn?: boolean;
 }
 
 function TeamNames({ teams }: { teams: string }) {
@@ -108,7 +109,10 @@ function PredictionBadge({ prediction }: { prediction: KnockoutPrediction }) {
   );
 }
 
-export function MatchCard({ data, prediction, pricingSource = "collect" }: MatchCardProps) {
+const MKT_FEE = 1.15;
+const COLLECT_FEE = 1.03;
+
+export function MatchCard({ data, prediction, pricingSource = "collect", feesOn = true }: MatchCardProps) {
   const { match, tickets, resalePrices } = data;
 
   const cheapestFloor = tickets
@@ -128,9 +132,12 @@ export function MatchCard({ data, prediction, pricingSource = "collect" }: Match
   const bestMktSaving = tickets.reduce<{ pct: number; dollars: number; category: number } | null>((best, t) => {
     if (!t.floorPrice || t.floorPrice <= 0) return best;
     const mkt = resalePrices.find(r => r.category === t.category);
-    if (!mkt || mkt.price <= t.floorPrice) return best;
-    const pct = Math.round(((mkt.price - t.floorPrice) / mkt.price) * 100);
-    const dollars = Math.round(mkt.price - t.floorPrice);
+    if (!mkt) return best;
+    const effectiveMkt = mkt.price * (feesOn ? MKT_FEE : 1);
+    const effectiveCollect = t.floorPrice * (feesOn ? COLLECT_FEE : 1);
+    if (effectiveMkt <= effectiveCollect) return best;
+    const pct = Math.round(((effectiveMkt - effectiveCollect) / effectiveMkt) * 100);
+    const dollars = Math.round(effectiveMkt - effectiveCollect);
     if (!best || pct > best.pct) return { pct, dollars, category: t.category };
     return best;
   }, null);
@@ -241,7 +248,7 @@ export function MatchCard({ data, prediction, pricingSource = "collect" }: Match
       </div>
 
       {/* Price table */}
-      <PriceTable tickets={tickets} resalePrices={resalePrices} matchNo={match.matchNo} pricingSource={pricingSource} />
+      <PriceTable tickets={tickets} resalePrices={resalePrices} matchNo={match.matchNo} pricingSource={pricingSource} feesOn={feesOn} />
 
       {/* Buy CTA — links to cheapest available category */}
       {cheapestFloor && (
