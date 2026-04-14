@@ -33,6 +33,16 @@ export async function getTicketsByMatch(): Promise<TicketListing[]> {
     }
   }
 
+  // Override placeholder kick-off times (API returns 12:00:00 for all matches)
+  const matchSchedule = await import("@/data/match-schedule.json");
+  const scheduleMap = matchSchedule.schedule as Record<string, string>;
+  for (const ticket of tickets) {
+    const correctedDate = scheduleMap[String(ticket.match.matchNo)];
+    if (correctedDate) {
+      ticket.match.date = correctedDate;
+    }
+  }
+
   return tickets;
 }
 
