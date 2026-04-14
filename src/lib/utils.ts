@@ -7,22 +7,43 @@ export function formatCurrency(amount: number): string {
   }).format(amount);
 }
 
-export function formatDate(dateString: string): string {
+const CITY_TIMEZONE: Record<string, string> = {
+  "Mexico City":          "America/Mexico_City",
+  "Guadalajara":          "America/Mexico_City",
+  "Monterrey":            "America/Monterrey",
+  "Toronto":              "America/Toronto",
+  "Vancouver":            "America/Vancouver",
+  "Los Angeles":          "America/Los_Angeles",
+  "San Francisco Bay Area": "America/Los_Angeles",
+  "Seattle":              "America/Los_Angeles",
+  "Dallas":               "America/Chicago",
+  "Houston":              "America/Chicago",
+  "Kansas City":          "America/Chicago",
+  "Miami":                "America/New_York",
+  "Atlanta":              "America/New_York",
+  "Philadelphia":         "America/New_York",
+  "Boston":               "America/New_York",
+  "New York New Jersey":  "America/New_York",
+};
+
+export function formatDate(dateString: string, city?: string): string {
   const date = new Date(dateString);
   return date.toLocaleDateString("en-US", {
     weekday: "short",
     month: "short",
     day: "numeric",
     year: "numeric",
+    timeZone: city ? CITY_TIMEZONE[city] : undefined,
   });
 }
 
-export function formatTime(dateString: string): string {
+export function formatTime(dateString: string, city?: string): string {
   const date = new Date(dateString);
   return date.toLocaleTimeString("en-US", {
     hour: "numeric",
     minute: "2-digit",
     timeZoneName: "short",
+    timeZone: city ? CITY_TIMEZONE[city] : undefined,
   });
 }
 

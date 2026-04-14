@@ -214,7 +214,7 @@ export function MatchCard({ data, prediction, pricingSource = "collect", feesOn 
       <div className="flex items-start justify-between gap-2 text-[11px] sm:text-xs text-zinc-500 dark:text-zinc-400 mb-2 sm:mb-3">
         {/* Left: date & stadium */}
         <div className="space-y-0.5">
-          <div>{formatDate(match.date)} &nbsp; {formatTime(match.date)}</div>
+          <div>{formatDate(match.date, match.city)} &nbsp; {formatTime(match.date, match.city)}</div>
           <div className="py-0.5">
             <StadiumMapModal
               stadium={match.stadium}
