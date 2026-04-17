@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-04-14T19:19:19.516347+00:00",
+  "scraped_at": "2026-04-17T14:25:57.783738+00:00",
   "currency": "USD",
   "source": "https://fwc26-resale-usd.tickets.fifa.com",
   "matches": {
@@ -16,19 +16,19 @@
         "Category 2": {
           "name": "Category 2",
           "catId": "10229393206255",
-          "bestPrice": 5000.0,
-          "maxPrice": 15000.0
+          "bestPrice": 4500.0,
+          "maxPrice": 15199.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229393206256",
-          "bestPrice": 3086.0,
+          "bestPrice": 2955.0,
           "maxPrice": 8980.0
         },
         "Category 4": {
           "name": "Category 4",
           "catId": "10229393206257",
-          "bestPrice": 3032.82,
+          "bestPrice": 3200.0,
           "maxPrice": 7000.0
         },
         "Wheelchair User - Category 1": {
@@ -47,12 +47,12 @@
           "name": "Easy Access Amenity - Category 1",
           "catId": "10229393220311",
           "bestPrice": 6950.0,
-          "maxPrice": 6950.0
+          "maxPrice": 17000.0
         },
         "Easy Access Amenity - Category 2": {
           "name": "Easy Access Amenity - Category 2",
           "catId": "10229393220313",
-          "bestPrice": 4500.0,
+          "bestPrice": 6500.0,
           "maxPrice": 6500.0
         }
       }
@@ -64,26 +64,26 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226860430",
-          "bestPrice": 530.0,
+          "bestPrice": 550.0,
           "maxPrice": 5000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226860431",
           "bestPrice": 380.0,
-          "maxPrice": 2500.0
+          "maxPrice": 4000.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226860432",
-          "bestPrice": 346.6,
+          "bestPrice": 330.0,
           "maxPrice": 2000.0
         },
         "Category 4": {
           "name": "Category 4",
           "catId": "10229226860433",
-          "bestPrice": 400.0,
-          "maxPrice": 1444.2
+          "bestPrice": 530.0,
+          "maxPrice": 1450.4
         },
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
@@ -118,14 +118,8 @@
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998853765",
-          "bestPrice": 833.3,
-          "maxPrice": 833.3
-        },
-        "Front Category 3": {
-          "name": "Front Category 3",
-          "catId": "10229998853766",
-          "bestPrice": 730.0,
-          "maxPrice": 730.0
+          "bestPrice": 710.69,
+          "maxPrice": 710.69
         }
       }
     },
@@ -136,50 +130,50 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226882411",
-          "bestPrice": 1443.47,
-          "maxPrice": 32494.5
+          "bestPrice": 1450.4,
+          "maxPrice": 32634.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226882412",
-          "bestPrice": 1436.97,
-          "maxPrice": 11553.6
+          "bestPrice": 1288.68,
+          "maxPrice": 11603.2
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226882413",
-          "bestPrice": 1010.94,
-          "maxPrice": 43326.0
+          "bestPrice": 1015.28,
+          "maxPrice": 43512.0
         },
         "Category 4": {
           "name": "Category 4",
           "catId": "10229226882414",
-          "bestPrice": 1047.04,
+          "bestPrice": 1015.28,
           "maxPrice": 9789.78
         },
         "Easy Access Standard - Category 2": {
           "name": "Easy Access Standard - Category 2",
           "catId": "10229227271142",
-          "bestPrice": 3971.55,
-          "maxPrice": 3971.55
+          "bestPrice": 3988.6,
+          "maxPrice": 3988.6
         },
         "Easy Access Standard - Category 3": {
           "name": "Easy Access Standard - Category 3",
           "catId": "10229227271143",
-          "bestPrice": 7221.0,
-          "maxPrice": 7221.0
+          "bestPrice": 7252.0,
+          "maxPrice": 7252.0
         },
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229226882424",
-          "bestPrice": 2238.51,
+          "bestPrice": 2248.12,
           "maxPrice": 8000.0
         },
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229226882425",
-          "bestPrice": 2527.35,
-          "maxPrice": 3971.55
+          "bestPrice": 2538.2,
+          "maxPrice": 3988.6
         },
         "Front Category 1": {
           "name": "Front Category 1",
@@ -190,8 +184,8 @@
         "Front Category 3": {
           "name": "Front Category 3",
           "catId": "10229998855180",
-          "bestPrice": 1408.09,
-          "maxPrice": 1985.77
+          "bestPrice": 1414.14,
+          "maxPrice": 1994.3
         }
       }
     },
@@ -202,31 +196,31 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229530028130",
-          "bestPrice": 1900.0,
+          "bestPrice": 1870.0,
           "maxPrice": 35000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229530028131",
-          "bestPrice": 1444.2,
+          "bestPrice": 1450.0,
           "maxPrice": 18500.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229530028132",
-          "bestPrice": 1083.15,
+          "bestPrice": 1087.8,
           "maxPrice": 11800.0
         },
         "Category 4": {
           "name": "Category 4",
           "catId": "10229530028133",
-          "bestPrice": 1400.0,
+          "bestPrice": 1260.0,
           "maxPrice": 4800.0
         },
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
           "catId": "10229530028139",
-          "bestPrice": 3450.0,
+          "bestPrice": 3433.0,
           "maxPrice": 3875.0
         },
         "Easy Access Standard - Category 2": {
@@ -239,18 +233,18 @@
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229530028144",
           "bestPrice": 3750.0,
-          "maxPrice": 12705.34
+          "maxPrice": 12759.89
         },
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229530028145",
-          "bestPrice": 2888.4,
+          "bestPrice": 2900.8,
           "maxPrice": 4000.0
         },
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
           "catId": "10229530028146",
-          "bestPrice": 5000.0,
+          "bestPrice": 3000.0,
           "maxPrice": 50000.0
         },
         "Front Category 1": {
@@ -262,8 +256,8 @@
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845194",
-          "bestPrice": 4330.0,
-          "maxPrice": 4444.0
+          "bestPrice": 2680.0,
+          "maxPrice": 3450.0
         }
       }
     },
@@ -274,7 +268,7 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229531538783",
-          "bestPrice": 800.0,
+          "bestPrice": 850.0,
           "maxPrice": 75000.0
         },
         "Category 2": {
@@ -298,8 +292,8 @@
         "Easy Access Standard - Category 2": {
           "name": "Easy Access Standard - Category 2",
           "catId": "10229531538794",
-          "bestPrice": 2000.0,
-          "maxPrice": 2000.0
+          "bestPrice": 1500.0,
+          "maxPrice": 1500.0
         },
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
@@ -310,14 +304,14 @@
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998853773",
-          "bestPrice": 1350.0,
-          "maxPrice": 1645.0
+          "bestPrice": 1050.0,
+          "maxPrice": 2500.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998853774",
-          "bestPrice": 902.62,
-          "maxPrice": 974.83
+          "bestPrice": 979.02,
+          "maxPrice": 979.02
         }
       }
     },
@@ -328,14 +322,14 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226860365",
-          "bestPrice": 577.68,
-          "maxPrice": 14442.0
+          "bestPrice": 500.0,
+          "maxPrice": 14504.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226860366",
-          "bestPrice": 429.99,
-          "maxPrice": 8657.97
+          "bestPrice": 424.0,
+          "maxPrice": 8695.14
         },
         "Category 3": {
           "name": "Category 3",
@@ -346,49 +340,49 @@
         "Category 4": {
           "name": "Category 4",
           "catId": "10229226860368",
-          "bestPrice": 577.68,
-          "maxPrice": 5850.0
+          "bestPrice": 580.16,
+          "maxPrice": 1813.0
         },
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
           "catId": "10229226860374",
-          "bestPrice": 1444.2,
-          "maxPrice": 3466.08
+          "bestPrice": 1450.4,
+          "maxPrice": 3480.96
         },
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229226860378",
-          "bestPrice": 1420.0,
-          "maxPrice": 1420.0
+          "bestPrice": 1426.1,
+          "maxPrice": 1426.1
         },
         "Alcohol-Free Area 1": {
           "name": "Alcohol-Free Area 1",
           "catId": "10229227295117",
-          "bestPrice": 718.48,
-          "maxPrice": 2130.19
+          "bestPrice": 627.29,
+          "maxPrice": 2139.34
         },
         "Alcohol-Free Area 2": {
           "name": "Alcohol-Free Area 2",
           "catId": "10229372777792",
-          "bestPrice": 722.1,
-          "maxPrice": 43326.0
+          "bestPrice": 725.2,
+          "maxPrice": 43512.0
         },
         "Alcohol-Free Area 3": {
           "name": "Alcohol-Free Area 3",
           "catId": "10229515504831",
-          "bestPrice": 877.35,
-          "maxPrice": 1805.25
+          "bestPrice": 797.72,
+          "maxPrice": 1813.0
         },
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998845179",
           "bestPrice": 1000.0,
-          "maxPrice": 3303.6
+          "maxPrice": 3317.79
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845185",
-          "bestPrice": 770.0,
+          "bestPrice": 650.0,
           "maxPrice": 2000.0
         },
         "Front Category 3": {
@@ -406,25 +400,25 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229531629279",
-          "bestPrice": 1860.0,
+          "bestPrice": 1813.0,
           "maxPrice": 55000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229531629280",
-          "bestPrice": 1389.93,
+          "bestPrice": 1300.0,
           "maxPrice": 30000.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229531629281",
-          "bestPrice": 433.26,
+          "bestPrice": 435.12,
           "maxPrice": 10000.0
         },
         "Category 4": {
           "name": "Category 4",
           "catId": "10229531629282",
-          "bestPrice": 1765.0,
+          "bestPrice": 1631.7,
           "maxPrice": 3500.0
         },
         "Easy Access Standard - Category 2": {
@@ -448,8 +442,14 @@
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998855181",
-          "bestPrice": 3000.0,
+          "bestPrice": 2370.0,
           "maxPrice": 10000.0
+        },
+        "Front Category 2": {
+          "name": "Front Category 2",
+          "catId": "10229998855182",
+          "bestPrice": 2900.8,
+          "maxPrice": 2900.8
         }
       }
     },
@@ -461,18 +461,18 @@
           "name": "Category 1",
           "catId": "10229226842589",
           "bestPrice": 450.0,
-          "maxPrice": 6500.0
+          "maxPrice": 6300.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226842590",
-          "bestPrice": 330.0,
+          "bestPrice": 355.0,
           "maxPrice": 11765.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226842591",
-          "bestPrice": 165.36,
+          "bestPrice": 200.0,
           "maxPrice": 3700.0
         },
         "Category 4": {
@@ -485,7 +485,13 @@
           "name": "Easy Access Standard - Category 1",
           "catId": "10229226842598",
           "bestPrice": 750.0,
-          "maxPrice": 800.0
+          "maxPrice": 1000.0
+        },
+        "Easy Access Standard - Category 2": {
+          "name": "Easy Access Standard - Category 2",
+          "catId": "10229227272868",
+          "bestPrice": 550.0,
+          "maxPrice": 550.0
         },
         "Easy Access Standard - Category 3": {
           "name": "Easy Access Standard - Category 3",
@@ -502,31 +508,31 @@
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229226854408",
-          "bestPrice": 500.0,
-          "maxPrice": 500.0
+          "bestPrice": 435.0,
+          "maxPrice": 450.0
         },
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
           "catId": "10229226854409",
           "bestPrice": 470.58,
-          "maxPrice": 470.58
+          "maxPrice": 500.0
         },
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998845187",
-          "bestPrice": 1200.0,
+          "bestPrice": 1321.0,
           "maxPrice": 5190.44
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845188",
           "bestPrice": 455.0,
-          "maxPrice": 2100.0
+          "maxPrice": 1250.0
         },
         "Front Category 3": {
           "name": "Front Category 3",
           "catId": "10229998845189",
-          "bestPrice": 220.0,
+          "bestPrice": 203.05,
           "maxPrice": 900.0
         }
       }
@@ -538,19 +544,19 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226885772",
-          "bestPrice": 875.0,
+          "bestPrice": 800.0,
           "maxPrice": 10869.57
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226885773",
-          "bestPrice": 650.0,
-          "maxPrice": 9000000.0
+          "bestPrice": 700.0,
+          "maxPrice": 30000.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226885774",
-          "bestPrice": 652.11,
+          "bestPrice": 625.0,
           "maxPrice": 3000.0
         },
         "Category 4": {
@@ -580,7 +586,7 @@
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998853780",
-          "bestPrice": 1000.0,
+          "bestPrice": 1995.0,
           "maxPrice": 1995.0
         }
       }
@@ -592,19 +598,19 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226878709",
-          "bestPrice": 550.0,
+          "bestPrice": 590.0,
           "maxPrice": 120000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226878710",
-          "bestPrice": 460.0,
-          "maxPrice": 6000.0
+          "bestPrice": 451.3,
+          "maxPrice": 5000.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226878711",
-          "bestPrice": 490.0,
+          "bestPrice": 485.0,
           "maxPrice": 3000.0
         },
         "Category 4": {
@@ -622,14 +628,20 @@
         "Supporter Standard Tier": {
           "name": "Supporter Standard Tier",
           "catId": "10229227496060",
-          "bestPrice": 470.0,
-          "maxPrice": 3000.0
+          "bestPrice": 400.0,
+          "maxPrice": 2300.0
         },
         "Supporter Value Tier": {
           "name": "Supporter Value Tier",
           "catId": "10229393571571",
-          "bestPrice": 347.83,
+          "bestPrice": 353.0,
           "maxPrice": 2500.0
+        },
+        "Supporter Entry Tier": {
+          "name": "Supporter Entry Tier",
+          "catId": "10229670042204",
+          "bestPrice": 400.0,
+          "maxPrice": 430.0
         },
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
@@ -647,7 +659,7 @@
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229226878722",
           "bestPrice": 1750.0,
-          "maxPrice": 1750.0
+          "maxPrice": 2012.5
         },
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
@@ -670,7 +682,7 @@
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845197",
-          "bestPrice": 725.0,
+          "bestPrice": 600.0,
           "maxPrice": 5560.0
         }
       }
@@ -682,20 +694,20 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226881303",
-          "bestPrice": 938.73,
+          "bestPrice": 999.0,
           "maxPrice": 30000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226881304",
           "bestPrice": 650.0,
-          "maxPrice": 6000.0
+          "maxPrice": 10000.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226881305",
           "bestPrice": 700.0,
-          "maxPrice": 10000.0
+          "maxPrice": 100000.0
         },
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
@@ -718,8 +730,8 @@
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998854269",
-          "bestPrice": 2250.0,
-          "maxPrice": 3560.0
+          "bestPrice": 1900.0,
+          "maxPrice": 4750.0
         }
       }
     },
@@ -742,14 +754,14 @@
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226879937",
-          "bestPrice": 300.0,
-          "maxPrice": 2166.3
+          "bestPrice": 250.0,
+          "maxPrice": 2175.6
         },
         "Wheelchair User - Category 2": {
           "name": "Wheelchair User - Category 2",
           "catId": "10229227371938",
-          "bestPrice": 722.1,
-          "maxPrice": 722.1
+          "bestPrice": 725.2,
+          "maxPrice": 725.2
         },
         "Easy Access Standard - Category 3": {
           "name": "Easy Access Standard - Category 3",
@@ -773,7 +785,7 @@
           "name": "Front Category 2",
           "catId": "10229998854276",
           "bestPrice": 536.0,
-          "maxPrice": 866.52
+          "maxPrice": 1500.0
         },
         "Front Category 3": {
           "name": "Front Category 3",
@@ -790,14 +802,14 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229531982636",
-          "bestPrice": 445.0,
+          "bestPrice": 399.0,
           "maxPrice": 17000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229531982637",
-          "bestPrice": 347.93,
-          "maxPrice": 57500.0
+          "bestPrice": 337.93,
+          "maxPrice": 67632.18
         },
         "Category 3": {
           "name": "Category 3",
@@ -808,8 +820,8 @@
         "Category 4": {
           "name": "Category 4",
           "catId": "10229531982639",
-          "bestPrice": 397.0,
-          "maxPrice": 1000.0
+          "bestPrice": 450.0,
+          "maxPrice": 870.24
         },
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
@@ -827,12 +839,12 @@
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229531982650",
           "bestPrice": 525.0,
-          "maxPrice": 1544.57
+          "maxPrice": 1551.2
         },
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
           "catId": "10229531982652",
-          "bestPrice": 361.05,
+          "bestPrice": 362.6,
           "maxPrice": 650.0
         },
         "Wheelchair & Easy Access Amenity - Category 4": {
@@ -844,19 +856,19 @@
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998845211",
-          "bestPrice": 1455.88,
-          "maxPrice": 2200.0
+          "bestPrice": 1000.0,
+          "maxPrice": 2990.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845212",
           "bestPrice": 550.0,
-          "maxPrice": 869.0
+          "maxPrice": 2000.0
         },
         "Front Category 3": {
           "name": "Front Category 3",
           "catId": "10229998845213",
-          "bestPrice": 415.2,
+          "bestPrice": 416.99,
           "maxPrice": 3100.0
         }
       }
@@ -868,13 +880,13 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229531982577",
-          "bestPrice": 650.0,
+          "bestPrice": 670.0,
           "maxPrice": 18000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229531982578",
-          "bestPrice": 450.0,
+          "bestPrice": 490.0,
           "maxPrice": 20000.0
         },
         "Category 3": {
@@ -886,7 +898,7 @@
         "Category 4": {
           "name": "Category 4",
           "catId": "10229531982580",
-          "bestPrice": 620.0,
+          "bestPrice": 570.0,
           "maxPrice": 3000.0
         },
         "Easy Access Standard - Category 1": {
@@ -916,19 +928,19 @@
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
           "catId": "10229531982593",
-          "bestPrice": 500.0,
+          "bestPrice": 400.0,
           "maxPrice": 3500.0
         },
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998845205",
-          "bestPrice": 1500.0,
+          "bestPrice": 1479.0,
           "maxPrice": 7000.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845206",
-          "bestPrice": 660.0,
+          "bestPrice": 560.0,
           "maxPrice": 2500.0
         }
       }
@@ -940,26 +952,26 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229530028130",
-          "bestPrice": 434.0,
+          "bestPrice": 450.0,
           "maxPrice": 16200.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229530028131",
-          "bestPrice": 324.94,
-          "maxPrice": 9385.13
+          "bestPrice": 326.34,
+          "maxPrice": 9425.42
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229530028132",
-          "bestPrice": 180.0,
+          "bestPrice": 175.0,
           "maxPrice": 5000.0
         },
         "Category 4": {
           "name": "Category 4",
           "catId": "10229530028133",
-          "bestPrice": 249.0,
-          "maxPrice": 699.0
+          "bestPrice": 350.0,
+          "maxPrice": 600.0
         },
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
@@ -977,7 +989,7 @@
           "name": "Easy Access Standard - Category 4",
           "catId": "10229530028143",
           "bestPrice": 450.0,
-          "maxPrice": 450.0
+          "maxPrice": 500.0
         },
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
@@ -994,14 +1006,14 @@
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
           "catId": "10229530028146",
-          "bestPrice": 400.0,
+          "bestPrice": 362.6,
           "maxPrice": 400.0
         },
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998845193",
-          "bestPrice": 1500.0,
-          "maxPrice": 2100.0
+          "bestPrice": 1450.0,
+          "maxPrice": 2000.0
         }
       }
     },
@@ -1012,20 +1024,26 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226854411",
-          "bestPrice": 499.0,
+          "bestPrice": 498.0,
           "maxPrice": 8000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226854412",
           "bestPrice": 350.0,
-          "maxPrice": 2671.77
+          "maxPrice": 3000.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226854413",
-          "bestPrice": 361.05,
-          "maxPrice": 4643.1
+          "bestPrice": 423.0,
+          "maxPrice": 5000.0
+        },
+        "Category 4": {
+          "name": "Category 4",
+          "catId": "10229226854414",
+          "bestPrice": 900.0,
+          "maxPrice": 3550.0
         },
         "Easy Access Standard - Category 3": {
           "name": "Easy Access Standard - Category 3",
@@ -1036,13 +1054,13 @@
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229226854423",
-          "bestPrice": 1000.0,
-          "maxPrice": 1000.0
+          "bestPrice": 750.0,
+          "maxPrice": 750.0
         },
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229226854424",
-          "bestPrice": 498.24,
+          "bestPrice": 500.38,
           "maxPrice": 800.0
         },
         "Front Category 1": {
@@ -1054,14 +1072,14 @@
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845183",
-          "bestPrice": 700.43,
+          "bestPrice": 703.44,
           "maxPrice": 1200.0
         },
         "Front Category 3": {
           "name": "Front Category 3",
           "catId": "10229998845184",
-          "bestPrice": 850.0,
-          "maxPrice": 940.0
+          "bestPrice": 830.0,
+          "maxPrice": 850.0
         }
       }
     },
@@ -1072,26 +1090,26 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229531629279",
-          "bestPrice": 1100.0,
-          "maxPrice": 20000.0
+          "bestPrice": 995.0,
+          "maxPrice": 16500.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229531629280",
-          "bestPrice": 750.0,
+          "bestPrice": 765.0,
           "maxPrice": 10000.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229531629281",
-          "bestPrice": 722.1,
+          "bestPrice": 700.0,
           "maxPrice": 9999.0
         },
         "Category 4": {
           "name": "Category 4",
           "catId": "10229531629282",
           "bestPrice": 800.0,
-          "maxPrice": 2888.4
+          "maxPrice": 2900.8
         },
         "Easy Access Standard - Category 3": {
           "name": "Easy Access Standard - Category 3",
@@ -1103,7 +1121,7 @@
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229531629294",
           "bestPrice": 800.0,
-          "maxPrice": 902.62
+          "maxPrice": 906.5
         },
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
@@ -1114,19 +1132,19 @@
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998855181",
-          "bestPrice": 2570.67,
+          "bestPrice": 2350.0,
           "maxPrice": 4200.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998855182",
-          "bestPrice": 1083.15,
-          "maxPrice": 1550.0
+          "bestPrice": 1350.0,
+          "maxPrice": 1460.0
         },
         "Front Category 3": {
           "name": "Front Category 3",
           "catId": "10229998855183",
-          "bestPrice": 938.73,
+          "bestPrice": 900.0,
           "maxPrice": 1075.0
         }
       }
@@ -1144,32 +1162,38 @@
         "Category 2": {
           "name": "Category 2",
           "catId": "10229531538784",
-          "bestPrice": 355.5,
-          "maxPrice": 2500000.0
+          "bestPrice": 375.0,
+          "maxPrice": 5000.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229531538785",
-          "bestPrice": 340.0,
+          "bestPrice": 347.0,
           "maxPrice": 1549.0
+        },
+        "Category 4": {
+          "name": "Category 4",
+          "catId": "10229531538786",
+          "bestPrice": 900.0,
+          "maxPrice": 900.0
         },
         "Easy Access Standard - Category 2": {
           "name": "Easy Access Standard - Category 2",
           "catId": "10229531538794",
           "bestPrice": 1000.0,
-          "maxPrice": 1443.47
+          "maxPrice": 1449.67
         },
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229531538797",
-          "bestPrice": 613.78,
+          "bestPrice": 616.42,
           "maxPrice": 1776.0
         },
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229531538798",
           "bestPrice": 500.0,
-          "maxPrice": 577.68
+          "maxPrice": 580.16
         },
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
@@ -1186,8 +1210,8 @@
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998853774",
-          "bestPrice": 799.0,
-          "maxPrice": 938.73
+          "bestPrice": 688.21,
+          "maxPrice": 799.0
         }
       }
     },
@@ -1198,14 +1222,14 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229531629338",
-          "bestPrice": 1200.0,
-          "maxPrice": 32850.0
+          "bestPrice": 1100.0,
+          "maxPrice": 24900.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229531629339",
           "bestPrice": 900.0,
-          "maxPrice": 13990.0
+          "maxPrice": 27500.0
         },
         "Category 3": {
           "name": "Category 3",
@@ -1216,8 +1240,8 @@
         "Category 4": {
           "name": "Category 4",
           "catId": "10229531629341",
-          "bestPrice": 1300.0,
-          "maxPrice": 2000.0
+          "bestPrice": 1500.0,
+          "maxPrice": 1999.99
         },
         "Easy Access Standard - Category 2": {
           "name": "Easy Access Standard - Category 2",
@@ -1240,8 +1264,8 @@
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998845199",
-          "bestPrice": 2800.0,
-          "maxPrice": 13000.0
+          "bestPrice": 2295.0,
+          "maxPrice": 13043.0
         }
       }
     },
@@ -1252,8 +1276,8 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226842589",
-          "bestPrice": 350.0,
-          "maxPrice": 7000.0
+          "bestPrice": 295.0,
+          "maxPrice": 5500.0
         },
         "Category 2": {
           "name": "Category 2",
@@ -1276,8 +1300,14 @@
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
           "catId": "10229226842598",
-          "bestPrice": 624.61,
+          "bestPrice": 627.29,
           "maxPrice": 1000.0
+        },
+        "Easy Access Standard - Category 2": {
+          "name": "Easy Access Standard - Category 2",
+          "catId": "10229227272868",
+          "bestPrice": 550.0,
+          "maxPrice": 550.0
         },
         "Easy Access Standard - Category 3": {
           "name": "Easy Access Standard - Category 3",
@@ -1289,13 +1319,13 @@
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229226854407",
           "bestPrice": 518.0,
-          "maxPrice": 902.62
+          "maxPrice": 826.72
         },
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229226854408",
           "bestPrice": 488.0,
-          "maxPrice": 650.0
+          "maxPrice": 652.68
         },
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
@@ -1318,7 +1348,7 @@
         "Front Category 3": {
           "name": "Front Category 3",
           "catId": "10229998845189",
-          "bestPrice": 190.0,
+          "bestPrice": 180.0,
           "maxPrice": 600.0
         }
       }
@@ -1331,19 +1361,19 @@
           "name": "Category 1",
           "catId": "10229226882411",
           "bestPrice": 530.0,
-          "maxPrice": 7148.79
+          "maxPrice": 7179.48
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226882412",
-          "bestPrice": 331.09,
-          "maxPrice": 6859.95
+          "bestPrice": 380.0,
+          "maxPrice": 6889.4
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226882413",
-          "bestPrice": 469.36,
-          "maxPrice": 4248.11
+          "bestPrice": 325.0,
+          "maxPrice": 4266.35
         },
         "Category 4": {
           "name": "Category 4",
@@ -1354,37 +1384,37 @@
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
           "catId": "10229227271140",
-          "bestPrice": 866.52,
-          "maxPrice": 1805.25
+          "bestPrice": 870.24,
+          "maxPrice": 1813.0
         },
         "Easy Access Standard - Category 4": {
           "name": "Easy Access Standard - Category 4",
           "catId": "10229227271144",
           "bestPrice": 600.0,
-          "maxPrice": 2960.61
+          "maxPrice": 2973.32
         },
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229226882424",
-          "bestPrice": 509.08,
-          "maxPrice": 7221.0
+          "bestPrice": 511.26,
+          "maxPrice": 4895.1
         },
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229226882425",
-          "bestPrice": 1155.36,
-          "maxPrice": 1155.36
+          "bestPrice": 1160.32,
+          "maxPrice": 1160.32
         },
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
           "catId": "10229226882426",
-          "bestPrice": 505.47,
-          "maxPrice": 722.1
+          "bestPrice": 507.64,
+          "maxPrice": 507.64
         },
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998855178",
-          "bestPrice": 2500.0,
+          "bestPrice": 1125.0,
           "maxPrice": 2500.0
         }
       }
@@ -1402,49 +1432,49 @@
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226881304",
-          "bestPrice": 910.0,
+          "bestPrice": 970.0,
           "maxPrice": 25000.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226881305",
-          "bestPrice": 781.0,
-          "maxPrice": 15000.0
+          "bestPrice": 1100.0,
+          "maxPrice": 5000.0
         },
         "Category 4": {
           "name": "Category 4",
           "catId": "10229226881306",
-          "bestPrice": 1700.0,
+          "bestPrice": 1099.0,
           "maxPrice": 2000.0
         },
         "Easy Access Standard - Category 2": {
           "name": "Easy Access Standard - Category 2",
           "catId": "10229227401028",
-          "bestPrice": 1000.0,
-          "maxPrice": 1000.0
+          "bestPrice": 2500.0,
+          "maxPrice": 2500.0
         },
         "Easy Access Standard - Category 3": {
           "name": "Easy Access Standard - Category 3",
           "catId": "10229227401029",
-          "bestPrice": 5054.7,
-          "maxPrice": 5054.7
+          "bestPrice": 5076.4,
+          "maxPrice": 5076.4
         },
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229226881317",
-          "bestPrice": 900.0,
+          "bestPrice": 1196.58,
           "maxPrice": 1450.0
         },
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998854269",
           "bestPrice": 2850.0,
-          "maxPrice": 5054.7
+          "maxPrice": 4700.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998854270",
-          "bestPrice": 1580.0,
+          "bestPrice": 1407.0,
           "maxPrice": 1600.0
         }
       }
@@ -1456,25 +1486,25 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226878709",
-          "bestPrice": 800.0,
+          "bestPrice": 900.0,
           "maxPrice": 9999999.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226878710",
-          "bestPrice": 722.1,
+          "bestPrice": 725.2,
           "maxPrice": 50000.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226878711",
-          "bestPrice": 775.0,
+          "bestPrice": 570.0,
           "maxPrice": 4000.0
         },
         "Category 4": {
           "name": "Category 4",
           "catId": "10229226878712",
-          "bestPrice": 875.0,
+          "bestPrice": 825.0,
           "maxPrice": 3000.0
         },
         "Easy Access Standard - Category 2": {
@@ -1486,7 +1516,7 @@
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229226878722",
-          "bestPrice": 1083.15,
+          "bestPrice": 1087.8,
           "maxPrice": 2000.0
         },
         "Wheelchair & Easy Access Amenity - Category 2": {
@@ -1510,8 +1540,8 @@
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845197",
-          "bestPrice": 999.0,
-          "maxPrice": 2999.99
+          "bestPrice": 940.0,
+          "maxPrice": 2951.0
         }
       }
     },
@@ -1522,7 +1552,7 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229653589102",
-          "bestPrice": 1129.0,
+          "bestPrice": 1086.5,
           "maxPrice": 3000000.0
         },
         "Category 2": {
@@ -1543,17 +1573,17 @@
           "bestPrice": 1100.0,
           "maxPrice": 2000.0
         },
-        "Wheelchair User - Category 1": {
-          "name": "Wheelchair User - Category 1",
-          "catId": "10229653589111",
-          "bestPrice": 600.0,
-          "maxPrice": 600.0
-        },
         "Wheelchair User - Category 2": {
           "name": "Wheelchair User - Category 2",
           "catId": "10229653589113",
           "bestPrice": 2500.0,
           "maxPrice": 2500.0
+        },
+        "Wheelchair User - Category 4": {
+          "name": "Wheelchair User - Category 4",
+          "catId": "10229653589117",
+          "bestPrice": 1700.0,
+          "maxPrice": 1700.0
         },
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
@@ -1570,14 +1600,14 @@
         "Easy Access Amenity - Category 3": {
           "name": "Easy Access Amenity - Category 3",
           "catId": "10229653589127",
-          "bestPrice": 1200.0,
+          "bestPrice": 2000.0,
           "maxPrice": 2000.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998853771",
           "bestPrice": 1169.0,
-          "maxPrice": 2040.0
+          "maxPrice": 1500.0
         }
       }
     },
@@ -1588,19 +1618,19 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229531982577",
-          "bestPrice": 410.0,
+          "bestPrice": 400.0,
           "maxPrice": 13000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229531982578",
-          "bestPrice": 258.0,
+          "bestPrice": 175.0,
           "maxPrice": 7500.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229531982579",
-          "bestPrice": 120.0,
+          "bestPrice": 140.0,
           "maxPrice": 6000.0
         },
         "Category 4": {
@@ -1649,13 +1679,13 @@
           "name": "Front Category 1",
           "catId": "10229998845205",
           "bestPrice": 990.0,
-          "maxPrice": 1450.0
+          "maxPrice": 2070.75
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845206",
           "bestPrice": 550.0,
-          "maxPrice": 550.0
+          "maxPrice": 895.0
         }
       }
     },
@@ -1666,32 +1696,32 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229530028130",
-          "bestPrice": 600.0,
+          "bestPrice": 580.0,
           "maxPrice": 23000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229530028131",
-          "bestPrice": 525.0,
+          "bestPrice": 470.0,
           "maxPrice": 8500.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229530028132",
-          "bestPrice": 450.0,
+          "bestPrice": 400.0,
           "maxPrice": 3500.0
         },
         "Category 4": {
           "name": "Category 4",
           "catId": "10229530028133",
-          "bestPrice": 550.0,
+          "bestPrice": 650.0,
           "maxPrice": 3000.0
         },
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
           "catId": "10229530028139",
-          "bestPrice": 1750.0,
-          "maxPrice": 2800.0
+          "bestPrice": 1900.0,
+          "maxPrice": 1900.0
         },
         "Easy Access Standard - Category 2": {
           "name": "Easy Access Standard - Category 2",
@@ -1714,8 +1744,8 @@
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229530028145",
-          "bestPrice": 815.66,
-          "maxPrice": 4000.0
+          "bestPrice": 819.16,
+          "maxPrice": 1050.0
         },
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
@@ -1726,7 +1756,7 @@
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998845193",
-          "bestPrice": 2700.0,
+          "bestPrice": 1900.0,
           "maxPrice": 3850.0
         },
         "Front Category 2": {
@@ -1744,68 +1774,68 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226860365",
-          "bestPrice": 769.03,
-          "maxPrice": 8664.47
+          "bestPrice": 721.57,
+          "maxPrice": 8701.67
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226860366",
-          "bestPrice": 505.47,
+          "bestPrice": 507.64,
           "maxPrice": 7000.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226860367",
-          "bestPrice": 523.52,
-          "maxPrice": 3610.5
+          "bestPrice": 494.58,
+          "maxPrice": 32634.0
         },
         "Category 4": {
           "name": "Category 4",
           "catId": "10229226860368",
           "bestPrice": 750.0,
-          "maxPrice": 938.73
+          "maxPrice": 1160.32
         },
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
           "catId": "10229226860374",
-          "bestPrice": 1805.25,
-          "maxPrice": 1805.25
+          "bestPrice": 1813.0,
+          "maxPrice": 1813.0
         },
         "Easy Access Standard - Category 2": {
           "name": "Easy Access Standard - Category 2",
           "catId": "10229227295111",
-          "bestPrice": 1083.15,
-          "maxPrice": 2310.72
+          "bestPrice": 1087.8,
+          "maxPrice": 2320.64
         },
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229226860379",
-          "bestPrice": 3593.89,
-          "maxPrice": 3593.89
+          "bestPrice": 3609.32,
+          "maxPrice": 3609.32
         },
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
           "catId": "10229226860380",
-          "bestPrice": 750.0,
-          "maxPrice": 1444.2
+          "bestPrice": 1450.4,
+          "maxPrice": 1450.4
         },
         "Alcohol-Free Area 1": {
           "name": "Alcohol-Free Area 1",
           "catId": "10229227295117",
-          "bestPrice": 1371.99,
-          "maxPrice": 1924.39
+          "bestPrice": 1377.88,
+          "maxPrice": 1932.65
         },
         "Alcohol-Free Area 2": {
           "name": "Alcohol-Free Area 2",
           "catId": "10229372777792",
-          "bestPrice": 1227.57,
-          "maxPrice": 1227.57
+          "bestPrice": 796.99,
+          "maxPrice": 1232.84
         },
         "Alcohol-Free Area 3": {
           "name": "Alcohol-Free Area 3",
           "catId": "10229515504831",
-          "bestPrice": 974.83,
-          "maxPrice": 1444.2
+          "bestPrice": 725.2,
+          "maxPrice": 1450.4
         },
         "Front Category 1": {
           "name": "Front Category 1",
@@ -1816,14 +1846,14 @@
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845185",
-          "bestPrice": 866.52,
-          "maxPrice": 1624.72
+          "bestPrice": 870.24,
+          "maxPrice": 1414.14
         },
         "Front Category 3": {
           "name": "Front Category 3",
           "catId": "10229998845186",
-          "bestPrice": 790.69,
-          "maxPrice": 1250.0
+          "bestPrice": 800.0,
+          "maxPrice": 900.0
         }
       }
     },
@@ -1834,7 +1864,7 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226860430",
-          "bestPrice": 2538.0,
+          "bestPrice": 2398.0,
           "maxPrice": 15000.0
         },
         "Category 2": {
@@ -1846,7 +1876,7 @@
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226860432",
-          "bestPrice": 2000.0,
+          "bestPrice": 1913.04,
           "maxPrice": 10000.0
         },
         "Category 4": {
@@ -1864,19 +1894,19 @@
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
           "catId": "10229226879890",
-          "bestPrice": 3550.0,
-          "maxPrice": 3550.0
+          "bestPrice": 3600.0,
+          "maxPrice": 3600.0
         },
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998853764",
           "bestPrice": 4999.0,
-          "maxPrice": 4999.0
+          "maxPrice": 9000.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998853765",
-          "bestPrice": 3945.0,
+          "bestPrice": 3477.39,
           "maxPrice": 3945.0
         }
       }
@@ -1888,25 +1918,25 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226885772",
-          "bestPrice": 1150.0,
+          "bestPrice": 1000.0,
           "maxPrice": 11000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226885773",
-          "bestPrice": 955.0,
+          "bestPrice": 880.0,
           "maxPrice": 8000.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226885774",
-          "bestPrice": 920.0,
+          "bestPrice": 890.0,
           "maxPrice": 18000.0
         },
         "Category 4": {
           "name": "Category 4",
           "catId": "10229226885775",
-          "bestPrice": 1000.0,
+          "bestPrice": 1460.0,
           "maxPrice": 2990.0
         },
         "Wheelchair & Easy Access Amenity - Category 1": {
@@ -1918,19 +1948,19 @@
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229226885786",
-          "bestPrice": 1500.0,
+          "bestPrice": 1200.0,
           "maxPrice": 33000.0
         },
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998853779",
-          "bestPrice": 2800.0,
+          "bestPrice": 2685.0,
           "maxPrice": 18000.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998853780",
-          "bestPrice": 1525.0,
+          "bestPrice": 1500.0,
           "maxPrice": 3000.0
         }
       }
@@ -1942,13 +1972,13 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229531538783",
-          "bestPrice": 900.0,
+          "bestPrice": 781.04,
           "maxPrice": 50000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229531538784",
-          "bestPrice": 700.0,
+          "bestPrice": 765.0,
           "maxPrice": 15000.0
         },
         "Category 3": {
@@ -1972,7 +2002,7 @@
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229531538797",
-          "bestPrice": 1754.7,
+          "bestPrice": 1762.23,
           "maxPrice": 1800.0
         },
         "Wheelchair & Easy Access Amenity - Category 3": {
@@ -1984,14 +2014,14 @@
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998853773",
-          "bestPrice": 3600.0,
+          "bestPrice": 3555.0,
           "maxPrice": 3600.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998853774",
-          "bestPrice": 1500.0,
-          "maxPrice": 2355.0
+          "bestPrice": 1095.0,
+          "maxPrice": 3000.0
         }
       }
     },
@@ -2002,19 +2032,19 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226842589",
-          "bestPrice": 800.0,
+          "bestPrice": 750.0,
           "maxPrice": 29500.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226842590",
-          "bestPrice": 628.22,
-          "maxPrice": 5500.0
+          "bestPrice": 630.92,
+          "maxPrice": 7500.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226842591",
-          "bestPrice": 600.0,
+          "bestPrice": 587.0,
           "maxPrice": 5000.0
         },
         "Category 4": {
@@ -2027,18 +2057,24 @@
           "name": "Easy Access Standard - Category 1",
           "catId": "10229226842598",
           "bestPrice": 1000.0,
-          "maxPrice": 2300.0
+          "maxPrice": 1875.0
+        },
+        "Easy Access Standard - Category 2": {
+          "name": "Easy Access Standard - Category 2",
+          "catId": "10229227272868",
+          "bestPrice": 750.0,
+          "maxPrice": 750.0
         },
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229226854407",
-          "bestPrice": 3000.0,
+          "bestPrice": 1995.0,
           "maxPrice": 4200.0
         },
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229226854408",
-          "bestPrice": 650.0,
+          "bestPrice": 840.0,
           "maxPrice": 1990.0
         },
         "Wheelchair & Easy Access Amenity - Category 3": {
@@ -2050,20 +2086,20 @@
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998845187",
-          "bestPrice": 1800.0,
-          "maxPrice": 2300.0
+          "bestPrice": 2000.0,
+          "maxPrice": 2400.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845188",
-          "bestPrice": 900.0,
-          "maxPrice": 1199.0
+          "bestPrice": 780.0,
+          "maxPrice": 1200.0
         },
         "Front Category 3": {
           "name": "Front Category 3",
           "catId": "10229998845189",
-          "bestPrice": 730.0,
-          "maxPrice": 730.0
+          "bestPrice": 782.0,
+          "maxPrice": 800.0
         }
       }
     },
@@ -2080,13 +2116,13 @@
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226854412",
-          "bestPrice": 1050.0,
+          "bestPrice": 1200.0,
           "maxPrice": 20000.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226854413",
-          "bestPrice": 1250.0,
+          "bestPrice": 799.0,
           "maxPrice": 6000.0
         },
         "Easy Access Standard - Category 1": {
@@ -2095,29 +2131,23 @@
           "bestPrice": 2000.0,
           "maxPrice": 2400.0
         },
-        "Easy Access Standard - Category 2": {
-          "name": "Easy Access Standard - Category 2",
-          "catId": "10229227295085",
-          "bestPrice": 3700.0,
-          "maxPrice": 3700.0
-        },
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229226854423",
-          "bestPrice": 1700.0,
-          "maxPrice": 3400.0
+          "bestPrice": 3000.0,
+          "maxPrice": 3000.0
         },
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229226854424",
-          "bestPrice": 2350.0,
+          "bestPrice": 2200.0,
           "maxPrice": 2700.0
         },
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
           "catId": "10229226854425",
           "bestPrice": 1149.0,
-          "maxPrice": 1285.0
+          "maxPrice": 1149.0
         },
         "Wheelchair & Easy Access Amenity - Category 4": {
           "name": "Wheelchair & Easy Access Amenity - Category 4",
@@ -2134,13 +2164,13 @@
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845183",
-          "bestPrice": 1400.0,
+          "bestPrice": 1550.0,
           "maxPrice": 4000.0
         },
         "Front Category 3": {
           "name": "Front Category 3",
           "catId": "10229998845184",
-          "bestPrice": 1500.0,
+          "bestPrice": 1700.0,
           "maxPrice": 1700.0
         }
       }
@@ -2152,86 +2182,86 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226882411",
-          "bestPrice": 866.52,
-          "maxPrice": 9206.77
+          "bestPrice": 942.76,
+          "maxPrice": 9246.3
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226882412",
           "bestPrice": 750.0,
-          "maxPrice": 3610.5
+          "maxPrice": 3626.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226882413",
           "bestPrice": 650.0,
-          "maxPrice": 5054.7
+          "maxPrice": 5076.4
         },
         "Category 4": {
           "name": "Category 4",
           "catId": "10229226882414",
-          "bestPrice": 794.31,
-          "maxPrice": 3610.5
+          "bestPrice": 701.92,
+          "maxPrice": 3626.0
         },
         "Supporter Premier Tier": {
           "name": "Supporter Premier Tier",
           "catId": "10229227271134",
           "bestPrice": 750.0,
-          "maxPrice": 31772.4
+          "maxPrice": 31908.8
         },
         "Supporter Standard Tier": {
           "name": "Supporter Standard Tier",
           "catId": "10229227271135",
-          "bestPrice": 866.52,
+          "bestPrice": 870.24,
           "maxPrice": 4430.0
         },
         "Supporter Value Tier": {
           "name": "Supporter Value Tier",
           "catId": "10229393571572",
           "bestPrice": 600.0,
-          "maxPrice": 8888.0
+          "maxPrice": 2350.0
+        },
+        "Supporter Entry Tier": {
+          "name": "Supporter Entry Tier",
+          "catId": "10229654423838",
+          "bestPrice": 900.0,
+          "maxPrice": 900.0
         },
         "Easy Access Standard - Category 2": {
           "name": "Easy Access Standard - Category 2",
           "catId": "10229227271142",
-          "bestPrice": 1588.62,
-          "maxPrice": 1588.62
-        },
-        "Easy Access Standard - Category 3": {
-          "name": "Easy Access Standard - Category 3",
-          "catId": "10229227271143",
-          "bestPrice": 765.0,
-          "maxPrice": 1805.25
+          "bestPrice": 1450.4,
+          "maxPrice": 2719.5
         },
         "Easy Access Standard - Category 4": {
           "name": "Easy Access Standard - Category 4",
           "catId": "10229227271144",
-          "bestPrice": 2888.4,
-          "maxPrice": 2888.4
+          "bestPrice": 2900.8,
+          "maxPrice": 2900.8
         },
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229226882424",
-          "bestPrice": 1426.14,
-          "maxPrice": 3610.5
+          "bestPrice": 1087.8,
+          "maxPrice": 3626.0
         },
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229226882425",
-          "bestPrice": 1010.94,
-          "maxPrice": 1010.94
+          "bestPrice": 870.24,
+          "maxPrice": 870.24
         },
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
           "catId": "10229226882426",
-          "bestPrice": 715.0,
-          "maxPrice": 1371.99
+          "bestPrice": 660.0,
+          "maxPrice": 1377.88
         },
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998855178",
-          "bestPrice": 1805.25,
-          "maxPrice": 3898.0
+          "bestPrice": 1813.0,
+          "maxPrice": 3500.0
         }
       }
     },
@@ -2242,14 +2272,14 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229531629338",
-          "bestPrice": 499.0,
-          "maxPrice": 6000.0
+          "bestPrice": 410.0,
+          "maxPrice": 5500.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229531629339",
-          "bestPrice": 397.15,
-          "maxPrice": 6000.0
+          "bestPrice": 398.86,
+          "maxPrice": 3000.0
         },
         "Category 3": {
           "name": "Category 3",
@@ -2266,8 +2296,14 @@
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
           "catId": "10229531629347",
-          "bestPrice": 800.0,
+          "bestPrice": 600.0,
           "maxPrice": 800.0
+        },
+        "Easy Access Standard - Category 2": {
+          "name": "Easy Access Standard - Category 2",
+          "catId": "10229531629349",
+          "bestPrice": 500.0,
+          "maxPrice": 500.0
         },
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
@@ -2278,8 +2314,8 @@
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229531629353",
-          "bestPrice": 361.05,
-          "maxPrice": 454.92
+          "bestPrice": 362.6,
+          "maxPrice": 900.0
         },
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
@@ -2290,8 +2326,8 @@
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998845199",
-          "bestPrice": 1250.0,
-          "maxPrice": 2000.0
+          "bestPrice": 1200.0,
+          "maxPrice": 1250.0
         }
       }
     },
@@ -2302,19 +2338,19 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226878709",
-          "bestPrice": 710.0,
-          "maxPrice": 30000.0
+          "bestPrice": 700.0,
+          "maxPrice": 10000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226878710",
-          "bestPrice": 575.0,
+          "bestPrice": 650.0,
           "maxPrice": 10000.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226878711",
-          "bestPrice": 667.94,
+          "bestPrice": 500.0,
           "maxPrice": 3000.0
         },
         "Category 4": {
@@ -2338,19 +2374,19 @@
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229226878723",
-          "bestPrice": 1200.0,
+          "bestPrice": 2650.0,
           "maxPrice": 2650.0
         },
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998845196",
           "bestPrice": 1200.0,
-          "maxPrice": 4300.0
+          "maxPrice": 15000.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845197",
-          "bestPrice": 765.0,
+          "bestPrice": 750.0,
           "maxPrice": 4000.0
         }
       }
@@ -2368,13 +2404,13 @@
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226879936",
-          "bestPrice": 380.0,
+          "bestPrice": 346.96,
           "maxPrice": 4000.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226879937",
-          "bestPrice": 260.0,
+          "bestPrice": 300.0,
           "maxPrice": 14500.0
         },
         "Category 4": {
@@ -2405,18 +2441,18 @@
           "name": "Front Category 1",
           "catId": "10229998854275",
           "bestPrice": 2400.0,
-          "maxPrice": 2400.0
+          "maxPrice": 3750.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998854276",
-          "bestPrice": 606.56,
+          "bestPrice": 609.16,
           "maxPrice": 2000.0
         },
         "Front Category 3": {
           "name": "Front Category 3",
           "catId": "10229998854277",
-          "bestPrice": 340.0,
+          "bestPrice": 433.0,
           "maxPrice": 1176.0
         }
       }
@@ -2429,31 +2465,25 @@
           "name": "Category 1",
           "catId": "10229531982636",
           "bestPrice": 430.0,
-          "maxPrice": 10900.0
+          "maxPrice": 6000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229531982637",
-          "bestPrice": 400.0,
+          "bestPrice": 355.0,
           "maxPrice": 15000.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229531982638",
-          "bestPrice": 216.63,
-          "maxPrice": 850000.0
+          "bestPrice": 260.0,
+          "maxPrice": 5000.0
         },
         "Category 4": {
           "name": "Category 4",
           "catId": "10229531982639",
-          "bestPrice": 586.0,
+          "bestPrice": 350.0,
           "maxPrice": 1000.0
-        },
-        "Easy Access Standard - Category 1": {
-          "name": "Easy Access Standard - Category 1",
-          "catId": "10229531982645",
-          "bestPrice": 825.0,
-          "maxPrice": 825.0
         },
         "Easy Access Standard - Category 2": {
           "name": "Easy Access Standard - Category 2",
@@ -2482,20 +2512,20 @@
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998845211",
-          "bestPrice": 1191.46,
+          "bestPrice": 1160.32,
           "maxPrice": 2300.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845212",
-          "bestPrice": 520.0,
-          "maxPrice": 1090.0
+          "bestPrice": 450.0,
+          "maxPrice": 3200.0
         },
         "Front Category 3": {
           "name": "Front Category 3",
           "catId": "10229998845213",
-          "bestPrice": 347.0,
-          "maxPrice": 700.0
+          "bestPrice": 580.16,
+          "maxPrice": 948.0
         }
       }
     },
@@ -2506,13 +2536,13 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229531982577",
-          "bestPrice": 700.0,
+          "bestPrice": 706.0,
           "maxPrice": 26000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229531982578",
-          "bestPrice": 548.0,
+          "bestPrice": 648.0,
           "maxPrice": 8500.0
         },
         "Category 3": {
@@ -2524,8 +2554,14 @@
         "Category 4": {
           "name": "Category 4",
           "catId": "10229531982580",
-          "bestPrice": 800.0,
-          "maxPrice": 13225.0
+          "bestPrice": 700.0,
+          "maxPrice": 15208.75
+        },
+        "Easy Access Standard - Category 1": {
+          "name": "Easy Access Standard - Category 1",
+          "catId": "10229531982586",
+          "bestPrice": 900.0,
+          "maxPrice": 900.0
         },
         "Easy Access Standard - Category 2": {
           "name": "Easy Access Standard - Category 2",
@@ -2536,8 +2572,8 @@
         "Easy Access Standard - Category 3": {
           "name": "Easy Access Standard - Category 3",
           "catId": "10229531982589",
-          "bestPrice": 1000.0,
-          "maxPrice": 1200.0
+          "bestPrice": 800.0,
+          "maxPrice": 1000.0
         },
         "Easy Access Standard - Category 4": {
           "name": "Easy Access Standard - Category 4",
@@ -2554,8 +2590,14 @@
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229531982592",
-          "bestPrice": 1590.0,
+          "bestPrice": 850.0,
           "maxPrice": 1590.0
+        },
+        "Wheelchair & Easy Access Amenity - Category 3": {
+          "name": "Wheelchair & Easy Access Amenity - Category 3",
+          "catId": "10229531982593",
+          "bestPrice": 500.0,
+          "maxPrice": 500.0
         },
         "Front Category 1": {
           "name": "Front Category 1",
@@ -2567,7 +2609,7 @@
           "name": "Front Category 2",
           "catId": "10229998845206",
           "bestPrice": 850.0,
-          "maxPrice": 1450.0
+          "maxPrice": 1900.0
         }
       }
     },
@@ -2579,18 +2621,18 @@
           "name": "Category 1",
           "catId": "10229530028130",
           "bestPrice": 500.0,
-          "maxPrice": 14442.0
+          "maxPrice": 14504.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229530028131",
-          "bestPrice": 400.0,
+          "bestPrice": 448.0,
           "maxPrice": 10000.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229530028132",
-          "bestPrice": 263.56,
+          "bestPrice": 264.69,
           "maxPrice": 3000.0
         },
         "Category 4": {
@@ -2620,20 +2662,20 @@
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
           "catId": "10229530028146",
-          "bestPrice": 550.0,
+          "bestPrice": 362.6,
           "maxPrice": 700.0
         },
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998845193",
-          "bestPrice": 1500.0,
-          "maxPrice": 2100.0
+          "bestPrice": 1250.0,
+          "maxPrice": 2610.72
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845194",
-          "bestPrice": 599.13,
-          "maxPrice": 794.31
+          "bestPrice": 590.43,
+          "maxPrice": 710.69
         }
       }
     },
@@ -2644,74 +2686,74 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226860365",
-          "bestPrice": 410.0,
-          "maxPrice": 7221.0
+          "bestPrice": 398.86,
+          "maxPrice": 7252.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226860366",
-          "bestPrice": 288.11,
-          "maxPrice": 3827.13
+          "bestPrice": 289.35,
+          "maxPrice": 7252.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226860367",
-          "bestPrice": 259.23,
-          "maxPrice": 10000.0
+          "bestPrice": 236.0,
+          "maxPrice": 7252.0
         },
         "Category 4": {
           "name": "Category 4",
           "catId": "10229226860368",
-          "bestPrice": 361.05,
+          "bestPrice": 362.6,
           "maxPrice": 1250.0
         },
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
           "catId": "10229226860374",
-          "bestPrice": 541.93,
-          "maxPrice": 3466.08
+          "bestPrice": 525.77,
+          "maxPrice": 3480.96
         },
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229226860378",
-          "bestPrice": 1420.0,
-          "maxPrice": 1420.0
+          "bestPrice": 1426.1,
+          "maxPrice": 1426.1
         },
         "Alcohol-Free Area 1": {
           "name": "Alcohol-Free Area 1",
           "catId": "10229227295117",
-          "bestPrice": 380.0,
-          "maxPrice": 1700.0
+          "bestPrice": 340.0,
+          "maxPrice": 1200.0
         },
         "Alcohol-Free Area 2": {
           "name": "Alcohol-Free Area 2",
           "catId": "10229372777792",
-          "bestPrice": 454.92,
+          "bestPrice": 456.87,
           "maxPrice": 800.0
         },
         "Alcohol-Free Area 3": {
           "name": "Alcohol-Free Area 3",
           "catId": "10229515504831",
           "bestPrice": 440.0,
-          "maxPrice": 866.52
+          "maxPrice": 870.24
         },
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998845179",
           "bestPrice": 1060.0,
-          "maxPrice": 2000.0
+          "maxPrice": 1100.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845185",
-          "bestPrice": 469.36,
-          "maxPrice": 3466.08
+          "bestPrice": 471.38,
+          "maxPrice": 3480.96
         },
         "Front Category 3": {
           "name": "Front Category 3",
           "catId": "10229998845186",
-          "bestPrice": 305.0,
-          "maxPrice": 353.82
+          "bestPrice": 279.2,
+          "maxPrice": 355.34
         }
       }
     },
@@ -2722,14 +2764,14 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229531629279",
-          "bestPrice": 600.0,
+          "bestPrice": 720.0,
           "maxPrice": 17400.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229531629280",
-          "bestPrice": 495.0,
-          "maxPrice": 7500.0
+          "bestPrice": 465.0,
+          "maxPrice": 5000.0
         },
         "Category 3": {
           "name": "Category 3",
@@ -2740,14 +2782,8 @@
         "Category 4": {
           "name": "Category 4",
           "catId": "10229531629282",
-          "bestPrice": 575.0,
+          "bestPrice": 600.0,
           "maxPrice": 1500.0
-        },
-        "Easy Access Standard - Category 1": {
-          "name": "Easy Access Standard - Category 1",
-          "catId": "10229531629288",
-          "bestPrice": 730.0,
-          "maxPrice": 730.0
         },
         "Easy Access Standard - Category 2": {
           "name": "Easy Access Standard - Category 2",
@@ -2776,19 +2812,19 @@
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998855181",
-          "bestPrice": 2450.0,
-          "maxPrice": 5000.0
+          "bestPrice": 1765.0,
+          "maxPrice": 15500.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998855182",
-          "bestPrice": 850.0,
-          "maxPrice": 938.73
+          "bestPrice": 790.46,
+          "maxPrice": 850.0
         },
         "Front Category 3": {
           "name": "Front Category 3",
           "catId": "10229998855183",
-          "bestPrice": 599.0,
+          "bestPrice": 608.0,
           "maxPrice": 669.0
         }
       }
@@ -2806,14 +2842,14 @@
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226885773",
-          "bestPrice": 510.0,
+          "bestPrice": 590.0,
           "maxPrice": 9800.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226885774",
-          "bestPrice": 505.47,
-          "maxPrice": 20000.0
+          "bestPrice": 511.99,
+          "maxPrice": 11764.7
         },
         "Category 4": {
           "name": "Category 4",
@@ -2824,7 +2860,7 @@
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
           "catId": "10229226885781",
-          "bestPrice": 2000.0,
+          "bestPrice": 1070.0,
           "maxPrice": 2000.0
         },
         "Easy Access Standard - Category 2": {
@@ -2836,19 +2872,19 @@
         "Easy Access Standard - Category 3": {
           "name": "Easy Access Standard - Category 3",
           "catId": "10229227263552",
-          "bestPrice": 650.0,
+          "bestPrice": 800.0,
           "maxPrice": 800.0
         },
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229226885786",
-          "bestPrice": 790.69,
+          "bestPrice": 629.47,
           "maxPrice": 800.0
         },
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998853779",
-          "bestPrice": 1400.0,
+          "bestPrice": 1305.0,
           "maxPrice": 2750.0
         },
         "Front Category 2": {
@@ -2866,13 +2902,13 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226881303",
-          "bestPrice": 1660.83,
-          "maxPrice": 28884.0
+          "bestPrice": 1200.0,
+          "maxPrice": 29008.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226881304",
-          "bestPrice": 1286.08,
+          "bestPrice": 1200.0,
           "maxPrice": 50000.0
         },
         "Category 3": {
@@ -2896,20 +2932,20 @@
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229226881317",
-          "bestPrice": 1191.46,
-          "maxPrice": 2000.0
+          "bestPrice": 1800.0,
+          "maxPrice": 2070.0
         },
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998854269",
-          "bestPrice": 2800.0,
+          "bestPrice": 3000.0,
           "maxPrice": 10000.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998854270",
-          "bestPrice": 1294.0,
-          "maxPrice": 1588.62
+          "bestPrice": 1595.44,
+          "maxPrice": 2175.6
         }
       }
     },
@@ -2920,19 +2956,19 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226842589",
-          "bestPrice": 310.0,
-          "maxPrice": 8200.0
+          "bestPrice": 299.5,
+          "maxPrice": 8500.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226842590",
-          "bestPrice": 200.0,
-          "maxPrice": 2600.0
+          "bestPrice": 160.0,
+          "maxPrice": 780000.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226842591",
-          "bestPrice": 104.0,
+          "bestPrice": 135.0,
           "maxPrice": 17000.0
         },
         "Category 4": {
@@ -2947,6 +2983,12 @@
           "bestPrice": 900.0,
           "maxPrice": 1000.0
         },
+        "Easy Access Standard - Category 2": {
+          "name": "Easy Access Standard - Category 2",
+          "catId": "10229227272868",
+          "bestPrice": 550.0,
+          "maxPrice": 550.0
+        },
         "Easy Access Standard - Category 3": {
           "name": "Easy Access Standard - Category 3",
           "catId": "10229227272869",
@@ -2956,13 +2998,13 @@
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229226854407",
-          "bestPrice": 620.0,
+          "bestPrice": 450.0,
           "maxPrice": 2550.0
         },
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229226854408",
-          "bestPrice": 350.0,
+          "bestPrice": 225.0,
           "maxPrice": 550.0
         },
         "Wheelchair & Easy Access Amenity - Category 3": {
@@ -2974,13 +3016,13 @@
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845188",
-          "bestPrice": 361.05,
+          "bestPrice": 362.6,
           "maxPrice": 1200.0
         },
         "Front Category 3": {
           "name": "Front Category 3",
           "catId": "10229998845189",
-          "bestPrice": 191.35,
+          "bestPrice": 192.17,
           "maxPrice": 980.0
         }
       }
@@ -2992,20 +3034,20 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229531538783",
-          "bestPrice": 1000.0,
+          "bestPrice": 900.0,
           "maxPrice": 26000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229531538784",
-          "bestPrice": 743.76,
+          "bestPrice": 830.0,
           "maxPrice": 5000.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229531538785",
-          "bestPrice": 750.0,
-          "maxPrice": 3610.5
+          "bestPrice": 650.0,
+          "maxPrice": 3626.0
         },
         "Category 4": {
           "name": "Category 4",
@@ -3028,19 +3070,19 @@
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229531538798",
-          "bestPrice": 1000.0,
-          "maxPrice": 1106.0
+          "bestPrice": 800.0,
+          "maxPrice": 960.0
         },
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998853773",
-          "bestPrice": 2300.0,
-          "maxPrice": 4000.0
+          "bestPrice": 1980.0,
+          "maxPrice": 5500.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998853774",
-          "bestPrice": 1150.0,
+          "bestPrice": 1800.0,
           "maxPrice": 6000.0
         }
       }
@@ -3053,67 +3095,67 @@
           "name": "Category 1",
           "catId": "10229226882411",
           "bestPrice": 782.0,
-          "maxPrice": 16608.3
+          "maxPrice": 16679.6
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226882412",
-          "bestPrice": 476.58,
+          "bestPrice": 543.9,
           "maxPrice": 2800.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226882413",
-          "bestPrice": 450.0,
-          "maxPrice": 7076.58
+          "bestPrice": 500.0,
+          "maxPrice": 7106.96
         },
         "Category 4": {
           "name": "Category 4",
           "catId": "10229226882414",
-          "bestPrice": 852.07,
-          "maxPrice": 1805.25
+          "bestPrice": 651.95,
+          "maxPrice": 1813.0
         },
         "Easy Access Standard - Category 2": {
           "name": "Easy Access Standard - Category 2",
           "catId": "10229227271142",
-          "bestPrice": 1877.46,
-          "maxPrice": 1877.46
+          "bestPrice": 1885.52,
+          "maxPrice": 1885.52
         },
         "Easy Access Standard - Category 3": {
           "name": "Easy Access Standard - Category 3",
           "catId": "10229227271143",
-          "bestPrice": 3971.55,
-          "maxPrice": 3971.55
+          "bestPrice": 3988.6,
+          "maxPrice": 3988.6
         },
         "Easy Access Standard - Category 4": {
           "name": "Easy Access Standard - Category 4",
           "catId": "10229227271144",
-          "bestPrice": 1010.21,
-          "maxPrice": 1010.21
+          "bestPrice": 1014.55,
+          "maxPrice": 1014.55
         },
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229226882424",
-          "bestPrice": 1083.15,
-          "maxPrice": 7221.0
+          "bestPrice": 1087.8,
+          "maxPrice": 7252.0
         },
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229226882425",
-          "bestPrice": 1083.15,
+          "bestPrice": 1087.8,
           "maxPrice": 3000.0
         },
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
           "catId": "10229226882426",
-          "bestPrice": 1079.53,
-          "maxPrice": 1079.53
+          "bestPrice": 1084.17,
+          "maxPrice": 1084.17
         },
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998855178",
           "bestPrice": 1565.0,
-          "maxPrice": 2780.08
+          "maxPrice": 3626.0
         }
       }
     },
@@ -3124,32 +3166,32 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226878709",
-          "bestPrice": 900.0,
+          "bestPrice": 890.0,
           "maxPrice": 1275000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226878710",
-          "bestPrice": 747.37,
+          "bestPrice": 750.58,
           "maxPrice": 15000.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226878711",
-          "bestPrice": 695.64,
-          "maxPrice": 7943.1
+          "bestPrice": 700.0,
+          "maxPrice": 7977.2
         },
         "Category 4": {
           "name": "Category 4",
           "catId": "10229226878712",
-          "bestPrice": 680.0,
+          "bestPrice": 690.0,
           "maxPrice": 10000.0
         },
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
           "catId": "10229226878718",
-          "bestPrice": 3200.0,
-          "maxPrice": 3200.0
+          "bestPrice": 2000.0,
+          "maxPrice": 2000.0
         },
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
@@ -3172,13 +3214,13 @@
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998845196",
-          "bestPrice": 1500.0,
+          "bestPrice": 1730.0,
           "maxPrice": 10000.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845197",
-          "bestPrice": 910.0,
+          "bestPrice": 870.24,
           "maxPrice": 3000.0
         }
       }
@@ -3190,32 +3232,20 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226860430",
-          "bestPrice": 1300.0,
-          "maxPrice": 4200.0
+          "bestPrice": 1190.0,
+          "maxPrice": 4650.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226860431",
-          "bestPrice": 950.0,
+          "bestPrice": 940.0,
           "maxPrice": 4900.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226860432",
-          "bestPrice": 900.0,
+          "bestPrice": 1050.0,
           "maxPrice": 2650000.0
-        },
-        "Category 4": {
-          "name": "Category 4",
-          "catId": "10229226860433",
-          "bestPrice": 1570.0,
-          "maxPrice": 1750.0
-        },
-        "Wheelchair User - Category 1": {
-          "name": "Wheelchair User - Category 1",
-          "catId": "10229226879888",
-          "bestPrice": 1303.47,
-          "maxPrice": 1303.47
         },
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
@@ -3238,14 +3268,14 @@
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998853764",
-          "bestPrice": 1932.7,
-          "maxPrice": 3999.0
+          "bestPrice": 1940.99,
+          "maxPrice": 16650.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998853765",
-          "bestPrice": 1000.0,
-          "maxPrice": 2527.35
+          "bestPrice": 1340.0,
+          "maxPrice": 2538.2
         }
       }
     },
@@ -3256,13 +3286,13 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229531982636",
-          "bestPrice": 1588.62,
+          "bestPrice": 1595.44,
           "maxPrice": 125000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229531982637",
-          "bestPrice": 1371.99,
+          "bestPrice": 1400.0,
           "maxPrice": 57500.0
         },
         "Category 3": {
@@ -3292,19 +3322,25 @@
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229531982650",
-          "bestPrice": 1516.41,
-          "maxPrice": 3089.14
+          "bestPrice": 1522.92,
+          "maxPrice": 3102.4
+        },
+        "Wheelchair & Easy Access Amenity - Category 4": {
+          "name": "Wheelchair & Easy Access Amenity - Category 4",
+          "catId": "10229531982653",
+          "bestPrice": 1850.0,
+          "maxPrice": 1850.0
         },
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998845211",
           "bestPrice": 2600.0,
-          "maxPrice": 15000.0
+          "maxPrice": 12075.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845212",
-          "bestPrice": 1700.0,
+          "bestPrice": 1600.0,
           "maxPrice": 3000.0
         }
       }
@@ -3316,20 +3352,20 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229531982577",
-          "bestPrice": 469.36,
+          "bestPrice": 460.0,
           "maxPrice": 15000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229531982578",
-          "bestPrice": 370.0,
-          "maxPrice": 5000.0
+          "bestPrice": 290.0,
+          "maxPrice": 5900.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229531982579",
-          "bestPrice": 205.0,
-          "maxPrice": 18052.5
+          "bestPrice": 175.0,
+          "maxPrice": 18130.0
         },
         "Category 4": {
           "name": "Category 4",
@@ -3340,13 +3376,13 @@
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
           "catId": "10229531982586",
-          "bestPrice": 550.0,
+          "bestPrice": 500.0,
           "maxPrice": 800.0
         },
         "Easy Access Standard - Category 2": {
           "name": "Easy Access Standard - Category 2",
           "catId": "10229531982588",
-          "bestPrice": 866.52,
+          "bestPrice": 870.24,
           "maxPrice": 1565.0
         },
         "Wheelchair & Easy Access Amenity - Category 1": {
@@ -3364,19 +3400,19 @@
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
           "catId": "10229531982593",
-          "bestPrice": 355.0,
+          "bestPrice": 260.0,
           "maxPrice": 1250.0
         },
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998845205",
           "bestPrice": 1200.0,
-          "maxPrice": 2300.0
+          "maxPrice": 2000.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845206",
-          "bestPrice": 340.0,
+          "bestPrice": 320.0,
           "maxPrice": 3000.0
         }
       }
@@ -3388,79 +3424,67 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226860365",
-          "bestPrice": 824.0,
-          "maxPrice": 70765.8
+          "bestPrice": 695.0,
+          "maxPrice": 71069.6
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226860366",
-          "bestPrice": 581.29,
-          "maxPrice": 11553.6
+          "bestPrice": 616.42,
+          "maxPrice": 11603.2
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226860367",
-          "bestPrice": 491.02,
-          "maxPrice": 2888.4
+          "bestPrice": 493.13,
+          "maxPrice": 2900.8
         },
         "Category 4": {
           "name": "Category 4",
           "catId": "10229226860368",
-          "bestPrice": 617.39,
-          "maxPrice": 2166.3
-        },
-        "Easy Access Standard - Category 1": {
-          "name": "Easy Access Standard - Category 1",
-          "catId": "10229226860374",
-          "bestPrice": 757.48,
-          "maxPrice": 757.48
+          "bestPrice": 580.16,
+          "maxPrice": 2175.6
         },
         "Easy Access Standard - Category 2": {
           "name": "Easy Access Standard - Category 2",
           "catId": "10229227295111",
-          "bestPrice": 1083.15,
+          "bestPrice": 1087.8,
           "maxPrice": 7236.34
         },
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229226860378",
-          "bestPrice": 3610.5,
-          "maxPrice": 3610.5
+          "bestPrice": 1435.89,
+          "maxPrice": 3626.0
         },
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229226860379",
-          "bestPrice": 1335.88,
-          "maxPrice": 3528.9
-        },
-        "Wheelchair & Easy Access Amenity - Category 3": {
-          "name": "Wheelchair & Easy Access Amenity - Category 3",
-          "catId": "10229226860380",
-          "bestPrice": 750.0,
-          "maxPrice": 750.0
+          "bestPrice": 1341.62,
+          "maxPrice": 3544.05
         },
         "Alcohol-Free Area 1": {
           "name": "Alcohol-Free Area 1",
           "catId": "10229227295117",
-          "bestPrice": 938.73,
-          "maxPrice": 2166.3
+          "bestPrice": 906.5,
+          "maxPrice": 2175.6
         },
         "Alcohol-Free Area 2": {
           "name": "Alcohol-Free Area 2",
           "catId": "10229372777792",
-          "bestPrice": 793.58,
-          "maxPrice": 2184.35
+          "bestPrice": 796.99,
+          "maxPrice": 2193.73
         },
         "Alcohol-Free Area 3": {
           "name": "Alcohol-Free Area 3",
           "catId": "10229515504831",
-          "bestPrice": 900.0,
-          "maxPrice": 1083.15
+          "bestPrice": 888.0,
+          "maxPrice": 1087.8
         },
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998845179",
-          "bestPrice": 1444.2,
+          "bestPrice": 2093.65,
           "maxPrice": 6000.0
         },
         "Front Category 2": {
@@ -3472,8 +3496,8 @@
         "Front Category 3": {
           "name": "Front Category 3",
           "catId": "10229998845186",
-          "bestPrice": 722.1,
-          "maxPrice": 800.0
+          "bestPrice": 725.2,
+          "maxPrice": 725.2
         }
       }
     },
@@ -3484,32 +3508,32 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226854411",
-          "bestPrice": 575.0,
+          "bestPrice": 415.0,
           "maxPrice": 6900.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226854412",
-          "bestPrice": 310.0,
-          "maxPrice": 3500.0
+          "bestPrice": 250.0,
+          "maxPrice": 5000.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226854413",
           "bestPrice": 189.0,
-          "maxPrice": 3610.5
+          "maxPrice": 3626.0
         },
         "Category 4": {
           "name": "Category 4",
           "catId": "10229226854414",
           "bestPrice": 400.0,
-          "maxPrice": 400.0
+          "maxPrice": 450.0
         },
         "Easy Access Standard - Category 2": {
           "name": "Easy Access Standard - Category 2",
           "catId": "10229227295085",
-          "bestPrice": 600.0,
-          "maxPrice": 600.0
+          "bestPrice": 475.0,
+          "maxPrice": 475.0
         },
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
@@ -3538,7 +3562,7 @@
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845183",
-          "bestPrice": 1083.15,
+          "bestPrice": 760.0,
           "maxPrice": 1599.0
         },
         "Front Category 3": {
@@ -3556,25 +3580,25 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229653589102",
-          "bestPrice": 1700.0,
+          "bestPrice": 1785.0,
           "maxPrice": 10000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229653589103",
           "bestPrice": 2000.0,
-          "maxPrice": 5000.0
+          "maxPrice": 8500.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229653589104",
-          "bestPrice": 1450.0,
+          "bestPrice": 1700.0,
           "maxPrice": 5000.0
         },
         "Category 4": {
           "name": "Category 4",
           "catId": "10229653589105",
-          "bestPrice": 1700.0,
+          "bestPrice": 1600.0,
           "maxPrice": 3999.0
         },
         "Wheelchair User - Category 1": {
@@ -3586,8 +3610,8 @@
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998853771",
-          "bestPrice": 1652.16,
-          "maxPrice": 3530.0
+          "bestPrice": 2100.0,
+          "maxPrice": 2100.0
         }
       }
     },
@@ -3598,7 +3622,7 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226879935",
-          "bestPrice": 500.0,
+          "bestPrice": 550.0,
           "maxPrice": 3000.0
         },
         "Category 2": {
@@ -3610,7 +3634,7 @@
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226879937",
-          "bestPrice": 288.84,
+          "bestPrice": 300.0,
           "maxPrice": 6000.0
         },
         "Wheelchair User - Category 1": {
@@ -3624,6 +3648,12 @@
           "catId": "10229226879944",
           "bestPrice": 1000.0,
           "maxPrice": 1000.0
+        },
+        "Easy Access Amenity - Category 1": {
+          "name": "Easy Access Amenity - Category 1",
+          "catId": "10229226879946",
+          "bestPrice": 1015.28,
+          "maxPrice": 1015.28
         },
         "Easy Access Amenity - Category 2": {
           "name": "Easy Access Amenity - Category 2",
@@ -3658,19 +3688,19 @@
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226885773",
-          "bestPrice": 295.0,
+          "bestPrice": 286.45,
           "maxPrice": 5500.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226885774",
-          "bestPrice": 225.0,
+          "bestPrice": 181.3,
           "maxPrice": 2230.0
         },
         "Category 4": {
           "name": "Category 4",
           "catId": "10229226885775",
-          "bestPrice": 288.84,
+          "bestPrice": 290.08,
           "maxPrice": 2000.0
         },
         "Easy Access Standard - Category 1": {
@@ -3682,7 +3712,7 @@
         "Easy Access Standard - Category 2": {
           "name": "Easy Access Standard - Category 2",
           "catId": "10229227263551",
-          "bestPrice": 393.54,
+          "bestPrice": 395.23,
           "maxPrice": 1200.0
         },
         "Front Category 1": {
@@ -3694,7 +3724,7 @@
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998853780",
-          "bestPrice": 422.42,
+          "bestPrice": 650.0,
           "maxPrice": 675.0
         }
       }
@@ -3706,8 +3736,8 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229531629279",
-          "bestPrice": 1400.0,
-          "maxPrice": 20000.0
+          "bestPrice": 1318.0,
+          "maxPrice": 11000.0
         },
         "Category 2": {
           "name": "Category 2",
@@ -3718,7 +3748,7 @@
         "Category 3": {
           "name": "Category 3",
           "catId": "10229531629281",
-          "bestPrice": 1000.0,
+          "bestPrice": 995.0,
           "maxPrice": 10000.0
         },
         "Category 4": {
@@ -3731,19 +3761,31 @@
           "name": "Supporter Premier Tier",
           "catId": "10229531629283",
           "bestPrice": 1200.0,
-          "maxPrice": 4300.0
+          "maxPrice": 3999.0
         },
         "Supporter Standard Tier": {
           "name": "Supporter Standard Tier",
           "catId": "10229531629284",
-          "bestPrice": 800.0,
+          "bestPrice": 900.0,
           "maxPrice": 6500.0
         },
         "Supporter Value Tier": {
           "name": "Supporter Value Tier",
           "catId": "10229531629285",
-          "bestPrice": 704.0,
-          "maxPrice": 30000.0
+          "bestPrice": 780.0,
+          "maxPrice": 9000.0
+        },
+        "Supporter Entry Tier": {
+          "name": "Supporter Entry Tier",
+          "catId": "10229654423837",
+          "bestPrice": 800.0,
+          "maxPrice": 900.0
+        },
+        "Easy Access Standard - Category 3": {
+          "name": "Easy Access Standard - Category 3",
+          "catId": "10229531629291",
+          "bestPrice": 3000.0,
+          "maxPrice": 3000.0
         },
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
@@ -3760,14 +3802,20 @@
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998855181",
-          "bestPrice": 3000.0,
-          "maxPrice": 4499.0
+          "bestPrice": 2800.0,
+          "maxPrice": 11000.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998855182",
-          "bestPrice": 1335.88,
+          "bestPrice": 1620.0,
           "maxPrice": 1620.0
+        },
+        "Front Category 3": {
+          "name": "Front Category 3",
+          "catId": "10229998855183",
+          "bestPrice": 1994.3,
+          "maxPrice": 1994.3
         }
       }
     },
@@ -3778,26 +3826,26 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226881303",
-          "bestPrice": 670.0,
+          "bestPrice": 685.0,
           "maxPrice": 12000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226881304",
-          "bestPrice": 500.0,
+          "bestPrice": 470.0,
           "maxPrice": 10000.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226881305",
-          "bestPrice": 541.57,
-          "maxPrice": 2500.0
+          "bestPrice": 450.0,
+          "maxPrice": 3000.0
         },
         "Category 4": {
           "name": "Category 4",
           "catId": "10229226881306",
           "bestPrice": 3000.0,
-          "maxPrice": 3000.0
+          "maxPrice": 3450.0
         },
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
@@ -3820,7 +3868,7 @@
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229226881316",
-          "bestPrice": 765.0,
+          "bestPrice": 400.0,
           "maxPrice": 765.0
         },
         "Wheelchair & Easy Access Amenity - Category 2": {
@@ -3832,8 +3880,8 @@
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998854269",
-          "bestPrice": 1470.0,
-          "maxPrice": 5250.0
+          "bestPrice": 1450.0,
+          "maxPrice": 3600.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
@@ -3856,14 +3904,20 @@
         "Category 2": {
           "name": "Category 2",
           "catId": "10229531629339",
-          "bestPrice": 295.0,
-          "maxPrice": 1500000.0
+          "bestPrice": 350.0,
+          "maxPrice": 5310.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229531629340",
-          "bestPrice": 210.0,
+          "bestPrice": 236.0,
           "maxPrice": 11500.0
+        },
+        "Category 4": {
+          "name": "Category 4",
+          "catId": "10229531629341",
+          "bestPrice": 998.0,
+          "maxPrice": 998.0
         },
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
@@ -3887,18 +3941,18 @@
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229531629352",
           "bestPrice": 750.0,
-          "maxPrice": 5500.0
+          "maxPrice": 1250.0
         },
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229531629353",
           "bestPrice": 400.0,
-          "maxPrice": 2000.0
+          "maxPrice": 599.0
         },
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
           "catId": "10229531629354",
-          "bestPrice": 357.43,
+          "bestPrice": 358.97,
           "maxPrice": 2000.0
         },
         "Front Category 1": {
@@ -3910,8 +3964,8 @@
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845200",
-          "bestPrice": 565.0,
-          "maxPrice": 2100.0
+          "bestPrice": 450.0,
+          "maxPrice": 3200.0
         }
       }
     },
@@ -3923,24 +3977,24 @@
           "name": "Category 1",
           "catId": "10229530028130",
           "bestPrice": 1350.0,
-          "maxPrice": 8000000.0
+          "maxPrice": 100000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229530028131",
-          "bestPrice": 1100.0,
+          "bestPrice": 1000.0,
           "maxPrice": 100000.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229530028132",
-          "bestPrice": 1000.0,
+          "bestPrice": 900.0,
           "maxPrice": 3250.0
         },
         "Category 4": {
           "name": "Category 4",
           "catId": "10229530028133",
-          "bestPrice": 1800.0,
+          "bestPrice": 1200.0,
           "maxPrice": 2990.0
         },
         "Easy Access Standard - Category 1": {
@@ -3953,7 +4007,7 @@
           "name": "Easy Access Standard - Category 2",
           "catId": "10229530028141",
           "bestPrice": 2000.0,
-          "maxPrice": 2000.0
+          "maxPrice": 2500.0
         },
         "Easy Access Standard - Category 3": {
           "name": "Easy Access Standard - Category 3",
@@ -3982,13 +4036,13 @@
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998845193",
-          "bestPrice": 5900.0,
-          "maxPrice": 22100.0
+          "bestPrice": 4725.0,
+          "maxPrice": 27000.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845194",
-          "bestPrice": 1850.0,
+          "bestPrice": 1650.0,
           "maxPrice": 15000.0
         }
       }
@@ -4000,7 +4054,7 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226842589",
-          "bestPrice": 495.0,
+          "bestPrice": 450.0,
           "maxPrice": 4500000.0
         },
         "Category 2": {
@@ -4012,20 +4066,26 @@
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226842591",
-          "bestPrice": 164.7,
+          "bestPrice": 140.0,
           "maxPrice": 12000.0
         },
         "Category 4": {
           "name": "Category 4",
           "catId": "10229226842592",
-          "bestPrice": 390.0,
+          "bestPrice": 350.0,
           "maxPrice": 1500.0
         },
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
           "catId": "10229226842598",
           "bestPrice": 740.0,
-          "maxPrice": 3000.0
+          "maxPrice": 1000.0
+        },
+        "Easy Access Standard - Category 2": {
+          "name": "Easy Access Standard - Category 2",
+          "catId": "10229227272868",
+          "bestPrice": 650.0,
+          "maxPrice": 650.0
         },
         "Easy Access Standard - Category 3": {
           "name": "Easy Access Standard - Category 3",
@@ -4036,19 +4096,19 @@
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229226854407",
-          "bestPrice": 500.0,
+          "bestPrice": 620.0,
           "maxPrice": 3450.0
         },
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229226854408",
-          "bestPrice": 450.0,
-          "maxPrice": 1588.62
+          "bestPrice": 440.0,
+          "maxPrice": 1595.44
         },
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
           "catId": "10229226854409",
-          "bestPrice": 480.0,
+          "bestPrice": 749.0,
           "maxPrice": 850.0
         },
         "Wheelchair & Easy Access Amenity - Category 4": {
@@ -4066,13 +4126,13 @@
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845188",
-          "bestPrice": 550.0,
-          "maxPrice": 1061.48
+          "bestPrice": 535.0,
+          "maxPrice": 1137.0
         },
         "Front Category 3": {
           "name": "Front Category 3",
           "catId": "10229998845189",
-          "bestPrice": 313.39,
+          "bestPrice": 290.08,
           "maxPrice": 850.0
         }
       }
@@ -4090,13 +4150,13 @@
         "Category 2": {
           "name": "Category 2",
           "catId": "10229531538784",
-          "bestPrice": 938.73,
+          "bestPrice": 859.36,
           "maxPrice": 16000.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229531538785",
-          "bestPrice": 868.0,
+          "bestPrice": 865.0,
           "maxPrice": 21275.0
         },
         "Category 4": {
@@ -4120,8 +4180,8 @@
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229531538797",
-          "bestPrice": 1130.41,
-          "maxPrice": 1130.41
+          "bestPrice": 1042.6,
+          "maxPrice": 1042.6
         },
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
@@ -4132,13 +4192,13 @@
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998853773",
-          "bestPrice": 2743.98,
-          "maxPrice": 4800.0
+          "bestPrice": 2589.0,
+          "maxPrice": 35300.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998853774",
-          "bestPrice": 2130.19,
+          "bestPrice": 1664.33,
           "maxPrice": 7000.0
         }
       }
@@ -4150,56 +4210,56 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226882411",
-          "bestPrice": 631.83,
-          "maxPrice": 5054.7
+          "bestPrice": 456.87,
+          "maxPrice": 5076.4
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226882412",
-          "bestPrice": 415.2,
+          "bestPrice": 400.0,
           "maxPrice": 9500.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226882413",
           "bestPrice": 400.0,
-          "maxPrice": 7076.58
+          "maxPrice": 7106.96
         },
         "Category 4": {
           "name": "Category 4",
           "catId": "10229226882414",
-          "bestPrice": 505.47,
-          "maxPrice": 2887.67
+          "bestPrice": 507.64,
+          "maxPrice": 2900.07
         },
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
           "catId": "10229227271140",
-          "bestPrice": 758.2,
-          "maxPrice": 758.2
+          "bestPrice": 725.2,
+          "maxPrice": 725.2
         },
         "Easy Access Standard - Category 2": {
           "name": "Easy Access Standard - Category 2",
           "catId": "10229227271142",
-          "bestPrice": 1155.36,
-          "maxPrice": 1155.36
+          "bestPrice": 1160.32,
+          "maxPrice": 1160.32
         },
         "Easy Access Standard - Category 4": {
           "name": "Easy Access Standard - Category 4",
           "catId": "10229227271144",
-          "bestPrice": 2527.35,
-          "maxPrice": 2527.35
+          "bestPrice": 2538.2,
+          "maxPrice": 2538.2
         },
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229226882424",
-          "bestPrice": 794.31,
-          "maxPrice": 5524.06
+          "bestPrice": 797.72,
+          "maxPrice": 5547.78
         },
         "Wheelchair & Easy Access Amenity - Category 4": {
           "name": "Wheelchair & Easy Access Amenity - Category 4",
           "catId": "10229226882427",
-          "bestPrice": 866.52,
-          "maxPrice": 866.52
+          "bestPrice": 870.24,
+          "maxPrice": 870.24
         },
         "Front Category 1": {
           "name": "Front Category 1",
@@ -4216,13 +4276,13 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226854411",
-          "bestPrice": 447.82,
-          "maxPrice": 14442.0
+          "bestPrice": 410.0,
+          "maxPrice": 14504.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226854412",
-          "bestPrice": 274.39,
+          "bestPrice": 280.0,
           "maxPrice": 7777.0
         },
         "Category 3": {
@@ -4231,11 +4291,17 @@
           "bestPrice": 165.0,
           "maxPrice": 5000.0
         },
+        "Category 4": {
+          "name": "Category 4",
+          "catId": "10229226854414",
+          "bestPrice": 550.0,
+          "maxPrice": 550.0
+        },
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
           "catId": "10229226854419",
           "bestPrice": 550.0,
-          "maxPrice": 1000.0
+          "maxPrice": 2300.0
         },
         "Easy Access Standard - Category 3": {
           "name": "Easy Access Standard - Category 3",
@@ -4258,32 +4324,32 @@
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
           "catId": "10229226854425",
-          "bestPrice": 1200.0,
+          "bestPrice": 362.6,
           "maxPrice": 1200.0
         },
         "Wheelchair & Easy Access Amenity - Category 4": {
           "name": "Wheelchair & Easy Access Amenity - Category 4",
           "catId": "10229226854426",
-          "bestPrice": 700.0,
-          "maxPrice": 700.0
+          "bestPrice": 300.0,
+          "maxPrice": 300.0
         },
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998845182",
-          "bestPrice": 600.0,
+          "bestPrice": 530.0,
           "maxPrice": 2379.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845183",
-          "bestPrice": 600.0,
-          "maxPrice": 794.31
+          "bestPrice": 580.0,
+          "maxPrice": 580.0
         },
         "Front Category 3": {
           "name": "Front Category 3",
           "catId": "10229998845184",
           "bestPrice": 252.93,
-          "maxPrice": 400.0
+          "maxPrice": 600.0
         }
       }
     },
@@ -4294,86 +4360,86 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226860365",
-          "bestPrice": 495.36,
-          "maxPrice": 36105.0
+          "bestPrice": 471.38,
+          "maxPrice": 36260.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226860366",
-          "bestPrice": 415.2,
-          "maxPrice": 14442.0
+          "bestPrice": 362.6,
+          "maxPrice": 14504.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226860367",
-          "bestPrice": 180.52,
-          "maxPrice": 4500.0
+          "bestPrice": 181.3,
+          "maxPrice": 3800.0
         },
         "Category 4": {
           "name": "Category 4",
           "catId": "10229226860368",
-          "bestPrice": 541.57,
-          "maxPrice": 1083.15
+          "bestPrice": 348.09,
+          "maxPrice": 1087.8
         },
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
           "catId": "10229226860374",
-          "bestPrice": 714.87,
-          "maxPrice": 4188.18
+          "bestPrice": 652.68,
+          "maxPrice": 4206.16
         },
         "Easy Access Standard - Category 3": {
           "name": "Easy Access Standard - Category 3",
           "catId": "10229227295112",
-          "bestPrice": 270.78,
-          "maxPrice": 866.52
+          "bestPrice": 650.0,
+          "maxPrice": 870.24
         },
         "Easy Access Standard - Category 4": {
           "name": "Easy Access Standard - Category 4",
           "catId": "10229227295113",
-          "bestPrice": 2094.09,
-          "maxPrice": 2094.09
+          "bestPrice": 2103.08,
+          "maxPrice": 2103.08
         },
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229226860378",
-          "bestPrice": 1083.15,
-          "maxPrice": 1083.15
+          "bestPrice": 1087.8,
+          "maxPrice": 1087.8
         },
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
           "catId": "10229226860380",
-          "bestPrice": 1083.15,
-          "maxPrice": 1083.15
+          "bestPrice": 1087.8,
+          "maxPrice": 1087.8
         },
         "Alcohol-Free Area 1": {
           "name": "Alcohol-Free Area 1",
           "catId": "10229227295117",
-          "bestPrice": 523.52,
-          "maxPrice": 1588.62
+          "bestPrice": 507.64,
+          "maxPrice": 1595.44
         },
         "Alcohol-Free Area 2": {
           "name": "Alcohol-Free Area 2",
           "catId": "10229372777792",
-          "bestPrice": 469.36,
-          "maxPrice": 1137.3
+          "bestPrice": 471.38,
+          "maxPrice": 1142.19
         },
         "Alcohol-Free Area 3": {
           "name": "Alcohol-Free Area 3",
           "catId": "10229515504831",
-          "bestPrice": 433.26,
-          "maxPrice": 1408.09
+          "bestPrice": 435.12,
+          "maxPrice": 1414.14
         },
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998845179",
-          "bestPrice": 1580.0,
+          "bestPrice": 1300.0,
           "maxPrice": 6000.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845185",
           "bestPrice": 450.0,
-          "maxPrice": 1480.0
+          "maxPrice": 1200.0
         },
         "Front Category 3": {
           "name": "Front Category 3",
@@ -4390,8 +4456,8 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226878709",
-          "bestPrice": 226.07,
-          "maxPrice": 3610.5
+          "bestPrice": 216.52,
+          "maxPrice": 3626.0
         },
         "Category 2": {
           "name": "Category 2",
@@ -4402,19 +4468,19 @@
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226878711",
-          "bestPrice": 160.0,
+          "bestPrice": 139.0,
           "maxPrice": 6500.0
         },
         "Category 4": {
           "name": "Category 4",
           "catId": "10229226878712",
-          "bestPrice": 269.0,
+          "bestPrice": 260.0,
           "maxPrice": 1695.0
         },
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
           "catId": "10229226878718",
-          "bestPrice": 410.0,
+          "bestPrice": 280.0,
           "maxPrice": 700.0
         },
         "Wheelchair & Easy Access Amenity - Category 1": {
@@ -4444,19 +4510,19 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226860430",
-          "bestPrice": 1700.0,
+          "bestPrice": 1565.0,
           "maxPrice": 9000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226860431",
-          "bestPrice": 1300.0,
+          "bestPrice": 1100.0,
           "maxPrice": 5000.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226860432",
-          "bestPrice": 1368.0,
+          "bestPrice": 1370.0,
           "maxPrice": 6000.0
         },
         "Category 4": {
@@ -4468,25 +4534,25 @@
         "Easy Access Standard - Category 3": {
           "name": "Easy Access Standard - Category 3",
           "catId": "10229227326897",
-          "bestPrice": 1877.46,
-          "maxPrice": 1949.67
+          "bestPrice": 1885.52,
+          "maxPrice": 1958.04
         },
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998853764",
-          "bestPrice": 2700.0,
+          "bestPrice": 2650.0,
           "maxPrice": 13500.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998853765",
-          "bestPrice": 1650.0,
-          "maxPrice": 1999.0
+          "bestPrice": 1999.0,
+          "maxPrice": 2600.0
         },
         "Front Category 3": {
           "name": "Front Category 3",
           "catId": "10229998853766",
-          "bestPrice": 2000.0,
+          "bestPrice": 1850.0,
           "maxPrice": 2000.0
         }
       }
@@ -4498,20 +4564,20 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229531629279",
-          "bestPrice": 955.29,
+          "bestPrice": 823.53,
           "maxPrice": 15000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229531629280",
-          "bestPrice": 850.0,
+          "bestPrice": 765.0,
           "maxPrice": 15000.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229531629281",
           "bestPrice": 750.0,
-          "maxPrice": 9026.25
+          "maxPrice": 9065.0
         },
         "Category 4": {
           "name": "Category 4",
@@ -4523,7 +4589,7 @@
           "name": "Easy Access Standard - Category 1",
           "catId": "10229531629288",
           "bestPrice": 2750.0,
-          "maxPrice": 21301.95
+          "maxPrice": 21393.4
         },
         "Easy Access Standard - Category 3": {
           "name": "Easy Access Standard - Category 3",
@@ -4534,14 +4600,8 @@
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229531629293",
-          "bestPrice": 700.0,
+          "bestPrice": 1420.0,
           "maxPrice": 1420.0
-        },
-        "Wheelchair & Easy Access Amenity - Category 2": {
-          "name": "Wheelchair & Easy Access Amenity - Category 2",
-          "catId": "10229531629294",
-          "bestPrice": 700.0,
-          "maxPrice": 700.0
         },
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
@@ -4552,19 +4612,19 @@
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998855181",
-          "bestPrice": 2021.88,
+          "bestPrice": 2000.0,
           "maxPrice": 9000.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998855182",
-          "bestPrice": 1664.44,
-          "maxPrice": 1664.44
+          "bestPrice": 1606.31,
+          "maxPrice": 1606.31
         },
         "Front Category 3": {
           "name": "Front Category 3",
           "catId": "10229998855183",
-          "bestPrice": 830.0,
+          "bestPrice": 1000.0,
           "maxPrice": 10000.0
         }
       }
@@ -4576,14 +4636,14 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226885772",
-          "bestPrice": 680.0,
+          "bestPrice": 600.0,
           "maxPrice": 5000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226885773",
-          "bestPrice": 575.0,
-          "maxPrice": 3500.0
+          "bestPrice": 510.0,
+          "maxPrice": 2900.0
         },
         "Category 3": {
           "name": "Category 3",
@@ -4594,8 +4654,8 @@
         "Category 4": {
           "name": "Category 4",
           "catId": "10229226885775",
-          "bestPrice": 600.0,
-          "maxPrice": 1600.0
+          "bestPrice": 607.06,
+          "maxPrice": 2000.0
         },
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
@@ -4606,26 +4666,26 @@
         "Easy Access Standard - Category 2": {
           "name": "Easy Access Standard - Category 2",
           "catId": "10229227263551",
-          "bestPrice": 794.31,
-          "maxPrice": 794.31
+          "bestPrice": 797.72,
+          "maxPrice": 797.72
         },
         "Easy Access Standard - Category 3": {
           "name": "Easy Access Standard - Category 3",
           "catId": "10229227263552",
-          "bestPrice": 3249.45,
-          "maxPrice": 3249.45
+          "bestPrice": 3263.4,
+          "maxPrice": 3263.4
         },
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229226885785",
-          "bestPrice": 938.73,
-          "maxPrice": 938.73
+          "bestPrice": 942.76,
+          "maxPrice": 942.76
         },
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229226885786",
           "bestPrice": 1300.0,
-          "maxPrice": 1300.0
+          "maxPrice": 1500.0
         },
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
@@ -4637,7 +4697,7 @@
           "name": "Front Category 1",
           "catId": "10229998853779",
           "bestPrice": 1350.0,
-          "maxPrice": 4500.0
+          "maxPrice": 2100.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
@@ -4654,19 +4714,19 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229531629338",
-          "bestPrice": 360.0,
+          "bestPrice": 300.0,
           "maxPrice": 3500.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229531629339",
-          "bestPrice": 250.0,
-          "maxPrice": 2527.35
+          "bestPrice": 181.3,
+          "maxPrice": 2538.2
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229531629340",
-          "bestPrice": 140.0,
+          "bestPrice": 147.06,
           "maxPrice": 2500.0
         },
         "Category 4": {
@@ -4678,14 +4738,14 @@
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
           "catId": "10229531629347",
-          "bestPrice": 700.0,
+          "bestPrice": 550.0,
           "maxPrice": 800.0
         },
         "Easy Access Standard - Category 2": {
           "name": "Easy Access Standard - Category 2",
           "catId": "10229531629349",
-          "bestPrice": 550.0,
-          "maxPrice": 722.1
+          "bestPrice": 500.0,
+          "maxPrice": 725.2
         },
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
@@ -4714,13 +4774,13 @@
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998845199",
-          "bestPrice": 1295.65,
+          "bestPrice": 1075.0,
           "maxPrice": 1800.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845200",
-          "bestPrice": 600.0,
+          "bestPrice": 500.0,
           "maxPrice": 1800.0
         }
       }
@@ -4738,7 +4798,7 @@
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226881304",
-          "bestPrice": 1000.0,
+          "bestPrice": 1070.0,
           "maxPrice": 25000.0
         },
         "Category 3": {
@@ -4750,13 +4810,13 @@
         "Category 4": {
           "name": "Category 4",
           "catId": "10229226881306",
-          "bestPrice": 1400.0,
+          "bestPrice": 1250.0,
           "maxPrice": 1500.0
         },
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
           "catId": "10229226881312",
-          "bestPrice": 3000.0,
+          "bestPrice": 2000.0,
           "maxPrice": 4000.0
         },
         "Easy Access Standard - Category 2": {
@@ -4774,8 +4834,8 @@
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998854269",
-          "bestPrice": 2400.0,
-          "maxPrice": 4350.0
+          "bestPrice": 2050.0,
+          "maxPrice": 6900.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
@@ -4798,32 +4858,20 @@
         "Category 2": {
           "name": "Category 2",
           "catId": "10229531982637",
-          "bestPrice": 2500.0,
+          "bestPrice": 2300.0,
           "maxPrice": 47000.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229531982638",
-          "bestPrice": 902.62,
-          "maxPrice": 470000.0
+          "bestPrice": 906.5,
+          "maxPrice": 20000.0
         },
         "Category 4": {
           "name": "Category 4",
           "catId": "10229531982639",
-          "bestPrice": 3500.0,
+          "bestPrice": 2500.0,
           "maxPrice": 9876543.21
-        },
-        "Easy Access Standard - Category 3": {
-          "name": "Easy Access Standard - Category 3",
-          "catId": "10229531982648",
-          "bestPrice": 3500.0,
-          "maxPrice": 3500.0
-        },
-        "Wheelchair & Easy Access Amenity - Category 1": {
-          "name": "Wheelchair & Easy Access Amenity - Category 1",
-          "catId": "10229531982650",
-          "bestPrice": 3604.0,
-          "maxPrice": 3604.0
         },
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
@@ -4840,14 +4888,8 @@
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998845211",
-          "bestPrice": 3400.0,
-          "maxPrice": 12000.0
-        },
-        "Front Category 3": {
-          "name": "Front Category 3",
-          "catId": "10229998845213",
-          "bestPrice": 4700.0,
-          "maxPrice": 4700.0
+          "bestPrice": 4000.0,
+          "maxPrice": 13000.0
         }
       }
     },
@@ -4870,26 +4912,26 @@
         "Category 3": {
           "name": "Category 3",
           "catId": "10229531982579",
-          "bestPrice": 125.0,
-          "maxPrice": 5000.0
+          "bestPrice": 140.0,
+          "maxPrice": 3000.0
         },
         "Category 4": {
           "name": "Category 4",
           "catId": "10229531982580",
-          "bestPrice": 209.0,
+          "bestPrice": 225.0,
           "maxPrice": 1000.0
         },
         "Supporter Value Tier": {
           "name": "Supporter Value Tier",
           "catId": "10229531982583",
-          "bestPrice": 140.0,
+          "bestPrice": 500.0,
           "maxPrice": 1950.0
         },
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
           "catId": "10229531982586",
           "bestPrice": 580.0,
-          "maxPrice": 580.0
+          "maxPrice": 600.0
         },
         "Easy Access Standard - Category 3": {
           "name": "Easy Access Standard - Category 3",
@@ -4909,12 +4951,6 @@
           "bestPrice": 310.0,
           "maxPrice": 860.0
         },
-        "Wheelchair & Easy Access Amenity - Category 3": {
-          "name": "Wheelchair & Easy Access Amenity - Category 3",
-          "catId": "10229531982593",
-          "bestPrice": 250.0,
-          "maxPrice": 250.0
-        },
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998845205",
@@ -4924,8 +4960,8 @@
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845206",
-          "bestPrice": 455.0,
-          "maxPrice": 650.0
+          "bestPrice": 589.0,
+          "maxPrice": 700.0
         }
       }
     },
@@ -4942,13 +4978,13 @@
         "Category 2": {
           "name": "Category 2",
           "catId": "10229530028131",
-          "bestPrice": 793.58,
+          "bestPrice": 725.2,
           "maxPrice": 10000.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229530028132",
-          "bestPrice": 260.0,
+          "bestPrice": 650.0,
           "maxPrice": 5000.0
         },
         "Category 4": {
@@ -4956,6 +4992,12 @@
           "catId": "10229530028133",
           "bestPrice": 950.0,
           "maxPrice": 1600.0
+        },
+        "Easy Access Standard - Category 2": {
+          "name": "Easy Access Standard - Category 2",
+          "catId": "10229530028141",
+          "bestPrice": 2500.0,
+          "maxPrice": 2500.0
         },
         "Easy Access Standard - Category 3": {
           "name": "Easy Access Standard - Category 3",
@@ -4973,7 +5015,7 @@
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229530028145",
           "bestPrice": 999.0,
-          "maxPrice": 2000.0
+          "maxPrice": 1680.0
         },
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
@@ -4996,13 +5038,13 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229531538783",
-          "bestPrice": 902.62,
+          "bestPrice": 1000.0,
           "maxPrice": 25000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229531538784",
-          "bestPrice": 750.0,
+          "bestPrice": 700.0,
           "maxPrice": 15000.0
         },
         "Category 3": {
@@ -5014,7 +5056,7 @@
         "Category 4": {
           "name": "Category 4",
           "catId": "10229531538786",
-          "bestPrice": 685.99,
+          "bestPrice": 1349.99,
           "maxPrice": 2800.0
         },
         "Easy Access Standard - Category 3": {
@@ -5044,7 +5086,7 @@
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998853774",
-          "bestPrice": 1200.0,
+          "bestPrice": 1000.0,
           "maxPrice": 1500.0
         }
       }
@@ -5056,13 +5098,13 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226879935",
-          "bestPrice": 1000.0,
+          "bestPrice": 1087.8,
           "maxPrice": 5000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226879936",
-          "bestPrice": 850.0,
+          "bestPrice": 775.0,
           "maxPrice": 5000.0
         },
         "Category 3": {
@@ -5104,8 +5146,8 @@
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998854275",
-          "bestPrice": 2400.0,
-          "maxPrice": 2400.0
+          "bestPrice": 2850.0,
+          "maxPrice": 2850.0
         }
       }
     },
@@ -5155,22 +5197,16 @@
           "bestPrice": 1300.0,
           "maxPrice": 6580.0
         },
-        "Wheelchair & Easy Access Amenity - Category 3": {
-          "name": "Wheelchair & Easy Access Amenity - Category 3",
-          "catId": "10229226878724",
-          "bestPrice": 700.0,
-          "maxPrice": 700.0
-        },
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998845196",
-          "bestPrice": 1499.0,
+          "bestPrice": 1300.0,
           "maxPrice": 4500.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845197",
-          "bestPrice": 1155.36,
+          "bestPrice": 1160.32,
           "maxPrice": 2400.0
         }
       }
@@ -5182,32 +5218,32 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229531629279",
-          "bestPrice": 1100.0,
+          "bestPrice": 1120.0,
           "maxPrice": 20000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229531629280",
-          "bestPrice": 820.0,
-          "maxPrice": 15000.0
+          "bestPrice": 750.0,
+          "maxPrice": 20000.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229531629281",
-          "bestPrice": 842.0,
+          "bestPrice": 880.0,
           "maxPrice": 12000.0
         },
         "Category 4": {
           "name": "Category 4",
           "catId": "10229531629282",
-          "bestPrice": 860.0,
+          "bestPrice": 895.0,
           "maxPrice": 5000.0
         },
         "Easy Access Standard - Category 3": {
           "name": "Easy Access Standard - Category 3",
           "catId": "10229531629291",
-          "bestPrice": 1199.0,
-          "maxPrice": 1200.0
+          "bestPrice": 1200.0,
+          "maxPrice": 1299.0
         },
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
@@ -5224,14 +5260,14 @@
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998855182",
-          "bestPrice": 1191.46,
+          "bestPrice": 1124.06,
           "maxPrice": 2191.0
         },
         "Front Category 3": {
           "name": "Front Category 3",
           "catId": "10229998855183",
-          "bestPrice": 1500.0,
-          "maxPrice": 1500.0
+          "bestPrice": 990.0,
+          "maxPrice": 990.0
         }
       }
     },
@@ -5242,19 +5278,19 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226881303",
-          "bestPrice": 794.31,
+          "bestPrice": 650.0,
           "maxPrice": 30000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226881304",
-          "bestPrice": 500.0,
+          "bestPrice": 575.0,
           "maxPrice": 19000.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226881305",
-          "bestPrice": 628.22,
+          "bestPrice": 630.92,
           "maxPrice": 8000.0
         },
         "Category 4": {
@@ -5272,7 +5308,7 @@
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229226881317",
-          "bestPrice": 695.5,
+          "bestPrice": 649.5,
           "maxPrice": 1250.0
         },
         "Wheelchair & Easy Access Amenity - Category 3": {
@@ -5285,7 +5321,7 @@
           "name": "Front Category 1",
           "catId": "10229998854269",
           "bestPrice": 3655.0,
-          "maxPrice": 4000.0
+          "maxPrice": 5000.0
         }
       }
     },
@@ -5296,7 +5332,7 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229653589102",
-          "bestPrice": 1749.0,
+          "bestPrice": 1650.0,
           "maxPrice": 20000.0
         },
         "Category 2": {
@@ -5314,7 +5350,7 @@
         "Category 4": {
           "name": "Category 4",
           "catId": "10229653589105",
-          "bestPrice": 1500.0,
+          "bestPrice": 1775.0,
           "maxPrice": 2150.0
         },
         "Wheelchair User - Category 1": {
@@ -5344,13 +5380,13 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229531982577",
-          "bestPrice": 941.2,
-          "maxPrice": 3500000.0
+          "bestPrice": 950.0,
+          "maxPrice": 22000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229531982578",
-          "bestPrice": 700.0,
+          "bestPrice": 725.2,
           "maxPrice": 30000.0
         },
         "Category 3": {
@@ -5363,7 +5399,7 @@
           "name": "Category 4",
           "catId": "10229531982580",
           "bestPrice": 900.0,
-          "maxPrice": 1750.0
+          "maxPrice": 1150.0
         },
         "Easy Access Standard - Category 2": {
           "name": "Easy Access Standard - Category 2",
@@ -5410,8 +5446,8 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226842589",
-          "bestPrice": 1125.0,
-          "maxPrice": 19500.0
+          "bestPrice": 1150.0,
+          "maxPrice": 20000.0
         },
         "Category 2": {
           "name": "Category 2",
@@ -5422,7 +5458,7 @@
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226842591",
-          "bestPrice": 690.0,
+          "bestPrice": 780.0,
           "maxPrice": 5000.0
         },
         "Category 4": {
@@ -5440,8 +5476,8 @@
         "Easy Access Standard - Category 2": {
           "name": "Easy Access Standard - Category 2",
           "catId": "10229227272868",
-          "bestPrice": 1083.15,
-          "maxPrice": 1083.15
+          "bestPrice": 1087.8,
+          "maxPrice": 1300.0
         },
         "Easy Access Standard - Category 3": {
           "name": "Easy Access Standard - Category 3",
@@ -5459,7 +5495,7 @@
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229226854408",
           "bestPrice": 1500.0,
-          "maxPrice": 2400.0
+          "maxPrice": 1700.0
         },
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
@@ -5477,13 +5513,13 @@
           "name": "Front Category 1",
           "catId": "10229998845187",
           "bestPrice": 2350.0,
-          "maxPrice": 3200.0
+          "maxPrice": 4000.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845188",
-          "bestPrice": 1800.0,
-          "maxPrice": 3060.0
+          "bestPrice": 1500.0,
+          "maxPrice": 2900.0
         }
       }
     },
@@ -5500,7 +5536,7 @@
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226854412",
-          "bestPrice": 570.0,
+          "bestPrice": 500.0,
           "maxPrice": 7200.0
         },
         "Category 3": {
@@ -5524,26 +5560,26 @@
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229226854423",
-          "bestPrice": 650.0,
+          "bestPrice": 515.0,
           "maxPrice": 2200.0
         },
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229226854424",
           "bestPrice": 600.0,
-          "maxPrice": 1250.0
+          "maxPrice": 3626.0
         },
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
           "catId": "10229226854425",
-          "bestPrice": 866.52,
+          "bestPrice": 870.24,
           "maxPrice": 4000.0
         },
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998845182",
-          "bestPrice": 2500.0,
-          "maxPrice": 7221.0
+          "bestPrice": 1690.0,
+          "maxPrice": 7252.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
@@ -5567,61 +5603,61 @@
           "name": "Category 1",
           "catId": "10229226882411",
           "bestPrice": 1705.99,
-          "maxPrice": 72210.0
+          "maxPrice": 72520.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226882412",
           "bestPrice": 1300.0,
-          "maxPrice": 10831.5
+          "maxPrice": 10878.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226882413",
-          "bestPrice": 1300.0,
-          "maxPrice": 1227570.0
+          "bestPrice": 1200.0,
+          "maxPrice": 1232840.0
         },
         "Category 4": {
           "name": "Category 4",
           "catId": "10229226882414",
-          "bestPrice": 1444.2,
+          "bestPrice": 1450.4,
           "maxPrice": 10000.0
         },
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
           "catId": "10229227271140",
-          "bestPrice": 5054.7,
-          "maxPrice": 5054.7
+          "bestPrice": 5076.4,
+          "maxPrice": 5076.4
         },
         "Easy Access Standard - Category 4": {
           "name": "Easy Access Standard - Category 4",
           "catId": "10229227271144",
-          "bestPrice": 3971.55,
-          "maxPrice": 3971.55
+          "bestPrice": 3988.6,
+          "maxPrice": 3988.6
         },
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229226882424",
-          "bestPrice": 5054.7,
-          "maxPrice": 28369.85
+          "bestPrice": 4278.68,
+          "maxPrice": 28491.64
         },
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229226882425",
-          "bestPrice": 3827.13,
-          "maxPrice": 3827.13
+          "bestPrice": 3843.56,
+          "maxPrice": 3843.56
         },
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
           "catId": "10229226882426",
-          "bestPrice": 1769.14,
-          "maxPrice": 1769.14
+          "bestPrice": 1776.74,
+          "maxPrice": 1776.74
         },
         "Wheelchair & Easy Access Amenity - Category 4": {
           "name": "Wheelchair & Easy Access Amenity - Category 4",
           "catId": "10229226882427",
-          "bestPrice": 2888.4,
-          "maxPrice": 2888.4
+          "bestPrice": 2900.8,
+          "maxPrice": 2900.8
         }
       }
     },
@@ -5632,19 +5668,19 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229530028130",
-          "bestPrice": 1189.0,
+          "bestPrice": 900.0,
           "maxPrice": 100000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229530028131",
-          "bestPrice": 900.0,
+          "bestPrice": 750.0,
           "maxPrice": 23570.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229530028132",
-          "bestPrice": 1000.0,
+          "bestPrice": 875.0,
           "maxPrice": 20000.0
         },
         "Category 4": {
@@ -5668,14 +5704,14 @@
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998845193",
-          "bestPrice": 3500.0,
+          "bestPrice": 2800.0,
           "maxPrice": 5000.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845194",
-          "bestPrice": 1191.46,
-          "maxPrice": 2888.4
+          "bestPrice": 1087.8,
+          "maxPrice": 2100.0
         }
       }
     },
@@ -5686,38 +5722,38 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226860365",
-          "bestPrice": 714.87,
-          "maxPrice": 72210.0
+          "bestPrice": 715.0,
+          "maxPrice": 72520.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226860366",
-          "bestPrice": 624.61,
-          "maxPrice": 5199.12
+          "bestPrice": 580.0,
+          "maxPrice": 5221.44
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226860367",
-          "bestPrice": 649.89,
-          "maxPrice": 7221.0
+          "bestPrice": 652.68,
+          "maxPrice": 7252.0
         },
         "Category 4": {
           "name": "Category 4",
           "catId": "10229226860368",
-          "bestPrice": 718.48,
-          "maxPrice": 7076.58
+          "bestPrice": 723.74,
+          "maxPrice": 7106.96
         },
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
           "catId": "10229226860374",
-          "bestPrice": 1443.47,
-          "maxPrice": 4910.28
+          "bestPrice": 1449.67,
+          "maxPrice": 4931.36
         },
         "Easy Access Standard - Category 2": {
           "name": "Easy Access Standard - Category 2",
           "catId": "10229227295111",
-          "bestPrice": 1371.26,
-          "maxPrice": 1444.2
+          "bestPrice": 1377.15,
+          "maxPrice": 2094.37
         },
         "Easy Access Standard - Category 3": {
           "name": "Easy Access Standard - Category 3",
@@ -5728,32 +5764,32 @@
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229226860378",
-          "bestPrice": 2548.58,
-          "maxPrice": 3249.45
+          "bestPrice": 2559.52,
+          "maxPrice": 3263.4
         },
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
           "catId": "10229226860380",
-          "bestPrice": 1227.57,
-          "maxPrice": 1227.57
+          "bestPrice": 1232.84,
+          "maxPrice": 1232.84
         },
         "Alcohol-Free Area 1": {
           "name": "Alcohol-Free Area 1",
           "catId": "10229227295117",
-          "bestPrice": 794.31,
-          "maxPrice": 6498.9
+          "bestPrice": 797.72,
+          "maxPrice": 6526.8
         },
         "Alcohol-Free Area 2": {
           "name": "Alcohol-Free Area 2",
           "catId": "10229372777792",
-          "bestPrice": 1299.78,
-          "maxPrice": 2130.19
+          "bestPrice": 1305.36,
+          "maxPrice": 2139.34
         },
         "Alcohol-Free Area 3": {
           "name": "Alcohol-Free Area 3",
           "catId": "10229515504831",
-          "bestPrice": 1588.62,
-          "maxPrice": 2325.16
+          "bestPrice": 1595.44,
+          "maxPrice": 2335.14
         }
       }
     },
@@ -5764,14 +5800,14 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229531982636",
-          "bestPrice": 2100.0,
+          "bestPrice": 2000.0,
           "maxPrice": 25000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229531982637",
-          "bestPrice": 1500.0,
-          "maxPrice": 30000.0
+          "bestPrice": 1999.0,
+          "maxPrice": 72540.3
         },
         "Category 3": {
           "name": "Category 3",
@@ -5800,20 +5836,20 @@
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
           "catId": "10229531982652",
-          "bestPrice": 2130.19,
-          "maxPrice": 2130.19
+          "bestPrice": 2139.34,
+          "maxPrice": 2300.0
         },
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998845211",
-          "bestPrice": 2830.0,
+          "bestPrice": 2680.0,
           "maxPrice": 5900.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845212",
-          "bestPrice": 2200.0,
-          "maxPrice": 3105.03
+          "bestPrice": 2190.0,
+          "maxPrice": 3118.36
         }
       }
     },
@@ -5824,7 +5860,7 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229531629338",
-          "bestPrice": 850.0,
+          "bestPrice": 908.0,
           "maxPrice": 100000.0
         },
         "Category 2": {
@@ -5836,7 +5872,7 @@
         "Category 3": {
           "name": "Category 3",
           "catId": "10229531629340",
-          "bestPrice": 799.0,
+          "bestPrice": 773.04,
           "maxPrice": 10000.0
         },
         "Category 4": {
@@ -5844,6 +5880,12 @@
           "catId": "10229531629341",
           "bestPrice": 869.56,
           "maxPrice": 2000.0
+        },
+        "Easy Access Standard - Category 1": {
+          "name": "Easy Access Standard - Category 1",
+          "catId": "10229531629347",
+          "bestPrice": 4000.0,
+          "maxPrice": 4000.0
         },
         "Easy Access Standard - Category 3": {
           "name": "Easy Access Standard - Category 3",
@@ -5861,19 +5903,19 @@
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229531629352",
           "bestPrice": 2750.0,
-          "maxPrice": 3500.0
+          "maxPrice": 18130.0
         },
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229531629353",
-          "bestPrice": 974.83,
+          "bestPrice": 979.02,
           "maxPrice": 3000.0
         },
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
           "catId": "10229531629354",
           "bestPrice": 500.0,
-          "maxPrice": 2200.0
+          "maxPrice": 1200.0
         },
         "Front Category 1": {
           "name": "Front Category 1",
@@ -5884,8 +5926,8 @@
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845200",
-          "bestPrice": 1949.67,
-          "maxPrice": 2100.0
+          "bestPrice": 1958.04,
+          "maxPrice": 2200.0
         }
       }
     },
@@ -5896,14 +5938,14 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226881303",
-          "bestPrice": 866.52,
+          "bestPrice": 885.0,
           "maxPrice": 15000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226881304",
-          "bestPrice": 715.0,
-          "maxPrice": 10250.0
+          "bestPrice": 700.0,
+          "maxPrice": 15440.0
         },
         "Category 3": {
           "name": "Category 3",
@@ -5926,20 +5968,20 @@
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229226881317",
-          "bestPrice": 2260.0,
-          "maxPrice": 2260.0
+          "bestPrice": 1200.0,
+          "maxPrice": 1200.0
         },
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998854269",
-          "bestPrice": 1825.0,
-          "maxPrice": 4422.0
+          "bestPrice": 3000.0,
+          "maxPrice": 25000.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998854270",
-          "bestPrice": 1350.0,
-          "maxPrice": 1877.46
+          "bestPrice": 1700.0,
+          "maxPrice": 1885.52
         }
       }
     },
@@ -5950,13 +5992,13 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226885772",
-          "bestPrice": 1175.0,
+          "bestPrice": 1300.0,
           "maxPrice": 19800.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226885773",
-          "bestPrice": 1250.0,
+          "bestPrice": 1260.0,
           "maxPrice": 15000.0
         },
         "Category 3": {
@@ -5974,14 +6016,14 @@
         "Easy Access Standard - Category 2": {
           "name": "Easy Access Standard - Category 2",
           "catId": "10229227263551",
-          "bestPrice": 2310.72,
+          "bestPrice": 2320.64,
           "maxPrice": 3000.0
         },
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998853779",
-          "bestPrice": 2607.0,
-          "maxPrice": 4600.0
+          "bestPrice": 2500.0,
+          "maxPrice": 8000.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
@@ -5998,19 +6040,19 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226878709",
-          "bestPrice": 1150.0,
+          "bestPrice": 1120.0,
           "maxPrice": 9999999.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226878710",
-          "bestPrice": 869.0,
-          "maxPrice": 8665.2
+          "bestPrice": 720.0,
+          "maxPrice": 8702.4
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226878711",
-          "bestPrice": 860.0,
+          "bestPrice": 750.0,
           "maxPrice": 12500.0
         },
         "Category 4": {
@@ -6022,8 +6064,8 @@
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
           "catId": "10229226878718",
-          "bestPrice": 1550.0,
-          "maxPrice": 1550.0
+          "bestPrice": 3000.0,
+          "maxPrice": 3000.0
         },
         "Easy Access Standard - Category 2": {
           "name": "Easy Access Standard - Category 2",
@@ -6034,8 +6076,8 @@
         "Easy Access Standard - Category 4": {
           "name": "Easy Access Standard - Category 4",
           "catId": "10229227496071",
-          "bestPrice": 1263.67,
-          "maxPrice": 1263.67
+          "bestPrice": 1269.1,
+          "maxPrice": 1269.1
         },
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
@@ -6046,19 +6088,19 @@
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
           "catId": "10229226878724",
-          "bestPrice": 652.17,
+          "bestPrice": 608.69,
           "maxPrice": 6000.0
         },
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998845196",
-          "bestPrice": 2600.0,
+          "bestPrice": 2015.0,
           "maxPrice": 25000.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845197",
-          "bestPrice": 1500.0,
+          "bestPrice": 1269.1,
           "maxPrice": 17000.0
         }
       }
@@ -6070,19 +6112,19 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229531629279",
-          "bestPrice": 1700.0,
+          "bestPrice": 1900.0,
           "maxPrice": 30000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229531629280",
-          "bestPrice": 1395.0,
-          "maxPrice": 18052.5
+          "bestPrice": 1250.0,
+          "maxPrice": 24970.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229531629281",
-          "bestPrice": 1500.0,
+          "bestPrice": 1269.1,
           "maxPrice": 495000.0
         },
         "Category 4": {
@@ -6148,7 +6190,7 @@
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998853771",
-          "bestPrice": 1383.0,
+          "bestPrice": 2200.0,
           "maxPrice": 3321.2
         }
       }
@@ -6160,20 +6202,20 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226881303",
-          "bestPrice": 1600.0,
+          "bestPrice": 1500.0,
           "maxPrice": 295850.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226881304",
-          "bestPrice": 1170.0,
+          "bestPrice": 1150.0,
           "maxPrice": 12500.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226881305",
-          "bestPrice": 1230.0,
-          "maxPrice": 20000.0
+          "bestPrice": 900.0,
+          "maxPrice": 15000.0
         },
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
@@ -6202,20 +6244,20 @@
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
           "catId": "10229226881318",
-          "bestPrice": 1100.0,
+          "bestPrice": 1500.0,
           "maxPrice": 1500.0
         },
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998854269",
-          "bestPrice": 2500.0,
-          "maxPrice": 3971.55
+          "bestPrice": 2399.0,
+          "maxPrice": 3626.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998854270",
-          "bestPrice": 1299.78,
-          "maxPrice": 1299.78
+          "bestPrice": 1595.44,
+          "maxPrice": 1595.44
         }
       }
     },
@@ -6226,19 +6268,19 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226854411",
-          "bestPrice": 1125.0,
+          "bestPrice": 1297.0,
           "maxPrice": 100000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226854412",
-          "bestPrice": 750.0,
+          "bestPrice": 869.56,
           "maxPrice": 23750.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226854413",
-          "bestPrice": 613.78,
+          "bestPrice": 616.42,
           "maxPrice": 20000.0
         },
         "Category 4": {
@@ -6262,8 +6304,8 @@
         "Easy Access Standard - Category 3": {
           "name": "Easy Access Standard - Category 3",
           "catId": "10229227295086",
-          "bestPrice": 2527.35,
-          "maxPrice": 2527.35
+          "bestPrice": 2538.2,
+          "maxPrice": 2538.2
         },
         "Easy Access Standard - Category 4": {
           "name": "Easy Access Standard - Category 4",
@@ -6281,19 +6323,19 @@
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229226854424",
           "bestPrice": 970.0,
-          "maxPrice": 5047.47
+          "maxPrice": 5069.14
         },
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
           "catId": "10229226854425",
-          "bestPrice": 1427.0,
+          "bestPrice": 900.0,
           "maxPrice": 6270.0
         },
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998845182",
-          "bestPrice": 2455.14,
-          "maxPrice": 25000.0
+          "bestPrice": 2465.68,
+          "maxPrice": 10000.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
@@ -6316,13 +6358,13 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229531982577",
-          "bestPrice": 1600.0,
+          "bestPrice": 1700.0,
           "maxPrice": 21000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229531982578",
-          "bestPrice": 1400.0,
+          "bestPrice": 1250.0,
           "maxPrice": 30000.0
         },
         "Category 3": {
@@ -6334,7 +6376,7 @@
         "Category 4": {
           "name": "Category 4",
           "catId": "10229531982580",
-          "bestPrice": 1370.0,
+          "bestPrice": 1300.0,
           "maxPrice": 7000.0
         },
         "Easy Access Standard - Category 1": {
@@ -6352,25 +6394,25 @@
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229531982592",
-          "bestPrice": 2166.3,
+          "bestPrice": 2175.6,
           "maxPrice": 4165.0
         },
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
           "catId": "10229531982593",
-          "bestPrice": 1490.0,
-          "maxPrice": 2600.0
+          "bestPrice": 1000.0,
+          "maxPrice": 2150.0
         },
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998845205",
-          "bestPrice": 2888.4,
+          "bestPrice": 2900.8,
           "maxPrice": 10000.0
         },
         "Front Category 2": {
           "name": "Front Category 2",
           "catId": "10229998845206",
-          "bestPrice": 1227.57,
+          "bestPrice": 1448.0,
           "maxPrice": 9999.0
         }
       }
@@ -6382,62 +6424,62 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226860365",
-          "bestPrice": 1499.0,
-          "maxPrice": 627913.04
+          "bestPrice": 1479.4,
+          "maxPrice": 630608.69
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226860366",
-          "bestPrice": 1150.0,
-          "maxPrice": 10831.5
+          "bestPrice": 1050.0,
+          "maxPrice": 8702.4
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229226860367",
-          "bestPrice": 1079.53,
-          "maxPrice": 10831.5
+          "bestPrice": 1087.8,
+          "maxPrice": 10878.0
         },
         "Category 4": {
           "name": "Category 4",
           "catId": "10229226860368",
-          "bestPrice": 1119.25,
-          "maxPrice": 5953.71
+          "bestPrice": 1124.06,
+          "maxPrice": 5979.27
         },
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
           "catId": "10229226860374",
-          "bestPrice": 1733.04,
-          "maxPrice": 10470.45
+          "bestPrice": 1740.48,
+          "maxPrice": 10515.4
         },
         "Easy Access Standard - Category 3": {
           "name": "Easy Access Standard - Category 3",
           "catId": "10229227295112",
-          "bestPrice": 3610.5,
-          "maxPrice": 3610.5
+          "bestPrice": 3626.0,
+          "maxPrice": 3626.0
         },
         "Easy Access Standard - Category 4": {
           "name": "Easy Access Standard - Category 4",
           "catId": "10229227295113",
-          "bestPrice": 1805.25,
-          "maxPrice": 1805.25
+          "bestPrice": 1813.0,
+          "maxPrice": 1813.0
         },
         "Alcohol-Free Area 1": {
           "name": "Alcohol-Free Area 1",
           "catId": "10229227295117",
           "bestPrice": 1800.0,
-          "maxPrice": 3610.5
+          "maxPrice": 3626.0
         },
         "Alcohol-Free Area 2": {
           "name": "Alcohol-Free Area 2",
           "catId": "10229372777792",
           "bestPrice": 1450.0,
-          "maxPrice": 3213.34
+          "maxPrice": 3227.14
         },
         "Alcohol-Free Area 3": {
           "name": "Alcohol-Free Area 3",
           "catId": "10229515504831",
-          "bestPrice": 1588.62,
-          "maxPrice": 1588.62
+          "bestPrice": 1595.44,
+          "maxPrice": 1595.44
         }
       }
     },
@@ -6448,13 +6490,13 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226885717",
-          "bestPrice": 1600.0,
+          "bestPrice": 2050.0,
           "maxPrice": 1100001.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226885718",
-          "bestPrice": 1450.0,
+          "bestPrice": 1500.0,
           "maxPrice": 20000.0
         },
         "Category 3": {
@@ -6466,8 +6508,8 @@
         "Category 4": {
           "name": "Category 4",
           "catId": "10229226885720",
-          "bestPrice": 1750.0,
-          "maxPrice": 3054.48
+          "bestPrice": 1705.0,
+          "maxPrice": 3067.59
         },
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
@@ -6484,14 +6526,14 @@
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229226885730",
-          "bestPrice": 2166.3,
-          "maxPrice": 3249.45
+          "bestPrice": 2175.6,
+          "maxPrice": 3263.4
         },
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229226885731",
-          "bestPrice": 5000.0,
-          "maxPrice": 5000.0
+          "bestPrice": 2300.0,
+          "maxPrice": 10607.0
         }
       }
     },
@@ -6502,13 +6544,13 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226872621",
-          "bestPrice": 2550.0,
+          "bestPrice": 2604.34,
           "maxPrice": 25000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226872622",
-          "bestPrice": 1900.0,
+          "bestPrice": 1650.0,
           "maxPrice": 80000.0
         },
         "Category 3": {
@@ -6520,7 +6562,7 @@
         "Category 4": {
           "name": "Category 4",
           "catId": "10229226872624",
-          "bestPrice": 1870.0,
+          "bestPrice": 1950.0,
           "maxPrice": 15000.0
         },
         "Easy Access Standard - Category 1": {
@@ -6545,13 +6587,19 @@
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229226872634",
           "bestPrice": 4000.0,
-          "maxPrice": 5100.0
+          "maxPrice": 5000.0
         },
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229226872635",
           "bestPrice": 2800.0,
           "maxPrice": 2800.0
+        },
+        "Wheelchair & Easy Access Amenity - Category 4": {
+          "name": "Wheelchair & Easy Access Amenity - Category 4",
+          "catId": "10229226872637",
+          "bestPrice": 3500.0,
+          "maxPrice": 3500.0
         }
       }
     },
@@ -6562,13 +6610,13 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226854479",
-          "bestPrice": 2200.0,
+          "bestPrice": 2500.0,
           "maxPrice": 30000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226854480",
-          "bestPrice": 1900.0,
+          "bestPrice": 2100.0,
           "maxPrice": 35000.0
         },
         "Category 3": {
@@ -6580,7 +6628,7 @@
         "Category 4": {
           "name": "Category 4",
           "catId": "10229226854482",
-          "bestPrice": 1925.0,
+          "bestPrice": 2000.0,
           "maxPrice": 15000.0
         },
         "Easy Access Standard - Category 1": {
@@ -6611,7 +6659,7 @@
           "name": "Wheelchair & Easy Access Amenity - Category 3",
           "catId": "10229226854494",
           "bestPrice": 3000.0,
-          "maxPrice": 3000.0
+          "maxPrice": 4790.0
         }
       }
     },
@@ -6623,13 +6671,13 @@
           "name": "Category 1",
           "catId": "10229226872683",
           "bestPrice": 2460.0,
-          "maxPrice": 57768.0
+          "maxPrice": 58016.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226872684",
-          "bestPrice": 1800.0,
-          "maxPrice": 25273.5
+          "bestPrice": 1750.0,
+          "maxPrice": 25382.0
         },
         "Category 3": {
           "name": "Category 3",
@@ -6646,8 +6694,8 @@
         "Easy Access Standard - Category 1": {
           "name": "Easy Access Standard - Category 1",
           "catId": "10229226878651",
-          "bestPrice": 2740.36,
-          "maxPrice": 5776.8
+          "bestPrice": 5801.6,
+          "maxPrice": 5801.6
         },
         "Easy Access Standard - Category 3": {
           "name": "Easy Access Standard - Category 3",
@@ -6658,14 +6706,14 @@
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229226878655",
-          "bestPrice": 5000.0,
-          "maxPrice": 5632.38
+          "bestPrice": 4000.0,
+          "maxPrice": 5656.56
         },
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229226878656",
           "bestPrice": 1950.0,
-          "maxPrice": 5632.38
+          "maxPrice": 5656.56
         },
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
@@ -6682,20 +6730,20 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229530184799",
-          "bestPrice": 4380.0,
+          "bestPrice": 3710.0,
           "maxPrice": 115000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229530184800",
-          "bestPrice": 2900.0,
+          "bestPrice": 2800.0,
           "maxPrice": 1295800.0
         },
         "Category 3": {
           "name": "Category 3",
           "catId": "10229530184801",
           "bestPrice": 2500.0,
-          "maxPrice": 36105.0
+          "maxPrice": 36260.0
         },
         "Category 4": {
           "name": "Category 4",
@@ -6725,13 +6773,13 @@
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229530184813",
           "bestPrice": 4180.0,
-          "maxPrice": 5776.8
+          "maxPrice": 5801.6
         },
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229530184814",
           "bestPrice": 2705.0,
-          "maxPrice": 4332.6
+          "maxPrice": 4351.2
         }
       }
     },
@@ -6755,12 +6803,12 @@
           "name": "Category 3",
           "catId": "10229226879884",
           "bestPrice": 2600.0,
-          "maxPrice": 72210.0
+          "maxPrice": 72520.0
         },
         "Category 4": {
           "name": "Category 4",
           "catId": "10229226860434",
-          "bestPrice": 3250.0,
+          "bestPrice": 3000.0,
           "maxPrice": 17500.0
         },
         "Easy Access Standard - Category 1": {
@@ -6772,13 +6820,13 @@
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229226860444",
-          "bestPrice": 5054.7,
+          "bestPrice": 4500.0,
           "maxPrice": 7100.0
         },
         "Wheelchair & Easy Access Amenity - Category 2": {
           "name": "Wheelchair & Easy Access Amenity - Category 2",
           "catId": "10229226860445",
-          "bestPrice": 3610.5,
+          "bestPrice": 3626.0,
           "maxPrice": 18000.0
         },
         "Wheelchair & Easy Access Amenity - Category 3": {
@@ -6796,13 +6844,13 @@
         "Category 1": {
           "name": "Category 1",
           "catId": "10229226854479",
-          "bestPrice": 1260.0,
+          "bestPrice": 1125.0,
           "maxPrice": 8500000.0
         },
         "Category 2": {
           "name": "Category 2",
           "catId": "10229226854480",
-          "bestPrice": 1025.0,
+          "bestPrice": 1000.0,
           "maxPrice": 59865.0
         },
         "Category 3": {
@@ -6829,6 +6877,12 @@
           "bestPrice": 2000.0,
           "maxPrice": 11000.0
         },
+        "Wheelchair & Easy Access Amenity - Category 3": {
+          "name": "Wheelchair & Easy Access Amenity - Category 3",
+          "catId": "10229226854494",
+          "bestPrice": 2100.0,
+          "maxPrice": 2100.0
+        },
         "Wheelchair & Easy Access Amenity - Category 4": {
           "name": "Wheelchair & Easy Access Amenity - Category 4",
           "catId": "10229226854495",
@@ -6838,14 +6892,8 @@
         "Front Category 1": {
           "name": "Front Category 1",
           "catId": "10229998845214",
-          "bestPrice": 2845.07,
+          "bestPrice": 2857.28,
           "maxPrice": 13043.47
-        },
-        "Front Category 2": {
-          "name": "Front Category 2",
-          "catId": "10229998845215",
-          "bestPrice": 1500.0,
-          "maxPrice": 4118.0
         }
       }
     },
@@ -6874,7 +6922,7 @@
         "Category 4": {
           "name": "Category 4",
           "catId": "10229226881372",
-          "bestPrice": 10000.0,
+          "bestPrice": 10995.0,
           "maxPrice": 30000.0
         },
         "Easy Access Standard - Category 1": {
@@ -6898,8 +6946,14 @@
         "Wheelchair & Easy Access Amenity - Category 1": {
           "name": "Wheelchair & Easy Access Amenity - Category 1",
           "catId": "10229226883402",
-          "bestPrice": 36105.0,
-          "maxPrice": 41495.47
+          "bestPrice": 36260.0,
+          "maxPrice": 41673.61
+        },
+        "Wheelchair & Easy Access Amenity - Category 2": {
+          "name": "Wheelchair & Easy Access Amenity - Category 2",
+          "catId": "10229226883403",
+          "bestPrice": 31000.0,
+          "maxPrice": 31000.0
         },
         "Wheelchair & Easy Access Amenity - Category 3": {
           "name": "Wheelchair & Easy Access Amenity - Category 3",
