@@ -182,10 +182,11 @@ def _load_cookie_str(session: requests.Session, cookie_str: str) -> None:
                 session.cookies.set(k.strip(), v.strip(), domain=domain)
 
 
-def _find_chrome_profile_with_fifa_cookies() -> str | None:
-    """Scan all Chrome profiles and return the Cookies DB path that has FIFA cookies."""
+def _find_chrome_profiles_with_fifa_cookies() -> list[str]:
+    """Scan all Chrome profiles and return Cookies DB paths that have FIFA cookies, best first."""
     base = Path.home() / "Library/Application Support/Google/Chrome"
-    profiles = ["Default"] + [f"Profile {i}" for i in range(1, 10)]
+    profiles = ["Default"] + [f"Profile {i}" for i in range(1, 20)]
+    results = []
     for profile in profiles:
         db = base / profile / "Cookies"
         if not db.exists():
@@ -195,16 +196,17 @@ def _find_chrome_profile_with_fifa_cookies() -> str | None:
                 count = con.execute("SELECT COUNT(*) FROM cookies WHERE host_key LIKE '%fifa%'").fetchone()[0]
             if count > 0:
                 log.info(f"Found {count} FIFA cookies in Chrome {profile}")
-                return str(db)
+                results.append((count, str(db)))
         except Exception:
             pass
-    return None
+    # Return paths sorted by cookie count descending (most cookies first)
+    return [path for _, path in sorted(results, reverse=True)]
 
 
 def get_session_with_cookies() -> requests.Session:
     """
     Returns a requests.Session with FIFA auth cookies. Sources tried in order:
-      1. browser_cookie3     — auto-loads from the Chrome profile that has FIFA cookies
+      1. browser_cookie3     — tries all Chrome profiles that have FIFA cookies
       2. scripts/cookie.txt  — fallback if browser_cookie3 fails (prompts user to update it)
       3. Interactive prompt  — last resort
     """
@@ -225,25 +227,37 @@ def get_session_with_cookies() -> requests.Session:
         "Upgrade-Insecure-Requests": "1",
     })
 
-    # ── Source 1: browser_cookie3 (auto-detects correct Chrome profile) ──────
+    # ── Source 1: browser_cookie3 (tries all Chrome profiles with FIFA cookies) ──
     if _HAS_BROWSER_COOKIE3:
-        try:
-            cookie_file = _find_chrome_profile_with_fifa_cookies()
-            domains = [".fifa.com", ".tickets.fifa.com", ".fwc26-resale-usd.tickets.fifa.com"]
-            before = len(session.cookies)
-            for domain in domains:
-                kwargs = {"domain_name": domain}
-                if cookie_file:
-                    kwargs["cookie_file"] = cookie_file
-                session.cookies.update(browser_cookie3.chrome(**kwargs))
-            total = len(session.cookies) - before
-            log.info(f"Loaded {total} cookies from Chrome via browser_cookie3.")
-            if total > 0:
-                log.info(f"Loaded {total} cookies from Chrome via browser_cookie3.")
-                return session
-            log.warning("browser_cookie3 returned 0 cookies — falling back to cookie.txt.")
-        except Exception as e:
-            log.warning(f"browser_cookie3 failed: {e} — falling back to cookie.txt.")
+        cookie_files = _find_chrome_profiles_with_fifa_cookies()
+        if not cookie_files:
+            cookie_files = [None]  # let browser_cookie3 try its default detection
+        domains = [".fifa.com", ".tickets.fifa.com", ".fwc26-resale-usd.tickets.fifa.com"]
+        for cookie_file in cookie_files:
+            try:
+                # Start fresh so cookies from a failed profile don't pollute the next attempt
+                candidate = requests.Session(impersonate=_IMPERSONATE) if _IMPERSONATE else requests.Session()
+                candidate.headers.update(session.headers)
+                before = len(candidate.cookies)
+                for domain in domains:
+                    candidate.cookies.update(browser_cookie3.chrome(
+                        cookie_file=cookie_file,
+                        domain_name=domain,
+                    ))
+                total = len(candidate.cookies) - before
+                if total == 0:
+                    log.warning(f"browser_cookie3 returned 0 cookies from {cookie_file} — trying next profile.")
+                    continue
+                # Validate the session is actually authenticated
+                test = candidate.get(f"{BASE_URL}/secured/list/events", timeout=15, allow_redirects=False)
+                if test.status_code in (301, 302):
+                    log.warning(f"Cookies from {cookie_file} are expired/invalid — trying next profile.")
+                    continue
+                log.info(f"Loaded {total} valid cookies from {cookie_file or 'Chrome (default)'}.")
+                return candidate
+            except Exception as e:
+                log.warning(f"browser_cookie3 failed for {cookie_file}: {e} — trying next profile.")
+        log.warning("All Chrome profiles exhausted — falling back to cookie.txt.")
 
     # ── Source 2: cookie.txt ─────────────────────────────────────────────────
     if COOKIE_FILE.exists():
@@ -436,12 +450,6 @@ def main():
     log.info(f"Total matches to scrape: {len(ALL_MATCHES)}")
 
     session = get_session_with_cookies()
-
-    # Auth check — catches expired sessions before the full 104-match run
-    test_resp = session.get(f"{BASE_URL}/secured/list/events", timeout=15, allow_redirects=False)
-    if test_resp.status_code in (301, 302):
-        log.error("Session appears expired or not logged in. Please log in to Chrome first.")
-        return
 
     results = scrape_all_matches(session, ALL_MATCHES)
 
