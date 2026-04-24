@@ -49,6 +49,7 @@ export async function getTicketsByMatch(): Promise<TicketListing[]> {
 export interface CollectPromo {
   pct: number;
   label: string;
+  endsAt: number | null; // unix ms
 }
 
 export async function getCollectPromo(): Promise<CollectPromo | null> {
@@ -68,7 +69,16 @@ export async function getCollectPromo(): Promise<CollectPromo | null> {
     const pct = parseInt(pctMatch[1], 10);
     if (pct <= 0 || pct > 50) return null; // sanity check
     const label = /right.to.ticket/i.test(html) ? "on all Right-to-Tickets" : "sitewide";
-    return { pct, label };
+
+    // Parse remaining time from "Ends in 18h : 19m : 14s" → absolute timestamp
+    let endsAt: number | null = null;
+    const countdownMatch = html.match(/[Ee]nds?\s+in\s+(\d+)\s*h\s*[:\s]+\s*(\d+)\s*m\s*[:\s]+\s*(\d+)\s*s/);
+    if (countdownMatch) {
+      const secs = parseInt(countdownMatch[1]) * 3600 + parseInt(countdownMatch[2]) * 60 + parseInt(countdownMatch[3]);
+      endsAt = Date.now() + secs * 1000;
+    }
+
+    return { pct, label, endsAt };
   } catch {
     return null;
   }

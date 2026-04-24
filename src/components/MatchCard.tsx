@@ -15,6 +15,7 @@ interface MatchCardProps {
   prediction?: KnockoutPrediction;
   pricingSource?: string;
   feesOn?: boolean;
+  salePct?: number;
 }
 
 function TeamNames({ teams }: { teams: string }) {
@@ -112,7 +113,7 @@ function PredictionBadge({ prediction }: { prediction: KnockoutPrediction }) {
 const MKT_FEE = 1.15;
 const COLLECT_FEE = 1.03;
 
-export function MatchCard({ data, prediction, pricingSource = "collect", feesOn = true }: MatchCardProps) {
+export function MatchCard({ data, prediction, pricingSource = "collect", feesOn = true, salePct = 0 }: MatchCardProps) {
   const { match, tickets, resalePrices } = data;
 
   const cheapestFloor = tickets
@@ -134,7 +135,7 @@ export function MatchCard({ data, prediction, pricingSource = "collect", feesOn 
     const mkt = resalePrices.find(r => r.category === t.category);
     if (!mkt) return best;
     const effectiveMkt = mkt.price * (feesOn ? MKT_FEE : 1);
-    const effectiveCollect = t.floorPrice * (feesOn ? COLLECT_FEE : 1);
+    const effectiveCollect = t.floorPrice * (1 - salePct / 100) * (feesOn ? COLLECT_FEE : 1);
     if (effectiveMkt <= effectiveCollect) return best;
     const pct = Math.round(((effectiveMkt - effectiveCollect) / effectiveMkt) * 100);
     const dollars = Math.round(effectiveMkt - effectiveCollect);
@@ -248,7 +249,7 @@ export function MatchCard({ data, prediction, pricingSource = "collect", feesOn 
       </div>
 
       {/* Price table */}
-      <PriceTable tickets={tickets} resalePrices={resalePrices} matchNo={match.matchNo} pricingSource={pricingSource} feesOn={feesOn} />
+      <PriceTable tickets={tickets} resalePrices={resalePrices} matchNo={match.matchNo} pricingSource={pricingSource} feesOn={feesOn} salePct={salePct} />
 
       {/* Buy CTA — links to cheapest available category */}
       {cheapestFloor && (

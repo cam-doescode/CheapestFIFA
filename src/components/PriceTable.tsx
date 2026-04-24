@@ -11,9 +11,10 @@ interface PriceTableProps {
   matchNo: number;
   pricingSource?: string;
   feesOn?: boolean;
+  salePct?: number;
 }
 
-export function PriceTable({ tickets, resalePrices, matchNo, pricingSource = "collect", feesOn = true }: PriceTableProps) {
+export function PriceTable({ tickets, resalePrices, matchNo, pricingSource = "collect", feesOn = true, salePct = 0 }: PriceTableProps) {
   if (tickets.length === 0) {
     return <p className="text-sm text-zinc-500 italic">No ticket data available</p>;
   }
@@ -52,7 +53,7 @@ export function PriceTable({ tickets, resalePrices, matchNo, pricingSource = "co
             const isRsdFallback = pricingSource === "rsd" && getRsdFaceValue(matchNo, ticket.category) === null;
 
             const effectiveMkt = resale ? resale.price * (feesOn ? MKT_FEE : 1) : null;
-            const effectiveCollect = hasFloor ? ticket.floorPrice! * (feesOn ? COLLECT_FEE : 1) : null;
+            const effectiveCollect = hasFloor ? ticket.floorPrice! * (1 - salePct / 100) * (feesOn ? COLLECT_FEE : 1) : null;
 
             const mktSaving = effectiveCollect != null && effectiveMkt != null && effectiveMkt > effectiveCollect
               ? Math.round(((effectiveMkt - effectiveCollect) / effectiveMkt) * 100)

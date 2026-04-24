@@ -1,7 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { useMemo } from "react";
+import { useMemo, useState, useEffect } from "react";
 import type { MatchWithPrices } from "@/lib/types";
 import { MatchCard } from "./MatchCard";
 import { MatchFilters } from "./MatchFilters";
@@ -11,9 +11,21 @@ import { getRsdFaceValue } from "@/data/rsd-prices";
 
 interface MatchGridProps {
   matches: MatchWithPrices[];
+  salePct?: number;
+  saleEndsAt?: number | null; // unix ms — when set, discount zeroes out client-side at this time
 }
 
-export function MatchGrid({ matches }: MatchGridProps) {
+export function MatchGrid({ matches, salePct: initialSalePct, saleEndsAt }: MatchGridProps) {
+  const [salePct, setSalePct] = useState(initialSalePct ?? 0);
+
+  // Zero out the discount the moment the countdown expires — no refresh needed
+  useEffect(() => {
+    if (!saleEndsAt || !initialSalePct) return;
+    const ms = saleEndsAt - Date.now();
+    if (ms <= 0) { setSalePct(0); return; }
+    const id = setTimeout(() => setSalePct(0), ms);
+    return () => clearTimeout(id);
+  }, [saleEndsAt, initialSalePct]);
   const searchParams = useSearchParams();
 
   const rounds = (searchParams.get("round") || "").split(",").filter(Boolean);
@@ -79,8 +91,8 @@ export function MatchGrid({ matches }: MatchGridProps) {
           return bMark - aMark; // highest markup first
         }
         case "mkt-discount": {
-          const aDis = getBestMktDiscount(a, feesOn);
-          const bDis = getBestMktDiscount(b, feesOn);
+          const aDis = getBestMktDiscount(a, feesOn, salePct);
+          const bDis = getBestMktDiscount(b, feesOn, salePct);
           return bDis - aDis;
         }
         case "most-popular": {
@@ -100,7 +112,7 @@ export function MatchGrid({ matches }: MatchGridProps) {
     });
 
     return result;
-  }, [matches, matchNos, rounds, cities, teams, sort, predictorOn, pricingSource, feesOn]);
+  }, [matches, matchNos, rounds, cities, teams, sort, predictorOn, pricingSource, feesOn, salePct]);
 
   return (
     <>
@@ -116,6 +128,7 @@ export function MatchGrid({ matches }: MatchGridProps) {
             prediction={predictorOn ? PREDICTIONS_BY_MATCH.get(match.match.matchNo) : undefined}
             pricingSource={pricingSource}
             feesOn={feesOn}
+            salePct={salePct}
           />
         ))}
       </div>
@@ -154,14 +167,14 @@ function getTotalSales(m: MatchWithPrices): number {
 const MKT_FEE = 1.15;
 const COLLECT_FEE = 1.03;
 
-function getBestMktDiscount(m: MatchWithPrices, feesOn: boolean): number {
+function getBestMktDiscount(m: MatchWithPrices, feesOn: boolean, salePct = 0): number {
   let best = -Infinity;
   for (const t of m.tickets) {
     if (!t.floorPrice || t.floorPrice <= 0) continue;
     const mkt = m.resalePrices.find((r) => r.category === t.category);
     if (!mkt) continue;
     const effectiveMkt = mkt.price * (feesOn ? MKT_FEE : 1);
-    const effectiveCollect = t.floorPrice * (feesOn ? COLLECT_FEE : 1);
+    const effectiveCollect = t.floorPrice * (1 - salePct / 100) * (feesOn ? COLLECT_FEE : 1);
     if (effectiveMkt <= effectiveCollect) continue;
     const pct = ((effectiveMkt - effectiveCollect) / effectiveMkt) * 100;
     if (pct > best) best = pct;
