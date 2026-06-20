@@ -87,15 +87,15 @@ export async function getCollectPromo(): Promise<CollectPromo | null> {
 export async function getResaleData(): Promise<ResaleData | null> {
   try {
     const raw = await import("@/data/fifa-marketplace-values-latest.json");
-    const data = raw.default as {
+    const data = raw.default as unknown as {
       scraped_at: string;
-      matches: Record<string, { categories: Record<string, { bestPrice: number | null }> }>;
+      matches: Record<string, { categories?: Record<string, { bestPrice: number | null }> }>;
     };
 
     const prices: ResalePrice[] = [];
     for (const [matchKey, match] of Object.entries(data.matches)) {
       const matchNo = parseInt(matchKey.replace("Match ", ""), 10);
-      if (isNaN(matchNo)) continue;
+      if (isNaN(matchNo) || !match.categories) continue;
       for (const [catName, cat] of Object.entries(match.categories)) {
         const category = parseInt(catName.replace("Category ", ""), 10);
         if (isNaN(category) || cat.bestPrice == null) continue;
