@@ -18,20 +18,20 @@ interface MatchCardProps {
   salePct?: number;
 }
 
-function TeamNames({ teams }: { teams: string }) {
+function TeamNames({ teams, team1Locked, team2Locked }: { teams: string; team1Locked?: boolean; team2Locked?: boolean }) {
   const parsed = parseTeams(teams);
   if (parsed.length !== 2) return <>{teams}</>;
 
   return (
     <span className="inline-flex flex-wrap items-center gap-x-1">
-      <TeamWithFlag name={parsed[0]} />
+      <TeamWithFlag name={parsed[0]} locked={team1Locked} />
       <span className="text-zinc-400 dark:text-zinc-500 font-normal mx-0.5">vs.</span>
-      <TeamWithFlag name={parsed[1]} />
+      <TeamWithFlag name={parsed[1]} locked={team2Locked} />
     </span>
   );
 }
 
-function TeamWithFlag({ name }: { name: string }) {
+function TeamWithFlag({ name, locked }: { name: string; locked?: boolean }) {
   const flagUrl = getFlagUrl(name);
   return (
     <span className="inline-flex items-center gap-1">
@@ -46,6 +46,15 @@ function TeamWithFlag({ name }: { name: string }) {
         />
       )}
       {name}
+      {locked && (
+        <span
+          title="Qualified — mathematically guaranteed this group position"
+          className="text-emerald-600 dark:text-emerald-400 not-italic cursor-help"
+          aria-label="Qualified for this position"
+        >
+          🔒
+        </span>
+      )}
     </span>
   );
 }
@@ -169,7 +178,7 @@ export function MatchCard({ data, prediction, pricingSource = "collect", feesOn 
             {prediction && <PredictionBadge prediction={prediction} />}
           </div>
           <h3 className={`font-semibold text-zinc-900 dark:text-zinc-100 text-sm sm:text-base leading-tight${prediction ? " italic" : ""}`}>
-            <TeamNames teams={displayTeams} />
+            <TeamNames teams={displayTeams} team1Locked={topMatchup?.team1Locked} team2Locked={topMatchup?.team2Locked} />
           </h3>
           <div className="text-[9px] sm:text-[10px] text-purple-500 dark:text-purple-400 mt-0.5 font-normal not-italic">
             {prediction ? <>Projected &middot; {match.teams}</> : <>&nbsp;</>}

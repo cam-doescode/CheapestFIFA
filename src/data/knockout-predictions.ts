@@ -8,6 +8,8 @@ export interface MatchupOption {
   team1: string;
   team2: string;
   probability: number; // % chance this specific matchup occurs
+  team1Locked?: boolean; // mathematically guaranteed to finish in this exact group slot
+  team2Locked?: boolean;
 }
 
 export interface KnockoutPrediction {

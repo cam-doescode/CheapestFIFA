@@ -63,7 +63,40 @@ const R16_BRACKET: { matchNo: number; feeder1: number; feeder2: number }[] = [
 
 // ── Slot resolution ────────────────────────────────────────────────────────────
 
-type SlotResult = { team: string; confidence: number };
+type SlotResult = { team: string; confidence: number; locked: boolean };
+
+/** A group is decided once every team has played all 3 matches. */
+function isGroupComplete(gs: GroupStanding): boolean {
+  return gs.teams.length > 0 && gs.teams.every(t => t.gamesPlayed >= 3);
+}
+
+/**
+ * Is the team currently at `pos` (0=winner, 1=runner-up) mathematically guaranteed
+ * to finish in exactly that position, regardless of all remaining results?
+ *
+ * - 1st: their current points already exceed the max any other team could reach.
+ * - 2nd: they cannot be caught by 3rd/4th AND cannot themselves catch 1st.
+ * Strict inequalities are used so ties (decided by tiebreakers) are never treated as locked.
+ */
+function isDirectSlotLocked(pos: number, gs: GroupStanding): boolean {
+  if (gs.teams.length <= pos) return false;
+  if (isGroupComplete(gs)) return true; // final standings, order fixed by ESPN rank
+
+  const maxReachable = (t: GroupStanding["teams"][0]) => t.points + 3 * (3 - t.gamesPlayed);
+  const team = gs.teams[pos];
+
+  if (pos === 0) {
+    // Locked as winner: nobody else can reach their current points
+    return gs.teams.every((o, i) => i === 0 || team.points > maxReachable(o));
+  }
+  if (pos === 1) {
+    const leader = gs.teams[0];
+    const cantRise = maxReachable(team) < leader.points;            // can never catch 1st
+    const cantDrop = gs.teams.slice(2).every(o => team.points > maxReachable(o)); // safe from 3rd/4th
+    return cantRise && cantDrop;
+  }
+  return false;
+}
 
 /** Confidence that a team holds their current group position by end of group stage. */
 function positionConfidence(ptsLead: number, gamesLeft: number): number {
@@ -81,14 +114,19 @@ function resolveDirectSlot(slot: string, map: Map<string, GroupStanding>): SlotR
   const pos = parseInt(slot[0]) - 1; // "1" → 0, "2" → 1
   const group = slot[1];
   const gs = map.get(group);
-  if (!gs || gs.teams.length <= pos) return { team: "TBD", confidence: 25 };
+  if (!gs || gs.teams.length <= pos) return { team: "TBD", confidence: 25, locked: false };
 
   const team = gs.teams[pos];
   const below = gs.teams[pos + 1];
   const ptsLead = below ? team.points - below.points : team.points;
   const gamesLeft = 3 - team.gamesPlayed;
+  const locked = isDirectSlotLocked(pos, gs);
 
-  return { team: norm(team.name), confidence: positionConfidence(ptsLead, gamesLeft) };
+  return {
+    team: norm(team.name),
+    confidence: locked ? 100 : positionConfidence(ptsLead, gamesLeft),
+    locked,
+  };
 }
 
 /**
@@ -114,6 +152,11 @@ function computeThirdPlaceAssignments(map: Map<string, GroupStanding>): Map<numb
     const t = gs.teams[2];
     thirds.push({ group, team: norm(t.name), points: t.points, gd: t.gd, gf: t.gf, gamesPlayed: t.gamesPlayed });
   }
+  // Cross-group ranking of 3rd-place teams uses FIFA's order: points → goal difference
+  // → goals scored. Head-to-head (the new first tiebreaker for 2026) only applies between
+  // teams in the SAME group, so it never enters this cross-group comparison.
+  // Within-group order (1st/2nd/3rd) comes from ESPN's rank, which already applies the
+  // full 2026 chain including head-to-head.
   thirds.sort((a, b) => b.points - a.points || b.gd - a.gd || b.gf - a.gf);
   const top8 = new Set(thirds.slice(0, 8).map(t => t.group));
 
@@ -170,7 +213,7 @@ function computeThirdPlaceAssignments(map: Map<string, GroupStanding>): Map<numb
     const best = top8Eligible[0] ?? thirds.find(t => !usedGroups.has(t.group) && slot.groups.includes(t.group));
 
     if (!best) {
-      assignments.set(slot.matchNo, { team: "TBD", confidence: 10 });
+      assignments.set(slot.matchNo, { team: "TBD", confidence: 10, locked: false });
       continue;
     }
 
@@ -181,7 +224,9 @@ function computeThirdPlaceAssignments(map: Map<string, GroupStanding>): Map<numb
     const qualifyConf = top8.has(best.group) ? 85 : 45;
     const confidence = Math.round(holdConf * qualifyConf / 100);
 
-    assignments.set(slot.matchNo, { team: best.team, confidence });
+    // 3rd-place placement depends on the global ranking + FIFA's assignment table,
+    // so it's never treated as "locked" even once a group is complete.
+    assignments.set(slot.matchNo, { team: best.team, confidence, locked: false });
     usedGroups.add(best.group);
   }
 
@@ -196,7 +241,7 @@ export function computeR32Predictions(standings: GroupStanding[]): KnockoutPredi
 
   return R32_BRACKET.map(({ matchNo, slot1, slot2 }) => {
     const resolve = (slot: string): SlotResult => {
-      if (slot.startsWith("3")) return thirdAssignments.get(matchNo) ?? { team: "TBD", confidence: 15 };
+      if (slot.startsWith("3")) return thirdAssignments.get(matchNo) ?? { team: "TBD", confidence: 15, locked: false };
       return resolveDirectSlot(slot, map);
     };
 
@@ -206,7 +251,10 @@ export function computeR32Predictions(standings: GroupStanding[]): KnockoutPredi
 
     return {
       matchNo,
-      matchups: [{ team1: r1.team, team2: r2.team, probability }],
+      matchups: [{
+        team1: r1.team, team2: r2.team, probability,
+        team1Locked: r1.locked, team2Locked: r2.locked,
+      }],
     };
   });
 }
