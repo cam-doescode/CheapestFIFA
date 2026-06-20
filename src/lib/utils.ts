@@ -95,6 +95,17 @@ export function getCollectUrl(matchNo: number, category?: number): string {
 /** Map team name (as it appears in the API) to ISO 3166-1 alpha-2 code */
 const TEAM_TO_ISO: Record<string, string> = {
   "Algeria": "dz",
+  "Bosnia": "ba",
+  "Bosnia-Herzegovina": "ba",
+  "Cape Verde": "cv",
+  "Congo DR": "cd",
+  "Czech Republic": "cz",
+  "Czechia": "cz",
+  "DR Congo": "cd",
+  "South Korea": "kr",
+  "Turkey": "tr",
+  "Türkiye": "tr",
+  "United States": "us",
   "Argentina": "ar",
   "Australia": "au",
   "Austria": "at",

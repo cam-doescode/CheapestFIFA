@@ -1,5 +1,62 @@
 import type { Match, TicketListing, ResaleData, ResalePrice } from "./types";
 
+// ── Group standings (from ESPN public API) ─────────────────────────────────────
+export interface GroupStanding {
+  group: string; // "A"–"L"
+  teams: Array<{
+    name: string;
+    points: number;
+    gamesPlayed: number;
+    gd: number;
+    gf: number;
+  }>; // sorted 1st → 4th by ESPN rank
+}
+
+export async function getGroupStandings(): Promise<GroupStanding[]> {
+  try {
+    const res = await fetch(
+      "https://site.api.espn.com/apis/v2/sports/soccer/fifa.world/standings",
+      { next: { revalidate: 300 } }
+    );
+    if (!res.ok) return [];
+    const data = await res.json() as {
+      children: Array<{
+        name: string;
+        standings: {
+          entries: Array<{
+            team: { displayName: string };
+            note?: { rank: number };
+            stats: Array<{ name: string; value?: number }>;
+          }>;
+        };
+      }>;
+    };
+
+    return data.children.map(child => {
+      const group = child.name.replace("Group ", "");
+      const teams = child.standings.entries
+        .map(entry => {
+          const stats: Record<string, number> = {};
+          for (const s of entry.stats) stats[s.name] = s.value ?? 0;
+          return {
+            name: entry.team.displayName,
+            points: stats.points ?? 0,
+            gamesPlayed: stats.gamesPlayed ?? 0,
+            gd: stats.pointDifferential ?? 0,
+            gf: stats.pointsFor ?? 0,
+            _rank: entry.note?.rank ?? 99,
+          };
+        })
+        .sort((a, b) => a._rank - b._rank)
+        .map(({ _rank: _r, ...t }) => t);
+
+      return { group, teams };
+    });
+  } catch {
+    return [];
+  }
+}
+
 const FIFACOLLECT_API = "https://www.fifacollect.info/api";
 const COMPETITION_ID = 2; // FIFA World Cup 2026
 

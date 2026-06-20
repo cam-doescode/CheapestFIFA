@@ -1,16 +1,26 @@
 import { Suspense } from "react";
-import { getTicketsByMatch, getResaleData } from "@/lib/api";
+import { getTicketsByMatch, getResaleData, getGroupStandings } from "@/lib/api";
+import { computeR32Predictions, computeR16Predictions } from "@/lib/knockout-bracket";
 import type { MatchWithPrices } from "@/lib/types";
+import type { KnockoutPrediction } from "@/data/knockout-predictions";
 import { withReferral } from "@/lib/utils";
 import { MatchGrid } from "@/components/MatchGrid";
 import { GeoBanner } from "@/components/GeoBanner";
 import { PaymentBanner } from "@/components/PaymentBanner";
 
 export default async function Home() {
-  const [tickets, resaleData] = await Promise.all([
+  const [tickets, resaleData, standings] = await Promise.all([
     getTicketsByMatch(),
     getResaleData(),
+    getGroupStandings(),
   ]);
+
+  // Build live knockout predictions from actual group standings
+  const r32 = computeR32Predictions(standings);
+  const r16 = computeR16Predictions(r32);
+  const knockoutPredictions = new Map<number, KnockoutPrediction>(
+    [...r32, ...r16].map(p => [p.matchNo, p])
+  );
 
   // Group tickets by match
   const matchMap = new Map<number, MatchWithPrices>();
@@ -145,7 +155,7 @@ export default async function Home() {
             </div>
           }
         >
-          <MatchGrid matches={matches} />
+          <MatchGrid matches={matches} knockoutPredictions={knockoutPredictions} />
         </Suspense>
       </main>
 

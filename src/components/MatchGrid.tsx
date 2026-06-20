@@ -6,16 +6,17 @@ import type { MatchWithPrices } from "@/lib/types";
 import { MatchCard } from "./MatchCard";
 import { MatchFilters } from "./MatchFilters";
 import { savingsPercent, parseTeams } from "@/lib/utils";
-import { PREDICTIONS_BY_MATCH } from "@/data/knockout-predictions";
+import type { KnockoutPrediction } from "@/data/knockout-predictions";
 import { getRsdFaceValue } from "@/data/rsd-prices";
 
 const HIDE_AFTER_MS = 60 * 60 * 1000; // hide matches 1h after kickoff
 
 interface MatchGridProps {
   matches: MatchWithPrices[];
+  knockoutPredictions: Map<number, KnockoutPrediction>;
 }
 
-export function MatchGrid({ matches }: MatchGridProps) {
+export function MatchGrid({ matches, knockoutPredictions }: MatchGridProps) {
   const [now, setNow] = useState(() => Date.now());
 
   // Re-evaluate completed matches every minute
@@ -64,7 +65,7 @@ export function MatchGrid({ matches }: MatchGridProps) {
         }
         // When predictor is on, also match on predicted teams
         if (predictorOn) {
-          const pred = PREDICTIONS_BY_MATCH.get(m.match.matchNo);
+          const pred = knockoutPredictions.get(m.match.matchNo);
           if (pred && pred.matchups.some((mu) => teamSet.has(mu.team1.toLowerCase()) || teamSet.has(mu.team2.toLowerCase()))) {
             return true;
           }
@@ -113,7 +114,7 @@ export function MatchGrid({ matches }: MatchGridProps) {
     });
 
     return result;
-  }, [matches, matchNos, rounds, cities, teams, sort, predictorOn, pricingSource, feesOn, now]);
+  }, [matches, matchNos, rounds, cities, teams, sort, predictorOn, pricingSource, feesOn, now, knockoutPredictions]);
 
   return (
     <>
@@ -126,7 +127,7 @@ export function MatchGrid({ matches }: MatchGridProps) {
           <MatchCard
             key={match.match.id}
             data={match}
-            prediction={predictorOn ? PREDICTIONS_BY_MATCH.get(match.match.matchNo) : undefined}
+            prediction={predictorOn ? knockoutPredictions.get(match.match.matchNo) : undefined}
             pricingSource={pricingSource}
             feesOn={feesOn}
           />
