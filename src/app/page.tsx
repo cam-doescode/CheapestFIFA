@@ -1,17 +1,15 @@
 import { Suspense } from "react";
-import { getTicketsByMatch, getResaleData, getCollectPromo } from "@/lib/api";
+import { getTicketsByMatch, getResaleData } from "@/lib/api";
 import type { MatchWithPrices } from "@/lib/types";
 import { withReferral } from "@/lib/utils";
 import { MatchGrid } from "@/components/MatchGrid";
 import { GeoBanner } from "@/components/GeoBanner";
 import { PaymentBanner } from "@/components/PaymentBanner";
-import { SaleBanner } from "@/components/SaleBanner";
 
 export default async function Home() {
-  const [tickets, resaleData, promo] = await Promise.all([
+  const [tickets, resaleData] = await Promise.all([
     getTicketsByMatch(),
     getResaleData(),
-    getCollectPromo(),
   ]);
 
   // Group tickets by match
@@ -65,9 +63,6 @@ export default async function Home() {
 
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950">
-      {/* Active sale banner — sits above everything */}
-      {promo && <SaleBanner promo={promo} />}
-
       {/* Header */}
       <header className="border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900">
         <div className="max-w-7xl mx-auto px-4 py-4 sm:py-6">
@@ -150,7 +145,7 @@ export default async function Home() {
             </div>
           }
         >
-          <MatchGrid matches={matches} salePct={promo?.pct} saleEndsAt={promo?.endsAt} />
+          <MatchGrid matches={matches} />
         </Suspense>
       </main>
 

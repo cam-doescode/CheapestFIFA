@@ -80,7 +80,7 @@ function PredictionBadge({ prediction }: { prediction: KnockoutPrediction }) {
         onClick={() => setOpen((v) => !v)}
         className="ml-1.5 inline-flex items-center px-1.5 py-0.5 rounded-full text-[9px] sm:text-[10px] font-semibold bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-400 normal-case tracking-normal cursor-help focus:outline-none"
       >
-        {top.probability}% likely
+        {top.probability === 100 ? "Confirmed" : `${top.probability}% likely`}
       </button>
       {alternatives.length > 0 && (
         <span
@@ -172,7 +172,9 @@ export function MatchCard({ data, prediction, pricingSource = "collect", feesOn 
             <TeamNames teams={displayTeams} />
           </h3>
           <div className="text-[9px] sm:text-[10px] text-purple-500 dark:text-purple-400 mt-0.5 font-normal not-italic">
-            {prediction ? <>Projected &middot; {match.teams}</> : <>&nbsp;</>}
+            {prediction
+              ? <>{prediction.matchups[0].probability === 100 ? "Confirmed" : "Projected"} &middot; {match.teams}</>
+              : <>&nbsp;</>}
           </div>
         </div>
         {cheapestFloor && (
