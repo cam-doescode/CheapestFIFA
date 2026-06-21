@@ -18,7 +18,7 @@ export interface RttReview {
 export const RTT_REVIEWS: RttReview[] = [
   {
     id: "sofi-cat1",
-    image: "/rtt-reviews/sofi-cat1.jpg",
+    image: "/rtt-reviews/sofi-cat1.png",
     category: "Cat 1",
     match: "Cat 1 · SoFi Stadium, LA",
     detail: "2 rows back · $620",
@@ -27,18 +27,18 @@ export const RTT_REVIEWS: RttReview[] = [
     url: "https://www.reddit.com/r/FIFACollect/comments/1ubxqps/rtb_cat_1/",
   },
   {
-    id: "metlife-cat1",
-    image: "/rtt-reviews/metlife-cat1.jpg",
+    id: "iraq-norway-cat1",
+    image: "/rtt-reviews/iraq-norway-cat1.png",
     category: "Cat 1",
-    match: "Cat 1 · MetLife Stadium",
+    match: "Cat 1 · Iraq vs. Norway",
     detail: "Section 108",
     quote: "FIFA Collect came through. Our Cat 1 seats — Section 108.",
     author: "kiwilagata",
-    url: "https://www.reddit.com/r/FIFACollect/comments/1u984al/cat_2_france_vs_senegal_metlife_stadium/",
+    url: "https://www.reddit.com/r/FIFACollect/comments/1u7ttp9/cat_2_iraq_vs_norway/",
   },
   {
     id: "iraq-norway-cat2",
-    image: "/rtt-reviews/iraq-norway-cat2.jpg",
+    image: "/rtt-reviews/iraq-norway-cat2.png",
     category: "Cat 2",
     match: "Cat 2 · Iraq vs. Norway",
     detail: "Great seats",
