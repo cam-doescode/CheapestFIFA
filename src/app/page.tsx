@@ -7,6 +7,7 @@ import { withReferral } from "@/lib/utils";
 import { MatchGrid } from "@/components/MatchGrid";
 import { GeoBanner } from "@/components/GeoBanner";
 import { PaymentBanner } from "@/components/PaymentBanner";
+import { RttReviews } from "@/components/RttReviews";
 
 export default async function Home() {
   const [tickets, resaleData, standings, koResults] = await Promise.all([
@@ -157,6 +158,7 @@ export default async function Home() {
 
       {/* Main content */}
       <main className="max-w-7xl mx-auto px-4 py-4 sm:py-6">
+        <RttReviews />
         <Suspense
           fallback={
             <div className="text-center text-zinc-500 py-12">
