@@ -31,7 +31,7 @@ export function MatchGrid({ matches, knockoutPredictions }: MatchGridProps) {
   const cities = (searchParams.get("city") || "").split(",").filter(Boolean);
   const teams = (searchParams.get("team") || "").split(",").filter(Boolean);
   const matchNos = (searchParams.get("matchNo") || "").split(",").filter(Boolean);
-  const sort = searchParams.get("sort") || "mkt-discount";
+  const sort = searchParams.get("sort") || "soonest";
   const predictorOn = searchParams.get("predictor") !== "off";
   const pricingSource = searchParams.get("pricing") || "collect";
   const feesOn = searchParams.get("fees") !== "off";
@@ -104,6 +104,13 @@ export function MatchGrid({ matches, knockoutPredictions }: MatchGridProps) {
         }
         case "match":
           return a.match.matchNo - b.match.matchNo;
+        case "soonest": {
+          // Soonest kickoff first; ties broken by best market discount
+          const aT = new Date(a.match.date).getTime();
+          const bT = new Date(b.match.date).getTime();
+          if (aT !== bT) return aT - bT;
+          return getBestMktDiscount(b, feesOn) - getBestMktDiscount(a, feesOn);
+        }
         case "date":
         default:
           return (

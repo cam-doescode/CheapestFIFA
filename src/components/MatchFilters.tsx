@@ -19,7 +19,7 @@ export function MatchFilters({ matches }: MatchFiltersProps) {
   const selectedCities = (searchParams.get("city") || "").split(",").filter(Boolean);
   const selectedTeams = (searchParams.get("team") || "").split(",").filter(Boolean);
   const selectedMatches = (searchParams.get("matchNo") || "").split(",").filter(Boolean);
-  const currentSort = searchParams.get("sort") || "mkt-discount";
+  const currentSort = searchParams.get("sort") || "soonest";
   const predictorOn = searchParams.get("predictor") !== "off";
   const pricingSource = searchParams.get("pricing") || "collect";
   const feesOn = searchParams.get("fees") !== "off";
@@ -58,7 +58,7 @@ export function MatchFilters({ matches }: MatchFiltersProps) {
     (key: string, value: string) => {
       const params = new URLSearchParams(searchParams.toString());
       // Clear param when it matches the default
-      const defaults: Record<string, string> = { sort: "mkt-discount", predictor: "on", pricing: "collect", fees: "on" };
+      const defaults: Record<string, string> = { sort: "soonest", predictor: "on", pricing: "collect", fees: "on" };
       if (value === defaults[key]) {
         params.delete(key);
       } else {
@@ -98,6 +98,7 @@ export function MatchFilters({ matches }: MatchFiltersProps) {
           onChange={(e) => updateSingleParam("sort", e.target.value)}
           className="rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 px-3 py-2 text-xs sm:text-sm text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-emerald-500 w-full sm:w-auto"
         >
+          <option value="soonest">Starting Soonest</option>
           <option value="mkt-discount">Savings vs. Mkt</option>
           <option value="savings">Savings vs. Face</option>
           <option value="most-popular">Most Popular</option>
