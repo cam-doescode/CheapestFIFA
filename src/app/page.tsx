@@ -1,6 +1,6 @@
 import { Suspense } from "react";
-import { getTicketsByMatch, getResaleData, getGroupStandings } from "@/lib/api";
-import { computeR32Predictions, computeR16Predictions } from "@/lib/knockout-bracket";
+import { getTicketsByMatch, getResaleData, getGroupStandings, getKnockoutResults } from "@/lib/api";
+import { computeKnockoutPredictions, type BracketMatch } from "@/lib/knockout-bracket";
 import type { MatchWithPrices } from "@/lib/types";
 import type { KnockoutPrediction } from "@/data/knockout-predictions";
 import { withReferral } from "@/lib/utils";
@@ -9,17 +9,26 @@ import { GeoBanner } from "@/components/GeoBanner";
 import { PaymentBanner } from "@/components/PaymentBanner";
 
 export default async function Home() {
-  const [tickets, resaleData, standings] = await Promise.all([
+  const [tickets, resaleData, standings, koResults] = await Promise.all([
     getTicketsByMatch(),
     getResaleData(),
     getGroupStandings(),
+    getKnockoutResults(),
   ]);
 
-  // Build live knockout predictions from actual group standings
-  const r32 = computeR32Predictions(standings);
-  const r16 = computeR16Predictions(r32);
+  // Parse the knockout bracket structure straight from the FIFA feeder strings
+  const bracketByNo = new Map<number, BracketMatch>();
+  for (const t of tickets) {
+    const m = t.match;
+    if ([32, 16, 8, 4, 3, 2].includes(m.round) && !bracketByNo.has(m.matchNo)) {
+      bracketByNo.set(m.matchNo, { matchNo: m.matchNo, round: m.round, teams: m.teams });
+    }
+  }
+
+  // Resolve every knockout round from live standings + results
+  const predictions = computeKnockoutPredictions(standings, [...bracketByNo.values()], koResults);
   const knockoutPredictions = new Map<number, KnockoutPrediction>(
-    [...r32, ...r16].map(p => [p.matchNo, p])
+    predictions.map(p => [p.matchNo, p])
   );
 
   // Group tickets by match

@@ -1,16 +1,21 @@
 /**
- * Dynamic knockout predictions derived from live group standings.
+ * Dynamic knockout predictions for every round (R32 → Final), driven entirely by live data.
  *
- * R32 bracket slots come directly from the FIFA API (match.teams on round=32 matches),
- * e.g. "2A vs. 2B", "1E vs. 3ABCDF". Group standings are fetched from ESPN's public API
- * and refreshed every 5 minutes alongside ticket prices.
+ * The bracket structure is parsed from the FIFA API match.teams field:
+ *   R32 slots reference group positions ("2A", "1E", "3ABCDF");
+ *   later rounds reference prior matches ("W74", "L101").
+ * Group standings + group/knockout results come from ESPN's public API, refreshed every 5 min.
  *
- * Probability = how likely this specific matchup occurs (both teams stay in their slot).
- * Confidence per slot = function of points lead + games remaining.
+ * Resolution is a single forward pass in match order. Each side of a match resolves to a set
+ * of candidate teams with probabilities:
+ *   - a group slot → the projected team (with its confidence) or the clinched team (locked);
+ *   - a "W##"/"L##" feeder → the winner/loser of that match: the real result once played,
+ *     otherwise the two finalists balanced 50/50 ("balanced until they play, then dynamic").
+ * As real results arrive, sides collapse to actual teams and propagate down the bracket.
  */
 
-import type { GroupStanding } from "@/lib/api";
-import type { KnockoutPrediction } from "@/data/knockout-predictions";
+import type { GroupStanding, KnockoutResult } from "@/lib/api";
+import type { KnockoutPrediction, MatchupOption } from "@/data/knockout-predictions";
 
 // ── Name normalisation ─────────────────────────────────────────────────────────
 // ESPN display names → internal names used throughout the app (for flags etc.)
@@ -26,40 +31,6 @@ const ESPN_TO_INTERNAL: Record<string, string> = {
 function norm(name: string): string {
   return ESPN_TO_INTERNAL[name] ?? name;
 }
-
-// ── Fixed R32 bracket (from FIFA API round=32 match.teams field) ───────────────
-// Slot codes: "1A" = winner of Group A, "2B" = runner-up of Group B,
-// "3ABCDF" = best 3rd-place team from groups A, B, C, D, or F.
-const R32_BRACKET: { matchNo: number; slot1: string; slot2: string }[] = [
-  { matchNo: 73, slot1: "2A",      slot2: "2B"      },
-  { matchNo: 74, slot1: "1E",      slot2: "3ABCDF"  },
-  { matchNo: 75, slot1: "1F",      slot2: "2C"      },
-  { matchNo: 76, slot1: "1C",      slot2: "2F"      },
-  { matchNo: 77, slot1: "1I",      slot2: "3CDFGH"  },
-  { matchNo: 78, slot1: "2E",      slot2: "2I"      },
-  { matchNo: 79, slot1: "1A",      slot2: "3CEFHI"  },
-  { matchNo: 80, slot1: "1L",      slot2: "3EHIJK"  },
-  { matchNo: 81, slot1: "1D",      slot2: "3BEFIJ"  },
-  { matchNo: 82, slot1: "1G",      slot2: "3AEHIJ"  },
-  { matchNo: 83, slot1: "2K",      slot2: "2L"      },
-  { matchNo: 84, slot1: "1H",      slot2: "2J"      },
-  { matchNo: 85, slot1: "1B",      slot2: "3EFGIJ"  },
-  { matchNo: 86, slot1: "1J",      slot2: "2H"      },
-  { matchNo: 87, slot1: "1K",      slot2: "3DEIJL"  },
-  { matchNo: 88, slot1: "2D",      slot2: "2G"      },
-];
-
-// ── Fixed R16 bracket (which R32 match winners feed into each R16 slot) ────────
-const R16_BRACKET: { matchNo: number; feeder1: number; feeder2: number }[] = [
-  { matchNo: 89, feeder1: 74, feeder2: 77 }, // W-74 vs W-77
-  { matchNo: 90, feeder1: 73, feeder2: 75 }, // W-73 vs W-75
-  { matchNo: 91, feeder1: 76, feeder2: 78 }, // W-76 vs W-78
-  { matchNo: 92, feeder1: 79, feeder2: 80 }, // W-79 vs W-80
-  { matchNo: 93, feeder1: 83, feeder2: 84 }, // W-83 vs W-84
-  { matchNo: 94, feeder1: 81, feeder2: 82 }, // W-81 vs W-82
-  { matchNo: 95, feeder1: 86, feeder2: 88 }, // W-86 vs W-88
-  { matchNo: 96, feeder1: 85, feeder2: 87 }, // W-85 vs W-87
-];
 
 // ── Slot resolution ────────────────────────────────────────────────────────────
 
@@ -179,7 +150,12 @@ function resolveDirectSlot(slot: string, map: Map<string, GroupStanding>): SlotR
  * best available team to the slot that has the fewest remaining eligible teams.
  * This avoids assigning the same team to multiple slots (the naive per-slot approach fails).
  */
-function computeThirdPlaceAssignments(map: Map<string, GroupStanding>): Map<number, SlotResult> {
+function computeThirdPlaceAssignments(
+  map: Map<string, GroupStanding>,
+  slots: { matchNo: number; groups: string[] }[],
+): Map<number, SlotResult> {
+  const allComplete = [...map.values()].length > 0 && [...map.values()].every(gs => gs.games.length > 0 && gs.games.every(g => g.played));
+
   // Collect and rank all 12 groups' 3rd-place teams
   type Third = {
     group: string; team: string;
@@ -198,18 +174,6 @@ function computeThirdPlaceAssignments(map: Map<string, GroupStanding>): Map<numb
   // full 2026 chain including head-to-head.
   thirds.sort((a, b) => b.points - a.points || b.gd - a.gd || b.gf - a.gf);
   const top8 = new Set(thirds.slice(0, 8).map(t => t.group));
-
-  // The 8 3rd-place slots (matchNo → eligible groups)
-  const slots: { matchNo: number; groups: string[] }[] = [
-    { matchNo: 74, groups: ["A","B","C","D","F"] },
-    { matchNo: 77, groups: ["C","D","F","G","H"] },
-    { matchNo: 79, groups: ["C","E","F","H","I"] },
-    { matchNo: 80, groups: ["E","H","I","J","K"] },
-    { matchNo: 81, groups: ["B","E","F","I","J"] },
-    { matchNo: 82, groups: ["A","E","H","I","J"] },
-    { matchNo: 85, groups: ["E","F","G","I","J"] },
-    { matchNo: 87, groups: ["D","E","I","J","L"] },
-  ];
 
   const assignments = new Map<number, SlotResult>();
   const usedGroups = new Set<string>();
@@ -264,54 +228,139 @@ function computeThirdPlaceAssignments(map: Map<string, GroupStanding>): Map<numb
     const confidence = Math.round(holdConf * qualifyConf / 100);
 
     // 3rd-place placement depends on the global ranking + FIFA's assignment table,
-    // so it's never treated as "locked" even once a group is complete.
-    assignments.set(slot.matchNo, { team: best.team, confidence, locked: false });
+    // so it's only "locked" once every group has finished (the 8 best are then fixed).
+    assignments.set(slot.matchNo, { team: best.team, confidence: allComplete ? 100 : confidence, locked: allComplete });
     usedGroups.add(best.group);
   }
 
   return assignments;
 }
 
-// ── Public API ─────────────────────────────────────────────────────────────────
+// ── Unified bracket resolver ─────────────────────────────────────────────────────
 
-export function computeR32Predictions(standings: GroupStanding[]): KnockoutPrediction[] {
-  const map = new Map(standings.map(gs => [gs.group, gs]));
-  const thirdAssignments = computeThirdPlaceAssignments(map);
+/** A team that may occupy one side of a match, with its probability and lock status. */
+type TeamProb = { team: string; prob: number; locked: boolean };
 
-  return R32_BRACKET.map(({ matchNo, slot1, slot2 }) => {
-    const resolve = (slot: string): SlotResult => {
-      if (slot.startsWith("3")) return thirdAssignments.get(matchNo) ?? { team: "TBD", confidence: 15, locked: false };
-      return resolveDirectSlot(slot, map);
-    };
-
-    const r1 = resolve(slot1);
-    const r2 = resolve(slot2);
-    const probability = Math.max(5, Math.round(r1.confidence * r2.confidence / 100));
-
-    return {
-      matchNo,
-      matchups: [{
-        team1: r1.team, team2: r2.team, probability,
-        team1Locked: r1.locked, team2Locked: r2.locked,
-      }],
-    };
-  });
+export interface BracketMatch {
+  matchNo: number;
+  round: number;  // 32, 16, 8, 4 (SF), 3 (3rd place), 2 (Final)
+  teams: string;  // FIFA feeder string, e.g. "1D vs. 3BEFIJ" or "W74 vs. W77"
 }
 
-export function computeR16Predictions(r32: KnockoutPrediction[]): KnockoutPrediction[] {
-  const r32Map = new Map(r32.map(p => [p.matchNo, p]));
+const TBD: TeamProb[] = [{ team: "TBD", prob: 1, locked: false }];
 
-  return R16_BRACKET.map(({ matchNo, feeder1, feeder2 }) => {
-    const f1 = r32Map.get(feeder1)?.matchups[0];
-    const f2 = r32Map.get(feeder2)?.matchups[0];
-    const teams1 = f1 ? [f1.team1, f1.team2] : ["TBD", "TBD"];
-    const teams2 = f2 ? [f2.team1, f2.team2] : ["TBD", "TBD"];
+/** Split "X vs. Y" into its two feeder tokens. */
+function parseFeeders(teams: string): [string, string] {
+  const parts = teams.split(/\s+vs\.?\s+/i).map(s => s.trim());
+  return [parts[0] ?? "", parts[1] ?? ""];
+}
 
-    // 4 possible matchups (2 possible winners from each R32 feed)
-    const matchups = teams1.flatMap(t1 =>
-      teams2.map(t2 => ({ team1: t1, team2: t2, probability: 25 }))
-    );
+/** Merge duplicate teams, sort by probability, cap the list, and renormalise to sum 1. */
+function mergeCapNormalise(list: TeamProb[], cap = 8): TeamProb[] {
+  const m = new Map<string, { prob: number; locked: boolean }>();
+  for (const t of list) {
+    const e = m.get(t.team);
+    if (e) { e.prob += t.prob; e.locked = e.locked || t.locked; }
+    else m.set(t.team, { prob: t.prob, locked: t.locked });
+  }
+  let arr = [...m.entries()].map(([team, v]) => ({ team, prob: v.prob, locked: v.locked }));
+  arr.sort((a, b) => b.prob - a.prob);
+  if (arr.length > cap) arr = arr.slice(0, cap);
+  const sum = arr.reduce((s, t) => s + t.prob, 0) || 1;
+  return arr.map(t => ({ ...t, prob: t.prob / sum }));
+}
 
-    return { matchNo, matchups };
-  });
+/**
+ * Winner/loser candidates of an undecided match: each side normalised to 0.5 so the two
+ * sides contribute equally ("balanced until they play"). Once a match is played, callers
+ * substitute the real winner/loser instead.
+ */
+function balancedOutcome(s1: TeamProb[], s2: TeamProb[]): TeamProb[] {
+  const half = (s: TeamProb[]) => {
+    const sum = s.reduce((a, t) => a + t.prob, 0) || 1;
+    return s.map(t => ({ team: t.team, prob: (t.prob / sum) * 0.5, locked: false }));
+  };
+  return mergeCapNormalise([...half(s1), ...half(s2)]);
+}
+
+/**
+ * Compute predictions for every knockout match (R32 → Final) from live group standings,
+ * the parsed bracket, and any completed knockout results. Processed in match order so each
+ * "W##"/"L##" feeder is already resolved before it's referenced.
+ */
+export function computeKnockoutPredictions(
+  standings: GroupStanding[],
+  bracket: BracketMatch[],
+  results: KnockoutResult[] = [],
+): KnockoutPrediction[] {
+  const map = new Map(standings.map(gs => [gs.group, gs]));
+
+  // 3rd-place slots come straight from the bracket's "3XXXX" tokens (eligible groups encoded inline)
+  const thirdSlots: { matchNo: number; groups: string[] }[] = [];
+  for (const b of bracket) {
+    for (const tok of parseFeeders(b.teams)) {
+      if (/^3[A-L]+$/.test(tok)) thirdSlots.push({ matchNo: b.matchNo, groups: tok.slice(1).split("") });
+    }
+  }
+  const thirdAssignments = computeThirdPlaceAssignments(map, thirdSlots);
+
+  // Completed knockout games indexed by unordered team pair
+  const pairResult = new Map<string, { winner: string; loser: string }>();
+  for (const r of results) {
+    pairResult.set(h2hKey(norm(r.teamA), norm(r.teamB)), { winner: norm(r.winner), loser: norm(r.loser) });
+  }
+
+  const winners = new Map<number, TeamProb[]>();
+  const losers = new Map<number, TeamProb[]>();
+  const predictions: KnockoutPrediction[] = [];
+
+  const resolveToken = (tok: string, matchNo: number): TeamProb[] => {
+    if (/^[12][A-L]$/.test(tok)) {
+      const r = resolveDirectSlot(tok, map);
+      return [{ team: r.team, prob: r.confidence / 100, locked: r.locked }];
+    }
+    if (/^3[A-L]+$/.test(tok)) {
+      const a = thirdAssignments.get(matchNo);
+      return a ? [{ team: a.team, prob: a.confidence / 100, locked: a.locked }] : TBD;
+    }
+    const w = /^W(\d+)$/.exec(tok);
+    if (w) return winners.get(parseInt(w[1])) ?? TBD;
+    const l = /^L(\d+)$/.exec(tok);
+    if (l) return losers.get(parseInt(l[1])) ?? TBD;
+    return TBD;
+  };
+
+  for (const b of [...bracket].sort((a, b) => a.matchNo - b.matchNo)) {
+    const [tok1, tok2] = parseFeeders(b.teams);
+    const s1 = resolveToken(tok1, b.matchNo);
+    const s2 = resolveToken(tok2, b.matchNo);
+
+    // Build display matchups: every team1 × team2 combination, most likely first
+    let matchups: MatchupOption[] = [];
+    for (const x of s1) {
+      for (const y of s2) {
+        matchups.push({
+          team1: x.team, team2: y.team, probability: x.prob * y.prob,
+          team1Locked: x.locked, team2Locked: y.locked,
+        });
+      }
+    }
+    matchups.sort((a, b) => b.probability - a.probability);
+    matchups = matchups.slice(0, 6).map(m => ({ ...m, probability: Math.max(1, Math.round(m.probability * 100)) }));
+    predictions.push({ matchNo: b.matchNo, matchups });
+
+    // Resolve this match's winner/loser for downstream feeders
+    const a = s1[0]?.team, c = s2[0]?.team;
+    const pr = a && c ? pairResult.get(h2hKey(a, c)) : undefined;
+    if (pr) {
+      winners.set(b.matchNo, [{ team: pr.winner, prob: 1, locked: true }]);
+      losers.set(b.matchNo, [{ team: pr.loser, prob: 1, locked: true }]);
+    } else {
+      const outcome = balancedOutcome(s1, s2);
+      winners.set(b.matchNo, outcome);
+      losers.set(b.matchNo, outcome);
+    }
+  }
+
+  return predictions;
 }

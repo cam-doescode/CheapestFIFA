@@ -59,6 +59,58 @@ async function getGroupStageMatches(): Promise<
   }
 }
 
+export interface KnockoutResult {
+  teamA: string;
+  teamB: string;
+  winner: string; // ESPN display name of winner
+  loser: string;  // ESPN display name of loser
+}
+
+/**
+ * Completed knockout-stage games (R32 → Final), used to advance real teams through
+ * the bracket. Empty until the knockout stage begins (June 28). Penalty-shootout
+ * winners are reflected by ESPN's reported result.
+ */
+export async function getKnockoutResults(): Promise<KnockoutResult[]> {
+  try {
+    const res = await fetch(
+      `${ESPN_BASE}/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260628-20260719&limit=200`,
+      { next: { revalidate: 300 } }
+    );
+    if (!res.ok) return [];
+    const data = await res.json() as {
+      events?: Array<{
+        status: { type: { state: string } };
+        competitions: Array<{
+          competitors: Array<{ team: { displayName: string }; score?: string; winner?: boolean; homeAway: string }>;
+        }>;
+      }>;
+    };
+
+    const out: KnockoutResult[] = [];
+    for (const ev of data.events ?? []) {
+      if (ev.status.type.state !== "post") continue;
+      const comp = ev.competitions[0];
+      const home = comp.competitors.find(c => c.homeAway === "home") ?? comp.competitors[0];
+      const away = comp.competitors.find(c => c.homeAway === "away") ?? comp.competitors[1];
+      // Prefer ESPN's explicit winner flag (handles shootouts); fall back to score
+      let winnerComp = comp.competitors.find(c => c.winner === true);
+      if (!winnerComp) {
+        const hs = parseInt(home.score ?? "0");
+        const as = parseInt(away.score ?? "0");
+        if (hs === as) continue; // no winner recorded yet
+        winnerComp = hs > as ? home : away;
+      }
+      const winner = winnerComp.team.displayName;
+      const loser = winner === home.team.displayName ? away.team.displayName : home.team.displayName;
+      out.push({ teamA: home.team.displayName, teamB: away.team.displayName, winner, loser });
+    }
+    return out;
+  } catch {
+    return [];
+  }
+}
+
 export async function getGroupStandings(): Promise<GroupStanding[]> {
   try {
     const [res, matches] = await Promise.all([

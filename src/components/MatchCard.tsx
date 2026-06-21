@@ -192,6 +192,8 @@ export function MatchCard({ data, prediction, pricingSource = "collect", feesOn 
   const displayTeams = topMatchup
     ? `${topMatchup.team1} vs. ${topMatchup.team2}`
     : match.teams;
+  // A knockout matchup is "confirmed" once both teams are mathematically/actually determined
+  const confirmed = !!topMatchup && !!topMatchup.team1Locked && !!topMatchup.team2Locked;
 
   return (
     <div className={`rounded-xl border p-3 sm:p-4 hover:shadow-md transition-shadow flex flex-col bg-white dark:bg-zinc-900 ${
@@ -204,13 +206,13 @@ export function MatchCard({ data, prediction, pricingSource = "collect", feesOn 
         <div>
           <div className="text-[10px] sm:text-xs font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-wide mb-0.5 sm:mb-1">
             {match.roundInfo} &middot; Match {match.matchNo}
-            {prediction && <PredictionBadge prediction={prediction} />}
+            {prediction && !confirmed && <PredictionBadge prediction={prediction} />}
           </div>
-          <h3 className={`font-semibold text-zinc-900 dark:text-zinc-100 text-sm sm:text-base leading-tight${prediction ? " italic" : ""}`}>
+          <h3 className={`font-semibold text-zinc-900 dark:text-zinc-100 text-sm sm:text-base leading-tight${prediction && !confirmed ? " italic" : ""}`}>
             <TeamNames teams={displayTeams} team1Locked={topMatchup?.team1Locked} team2Locked={topMatchup?.team2Locked} />
           </h3>
-          <div className="text-[9px] sm:text-[10px] text-purple-500 dark:text-purple-400 mt-0.5 font-normal not-italic">
-            {prediction ? <>Projected &middot; {match.teams}</> : <>&nbsp;</>}
+          <div className={`text-[9px] sm:text-[10px] mt-0.5 font-normal not-italic ${confirmed ? "text-emerald-600 dark:text-emerald-400" : "text-purple-500 dark:text-purple-400"}`}>
+            {confirmed ? <>Confirmed matchup</> : prediction ? <>Projected &middot; {match.teams}</> : <>&nbsp;</>}
           </div>
         </div>
         {cheapestFloor && (
