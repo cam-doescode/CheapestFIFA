@@ -65,37 +65,75 @@ const R16_BRACKET: { matchNo: number; feeder1: number; feeder2: number }[] = [
 
 type SlotResult = { team: string; confidence: number; locked: boolean };
 
-/** A group is decided once every team has played all 3 matches. */
-function isGroupComplete(gs: GroupStanding): boolean {
-  return gs.teams.length > 0 && gs.teams.every(t => t.gamesPlayed >= 3);
-}
+const h2hKey = (a: string, b: string) => (a < b ? `${a}|${b}` : `${b}|${a}`);
 
 /**
- * Is the team currently at `pos` (0=winner, 1=runner-up) mathematically guaranteed
- * to finish in exactly that position, regardless of all remaining results?
+ * Determine the group position a team is *guaranteed* to finish in, or null if it
+ * isn't locked. Works by brute-forcing every combination of remaining-game results
+ * (win/draw/loss) and applying the FIFA 2026 tiebreaker chain:
+ *   points → head-to-head (the new 2026 first tiebreaker) → overall GD/GF.
  *
- * - 1st: their current points already exceed the max any other team could reach.
- * - 2nd: they cannot be caught by 3rd/4th AND cannot themselves catch 1st.
- * Strict inequalities are used so ties (decided by tiebreakers) are never treated as locked.
+ * Head-to-head among level teams is computed as a mini-league. If a placement comes
+ * down to overall goal difference (which scorelines could still swing), it's treated
+ * as "uncertain" so we never report a false lock. A completed group locks every team
+ * at its final ESPN rank.
+ *
+ * Team names here are raw ESPN display names (matching gs.games), normalised only on output.
  */
-function isDirectSlotLocked(pos: number, gs: GroupStanding): boolean {
-  if (gs.teams.length <= pos) return false;
-  if (isGroupComplete(gs)) return true; // final standings, order fixed by ESPN rank
+function lockedPositionFor(teamName: string, gs: GroupStanding): number | null {
+  const idx = gs.teams.findIndex(t => t.name === teamName);
+  if (idx === -1) return null;
 
-  const maxReachable = (t: GroupStanding["teams"][0]) => t.points + 3 * (3 - t.gamesPlayed);
-  const team = gs.teams[pos];
+  const remaining = gs.games.filter(g => !g.played);
+  if (remaining.length === 0) return idx + 1; // group complete → ESPN order is final
 
-  if (pos === 0) {
-    // Locked as winner: nobody else can reach their current points
-    return gs.teams.every((o, i) => i === 0 || team.points > maxReachable(o));
+  const basePts = new Map(gs.teams.map(t => [t.name, t.points]));
+  const playedH2H = new Map<string, string>();
+  for (const g of gs.games) if (g.played && g.winner) playedH2H.set(h2hKey(g.teamA, g.teamB), g.winner);
+
+  const positions = new Set<number>();
+  const combos = 3 ** remaining.length;
+
+  for (let c = 0; c < combos; c++) {
+    const pts = new Map(basePts);
+    const h2h = new Map(playedH2H);
+
+    let cc = c;
+    for (const g of remaining) {
+      const outcome = cc % 3; cc = Math.floor(cc / 3);
+      if (outcome === 0) { pts.set(g.teamA, pts.get(g.teamA)! + 3); h2h.set(h2hKey(g.teamA, g.teamB), g.teamA); }
+      else if (outcome === 1) { pts.set(g.teamA, pts.get(g.teamA)! + 1); pts.set(g.teamB, pts.get(g.teamB)! + 1); h2h.set(h2hKey(g.teamA, g.teamB), "draw"); }
+      else { pts.set(g.teamB, pts.get(g.teamB)! + 3); h2h.set(h2hKey(g.teamA, g.teamB), g.teamB); }
+    }
+
+    const tp = pts.get(teamName)!;
+    let above = gs.teams.filter(t => pts.get(t.name)! > tp).length;
+    const tied = gs.teams.filter(t => pts.get(t.name)! === tp).map(t => t.name);
+
+    if (tied.length > 1) {
+      // Mini-league points among the level teams (FIFA 2026 first tiebreaker)
+      const mini = new Map(tied.map(t => [t, 0]));
+      for (let i = 0; i < tied.length; i++) {
+        for (let j = i + 1; j < tied.length; j++) {
+          const w = h2h.get(h2hKey(tied[i], tied[j]));
+          if (w === "draw") { mini.set(tied[i], mini.get(tied[i])! + 1); mini.set(tied[j], mini.get(tied[j])! + 1); }
+          else if (w === tied[i]) mini.set(tied[i], mini.get(tied[i])! + 3);
+          else if (w === tied[j]) mini.set(tied[j], mini.get(tied[j])! + 3);
+        }
+      }
+      const tm = mini.get(teamName)!;
+      for (const r of tied) {
+        if (r === teamName) continue;
+        const rm = mini.get(r)!;
+        if (rm > tm) above++;
+        else if (rm === tm) return null; // resolved only by goal difference → not a guaranteed lock
+      }
+    }
+    positions.add(above + 1);
+    if (positions.size > 1) return null; // position varies across scenarios → not locked
   }
-  if (pos === 1) {
-    const leader = gs.teams[0];
-    const cantRise = maxReachable(team) < leader.points;            // can never catch 1st
-    const cantDrop = gs.teams.slice(2).every(o => team.points > maxReachable(o)); // safe from 3rd/4th
-    return cantRise && cantDrop;
-  }
-  return false;
+
+  return positions.size === 1 ? [...positions][0] : null;
 }
 
 /** Confidence that a team holds their current group position by end of group stage. */
@@ -120,7 +158,8 @@ function resolveDirectSlot(slot: string, map: Map<string, GroupStanding>): SlotR
   const below = gs.teams[pos + 1];
   const ptsLead = below ? team.points - below.points : team.points;
   const gamesLeft = 3 - team.gamesPlayed;
-  const locked = isDirectSlotLocked(pos, gs);
+  // Locked only if guaranteed to finish in exactly this slot's position (1st or 2nd)
+  const locked = lockedPositionFor(team.name, gs) === pos + 1;
 
   return {
     team: norm(team.name),

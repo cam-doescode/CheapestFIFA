@@ -67,6 +67,14 @@ function PredictionBadge({ prediction }: { prediction: KnockoutPrediction }) {
   const aggregates = getTeamAggregates(prediction);
   const sortedTeams = [...aggregates.entries()].sort((a, b) => b[1] - a[1]);
 
+  const lockedTeams = [
+    top.team1Locked ? top.team1 : null,
+    top.team2Locked ? top.team2 : null,
+  ].filter((t): t is string => !!t);
+
+  // Only show the interactive tooltip when there's something to explain
+  const hasTooltip = alternatives.length > 0 || lockedTeams.length > 0;
+
   useEffect(() => {
     if (!open) return;
     function handleClickOutside(e: MouseEvent | TouchEvent) {
@@ -82,39 +90,60 @@ function PredictionBadge({ prediction }: { prediction: KnockoutPrediction }) {
     };
   }, [open]);
 
+  const badgeClasses =
+    "ml-1.5 inline-flex items-center px-1.5 py-0.5 rounded-full text-[9px] sm:text-[10px] font-semibold bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-400 normal-case tracking-normal";
+
+  if (!hasTooltip) {
+    return <span className={badgeClasses}>{top.probability}% likely</span>;
+  }
+
   return (
     <span ref={ref} className="relative group/pred">
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="ml-1.5 inline-flex items-center px-1.5 py-0.5 rounded-full text-[9px] sm:text-[10px] font-semibold bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-400 normal-case tracking-normal cursor-help focus:outline-none"
+        className={`${badgeClasses} cursor-help focus:outline-none`}
       >
         {top.probability}% likely
       </button>
-      {alternatives.length > 0 && (
-        <span
-          className={`absolute top-full left-0 mt-1 min-w-[240px] w-max max-w-[300px] px-3 py-2.5 rounded-lg bg-zinc-800 dark:bg-zinc-700 text-white text-[10px] sm:text-xs leading-snug z-50 shadow-lg transition-opacity ${
-            open
-              ? "opacity-100 pointer-events-auto"
-              : "opacity-0 pointer-events-none group-hover/pred:opacity-100 group-hover/pred:pointer-events-auto"
-          }`}
-        >
-          <div className="font-semibold mb-1.5 text-purple-300">Other possible matchups</div>
-          {alternatives.map((alt, i) => (
-            <div key={i} className="flex justify-between gap-3 py-0.5">
-              <span className="whitespace-nowrap">{alt.team1} vs. {alt.team2}</span>
-              <span className="text-purple-300 font-medium shrink-0">{alt.probability}%</span>
-            </div>
-          ))}
-          <div className="border-t border-zinc-600 mt-1.5 pt-1.5 font-semibold text-zinc-300">Team odds for this slot</div>
-          {sortedTeams.map(([team, pct]) => (
-            <div key={team} className="flex justify-between gap-3 py-0.5">
-              <span>{team}</span>
-              <span className="text-emerald-400 font-medium shrink-0">{pct.toFixed(1)}%</span>
-            </div>
-          ))}
-        </span>
-      )}
+      <span
+        className={`absolute top-full left-0 mt-1 min-w-[240px] w-max max-w-[300px] px-3 py-2.5 rounded-lg bg-zinc-800 dark:bg-zinc-700 text-white text-[10px] sm:text-xs leading-snug z-50 shadow-lg transition-opacity ${
+          open
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none group-hover/pred:opacity-100 group-hover/pred:pointer-events-auto"
+        }`}
+      >
+        {lockedTeams.length > 0 && (
+          <div className="mb-1.5">
+            <div className="font-semibold text-emerald-300 mb-0.5">Qualified for this slot</div>
+            {lockedTeams.map((t) => (
+              <div key={t} className="flex items-center gap-1 py-0.5">
+                <span>🔒</span>
+                <span>{t}</span>
+                <span className="text-emerald-400 ml-auto shrink-0">guaranteed</span>
+              </div>
+            ))}
+          </div>
+        )}
+        {alternatives.length > 0 && (
+          <>
+            <div className="font-semibold mb-1.5 text-purple-300">Other possible matchups</div>
+            {alternatives.map((alt, i) => (
+              <div key={i} className="flex justify-between gap-3 py-0.5">
+                <span className="whitespace-nowrap">{alt.team1} vs. {alt.team2}</span>
+                <span className="text-purple-300 font-medium shrink-0">{alt.probability}%</span>
+              </div>
+            ))}
+            <div className="border-t border-zinc-600 mt-1.5 pt-1.5 font-semibold text-zinc-300">Team odds for this slot</div>
+            {sortedTeams.map(([team, pct]) => (
+              <div key={team} className="flex justify-between gap-3 py-0.5">
+                <span>{team}</span>
+                <span className="text-emerald-400 font-medium shrink-0">{pct.toFixed(1)}%</span>
+              </div>
+            ))}
+          </>
+        )}
+      </span>
     </span>
   );
 }

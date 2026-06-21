@@ -1,6 +1,13 @@
 import type { Match, TicketListing, ResaleData, ResalePrice } from "./types";
 
 // ── Group standings (from ESPN public API) ─────────────────────────────────────
+export interface GroupGame {
+  teamA: string; // ESPN display name
+  teamB: string;
+  played: boolean;
+  winner: string | null; // ESPN display name of winner, "draw", or null if not played
+}
+
 export interface GroupStanding {
   group: string; // "A"–"L"
   teams: Array<{
@@ -10,14 +17,54 @@ export interface GroupStanding {
     gd: number;
     gf: number;
   }>; // sorted 1st → 4th by ESPN rank
+  games: GroupGame[]; // all 6 intra-group games (played + remaining) — for lock/tiebreaker logic
+}
+
+const ESPN_BASE = "https://site.api.espn.com/apis";
+
+/** Fetch every group-stage match (played + scheduled) in one request. */
+async function getGroupStageMatches(): Promise<
+  Array<{ teamA: string; teamB: string; played: boolean; winner: string | null }>
+> {
+  try {
+    const res = await fetch(
+      `${ESPN_BASE}/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260627&limit=200`,
+      { next: { revalidate: 300 } }
+    );
+    if (!res.ok) return [];
+    const data = await res.json() as {
+      events?: Array<{
+        status: { type: { state: string } };
+        competitions: Array<{
+          competitors: Array<{ team: { displayName: string }; score?: string; homeAway: string }>;
+        }>;
+      }>;
+    };
+
+    return (data.events ?? []).map(ev => {
+      const comp = ev.competitions[0];
+      const home = comp.competitors.find(c => c.homeAway === "home") ?? comp.competitors[0];
+      const away = comp.competitors.find(c => c.homeAway === "away") ?? comp.competitors[1];
+      const played = ev.status.type.state === "post";
+      let winner: string | null = null;
+      if (played) {
+        const hs = parseInt(home.score ?? "0");
+        const as = parseInt(away.score ?? "0");
+        winner = hs > as ? home.team.displayName : as > hs ? away.team.displayName : "draw";
+      }
+      return { teamA: home.team.displayName, teamB: away.team.displayName, played, winner };
+    });
+  } catch {
+    return [];
+  }
 }
 
 export async function getGroupStandings(): Promise<GroupStanding[]> {
   try {
-    const res = await fetch(
-      "https://site.api.espn.com/apis/v2/sports/soccer/fifa.world/standings",
-      { next: { revalidate: 300 } }
-    );
+    const [res, matches] = await Promise.all([
+      fetch(`${ESPN_BASE}/v2/sports/soccer/fifa.world/standings`, { next: { revalidate: 300 } }),
+      getGroupStageMatches(),
+    ]);
     if (!res.ok) return [];
     const data = await res.json() as {
       children: Array<{
@@ -50,7 +97,13 @@ export async function getGroupStandings(): Promise<GroupStanding[]> {
         .sort((a, b) => a._rank - b._rank)
         .map(({ _rank: _r, ...t }) => t);
 
-      return { group, teams };
+      // Keep only matches where both teams belong to this group
+      const memberNames = new Set(teams.map(t => t.name));
+      const games: GroupGame[] = matches
+        .filter(m => memberNames.has(m.teamA) && memberNames.has(m.teamB))
+        .map(({ teamA, teamB, played, winner }) => ({ teamA, teamB, played, winner }));
+
+      return { group, teams, games };
     });
   } catch {
     return [];
