@@ -25,19 +25,15 @@ const RTT_CUTOFF_MS = 3 * 24 * 60 * 60 * 1000;
 const RTT_URGENT_MS = 48 * 60 * 60 * 1000;  // bouncing "buy now" within 2 days of the deadline
 const RTT_SOON_MS = 6 * 24 * 60 * 60 * 1000; // soft heads-up within 6 days of the deadline
 
-type RttState = { tier: "urgent" | "soon" | "closed"; msLeft: number };
+type RttState = { tier: "urgent" | "soon"; msLeft: number };
 
+// Matches inside the closed window are filtered out of the grid entirely, so here we
+// only flag the run-up to the deadline.
 function getRttState(matchDate: string, now: number): RttState | null {
-  const kickoff = new Date(matchDate).getTime();
-  const deadline = kickoff - RTT_CUTOFF_MS;
-  const msLeft = deadline - now;
-  if (msLeft > 0) {
-    if (msLeft <= RTT_URGENT_MS) return { tier: "urgent", msLeft };
-    if (msLeft <= RTT_SOON_MS) return { tier: "soon", msLeft };
-    return null;
-  }
-  // Deadline passed but match not yet kicked off → conversion window is closed
-  if (kickoff > now) return { tier: "closed", msLeft };
+  const msLeft = new Date(matchDate).getTime() - RTT_CUTOFF_MS - now;
+  if (msLeft <= 0) return null;
+  if (msLeft <= RTT_URGENT_MS) return { tier: "urgent", msLeft };
+  if (msLeft <= RTT_SOON_MS) return { tier: "soon", msLeft };
   return null;
 }
 
@@ -241,7 +237,7 @@ export function MatchCard({ data, prediction, pricingSource = "collect", feesOn 
         : "border-zinc-200 dark:border-zinc-800"
     }`}>
       {/* RTT conversion-deadline urgency */}
-      {rtt && rtt.tier !== "closed" && (
+      {rtt && (
         <a
           href={getCollectUrl(match.matchNo, cheapestFloor?.category)}
           target="_blank"
@@ -259,13 +255,6 @@ export function MatchCard({ data, prediction, pricingSource = "collect", feesOn 
             {rtt.tier === "urgent" ? "Buy now" : "Buy soon"} — RTT converts close in {formatCountdown(rtt.msLeft)}
           </span>
         </a>
-      )}
-      {rtt?.tier === "closed" && (
-        <div className="mb-2 sm:mb-3 -mx-0.5 px-2 py-1 rounded-lg bg-zinc-100 dark:bg-zinc-800 flex items-center gap-1.5">
-          <span className="text-xs font-medium text-zinc-500 dark:text-zinc-400">
-            RTT conversion window closed (within 3 days of kick-off)
-          </span>
-        </div>
       )}
 
       {/* Header */}

@@ -9,7 +9,9 @@ import { savingsPercent, parseTeams } from "@/lib/utils";
 import type { KnockoutPrediction } from "@/data/knockout-predictions";
 import { getRsdFaceValue } from "@/data/rsd-prices";
 
-const HIDE_AFTER_MS = 60 * 60 * 1000; // hide matches 1h after kickoff
+// RTTs can't be converted or traded within 3 days of kick-off, so past that point
+// a match is no longer buyable. https://collect.fifa.com/pages/right-to-tickets
+const RTT_CUTOFF_MS = 3 * 24 * 60 * 60 * 1000;
 
 interface MatchGridProps {
   matches: MatchWithPrices[];
@@ -39,8 +41,13 @@ export function MatchGrid({ matches, knockoutPredictions }: MatchGridProps) {
   const filtered = useMemo(() => {
     let result = matches;
 
-    // Hide matches that kicked off more than 1 hour ago
-    result = result.filter((m) => now < new Date(m.match.date).getTime() + HIDE_AFTER_MS);
+    // Only show matches you can actually buy: a live Collect floor price must exist
+    // and the RTT conversion/trade window (closes 3 days before kick-off) must still be open.
+    result = result.filter((m) => {
+      const hasFloor = m.tickets.some((t) => t.floorPrice != null && t.floorPrice > 0);
+      if (!hasFloor) return false;
+      return now < new Date(m.match.date).getTime() - RTT_CUTOFF_MS;
+    });
 
     if (matchNos.length > 0) {
       const matchNoNums = new Set(matchNos.map((n) => parseInt(n)));
