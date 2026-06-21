@@ -5,6 +5,7 @@ import { RTT_REVIEWS, type RttReview } from "@/data/rtt-reviews";
 
 export function RttReviews() {
   const [active, setActive] = useState<RttReview | null>(null);
+  const [collapsed, setCollapsed] = useState(false);
   // Drop any review whose image file isn't present yet, so nothing renders broken
   const [failed, setFailed] = useState<Set<string>>(new Set());
   const close = useCallback(() => setActive(null), []);
@@ -26,16 +27,22 @@ export function RttReviews() {
 
   return (
     <section className="mb-5 sm:mb-6 rounded-xl border border-emerald-200 dark:border-emerald-900/50 bg-emerald-50/50 dark:bg-emerald-950/20 p-3 sm:p-4">
-      <div className="flex items-baseline justify-between gap-2 mb-2 sm:mb-3 flex-wrap">
-        <h2 className="text-sm sm:text-base font-bold text-zinc-900 dark:text-zinc-100">
+      <button
+        type="button"
+        onClick={() => setCollapsed((v) => !v)}
+        aria-expanded={!collapsed}
+        className="w-full flex items-baseline justify-between gap-2 flex-wrap text-left"
+      >
+        <h2 className="text-sm sm:text-base font-bold text-zinc-900 dark:text-zinc-100 flex items-center gap-1.5">
+          <span className={`text-emerald-500 text-xs transition-transform ${collapsed ? "" : "rotate-90"}`}>▶</span>
           Thinking about RTT? See how it worked for others
         </h2>
         <span className="text-[11px] sm:text-xs text-zinc-500 dark:text-zinc-400">
-          Real seats fans got after converting on FIFA Collect · via r/FIFACollect
+          {collapsed ? "Show real seat reports" : "Real seats fans got after converting on FIFA Collect · via r/FIFACollect"}
         </span>
-      </div>
+      </button>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+      <div className={`grid grid-cols-1 sm:grid-cols-3 gap-3 ${collapsed ? "hidden" : "mt-2 sm:mt-3"}`}>
         {reviews.map((r) => (
           <button
             key={r.id}
@@ -47,7 +54,7 @@ export function RttReviews() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={r.image}
-                alt={`${r.match} — seat view shared by ${r.author}`}
+                alt={`${r.match} — seat view`}
                 loading="lazy"
                 onError={() => markFailed(r.id)}
                 className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-300"
@@ -62,7 +69,7 @@ export function RttReviews() {
                 <p className="text-[11px] text-emerald-700 dark:text-emerald-400 font-medium mt-0.5">{r.detail}</p>
               )}
               <p className="text-[11px] text-zinc-600 dark:text-zinc-400 mt-1 line-clamp-2 italic">“{r.quote}”</p>
-              <p className="text-[10px] text-zinc-400 dark:text-zinc-500 mt-1">u/{r.author} · tap to view</p>
+              <p className="text-[10px] text-zinc-400 dark:text-zinc-500 mt-1">via r/FIFACollect · tap to view</p>
             </div>
           </button>
         ))}
@@ -96,13 +103,13 @@ export function RttReviews() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={active.image}
-                alt={`${active.match} — seat view shared by ${active.author}`}
+                alt={`${active.match} — seat view`}
                 className="w-full h-auto"
               />
               <div className="p-4">
                 <p className="text-sm text-zinc-700 dark:text-zinc-300 italic">“{active.quote}”</p>
                 <div className="flex items-center justify-between gap-2 mt-2">
-                  <span className="text-xs text-zinc-500 dark:text-zinc-400">Shared by u/{active.author}</span>
+                  <span className="text-xs text-zinc-500 dark:text-zinc-400">via r/FIFACollect</span>
                   <a
                     href={active.url}
                     target="_blank"
