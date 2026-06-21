@@ -137,6 +137,7 @@ export function MatchGrid({ matches, knockoutPredictions }: MatchGridProps) {
             prediction={predictorOn ? knockoutPredictions.get(match.match.matchNo) : undefined}
             pricingSource={pricingSource}
             feesOn={feesOn}
+            now={now}
           />
         ))}
       </div>

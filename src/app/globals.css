@@ -34,8 +34,27 @@ body {
   animation: subtle-pulse 2s ease-in-out infinite;
 }
 
+/* RTT conversion-deadline urgency */
+@keyframes urgent-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.55); }
+  50% { box-shadow: 0 0 0 7px rgba(239, 68, 68, 0); }
+}
+.animate-urgent-glow {
+  animation: urgent-glow 1.4s ease-in-out infinite;
+}
+
+@keyframes nudge-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+.animate-nudge {
+  animation: nudge-bounce 1s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .animate-subtle-pulse {
+  .animate-subtle-pulse,
+  .animate-urgent-glow,
+  .animate-nudge {
     animation: none;
   }
 }

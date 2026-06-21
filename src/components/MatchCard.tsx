@@ -16,6 +16,39 @@ interface MatchCardProps {
   pricingSource?: string;
   feesOn?: boolean;
   salePct?: number;
+  now?: number;
+}
+
+// RTTs can be converted/traded only up until 3 days before match day.
+// https://collect.fifa.com/pages/right-to-tickets
+const RTT_CUTOFF_MS = 3 * 24 * 60 * 60 * 1000;
+const RTT_URGENT_MS = 48 * 60 * 60 * 1000;  // bouncing "buy now" within 2 days of the deadline
+const RTT_SOON_MS = 6 * 24 * 60 * 60 * 1000; // soft heads-up within 6 days of the deadline
+
+type RttState = { tier: "urgent" | "soon" | "closed"; msLeft: number };
+
+function getRttState(matchDate: string, now: number): RttState | null {
+  const kickoff = new Date(matchDate).getTime();
+  const deadline = kickoff - RTT_CUTOFF_MS;
+  const msLeft = deadline - now;
+  if (msLeft > 0) {
+    if (msLeft <= RTT_URGENT_MS) return { tier: "urgent", msLeft };
+    if (msLeft <= RTT_SOON_MS) return { tier: "soon", msLeft };
+    return null;
+  }
+  // Deadline passed but match not yet kicked off → conversion window is closed
+  if (kickoff > now) return { tier: "closed", msLeft };
+  return null;
+}
+
+function formatCountdown(ms: number): string {
+  const totalMin = Math.max(0, Math.floor(ms / 60000));
+  const d = Math.floor(totalMin / 1440);
+  const h = Math.floor((totalMin % 1440) / 60);
+  const m = totalMin % 60;
+  if (d > 0) return `${d}d ${h}h`;
+  if (h > 0) return `${h}h ${m}m`;
+  return `${m}m`;
 }
 
 function TeamNames({ teams, team1Locked, team2Locked }: { teams: string; team1Locked?: boolean; team2Locked?: boolean }) {
@@ -151,8 +184,12 @@ function PredictionBadge({ prediction }: { prediction: KnockoutPrediction }) {
 const MKT_FEE = 1.15;
 const COLLECT_FEE = 1.03;
 
-export function MatchCard({ data, prediction, pricingSource = "collect", feesOn = true, salePct = 0 }: MatchCardProps) {
+export function MatchCard({ data, prediction, pricingSource = "collect", feesOn = true, salePct = 0, now = Date.now() }: MatchCardProps) {
   const { match, tickets, resalePrices } = data;
+
+  // Only flag urgency when there's actually something to buy
+  const hasListings = tickets.some((t) => t.floorPrice != null && t.floorPrice > 0);
+  const rtt = hasListings ? getRttState(match.date, now) : null;
 
   const cheapestFloor = tickets
     .filter((t) => t.floorPrice != null && t.floorPrice > 0)
@@ -197,10 +234,40 @@ export function MatchCard({ data, prediction, pricingSource = "collect", feesOn 
 
   return (
     <div className={`rounded-xl border p-3 sm:p-4 hover:shadow-md transition-shadow flex flex-col bg-white dark:bg-zinc-900 ${
-      prediction
+      rtt?.tier === "urgent"
+        ? "border-red-400 dark:border-red-600 animate-urgent-glow"
+        : prediction
         ? "border-purple-300 dark:border-purple-800"
         : "border-zinc-200 dark:border-zinc-800"
     }`}>
+      {/* RTT conversion-deadline urgency */}
+      {rtt && rtt.tier !== "closed" && (
+        <a
+          href={getCollectUrl(match.matchNo, cheapestFloor?.category)}
+          target="_blank"
+          rel="noopener"
+          className={`mb-2 sm:mb-3 -mx-0.5 px-2 py-1.5 rounded-lg flex items-center gap-1.5 transition-colors ${
+            rtt.tier === "urgent"
+              ? "bg-red-50 dark:bg-red-950/50 border border-red-300 dark:border-red-800 hover:bg-red-100 dark:hover:bg-red-950/70"
+              : "bg-amber-50 dark:bg-amber-950/40 border border-amber-300 dark:border-amber-800 hover:bg-amber-100 dark:hover:bg-amber-950/60"
+          }`}
+        >
+          <span className={`text-base leading-none ${rtt.tier === "urgent" ? "animate-nudge" : ""}`}>
+            {rtt.tier === "urgent" ? "⚡" : "⏳"}
+          </span>
+          <span className={`text-xs font-bold ${rtt.tier === "urgent" ? "text-red-700 dark:text-red-300" : "text-amber-700 dark:text-amber-300"}`}>
+            {rtt.tier === "urgent" ? "Buy now" : "Buy soon"} — RTT converts close in {formatCountdown(rtt.msLeft)}
+          </span>
+        </a>
+      )}
+      {rtt?.tier === "closed" && (
+        <div className="mb-2 sm:mb-3 -mx-0.5 px-2 py-1 rounded-lg bg-zinc-100 dark:bg-zinc-800 flex items-center gap-1.5">
+          <span className="text-xs font-medium text-zinc-500 dark:text-zinc-400">
+            RTT conversion window closed (within 3 days of kick-off)
+          </span>
+        </div>
+      )}
+
       {/* Header */}
       <div className="flex items-start justify-between mb-2 sm:mb-3">
         <div>
