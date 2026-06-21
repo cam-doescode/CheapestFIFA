@@ -101,6 +101,20 @@ function PredictionBadge({ prediction }: { prediction: KnockoutPrediction }) {
     top.team2Locked ? top.team2 : null,
   ].filter((t): t is string => !!t);
 
+  // When exactly one side is locked, list the realistic opponents for the open slot,
+  // ranked by likelihood (aggregated across all matchups).
+  const oneLocked = !!top.team1Locked !== !!top.team2Locked;
+  const lockedFirst = !!top.team1Locked;
+  const opponents = (() => {
+    if (!oneLocked) return [] as Array<[string, number]>;
+    const m = new Map<string, number>();
+    for (const mu of prediction.matchups) {
+      const opp = lockedFirst ? mu.team2 : mu.team1;
+      m.set(opp, (m.get(opp) ?? 0) + mu.probability);
+    }
+    return [...m.entries()].sort((a, b) => b[1] - a[1]);
+  })();
+
   // Only show the interactive tooltip when there's something to explain
   const hasTooltip = alternatives.length > 0 || lockedTeams.length > 0;
 
@@ -154,7 +168,17 @@ function PredictionBadge({ prediction }: { prediction: KnockoutPrediction }) {
             ))}
           </div>
         )}
-        {alternatives.length > 0 && (
+        {oneLocked && opponents.length > 0 ? (
+          <>
+            <div className="font-semibold mb-1.5 text-purple-300">Likely opponents (current standing)</div>
+            {opponents.map(([team, pct]) => (
+              <div key={team} className="flex justify-between gap-3 py-0.5">
+                <span>{team}</span>
+                <span className="text-purple-300 font-medium shrink-0">{pct}%</span>
+              </div>
+            ))}
+          </>
+        ) : alternatives.length > 0 ? (
           <>
             <div className="font-semibold mb-1.5 text-purple-300">Other possible matchups</div>
             {alternatives.map((alt, i) => (
@@ -171,7 +195,7 @@ function PredictionBadge({ prediction }: { prediction: KnockoutPrediction }) {
               </div>
             ))}
           </>
-        )}
+        ) : null}
       </span>
     </span>
   );

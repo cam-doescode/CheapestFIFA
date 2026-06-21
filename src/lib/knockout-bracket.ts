@@ -284,6 +284,45 @@ function balancedOutcome(s1: TeamProb[], s2: TeamProb[]): TeamProb[] {
 }
 
 /**
+ * Candidate teams for a 3rd-place slot like "3BEFIJ": the current 3rd-placed team of each
+ * eligible group, ranked by current standing, weighted by their likelihood of qualifying as
+ * a top-8 third. The team picked by the global assignment is pinned first (the projection);
+ * the rest are shown as realistic alternative opponents. Once every group is complete the
+ * placement is fixed, so only the locked team is returned.
+ */
+function thirdPlaceCandidates(
+  groups: string[],
+  map: Map<string, GroupStanding>,
+  assignment: SlotResult | undefined,
+): TeamProb[] {
+  if (!assignment) return TBD;
+  if (assignment.locked) return [{ team: assignment.team, prob: 1, locked: true }];
+
+  const qualWeight = (pts: number) => (pts >= 4 ? 85 : pts >= 3 ? 70 : pts >= 1 ? 50 : 25);
+  type Cand = { team: string; w: number; pts: number; gd: number; gf: number };
+  const list: Cand[] = [];
+  for (const g of groups) {
+    const gs = map.get(g);
+    if (!gs || gs.teams.length < 3) continue;
+    const t = gs.teams[2];
+    list.push({ team: norm(t.name), w: qualWeight(t.points), pts: t.points, gd: t.gd, gf: t.gf });
+  }
+  if (list.length === 0) return [{ team: assignment.team, prob: assignment.confidence / 100, locked: false }];
+
+  list.sort((a, b) => b.pts - a.pts || b.gd - a.gd || b.gf - a.gf);
+
+  // Pin the assigned team first with a guaranteed-highest weight (it's the projection)
+  let assigned = list.find(c => c.team === assignment.team);
+  if (!assigned) { assigned = { team: assignment.team, w: 0, pts: 0, gd: 0, gf: 0 }; list.push(assigned); }
+  const maxOther = Math.max(0, ...list.filter(c => c !== assigned).map(c => c.w));
+  assigned.w = Math.max(assigned.w, maxOther) + 1;
+
+  const ordered = [assigned, ...list.filter(c => c !== assigned)];
+  const sum = ordered.reduce((s, c) => s + c.w, 0) || 1;
+  return ordered.map(c => ({ team: c.team, prob: c.w / sum, locked: false }));
+}
+
+/**
  * Compute predictions for every knockout match (R32 → Final) from live group standings,
  * the parsed bracket, and any completed knockout results. Processed in match order so each
  * "W##"/"L##" feeder is already resolved before it's referenced.
@@ -320,8 +359,7 @@ export function computeKnockoutPredictions(
       return [{ team: r.team, prob: r.confidence / 100, locked: r.locked }];
     }
     if (/^3[A-L]+$/.test(tok)) {
-      const a = thirdAssignments.get(matchNo);
-      return a ? [{ team: a.team, prob: a.confidence / 100, locked: a.locked }] : TBD;
+      return thirdPlaceCandidates(tok.slice(1).split(""), map, thirdAssignments.get(matchNo));
     }
     const w = /^W(\d+)$/.exec(tok);
     if (w) return winners.get(parseInt(w[1])) ?? TBD;
